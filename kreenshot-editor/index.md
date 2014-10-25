@@ -2,7 +2,7 @@ kreenshot-editor
 ================
 kreenshot-editor -- **screenshot image editing**
 
-Note! kreenshot-editor is *INCUBATING* and not yet ready for production use. Target schedule for first release: Ende of 2014.
+Note! kreenshot-editor is *INCUBATING* and not yet ready for production use. Target schedule for first release: end of 2014.
 
 kreenshot-editor is written in QT5 with Linux as target platform.
 
@@ -35,6 +35,7 @@ Code
 (incubating)
 
   * Source code hosted on [KDE quickgit](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fkreenshot-editor.git)
+    * inital commit 2014-05-01
   * [README](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fkreenshot-editor.git&a=blob&f=README.md) with build instructions and current TODOs and open issues.
 
 ### Details
