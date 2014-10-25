@@ -1,6 +1,6 @@
 kreenshot-editor
 ================
---> **screenshot image editing** <--
+kreenshot-editor -- **screenshot image editing**
 
 Note! kreenshot-editor is *INCUBATING* and not yet ready for production use. Target schedule for first release: Ende of 2014.
 
@@ -29,7 +29,6 @@ Target features
     Thus, the mouse cursor can always be captured and the user decides later.
   * Provide a QWidget component to seemlessly integrate in other screenshot tools
   * Save image to default location with placeholders for date, time etc.
-  * One goal is to help fixing this [ksnapshot](https://www.kde.org/applications/graphics/ksnapshot/) issue: [Bug 268260 - WISH - Add basic draw functions](https://bugs.kde.org/show_bug.cgi?id=268260)
 
 Code
 ----
@@ -44,8 +43,6 @@ Code
   * Primary programming language: C++
   * Build system: cmake
 
-Screenshots of current dev version (2014-07-05):
-
 Why?
 ----
 
@@ -57,4 +54,12 @@ A screenshot tool in general comprises of three parts:
 
 kreenshot-editor aims to support the user with task No. 2 and 3.
 
+One goal is to help fixing this [ksnapshot](https://www.kde.org/applications/graphics/ksnapshot/) issue: [Bug 268260 - WISH - Add basic draw functions](https://bugs.kde.org/show_bug.cgi?id=268260)
+
 Inspired by: [Greenshot](http://getgreenshot.org/)
+
+Screenshots
+-----------
+### dev state 2014-07-05
+![Main Window](img/2014-07-05-main-window.png "Main Window")
+![Preferences window](img/2014-07-05-prefs.png "Preferences window")
