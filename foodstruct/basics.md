@@ -54,3 +54,11 @@ Quelle: extravegant.de, abgerufen 08.03.2014
 
 ![](img/extravegant-tabelle.png)
 
+Kochen lassen / Links
+----------------------
+  * http://www.veganmania.at
+
+### Schwedische Apfeltorte
+eingestellt am 12.01.2014
+
+aus: Vegan backen - mit Liebe, aber ohne Ei (von Nicole Just)
