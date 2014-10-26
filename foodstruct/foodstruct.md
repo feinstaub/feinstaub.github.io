@@ -3,7 +3,7 @@ TODO: move from here: http://codestruct.wordpress.com/foodstruct/
 foodstruct
 ==========
 Im foodstruct finden sich Essenskonstruktionen aus pflanzlichen Bausteinen.
-Siehe auch [basics](basics.md). Die folgenden foodnotes zeigen einige Rezeptentwürfe.
+Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezeptentwürfe.
 
 
 Hummus (alias Humus)
@@ -98,6 +98,11 @@ Die Zuchini würfeln und in die Pfanne dazugeben. Solange weiterdünsten, bis di
 Zusammen mit einer gewünschten Menge an Gepa Salsa Curry (muss nicht extra warm gemacht werden) auf Nudeln servieren.
 
 
-Kochen lassen
--------------
+Kochen lassen / Links
+----------------------
   * http://www.veganmania.at
+
+### Schwedische Apfeltorte
+eingestellt am 12.01.2014
+
+aus: Vegan backen - mit Liebe, aber ohne Ei (von Nicole Just)
