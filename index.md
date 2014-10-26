@@ -7,7 +7,7 @@ This... is the codestruct.
     * [beginners](linux-user/linux-beginners-notes.md)
     * [advanced](linux-user/linux-advanced-notes.md)
   * struct - collections and thoughts on ongoing topics:
-    * [Bugs and wishes](struct/struct-main.md)
+    * [Bugs, wishes and annoyances / KDE UI](struct/struct-main.md)
     * [Plasma: Symlink handling](struct/symlink-handling.md)
   * dev
     * [Misc dev hints for QT, KDE, C++, cmake](dev-hints.md)
