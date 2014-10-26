@@ -1,6 +1,8 @@
-Bugs, wishes and annoyances / KDE UI
+Bugs, annoyances and wishes / KDE UI
 ====================================
 This page collects issues I stumbled on when using Linux with KDE.
+
+TODO: move content from here: http://codestruct.jimdo.com/
 
 ksnapshot [several]
 ----------------
@@ -81,6 +83,19 @@ Thunderbird [bug]: Drag and Drop attachment
 Drag and Drop of attachment files from Mozilla Thunderbird to the KDE Desktop is not working. The appearing menu shows “Link here” and “Cancel” instead of “Copy here”.
 
 Bug exists since 2007 in TB: [Bug 377621 - Drag and Drop attachments to desktop or folders doesn't work ](https://bugzilla.mozilla.org/show_bug.cgi?id=377621)
+
+
+Usability: Put Trashcan on Desktop by default
+---------------------------------------------
+2014-06-16, wait for KF5, (todo: is this a Plasma or openSUSE issue?)
+
+Current situation: the average user has to **add the Trashcan on KDE Desktop manually**:
+
+* it is a plasma widget and it is called Trashcan which can be added via Add Widgets…
+
+Found here: http://forums.opensuse.org/showthread.php/477049-Putting-Home-amp-Trashcan-on-KDE-Desktop-openSUSE-12-1
+
+WISH: the trash can should be present by default, see my [reply](https://forums.opensuse.org/showthread.php/477049-Putting-Home-amp-Trashcan-on-KDE-Desktop-openSUSE-12-1?p=2671343#post2671343).
 
 
 Plasma [usability]: flash modal
