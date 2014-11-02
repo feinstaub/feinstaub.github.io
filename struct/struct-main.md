@@ -145,6 +145,56 @@ SUGGESTION: just make border
  (the screenshot is taken from gwenview; for dolphin I would also highlight the filename as in the second screenshot)
 ![](img/dolphin-selected-images-suggestion-from-gwenview.png)
 
+
+Mouse - KDE Control Module: mouse too fast / add constant deceleration
+----------------------------------------------------------------------
+Status: reported on kde-devel mailing list (todo: when?).
+todo: submit a pull request with KF5
+
+Current situation:
+Mouse pointer moves too fast.
+
+SUGGESTION:
+Add option to control "deceleration" value (todo: is this an X thing or also Wayland?):
+
+![](img/mouse-system-settings-decel.png)
+
+This is how it looks on Windows 7: ![](img/mouse-2013-12-28 13_56_21-Eigenschaften von Maus.png)
+
+See also:
+
+* see Thread: Mimicking "Windows" Mouse Sensitivity (http://ubuntuforums.org/showthread.php?t=748412)
+* see http://lists.x.org/archives/xorg-mentors/2006/000023.html
+
+home-fixmouse:
+
+```
+#!/bin/bash
+
+# from here https://www.google.de/search?q=linux+slow+down+mouse&ie=utf-8&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&gws_rd=cr&ei=vpeOUom7JoSctAaVzoHIBQ#q=opensuse+mouse+too+fast&rls=org.mozilla:en-US%3Aofficial
+# to here https://wiki.archlinux.org/index.php/Mouse_acceleration
+#
+
+# using xset
+############
+# seems not to work that good
+
+# using xinput
+##############
+# $ xinput list
+# $ xinput list-props 14  or   $ xinput list-props <mouse> <brand>
+
+xinput --set-prop 14 'Device Accel Constant Deceleration' 3
+
+# "To make it permanent, edit xorg configuration (see above) or add commands to xprofile"
+# currently I use KDE Autostart
+```
+
+decelerate mouse:
+
+![](img/mouse-decelerate-mouse.png)
+
+
 [KDE Usability] Show notification if a document is sent to offline printer
 --------------------------------------------------------------------------
 reported 18/06/14 22:45 on kde-usability@kde.org, status: try again later and report back
