@@ -254,9 +254,20 @@ See also:
 * https://bugzilla.novell.com/show_bug.cgi?id=857630 [reported as fixed]
 
 
+Font Installer [usability]: enter password for each font
+--------------------------------------------------------
+2014-08, not reported yet, WAIT for KF5
+
+Current situation:
+![](img/font-installer-several.png)
+
+Click "Install..." and you have to enter the password **7 times** (one time for each font).
+
+WISH: only be asked one time.
+
 Font Installer [usability]: wrong kind of message box
 -----------------------------------------------------
-2014-10, WAIT for KF5
+2014-10, not reported yet, WAIT for KF5
 
 This should be an information box and not error box:
 
