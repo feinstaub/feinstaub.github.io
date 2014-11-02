@@ -10,6 +10,8 @@ The invisible buttons are functional if you know where they are.
 
 Restart application a few times. There is no pattern when the buttons are visible or not.
 
+The following screenshots show on the left side: missing buttons. On the right side: buttons as expected:
+
 ![](img/missing-buttions-kcmmouse-missing.png "kcmshell5 mouse # buttons missing")
 ![](img/missing-buttions-kcmmouse-visible.png "kcmshell5 mouse # buttons visible")
 
