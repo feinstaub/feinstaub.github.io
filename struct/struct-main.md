@@ -298,12 +298,34 @@ WISH: the trash can should be present by default, see my [reply](https://forums.
 
 Plasma [usability]: flash modal
 -------------------------------
-2014-10-26, WAIT for KF5
+2014-10-26, WAIT for KF5, not reported yet
 
 A modal dialog should flash or similar when the gray dolphin window is clicked.
 
 Currently it does nothing.
 ![](img/plasma-flash-modal.png "Modal dialog should flash or similar when the gray dolphin window is clicked")
+
+
+new/unreported: Kate: handling of deleted files
+-----------------------------------------------
+2014-09, WAIT for KF5, not reported yet
+
+Current situation:
+
+1. delete file,
+
+![](img/kate-deleted-file-handling.png)
+
+2. Click Ignore, 3. Manually close tab.png
+
+=> Not quite convenient.
+
+SUGGESTION:
+"The file was deleted from disk. You have the following options:
+
+* Close the document tab
+* Keep the document tab open
+* Save File as..."
 
 
 new/unreported: copy large files to USB stick / strange progress
