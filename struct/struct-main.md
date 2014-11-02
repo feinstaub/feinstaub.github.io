@@ -15,6 +15,15 @@ All kipi plugin entries should be present by default and the Configure dialog sh
 allow to exclude undesired items. In addition, it should be possible to define user
 defined commands to edit images.
 
+### Add "Edit with..."
+
+Current situation: one can send the image to another application and then ksnapshot loses control over the image.
+
+SUGGESTION:
+1. Add "Edit with..." where user can choose an external application
+2. After edit is complete the ksnapshot preview image is updated with the changes made in the external application
+3. User can use Send To... to send image to target.
+
 ### Add option for 100% zoom
 
 Current situation: the preview image zoomed to fit which makes it cumbersome to view it 100% for pixel perfectness.
@@ -26,9 +35,29 @@ If image is too large, scrollbars should be shown. Or at least the image should 
 
 see [Reversed check boxes in ksnapshot](http://agateau.com/2010/common-user-interface-mistakes-in-kde-applications-part-2-dialog-layouts/)
 
+### Send To printer a la greenshot
 
-Dolphin [wish]: Symlink --> Show original file
-----------------------------------------------
+...with options to rotate, scale and align image to target paper size and format.
+
+
+Dolphin [usability, symlinks]: Copy symlink to USB stick fails
+--------------------------------------------------------------
+v4.11.5, 2014-11, not reported yet, WAIT for KF5
+
+Current situation:
+
+1. DND a folder that contains symlinks to files to an USB stick drive which is FAT32 formatted.
+2. The following information box appears and the copy process is aborted:
+
+![](img/dolphin-copy-symlink-to-usb-stick-information-box.png)
+
+SUGGESTION:
+Instead of the information a question should be asked:
+"The source contains symlinks. Would you like to resolve the symlinks and copy the original files?"
+
+
+Dolphin [wish, symlinks]: Symlink --> Show original file
+--------------------------------------------------------
 v4.11.5, 2014, not reported yet, WAIT for KF5
 
 There is currently no quick way to navigate to the original file or folder behind a symlink.
@@ -65,6 +94,24 @@ Add a new item with submenu items taken from the standard Compress context menu.
 ### Use cases where current methods are inconvenient
   * Goal is to compress a local folder on an external drive (e.g. to archive the folder away).
   With suggested method it is easy to minimize the data will be transferred from one drive to the other.
+
+
+Dolphin [usability]: Confusing: Selected images become wrong colored
+--------------------------------------------------------------------
+v4.11.5, 2014, not reported yet (first find out if there maybe is already an option), WAIT for KF5
+
+Current situation: It is highly confusing if I look at my pictures which become false colored. I am regularly startled for a second until I realise it is just the selection
+
+No selection:
+![](img/dolphin-images-no-selection.png)
+
+False colors of one image selected:
+![](img/dolphin-images-1-image-selected.png)
+
+SUGGESTION: just make border
+ (the screenshot is taken from gwenview; for dolphin I would also highlight the filename as in the second screenshot)
+![](img/dolphin-selected-images-suggestion-from-gwenview.png)
+
 
 
 Font Installer [usability]: wrong kind of message box
