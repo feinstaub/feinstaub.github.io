@@ -1,7 +1,7 @@
 Meta
 ====
 
-codestruct content currently hosted at feinstaub.github.io
+**codestruct** content currently hosted at feinstaub.github.io
 
 Why mdwiki?
 -----------
