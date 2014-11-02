@@ -4,7 +4,7 @@ kreenshot-editor -- **screenshot image editing**
 
 Note! kreenshot-editor is *INCUBATING* and not yet ready for production use. Target schedule for first release: end of 2014.
 
-kreenshot-editor is written in QT5 with Linux as target platform.
+kreenshot-editor is written in Qt 5.3 with Linux as target platform.
 
 Target features
 ---------------
@@ -17,6 +17,7 @@ Target features
       * arrow
       * text
       * Optional drop shadow for objects
+      * later: create a free-hand drawing object
     * Rectangular image operation objects
       * highlight
       * obfuscate
@@ -40,9 +41,11 @@ Code
 
 ### Details
 
-  * Widget toolkit: QT 5
+  * Widget toolkit: Qt 5.3 (http://qt-project.org/)
+    * based on QGraphicsView, QGraphicsScene, QGraphicsItem
   * Primary programming language: C++
   * Build system: cmake
+  * Snapshot binary package for openSUSE: http://software.opensuse.org/package/kreenshot-editor
 
 Why?
 ----
