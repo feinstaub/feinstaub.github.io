@@ -96,8 +96,32 @@ Add a new item with submenu items taken from the standard Compress context menu.
   With suggested method it is easy to minimize the data will be transferred from one drive to the other.
 
 
-Dolphin [usability]: Confusing: Selected images become wrong colored
---------------------------------------------------------------------
+Dolphin [usability]: Rotate selected images using context menu or button
+------------------------------------------------------------------------
+v4.11.5, 2014
+reported here: https://bugs.kde.org/show_bug.cgi?id=311127,
+currently marked as "resolved downstream" (i.e. ask your favorite distribution),
+contributed to discussion:
+```
+I am also a user who likes to do simple image rotation correction directly
+in file browser in the following manner:
+1) enable image preview,
+2) eye-scan for wrongly rotated images,
+3) select these images with Ctrl+click,
+4) invoke the "rotate by 90degree function" via context menu (or toolbar).
+For mass rotation gwenview used the kipiplugin found here:
+gwenview --> Plugins --> Images --> Rotate Left/Right (Ctrl+Shift+Left/Right).
+Maybe this could be integrated.
+```
+
+* see also:
+  * Kim (Kde Image Menu) 0.9.5 (KDE 4.x): http://kde-apps.org/content/show.php?content=11505 (KDE service menu)
+  * http://mylinuxramblings.wordpress.com/2011/02/20/mini-how-to-manipulate-images-from-within-your-kde4-file-manager-without-using-an-external-program/
+    * "In fact I fail to understand why this is no shipped as standard with KDE4 in all distributions."
+      though I find the presented menu a bit too bloated.
+
+Dolphin [usability]: Selected images become wrong colored
+---------------------------------------------------------
 v4.11.5, 2014, not reported yet (first find out if there maybe is already an option), WAIT for KF5
 
 Current situation: It is highly confusing if I look at my pictures which become false colored. I am regularly startled for a second until I realise it is just the selection
@@ -112,6 +136,18 @@ SUGGESTION: just make border
  (the screenshot is taken from gwenview; for dolphin I would also highlight the filename as in the second screenshot)
 ![](img/dolphin-selected-images-suggestion-from-gwenview.png)
 
+
+Plasma [usability]: warn about low disk space on root
+-----------------------------------------------------
+v4.11.5, 2014, not reported yet?
+
+Current situation:
+the "Free space notifier" (systemsetting -> system admin -> startup & shutdown -> service manager -> startup services,
+see https://forum.kde.org/viewtopic.php?f=22&t=100802) only works for the home dir.
+
+SUGGESTION:
+Make it also work for the root dir because a full root can lead to failing of system package upgrades and other things.
+See also file:///usr/share/kde4/config.kcfg/freespacenotifier.kcfg
 
 
 Font Installer [usability]: wrong kind of message box

@@ -1,6 +1,12 @@
 KDE building and contributing
 =============================
 
+FAQ about dev env
+-----------------
+When asking questions about KF5, the following information is often requested:
+Running Plasma 4 on openSUSE 13.1, KDE version 4.11.5
+
+
 Build KF5 frameworks hints
 --------------------------
 see https://community.kde.org/Frameworks/Building
