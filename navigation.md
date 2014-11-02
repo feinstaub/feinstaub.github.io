@@ -5,10 +5,8 @@
   * [Beginners](linux-user/linux-beginners-notes.md)
   * [Advanced](linux-user/linux-advanced-notes.md)
 
-[Bugs, annoyances and wishes]()
-
-  * [KDE UI](struct/struct-main.md)
-
 [struct]()
 
-  * [Misc dev hints](dev-hints.md)
+  * [KDE UI: Bugs, annoyances and wishes](struct/struct-main.md)
+  * [KDE community](struct/kde-community.md)
+  * [C++ dev hints](struct/dev-hints.md)

@@ -1,5 +1,5 @@
-dev hints
-=========
+C++ dev hints
+=============
 
 * How do I force make/gcc to show me the commands?
   * ```make VERBOSE=1``` or ```make V=1```
