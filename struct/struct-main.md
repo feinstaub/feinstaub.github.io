@@ -295,6 +295,13 @@ Currently it does nothing.
 ![](img/plasma-flash-modal.png "Modal dialog should flash or similar when the gray dolphin window is clicked")
 
 
+new/unreported: copy large files to USB stick / strange progress
+----------------------------------------------------------------
+![](img/copy-large-files-1.png) Warum steht da so oft 0KB pro sec?
+
+![](img/copy-large-files-2.png) 250MB⁄s, lange Pause , Peak, lange Pause etc. Normal?
+
+
 See also
 --------
-  * Aurélien Gâteau's article series about [Common user interface mistakes in KDE applications](http://agateau.com/article-series/common-ui-mistakes-in-kde-applications/) (TODO: read)
+  * Aurélien Gâteau's article series about [Common user interface mistakes in KDE applications](http://agateau.com/article-series/common-ui-mistakes-in-kde-applications/)
