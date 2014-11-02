@@ -1,4 +1,4 @@
-kreenshot-editor
+Kreenshot Editor
 ================
 kreenshot-editor -- **screenshot image editing**
 
