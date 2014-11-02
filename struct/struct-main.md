@@ -39,6 +39,15 @@ see [Reversed check boxes in ksnapshot](http://agateau.com/2010/common-user-inte
 
 ...with options to rotate, scale and align image to target paper size and format.
 
+kurlnavigator [usability] Navigate to parent folder should select child folder
+------------------------------------------------------------------------------
+reported here: https://bugs.kde.org/show_bug.cgi?id=335616, discussed on: kde-usability@kde.org
+
+The usability team approves the new behaviour.
+To the question if there is a use case to keep the current behaviour there was no answer
+(mail from Heiko Tietze on kde-usability@kde.org, 14/06/14 11:29, "[KDE Usability] Dolphin/KUrlNavigator: setUrl should select child folder item of last URL if available").
+
+todo: add some screenshots to demonstrate
 
 Dolphin [usability, symlinks]: Copy symlink to USB stick fails
 --------------------------------------------------------------
@@ -136,10 +145,95 @@ SUGGESTION: just make border
  (the screenshot is taken from gwenview; for dolphin I would also highlight the filename as in the second screenshot)
 ![](img/dolphin-selected-images-suggestion-from-gwenview.png)
 
+[KDE Usability] Show notification if a document is sent to offline printer
+--------------------------------------------------------------------------
+reported 18/06/14 22:45 on kde-usability@kde.org, status: try again later and report back
+
+```
+Hello,
+
+when I send a document to a printer which is offline (e. g. because the
+USB cable is not plugged in) the print job is silently queued without
+any notification.
+
+>From the usability standpoint, would it be ok to show some kind of
+notication (e. g. a tooltip on the Print Jobs plasma widget) saying that
+the job was accepted but could not be printed because the printer is
+offline?
+
+Greetings
+
+Gregor
+```
+
+Thomas Pfeiffer:
+```
+> Hello,
+>
+> when I send a document to a printer which is offline (e. g. because the
+> USB cable is not plugged in) the print job is silently queued without
+> any notification.
+
+Really, it does that? Oh, that's... bad. I wonder why we haven't already had
+countless complaints from users who realised, after 10 minutes of waiting for
+their document to come out of the printer, that it's not plugged in.
+
+> From the usability standpoint, would it be ok to show some kind of
+> notication (e. g. a tooltip on the Print Jobs plasma widget) saying that
+> the job was accepted but could not be printed because the printer is
+> offline?
+
+If a user clicks "Print", then their main task is printing. If that task fails
+to be executed, the user has to be notified about that very clearly.
+If the printer is connected, being turnede on automatically and the system is
+just waiting for it to become ready, that's expected behavior, and there
+should be no notification. If, however, the printer is not plugged in or
+doesn't have any power, the print won't start unless the user fixes the
+situation.
+Actually, the best solution would be to show a KMessageWidget in the
+application sending the print job (see
+http://techbase.kde.org/Projects/Usability/HIG/MessageWidget ), but since
+print jobs may come from pretty anywhere, that's not feasible in all cases.
+
+For the case of the printer being unplugged, I'd actually vote for showing a
+message dialog which tells the user that they have to plug the printer in for
+the print to start, because otherwise they might never know what's wrong.
+
+If the printer is plugged in, but has to be turned on manually (I have such a
+printer), a dialog might be too much because the user might have clicked
+"print" first and then turns on the printer. In that case, a notification
+telling the user that the print will start when the printer is ready may be
+enough.
+
+Can we reliably distinguish between these two situations?
+```
+
+Heiko Tietze:
+```
+>> Hello,
+>>
+>> when I send a document to a printer which is offline (e. g. because the
+>> USB cable is not plugged in) the print job is silently queued without
+>> any notification.
+>
+> If the printer is plugged in, but has to be turned on manually (I have such
+> a printer), a dialog might be too much because the user might have clicked
+> "print" first and then turns on the printer. In that case, a notification
+> telling the user that the print will start when the printer is ready may be
+> enough.
+>
+> Can we reliably distinguish between these two situations?
+
+I'm not sure if we have to blame KDE at all in this case. HP, for instance,
+has it own driver and settings stuff. And the communication runs over CUPS (or
+alternative frameworks) as far as I know.
+```
 
 Plasma [usability]: warn about low disk space on root
 -----------------------------------------------------
-v4.11.5, 2014, not reported yet?
+v4.11.5, 2014, discussed on kde-usability@kde.org,
+reported with https://bugs.kde.org/show_bug.cgi?id=340582 "Free Space Notifier" should also report full root
+WAIT, see also https://bugs.kde.org/show_bug.cgi?id=240863
 
 Current situation:
 the "Free space notifier" (systemsetting -> system admin -> startup & shutdown -> service manager -> startup services,
@@ -148,6 +242,69 @@ see https://forum.kde.org/viewtopic.php?f=22&t=100802) only works for the home d
 SUGGESTION:
 Make it also work for the root dir because a full root can lead to failing of system package upgrades and other things.
 See also file:///usr/share/kde4/config.kcfg/freespacenotifier.kcfg
+
+Mails:
+```
+Subject: [KDE Usability] Show warning when disk space on root (/) is low
+Date: Tue, 01 Jul 2014 20:39:51 +0200
+From: Gregor Mi <codestruct@posteo.org>
+Reply-To: KDE Usability Project <kde-usability@kde.org>
+To: kde-usability@kde.org
+
+Hi,
+
+when trying to update an openSUSE computer I ran into the following
+scenario:
+
+1. Use Apper from the notification area to install the proposed updates.
+2. Apper aborts at some point and shows the message "aborted by user".
+3. After some searching I found out that the root partition was full
+because of a large /tmp/ directory.
+
+=> Wouldn't it be nice if the user gets notified about low disk space on
+root?
+
+I found that there exists an module called "Free Space Notifier" [1].
+Does anything speak against extending it to also monitor and notify
+about the root partition (and maybe propose to delete /tmp/)?
+
+Best regards
+
+Gregor
+
+[1] http://askubuntu.com/questions/21317/what-is-free-space-notifier
+```
+
+```
+Subject: Re: [KDE Usability] Show warning when disk space on root (/) is low
+Date: Wed, 02 Jul 2014 12:20 +0200
+From: Sebastian Kügler <sebas@kde.org>
+Reply-To: KDE Usability Project <kde-usability@kde.org>
+To: kde-usability@kde.org
+
+On Tuesday, July 01, 2014 15:51:35 Celeste Lyn Paul wrote:
+> I think that would be a great feature. However, scanning / would have to be
+> done as sudo and not in regular user mode.
+
+Just for getting the info about file-system usage and capacity, no root
+privileges are needed.
+```
+
+```
+In freespacenotifier.cpp the method KDiskFreeSpaceInfo::freeSpaceInfo is
+used to determine the free disk space. I don't know how it works exactly
+but probably one don't has to worry about details (like who has access
+to which files) because it uses mount point information and does not
+need to scan every file.
+
+// Gregor
+```
+
+See also:
+
+* https://bugs.kde.org/show_bug.cgi?id=336943
+* https://bugzilla.novell.com/show_bug.cgi?id=885909
+* https://bugzilla.novell.com/show_bug.cgi?id=857630 [reported as fixed]
 
 
 Font Installer [usability]: wrong kind of message box
