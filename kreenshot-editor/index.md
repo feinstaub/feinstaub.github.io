@@ -64,6 +64,16 @@ Inspired by: [Greenshot](http://getgreenshot.org/)
 
 Screenshots
 -----------
+### dev state 2014-11-02
+![](img/2014-11-02-main-window.png "Main Window")
+![](img/2014-11-02-menu-file.png "Menu 'File'")
+![](img/2014-11-02-menu-tool.png "Menu 'Tool'")
+
 ### dev state 2014-07-05
-![Main Window](img/2014-07-05-main-window.png "Main Window")
-![Preferences window](img/2014-07-05-prefs.png "Preferences window")
+![](img/2014-07-05-main-window.png "Main Window")
+![](img/2014-07-05-prefs.png "Preferences window")
+
+Contribute
+----------
+todo: Create a https://git.reviewboard.kde.org/groups/ group, create a https://bugs.kde.org/ product.
+Until this is done, look into the source code for my email address and leave me a message.
