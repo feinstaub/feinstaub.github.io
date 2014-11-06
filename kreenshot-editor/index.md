@@ -46,10 +46,7 @@ Target features
 
 Code
 ----
-(incubating)
-
   * Source code hosted on [projects.kde.org](https://projects.kde.org/projects/playground/graphics/kreenshot-editor)
-    * inital commit 2014-05-01
   * [README](https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository/revisions/master/entry/README.md) with build instructions and current TODOs and open issues.
 
 ### Details
