@@ -6,6 +6,19 @@ Note! kreenshot-editor is *INCUBATING* and not yet ready for production use. Tar
 
 kreenshot-editor is written in Qt 5.3 with Linux as target platform.
 
+News
+----
+**2014-11-06, Thu**
+Master source code repository moved to https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository
+Project page: https://projects.kde.org/projects/playground/graphics/kreenshot-editor
+
+**2014-10-24, Fri**
+First binary prototype v0.03 availabe for openSUSE 13.2: http://software.opensuse.org/package/kreenshot-editor.
+
+**2014-05-01, Thu**
+First source code commited to repository.
+
+
 Target features
 ---------------
 
@@ -35,9 +48,9 @@ Code
 ----
 (incubating)
 
-  * Source code hosted on [KDE quickgit](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fkreenshot-editor.git)
+  * Source code hosted on [projects.kde.org](https://projects.kde.org/projects/playground/graphics/kreenshot-editor)
     * inital commit 2014-05-01
-  * [README](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fkreenshot-editor.git&a=blob&f=README.md) with build instructions and current TODOs and open issues.
+  * [README](https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository/revisions/master/entry/README.md) with build instructions and current TODOs and open issues.
 
 ### Details
 
