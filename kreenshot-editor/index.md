@@ -22,40 +22,46 @@ First source code commited to repository.
 Target features
 ---------------
 
-  * Image editing optimized for screenshots. Common editing and annotation tasks that occur when dealing with screenshots:
-    * Draw objects and move or resize later
-      * rectangle
-      * ellipse
-      * line
-      * arrow
-      * text
-      * Optional drop shadow for objects
-      * later: create a free-hand drawing object
-    * Rectangular image operation objects
-      * highlight
-      * obfuscate
-      * Movable and resizeable
-    * Crop
-    * Undo/Redo
-  * Command line interface to integrate it in other screenshot tools that have no own image editor.
-    * Example: ```kreenshot-editor --treat-as-new "/tmp/image1.png" --description "Hallo das ist ein Test - aaa \ bbb ///"```
-    * Give a secondary image as parameter. This can be used to pass the captured mouse cursor as extra object so the user can move or delete it.
-    Thus, the mouse cursor can always be captured and the user decides later.
-  * Provide a QWidget component to seemlessly integrate in other screenshot tools
-  * Save image to default location with placeholders for date, time etc.
+* Image editing optimized for screenshots. Common editing and annotation tasks that occur when dealing with screenshots:
+* Draw objects and move or resize later
+    * rectangle
+    * ellipse
+    * line
+    * arrow
+    * text
+    * Optional drop shadow for objects
+    * later: create a free-hand drawing object
+* Rectangular image operation objects
+    * highlight
+    * obfuscate
+    * Movable and resizeable
+* Crop
+* Undo/Redo
+* Command line interface to integrate it in other screenshot tools that have no own image editor.
+* Example: ```kreenshot-editor --treat-as-new "/tmp/image1.png" --description "Hallo das ist ein Test - aaa \ bbb ///"```
+* Give a secondary image as parameter. This can be used to pass the captured mouse cursor as extra object so the user can move or delete it.
+Thus, the mouse cursor can always be captured and the user decides later.
+* Provide a QWidget component to seemlessly integrate in other screenshot tools
+* Save image to default location with placeholders for date, time etc.
 
-Code
-----
-  * Source code hosted on [projects.kde.org](https://projects.kde.org/projects/playground/graphics/kreenshot-editor)
-  * [README](https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository/revisions/master/entry/README.md) with build instructions and current TODOs and open issues.
+Code and Contribute
+-------------------
+* Source code hosted on [projects.kde.org](https://projects.kde.org/projects/playground/graphics/kreenshot-editor)
+* [README](https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository/revisions/master/entry/README.md) with build instructions and current TODOs and open issues.
 
-### Details
+### Code Details
 
-  * Widget toolkit: Qt 5.3 (http://qt-project.org/)
+* Widget toolkit: Qt 5.3 (http://qt-project.org/)
     * based on QGraphicsView, QGraphicsScene, QGraphicsItem
-  * Primary programming language: C++
-  * Build system: cmake
-  * Snapshot binary package for openSUSE: http://software.opensuse.org/package/kreenshot-editor
+* Primary programming language: C++
+* Build system: cmake
+* Snapshot binary package for openSUSE: http://software.opensuse.org/package/kreenshot-editor
+
+### Contribute
+
+* Code contributions can be done via https://git.reviewboard.kde.org. See this [Sample review request](https://git.reviewboard.kde.org/r/121029/) how to fill in the fields correctly.
+* Bug reports go to here: write me an email (see source code)
+  (todo later create a https://bugs.kde.org/ product for kreenshot-editor)
 
 Why?
 ----
@@ -82,8 +88,3 @@ Screenshots
 ### dev state 2014-07-05
 ![](img/2014-07-05-main-window.png "Main Window")
 ![](img/2014-07-05-prefs.png "Preferences window")
-
-Contribute
-----------
-todo: Create a https://git.reviewboard.kde.org/groups/ group, create a https://bugs.kde.org/ product.
-Until this is done, look into the source code for my email address and leave me a message.

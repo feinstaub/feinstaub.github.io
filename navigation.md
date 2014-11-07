@@ -13,8 +13,9 @@
 
 [struct]()
 
-  * [KDE UI: Bugs, annoyances and wishes / general](struct/struct-main.md)
-  * [KDE UI: Bugs, annoyances and wishes / dolphin](struct/struct-dolphin.md)
+  * # KDE UI: Bugs, annoyances and wishes
+  * [general](struct/struct-main.md)
+  * [dolphin](struct/struct-dolphin.md)
 
 [fyshare](fyshare/index.md)
 
