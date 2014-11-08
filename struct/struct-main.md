@@ -9,7 +9,12 @@ dolphin [several]
 [Bugs, annoyances and wishes / KDE UI / Dolphin](struct-dolphin.md)
 
 ksnapshot [several]
-----------------
+-------------------
+### Speed up "Send to..." menu
+* https://bugs.kde.org/show_bug.cgi?id=312495
+* see [dev/kde-community](../dev/kde-community.md)
+
+
 ### Make "Send to..." configurable
 
 Current situation: the menu is crowed with over 20 entries and takes up to a few seconds to load.
@@ -179,12 +184,13 @@ alternative frameworks) as far as I know.
 Plasma [usability]: warn about low disk space on root
 -----------------------------------------------------
 v4.11.5, 2014, discussed on kde-usability@kde.org,
-reported with https://bugs.kde.org/show_bug.cgi?id=340582 "Free Space Notifier" should also report full root
-WAIT, see also https://bugs.kde.org/show_bug.cgi?id=240863
+reported with https://bugs.kde.org/show_bug.cgi?id=340582 "Free Space Notifier" should also report full root, WAIT
+(duplicate https://bugs.kde.org/show_bug.cgi?id=240863)
 
 Current situation:
 the "Free space notifier" (systemsetting -> system admin -> startup & shutdown -> service manager -> startup services,
 see https://forum.kde.org/viewtopic.php?f=22&t=100802) only works for the home dir.
+**TODO**: find out where "Free space notifier" is officially documented and if the check is only done at startup or regularly.
 
 SUGGESTION:
 Make it also work for the root dir because a full root can lead to failing of system package upgrades and other things.
@@ -249,9 +255,9 @@ need to scan every file.
 
 See also:
 
-* https://bugs.kde.org/show_bug.cgi?id=336943
-* https://bugzilla.novell.com/show_bug.cgi?id=885909
-* https://bugzilla.novell.com/show_bug.cgi?id=857630 [reported as fixed]
+* https://bugs.kde.org/show_bug.cgi?id=336943 RESOLVED INVALID
+* https://bugzilla.novell.com/show_bug.cgi?id=885909 RESOLVED DUPLICATE
+* https://bugzilla.novell.com/show_bug.cgi?id=857630 RESOLVED FIXED
 
 
 Font Installer [usability]: enter password for each font
