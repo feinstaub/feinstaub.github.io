@@ -80,8 +80,89 @@ Quick howto tmux:
 * `tmux ls` to list all sessions
 * reminder: press **Ctrl+Alt+F6** to switch away from X to console and **Ctrl+Alt+F7** to go back to X.
 
-`zypper help dup` - Perform a distribution upgrade.
-This will ask before continuing.
-Check /home/gregor/sys/upgrade_13.1_13.2/zypper_dup.out.txt for REMOVED packages to know what will be missing later.
+`zypper help dup` - "Perform a distribution upgrade."
 
-... to be continued ...
+`zypper dup --download "in-advance"` - Performs the update
+
+This will ask before continuing.
+Check the console output (/home/gregor/sys/upgrade_13.1_13.2/zypper_dup.out.txt) for REMOVED or DOWNGRADED packages to know what will be missing later.
+
+Downloading 5106 packages... done
+
+Installing packages... done
+
+(I leave third-party repos still disabled.)
+
+### Reboot and afterwork
+
+"After upgrade, reboot is recommended to start new kernel and newer versions of everything."
+
+Try to reboot but the system did not boot anymore because kernel was not found. See next section about how to fix boot problems. Now fixed.
+
+After successful reboot: Using KDE Development Platform 4.14.2.
+
+Yast Online Update Installation Summary wants to install ibus. (Note that previously it messed up with Firefox KDE integration)
+
+"In addition, `zypper up` can be run from time to time to ensure you have the latest available packages from the various repositories that you have enabled. YOU (Yast Online Update) only addresses security updates from the official repositories."
+
+Run `sudo zypper dup` again which removes about 150 libraries.
+
+Open "YaST2 - Bootloader" and fix distributor text from "13.1" to "13.2"
+
+Install video codecs (see http://opensuse-guide.org/codecs.php):
+```
+zypper addrepo -f http://ftp.gwdg.de/pub/linux/packman/suse/openSUSE_13.2/ packman
+zypper addrepo -f http://opensuse-guide.org/repo/13.2/ dvd
+zypper install libxine2-codecs k3b-codecs ffmpeg lame gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-plugins-ugly-orig-addon gstreamer-plugins-libav libdvdcss2
+http://download.videolan.org/pub/videolan/vlc/SuSE/13.2/
+```
+
+`sudo zypper repos --uri` # sort by priority
+
+vlc did not work
+
+1-Click-Install-Codecs. vlc did not work.
+Install from http://www.videolan.org/vlc/download-suse.html vlc did not work.
+
+smplayer works by the way.
+
+Read: https://en.opensuse.org/Additional_package_repositories
+Read: https://en.opensuse.org/Package_repositories
+
+### Open issues
+
+* fix vlc
+* TODO report: KDE Print jobs plasma widget should display on which printer the job is printed; std-printer still defect
+    * use case: more than one printer. Sent to wrong printer which is offline. Want to cancel only jobs for the wrong printer.
+* TODO report: yast2 Sound: the test sound too loud and too long
+
+
+openSUSE: Fix grub boot problems
+--------------------------------
+This is the log about how boot problems after a system upgrade were solved. This steps also helped in similar scenarios.
+
+Concrete case 2014-11-09:
+An update from openSUSE 13.1 to 13.2 via `zypper dup` was performed and then reboot was done which lead to a **boot failure**.
+
+![](img/boot-problem-1a.jpg) ![](img/boot-problem-2a.jpg) ![](img/boot-problem-3a.jpg) ![](img/boot-problem-4a.jpg)
+
+Insert **openSUSE 13.1 DVD** and start the **Rescue System**.
+
+(The following commands were gathered from the internet some time ago, so the sources are unknown)
+
+My system is dual-boot and Linux is (currently) not on first partition.
+
+```
+Rescue login: root     (no pw required)
+$ mount /dev/sda6 /mnt
+$ mount -o bind /dev/  /mnt/dev
+$ mount -o bind /proc/ /mnt/proc
+$ chroot /mnt /bin/bash
+```
+(NOTE: `$ yast2` --> System --> bootloader fails with message. TODO: add image)
+```
+$ grub2-install /dev/sda
+Ctrl+D to log out of chroot environment.
+$ reboot
+```
+FIXED.
