@@ -144,13 +144,13 @@ This is the log about how boot problems after a system upgrade were solved. This
 Concrete case 2014-11-09:
 An update from openSUSE 13.1 to 13.2 via `zypper dup` was performed and then reboot was done which lead to a **boot failure**.
 
-![](img/boot-problem-1a.jpg) ![](img/boot-problem-2a.jpg) ![](img/boot-problem-3a.jpg) ![](img/boot-problem-4a.jpg)
+![](img/boot-problem-1a.jpg) ![](img/boot-problem-2a.jpg)
 
 Insert **openSUSE 13.1 DVD** and start the **Rescue System**.
 
-(The following commands were gathered from the internet some time ago, so the sources are unknown)
+The following commands were gathered from the internet some time ago, so the sources are unknown.
 
-My system is dual-boot and Linux is (currently) not on first partition.
+(My system is dual-boot and Linux is (currently) not on first partition but on /dev/sda6)
 
 ```
 Rescue login: root     (no pw required)
@@ -159,9 +159,14 @@ $ mount -o bind /dev/  /mnt/dev
 $ mount -o bind /proc/ /mnt/proc
 $ chroot /mnt /bin/bash
 ```
-(NOTE: `$ yast2` --> System --> bootloader fails with message. TODO: add image)
+NOTE: `$ yast2` --> System --> bootloader fails with message:
+![](img/boot-problem-3a.jpg)
 ```
 $ grub2-install /dev/sda
+```
+![](img/boot-problem-4a.jpg)
+
+```
 Ctrl+D to log out of chroot environment.
 $ reboot
 ```
