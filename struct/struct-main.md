@@ -259,6 +259,42 @@ See also:
 * https://bugzilla.novell.com/show_bug.cgi?id=885909 RESOLVED DUPLICATE
 * https://bugzilla.novell.com/show_bug.cgi?id=857630 RESOLVED FIXED
 
+Service Menu: image -> Actions -> Resize
+----------------------------------------
+Current situation: Right click on image file -> Actions -> Convert To (png, jpg etc.)
+
+**SUGGESTION:**
+Right click on image file -> Actions -> Resize:
+
+* 800x800 (max, keep aspect ratio)
+* 800x800> (shrink only, smaller images stay the same) (http://stackoverflow.com/questions/6384729/only-shrink-larger-images-using-imagemagick-to-a-ratio)
+  * `$ convert zzz.png -resize '800x800>' zzz1.png`
+* 800 (max w, keep aspect ratio)
+* x800 (max h, keep aspect ratio)
+
+see also http://www.howtogeek.com/109369/how-to-quickly-resize-convert-modify-images-from-the-linux-terminal/
+see also http://www.imagemagick.org/script/command-line-options.php#resize
+
+More specific:
+Right click on image file -> Actions:
+
+* Downsize to max width and height
+  * 100
+  * 256
+  * 512
+  * 1024
+  * 2048
+* Resize %
+  * 25
+  * 50
+  * 75
+
+TODO: Where to suggest this menu to be added to the std service menu in KDE?
+
+kdevelop [usability]: Notify user when debug symbols are missing
+----------------------------------------------------------------
+already reported: https://bugs.kde.org/show_bug.cgi?id=327760
+
 
 Font Installer [usability]: enter password for each font
 --------------------------------------------------------
@@ -291,7 +327,7 @@ Bug exists since 2007 in TB: [Bug 377621 - Drag and Drop attachments to desktop 
 
 Usability: Put Trashcan on Desktop by default
 ---------------------------------------------
-2014-06-16, wait for KF5, (todo: is this a Plasma or openSUSE issue?)
+2014-06-16, wait for KF5 and see below
 
 Current situation: the average user has to **add the Trashcan on KDE Desktop manually**:
 
@@ -299,12 +335,52 @@ Current situation: the average user has to **add the Trashcan on KDE Desktop man
 
 Found here: http://forums.opensuse.org/showthread.php/477049-Putting-Home-amp-Trashcan-on-KDE-Desktop-openSUSE-12-1
 
-WISH: the trash can should be present by default, see my [reply](https://forums.opensuse.org/showthread.php/477049-Putting-Home-amp-Trashcan-on-KDE-Desktop-openSUSE-12-1?p=2671343#post2671343).
+WISH: the trash can should be present by default, see my [reply](https://forums.opensuse.org/showthread.php/477049-Putting-Home-amp-Trashcan-on-KDE-Desktop-openSUSE-12-1?p=2671343#post2671343), 26-Oct-2014, 11:40.
+
+
+```
+26-Oct-2014, 14:56
+john_hudson
+
+Welcome to the forums. When KDE4 was introduced, Dolphin was introduced as the new file manager. This incorporates the Trashcan on the left hand side. [...]
+```
+
+```
+27-Oct-2014, 01:43
+wolfi323
+
+And you can also find the Trashcan in the K-Menu on the "Computer" tab.
+
+Regarding not having a Trashcan on the Desktop by default:
+This could of course easily be added to openSUSE's default settings (upstream doesn't even have a folder view by default).
+Maybe propose it on the opensuse-kde or opensuse-factory mailinglists, or file a feature request.
+http://lists.opensuse.org/opensuse-kde/
+http://lists.opensuse.org/opensuse-factory/
+https://features.opensuse.org/
+But it's of course too late for 13.2 now.
+
+I think in earlier versions a link to the Trashcan was indeed copied to the ~/Desktop folder when the user first logged in. No idea why that got dropped.
+```
+
+see also my comment on [openFATE - openSUSE feature tracking > #310994 Restore button in recycle bin](https://features.opensuse.org/310994)
+
+[#318123 Put the Trashcan on the Desktop by default](https://features.opensuse.org/318123)
+```
+Trashcan is often-used feature which users expect to find easily.
+
+Currently one has to add the Trashcan to the desktop manually in a way that is not quite intuitive for novice users: https://forums.opensuse.org/showthread.php/477049-Putting-Home-amp-Trashcan-on-KDE-Desktop-openSUSE-12-1?p=2671343
+
+I suggest to put the Trashcan on the Desktop by default.
+
+This would save many users from searching the internet for how to add it. Deleting it when not desired is much easier.
+```
+
+Status: WAIT (since 2014-11-09, last update: 2014-11-09)
 
 
 Plasma [usability]: flash modal
 -------------------------------
-2014-10-26, WAIT for KF5, not reported yet
+2014-10-26, WAIT for KF5, not reported yet, no existing bug searched yet
 
 A modal dialog should flash or similar when the gray dolphin window is clicked.
 
@@ -312,8 +388,52 @@ Currently it does nothing.
 ![](img/plasma-flash-modal.png "Modal dialog should flash or similar when the gray dolphin window is clicked")
 
 
-new/unreported: Kate: handling of deleted files
------------------------------------------------
+Plasma [usability]: ! Plus/minus file selection "buttons" should have hover effect
+--------------------------------------------------------------------------------
+2014-09-20, WAIT for KF5, not reported yet, no existing bug searched yet
+
+Current situation: confusing for people: click on the text of a file or on the icon which happens to have the plus/minus symbol have different actions:
+1. Selection, 2. add to selection
+
+Good example but only works when preview images are enabled:
+
+Mouse not hover: ![](img/selection_plus_minus-good-example-mouse-not-over.png)
+
+
+Mouse hover: ![](img/selection_plus_minus-good-example-mouse-over.png)
+
+SUGGESTION:
+Add a hover effect to the plus/minus button so that the user can see that there is a different operation.
+
+
+Plasma [usability]: Panel unlock und lock should be at the same location
+------------------------------------------------------------------------
+2014-08-27, WAIT for KF5, not reported yet
+Current situation:
+1. Right click on panel
+2. Choose "Unlock widgets"
+3. Right click on panel
+4. Choose submenu "Panel options"
+5. Choose "Lock widgets"
+
+SUGGESTION:
+Step 4 should be removed.
+
+
+kdiskfree [usability]: F5 to refresh / also refresh when USB drives get disconnected
+------------------------------------------------------------------------------------
+2014-11-08, WAIT for KF5, not reported yet
+Version v0.15, Using KDE Development Platform 4.11.5
+
+* F5 should be the shortcut for refresh
+* Refresh should also update the list (currently e.g. when USB device were disconnected, the list still has the entries of removed devices)
+* see also
+    * [Bug 313018 - Kdiskfree keeps showing an unmounted device](https://bugs.kde.org/show_bug.cgi?id=313018)
+    * [Bug 94452 - kdf stops updating free space information](https://bugs.kde.org/show_bug.cgi?id=94452)
+
+
+Kate (new/unreported): handling of deleted files
+------------------------------------------------
 2014-09, WAIT for KF5, not reported yet
 
 Current situation:
@@ -339,6 +459,11 @@ new/unreported: copy large files to USB stick / strange progress
 ![](img/copy-large-files-1.png) Warum steht da so oft 0KB pro sec?
 
 ![](img/copy-large-files-2.png) 250MB⁄s, lange Pause , Peak, lange Pause etc. Normal?
+
+
+openSUSE: "Beautiful one-click-install"
+---------------------------------------
+add comment 2014-11-09 (link to image broken) to https://features.opensuse.org/309503
 
 
 See also

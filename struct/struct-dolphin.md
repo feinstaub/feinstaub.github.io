@@ -104,6 +104,9 @@ No selection:
 False colors of one image selected:
 ![](img/dolphin-images-1-image-selected.png)
 
+Dark image selected:
+![](img/dolphin-images-1-dark-image-selected.png)
+
 SUGGESTION: just make border
  (the screenshot is taken from gwenview; for dolphin I would also highlight the filename as in the second screenshot)
 ![](img/dolphin-selected-images-suggestion-from-gwenview.png)
