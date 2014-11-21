@@ -4,6 +4,7 @@
 
   * [Beginners](linux-user/linux-beginners-notes.md)
   * [Advanced](linux-user/linux-advanced-notes.md)
+  * [Firefox](linux-user/browser-notes.md)
 
 [dev]()
 
