@@ -6,6 +6,8 @@ FAQ about dev env
 When asking questions about KF5, the following information is often requested:
 Running Plasma 4 on openSUSE 13.1, KDE version 4.11.5, branch frameworks
 
+Using KDE Development Platform 4.14.2 since 2014-11-09 (openSUSE 13.2)
+
 
 Build KF5 frameworks hints
 --------------------------
@@ -72,9 +74,15 @@ https://mail.kde.org/mailman/listinfo/kde-graphics-devel
 ```
 
 ### kate: "crash in kateprojectworker.cpp", 2014-11-02
-* Bug reports via mailing list
+* Bug report via mailing list
   * kwrite-devel@kde.org
     * "crash in kateprojectworker.cpp", 2014-11-02
+* bug created: https://bugs.kde.org/show_bug.cgi?id=340789
+
+
+### kate: Recently used projects, 2014-11-09
+* see my post on http://kate-editor.org/2012/11/02/using-the-projects-plugin-in-kate/#comment-1874
+* "Is there a way to open recently used projects similar to recently used files?"
 
 
 KDE community contributions [done]
