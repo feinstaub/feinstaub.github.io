@@ -17,6 +17,10 @@ see https://community.kde.org/Frameworks/Building
 
 * okteta
 * kdepim
+* kdevplatform
+* kdevelop/kdevelop
+
+edit this file: `src/extragear/utils/kdesrc-build/kf5-applications-build-include` before running kdesrc-build
 
 Plasma5
 -------
