@@ -17,6 +17,7 @@
   * # KDE UI: Bugs, annoyances and wishes
   * [general](struct/struct-main.md)
   * [dolphin](struct/struct-dolphin.md)
+  * [Desktop Misc](struct/struct-desktop-misc.md)
 
 [fyshare](fyshare/index.md)
 
