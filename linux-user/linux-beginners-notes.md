@@ -5,6 +5,97 @@ All the things I noticed when switching my home computer from Windows 7 to openS
 
 TODO: move from here: http://publicstatic.de/gnu/linux/todo-and-solved.html
 
+see also: http://www.tweakhound.com/2014/11/14/opensuse-13-2-tips-tricks-and-tweaks/
+
+Format external USB hard drive
+------------------------------
+1) Create Partition:
+
+* Open gparted
+* If drive is completely unformatted then goto Device --> Create Partition Table... --> Choose msdos
+  * see gparted help about this topic: "The default partition table type is msdos for disks smaller than 2 Tebibytes in size (assuming a 512 byte sector size) and gpt for disks 2 Tebibytes and larger."
+  ```
+    The msdos partition table limits partitions as follows:
+    Maximum of 4 primary partitions.
+    Maximum of 3 primary partitions, and 1 extended partition.
+    The extended partition can contain multiple logical partitions. Some GNU/Linux distributions support accessing at most 15 partitions on a disk device.
+    Maximum size of a partition is 2 Tebibytes using a sector size of 512 bytes. The partition must also start within the first 2 Tebibytes of the disk device.
+  ```
+* Insert new partition with ext4 file system
+* Set Label to 'backup2014'
+* Apply
+
+See here on the advantages of btrfs but recommendation towards ext4 for backup drives:
+http://askubuntu.com/questions/331050/which-filesystem-should-i-use-to-format-my-external-backup-hdd-btrfs
+
+2) Mount Partition:
+Now mount the partition, e.g. with KDE device notifier.
+Because of label the partition gets mounted under /run/media/<username>/backup2014/
+The directory can only be written to with root permissions.
+
+3) Set permissions:
+We create a folder with correct permissions:
+```
+cd /run/media/gregor/backup2014/
+sudo mkdir backup
+sudo chown gregor backup/
+sudo chgrp users backup/
+```
+
+TODO 1: Kann man auch den root der Platte mit gregor/users mounten?
+TODO 2: Geht das auch weniger umständlich?
+
+### Related programs
+
+* gnome-disk-utility (todo: try out in detail)
+  * Has a benchmark feature
+* KDE Partition Manager (todo: try out in detail)
+  * https://www.kde.org/applications/system/kdepartitionmanager
+  * http://en.wikipedia.org/wiki/KDE_Partition_Manager
+
+
+### Troubleshooting
+
+Drive can be mounted but not we written.
+
+Disconnect USB.
+
+`$ tail -f /var/log/messages` (see http://askubuntu.com/questions/302480/cant-mount-external-drive-after-reformatting)
+
+Reconnect USB.
+
+```
+2014-11-22T10:41:53.548926+01:00 catgroove kernel: [ 4373.543022] usb 2-1.2: USB disconnect, device number 9
+2014-11-22T10:41:58.578940+01:00 catgroove kernel: [ 4378.576450] usb 2-1.2: new high-speed USB device number 10 using ehci-pci
+2014-11-22T10:42:00.541921+01:00 catgroove kernel: [ 4380.541023] usb 2-1.2: New USB device found, idVendor=174c, idProduct=5106
+2014-11-22T10:42:00.541946+01:00 catgroove kernel: [ 4380.541030] usb 2-1.2: New USB device strings: Mfr=2, Product=3, SerialNumber=1
+2014-11-22T10:42:00.541949+01:00 catgroove kernel: [ 4380.541033] usb 2-1.2: Product: AS2105
+2014-11-22T10:42:00.541951+01:00 catgroove kernel: [ 4380.541036] usb 2-1.2: Manufacturer: ASMedia
+2014-11-22T10:42:00.541952+01:00 catgroove kernel: [ 4380.541039] usb 2-1.2: SerialNumber:             W6215S84
+2014-11-22T10:42:00.542926+01:00 catgroove kernel: [ 4380.541578] usb-storage 2-1.2:1.0: USB Mass Storage device detected
+2014-11-22T10:42:00.542941+01:00 catgroove kernel: [ 4380.541698] usb-storage 2-1.2:1.0: Quirks match for vid 174c pid 5106: 800000
+2014-11-22T10:42:00.542944+01:00 catgroove kernel: [ 4380.541738] scsi9 : usb-storage 2-1.2:1.0
+2014-11-22T10:42:00.546575+01:00 catgroove mtp-probe: checking bus 2, device 10: "/sys/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.2"
+2014-11-22T10:42:00.546996+01:00 catgroove mtp-probe: bus: 2, device: 10 was not an MTP device
+2014-11-22T10:42:01.571896+01:00 catgroove kernel: [ 4381.572057] scsi 9:0:0:0: Direct-Access     ST500LM0 21-1KJ152        0001 PQ: 0 ANSI: 5
+2014-11-22T10:42:01.572891+01:00 catgroove kernel: [ 4381.572386] sd 9:0:0:0: Attached scsi generic sg2 type 0
+2014-11-22T10:42:01.572904+01:00 catgroove kernel: [ 4381.572906] sd 9:0:0:0: [sdb] 976773168 512-byte logical blocks: (500 GB/465 GiB)
+2014-11-22T10:42:01.574191+01:00 catgroove kernel: [ 4381.573932] sd 9:0:0:0: [sdb] Write Protect is off
+2014-11-22T10:42:01.574207+01:00 catgroove kernel: [ 4381.573943] sd 9:0:0:0: [sdb] Mode Sense: 23 00 00 00
+2014-11-22T10:42:01.575900+01:00 catgroove kernel: [ 4381.575786] sd 9:0:0:0: [sdb] No Caching mode page found
+2014-11-22T10:42:01.575915+01:00 catgroove kernel: [ 4381.575789] sd 9:0:0:0: [sdb] Assuming drive cache: write through
+2014-11-22T10:42:01.629022+01:00 catgroove kernel: [ 4381.628776]  sdb: sdb1
+2014-11-22T10:42:01.631909+01:00 catgroove kernel: [ 4381.632009] sd 9:0:0:0: [sdb] Attached SCSI disk
+2014-11-22T10:42:01.843946+01:00 catgroove kernel: [ 4381.843516] usb 2-1.2: reset high-speed USB device number 10 using ehci-pci
+2014-11-22T10:42:02.469947+01:00 catgroove kernel: [ 4382.469994] usb 2-1.2: reset high-speed USB device number 10 using ehci-pci
+2014-11-22T10:42:02.665746+01:00 catgroove udisksd[1822]: Error performing initial housekeeping for drive /org/freedesktop/UDisks2/drives/ST500LM021_1KJ152_W6215S84: Error updating SMART data: sk_disk_smart_status: Input/output error (udisks-error-quark, 0)
+```
+
+Creating a file with root user works.
+
+Reason: drive was mounted with wrong permissions. See previous section of how to deal with that.
+
+
 openSUSE: upgrade from 13.1 to 13.2
 -----------------------------------
 
