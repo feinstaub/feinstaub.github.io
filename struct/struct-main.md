@@ -6,6 +6,20 @@ This page collects issues I stumbled on when using Linux with KDE.
 
 * [Desktop Misc](struct-desktop-misc.md)
 
+* KDE Usability Project:
+https://techbase.kde.org/Projects/Usability (outdated? wait for answer on:
+```
+Subject: [KDE Usability] Project wiki / process
+Date: Sun, 23 Nov 2014 14:17:30 +0100
+From: Gregor Mi
+To: kde-usability@kde.org
+```
+)
+
+* KDE Visual Design Group:
+    * Wiki: https://community.kde.org/KDE_Visual_Design_Group
+    * General website: https://vdesign.kde.org/
+
 dolphin [several]
 -----------------
 [Bugs, annoyances and wishes / KDE UI / Dolphin](struct-dolphin.md)
