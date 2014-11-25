@@ -13,9 +13,9 @@ http://dynalon.github.io/mdwiki
   * not indexable by google (yet)
   * bugs
     * Firefox 31.1.0, Linux, nested mdwiki, back-navigation is broken,
-      two entries instead of one, todo: report
+      two entries instead of one (not reported yet)
 * Others
-  * rst 2 html... self script (TODO)
+  * rst2html
     * CON: navigation links are on the top only
   * wordpress.com
     * CON: no automatic navigation generation possible

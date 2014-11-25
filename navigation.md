@@ -8,7 +8,6 @@
 
 [dev]()
 
-  * [KDE community](dev/kde-community.md)
   * [C++ dev hints](dev/dev-hints.md)
   * [Open issues](dev/dev-open-issues.md)
 

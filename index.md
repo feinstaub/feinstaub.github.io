@@ -8,8 +8,8 @@ This... is the codestruct.
     * [beginners](linux-user/linux-beginners-notes.md)
     * [advanced](linux-user/linux-advanced-notes.md)
   * dev
-    * [KDE community](dev/kde-community.md)
     * [dev hints for QT, KDE, C++, cmake](dev/dev-hints.md)
+    * see menu
   * struct - collections and thoughts on ongoing topics:
     * [Bugs, annoyances and wishes / KDE UI](struct/struct-main.md)
     * [KDE: Symlink handling](struct/symlink-handling.md)
