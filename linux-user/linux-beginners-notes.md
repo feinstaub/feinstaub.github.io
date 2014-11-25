@@ -1,11 +1,12 @@
 Linux beginners notes
 =====================
 
-All the things I noticed when switching my home computer from Windows 7 to openSUSE Linux 13.1.
+All the things I noticed when switching my home computer from Windows 7 to openSUSE Linux 13.1, 13.2.
 
-TODO: move from here: http://publicstatic.de/gnu/linux/todo-and-solved.html
+See also:
 
-see also: http://www.tweakhound.com/2014/11/14/opensuse-13-2-tips-tricks-and-tweaks/
+* http://publicstatic.de/gnu/linux/todo-and-solved.html
+* http://www.tweakhound.com/2014/11/14/opensuse-13-2-tips-tricks-and-tweaks/
 
 Format external USB hard drive
 ------------------------------
@@ -42,7 +43,7 @@ sudo chown gregor backup/
 sudo chgrp users backup/
 ```
 
-TODO 1: Kann man auch den root der Platte mit gregor/users mounten?
+TODO 1: Kann man auch den **root** der Platte mit gregor/users mounten?
 TODO 2: Geht das auch weniger umständlich?
 
 ### Related programs

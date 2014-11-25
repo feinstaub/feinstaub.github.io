@@ -184,6 +184,22 @@ TODO: check if maybe already installed
   * "VMware Tools installation cannot be started manually while Easy Install is in progress"
   * see http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1017687
   * Remove everything (but keep kubutu.iso)
+* `tar -xvf file.tar.gz`
+* `sudo ./vmware-install.pl`
+  * no space left on device
+  * TODO...
+* But not needed so far.
+
+* Change screen resolution
+  * Open start menu
+  * Enter display
+  * Open the Display Configuration (from KDE)
+  * Change resulution
+  * Alt+F2, Shutdown
+  * Startup, resulution did not change
+  * Try in VM settings
+    * resulution did not change either
+* Staying with 800x600 so far.
 
 * Try to fix 3d message
   * see https://forums.opensuse.org/showthread.php/494522-No-3d-Support-or-graphics-accelleration

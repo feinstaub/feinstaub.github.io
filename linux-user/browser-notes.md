@@ -3,7 +3,7 @@ Firefox
 
 Bookmarks and Tags
 ------------------
-### More results in Awesomebar instead of 12
+### More results in Awesomebar instead of only 12
 
 about:config:
 
