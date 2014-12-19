@@ -17,6 +17,4 @@
   * [dolphin](struct/struct-dolphin.md)
   * [Desktop Misc](struct/struct-desktop-misc.md)
 
-[fyshare](fyshare/index.md)
-
 [kreenshot-editor](kreenshot-editor/index.htm)

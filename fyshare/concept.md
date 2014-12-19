@@ -29,6 +29,9 @@ Evaluation: FyShare uses central storage to exchange data asynchronously
 http://sparkleshare.org/ - gitbased, cannot use central service like dropbox,
 TODO: understand the concept and verify that it cannot do what FyShare does.
 
+### see Group:SyncReplacement on libreplanet
+http://libreplanet.org/wiki/Group:SyncReplacement
+
 ### Plutus
 “Plutus: Scalable Secure File Sharing on Untrusted Storage” (http://dl.acm.org/citation.cfm?id=1090698)
 “Plutus is a cryptographic storage system that enables secure file sharing without placing much trust on the file servers. In particular, it makes novel use of cryptographic primitives to protect and share files. Plutus features highly scalable key management while allowing individual users to retain direct control over who gets access to their files. We explain the mechanisms in Plutus to reduce the number of cryptographic keys exchanged between users by using filegroups, distinguish file read and write access, handle user revocation efficiently, and allow an untrusted server to authorize file writes. We have built a prototype of Plutus on OpenAFS. Measurements of this prototype show that Plutus achieves strong security with overhead comparable to systems that encrypt all network traffic.”

@@ -13,5 +13,6 @@ This... is the codestruct.
   * struct - collections and thoughts on ongoing topics:
     * [Bugs, annoyances and wishes / KDE UI](struct/struct-main.md)
     * [KDE: Symlink handling](struct/symlink-handling.md)
+  * [fyshare](fyshare/index.md)
   * [foodstruct](foodstruct/foodstruct.md)
   * [meta](meta.md)
