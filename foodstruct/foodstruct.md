@@ -3,6 +3,20 @@ foodstruct
 Im foodstruct finden sich Essenskonstruktionen aus pflanzlichen Bausteinen.
 Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezeptentwürfe.
 
+---
+
+Hellgrüner Apfel-Spinat-Ingwer-Drink
+------------------------------------
+22.12.2014
+
+* 6 mittelgroße Äpfel
+* 3 Spinat-Elemente
+* 1/3 Daumen Ingwer
+* Auf 1200 ml mit Wasser auffüllen.
+* Gut durchmixen.
+
+---
+
 Milder Rote-Beete-Smoothie
 --------------------------
 26.11.2014
@@ -20,6 +34,7 @@ Milder Rote-Beete-Smoothie
 Alles fein mixen.
 Das Ergebnis ist hell-rosa durchsetzt von weißen Drink-Partikeln mit einer schaumigen Oberfläche.
 
+---
 
 Salbei-Veggiebelle-Knoblauch-Soße
 ---------------------------------
@@ -27,6 +42,7 @@ Salbei-Veggiebelle-Knoblauch-Soße
 
 **Knoblauch** und geschnittene eingelegte **getrocknete Tomaten** in **Olivenöl** andünsten. Dann **Veggiebelle** und **Salbei**blätter hinzugeben. Ggf. mit Pfeffer abschmecken und auf **Nudeln** servieren.
 
+---
 
 Avocado mit Vinaigrette
 -----------------------
@@ -40,6 +56,7 @@ Avocado mit Vinaigrette
 Avocado in handliche Scheiben/Streifen schneiden und eine Mischung aus Essig, Öl und Pfeffer drübergeben.
 Zusammen mit **Weißbrot** servieren - ggf. mit Frischkäse (Soyanada). Oder ohne zum späteren Auftunken der Soße.
 
+---
 
 Gemüsenudeln mit Cashew-Pesto
 -----------------------------
@@ -62,6 +79,7 @@ Die klein geschnittenen Zwiebeln, die grob gestückten Tomaten und die in kleine
 Die Zuchini würfeln und in die Pfanne dazugeben. Solange weiterdünsten, bis die Zuchini-Stücke bissfest weich sind.
 Zusammen mit einer gewünschten Menge an Gepa Salsa Curry (muss nicht extra warm gemacht werden) auf Nudeln servieren.
 
+---
 
 Helle Mehlschwitze
 ------------------
@@ -69,6 +87,7 @@ Helle Mehlschwitze
 
 **Alsana** in einem Topf erhitzen. **Lupinenmehl** unterrühren bis eine Paste entsteht. Dann etwas X-Drink dazugeben. TODO...
 
+---
 
 Hellminzgrüner Minz-Kokos-Vanille-Cocktail
 ------------------------------------------
@@ -85,6 +104,7 @@ Hellminzgrüner Minz-Kokos-Vanille-Cocktail
 
 Alles fein mixen und bei Bedarf mit einem Schuss Amaretto und Rum servieren.
 
+---
 
 Mintgrüner Banane-Apfel-Spinat-Ingwer-Smoothie
 ----------------------------------------------
@@ -105,6 +125,7 @@ Das alles fein mixen.
 
 Weitere Idee: Fenchel oder Sellerie
 
+---
 
 Humus
 -----
@@ -125,6 +146,7 @@ Humus
 
 Alles mit dem Stabmixer **mixen**. Kalt, z. B. zu warmen Nudeln oder Linsen servieren, zusammen mit passierten Tomaten als Soße und sonstigen Dingen. Rest in Glasdosen  zur späteren Verwendung kühlstellen.
 
+---
 
 Avocadocreme
 ------------
