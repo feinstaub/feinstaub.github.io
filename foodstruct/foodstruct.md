@@ -5,6 +5,17 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
+Leichtgrüner Birnen-Banen-Ingwer-Drink
+--------------------------------------
+04.01.2015
+
+* 3 Birnen
+* 1 mittelgroße Banane
+* 1/2 Daumen Ingwer
+* auf 1200 ml mit Wasser auffüllen.
+* Gut durchmixen.
+
+
 Hellgrüner Apfel-Spinat-Ingwer-Drink
 ------------------------------------
 22.12.2014

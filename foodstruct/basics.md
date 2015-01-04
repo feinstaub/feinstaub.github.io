@@ -63,6 +63,24 @@ Quelle: extravegant.de, abgerufen 08.03.2014
 ![](img/extravegant-tabelle.png)
 
 
+Süßes ohne Kristall-Zucker
+--------------------------
+Ziel: leckere Süßigkeiten, rein pflanzlich, ohne Kristallzucker (z. B. wegen der Haut), ohne Sklavenarbeit, möglichst naturnah.
+
+Beispiele:
+
+* **Schoko-Light 120g** von Govinda
+  * Link: http://www.govinda-natur.de/shop/Bio-Naturkost/Suesses/Schoko-Light-120g::1114.html
+  * Zutaten (2014-12): Datteln, Kakaopulver, Vanille
+  * Unternehmen: Govinda Natur GmbH / Dieselstr. 13A / D-67141 Neuhofen / Anzahl Mitarbeiter: unbekannt
+  * Bezugsquellen: Bio-Laden
+* **lovechock Rocks, Mandel/Zimt** von lovechock
+  * Link: http://www.lovechock.com/de/producten/rocks/mandel-zimt.html / http://www.lovechock.com/de/producten/rocks.html?view=default
+  * Zutaten (2014-12): Rohe Kakaomasse, Mandeln (23%), Kakaobutter, getrockneter Kokosblütennektar, getrockneter gekeimte Quinoa, Zimtpulver (1%), Reishi Extrakt (0,5%), Vanillepulver, Meersalz
+  * Unternehmen: LOVECHOCK / Asterweg 20 B2 / 1031 HN Amsterdam / Anzahl Mitarbeiter: unbekannt
+  * Bezugsquellen: Bio-Laden
+
+
 Kochen lassen / Links
 ----------------------
   * http://www.veganmania.at
