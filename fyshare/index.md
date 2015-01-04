@@ -3,11 +3,13 @@ fyshare
 
 ...INCUBATING... [Concept](concept.md)
 
+
 Assumption
 ----------
 It is assumed that within the group of people who want to exchange things with fyshare there is at least one person who has interest and technical insight to setup the central storage server that will hold the sent data in encrypted form. This person has to know how to setup an FTP server and doing basic administering tasks as creating a user and password.
 
 Now the trust in families comes into play because the user and password will be shared among them. When data is sent to a specific person, only this person can decrypt the data locally because of the public key cryptography. But with the shared password it is possible to disturb the operation by deleting files from the central server. But this person will probably be out-cast soon.
+
 
 Glossary
 --------
@@ -15,6 +17,7 @@ Glossary
 | ------------------ | ------------- |
 | encrypt with public key of receiver          | only the receiver can decrypt the data |
 | sign with private key of sender              | receiver can be sure that the data is sent by the sender and not anybody else (by using the public key of the sender) |
+
 
 Behind fyshare
 --------------

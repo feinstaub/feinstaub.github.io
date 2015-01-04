@@ -2,6 +2,7 @@ FyShare (fyshare) Concept document
 ==================================
 Author(s): Gregor Mi
 
+
 Abstract
 --------
 This document describes the main concepts of the file exchange client FyShare. The goal of FyShare is to make secure exchange of all kinds of files within a small group of people as easy as possible. This includes automatic encryption and decryption to eliminate hassle when private keys get lost (in the sense of deleted and not stolen).
@@ -13,6 +14,7 @@ The assumption are trustworthy family computers but untrustworthy and unencryped
 The online file storage is free to choose. In the first version of FyShare could be based on dropbox.
 
 The exchange can be done a) from one person to another b) within a group of people where b) could be implemented by creating a new private key for each combination of group members and distribute it among them via the secure channel of in a).
+
 
 Related work
 ------------
@@ -47,9 +49,11 @@ https://www.cloudme.com/en/api/webservices
 https://spideroak.com/faq/questions/37/how_do_i_use_the_spideroak_web_api/
 http://www.techradar.com/news/internet/cloud-services/send-large-files-10-of-the-best-services-for-sharing-big-files-1181486
 
+
 Main parts
 ----------
 see [FyShare-Concept.odt](FyShare-Concept.odt)
+
 
 Online file storage providers
 -----------------------------
@@ -77,3 +81,29 @@ Die Top 10 der Online-Speicher: http://www.computerwoche.de/a/die-top-10-der-onl
 ### Private FTP server
 ...give your friends access to one specific directory to your simple unencrypted FTP server...
 
+
+Misc - fyshare-connection-info
+------------------------------
+
+```
+fyshare_central_server_info,v1,-----BEGIN-----
+encrypted with shared secret of contact:
+contact_id=Gregor Mi
+publickey_fingerprint=234a2a3aa3a3afff8674
+server_type=ftp
+server_host=ftp.biohostnet.de
+server_port=
+server_user=m1073ftp_fy
+server_pw=...
+-----END-----
+Copy this message to clipboard (Ctrl+A, Ctrl+C) and open fyshare to receive further instructions.
+- fyshare will automatically read, ask for shared secret etc.
+    - shared secret can be one time or stored with contact
+    - "You just received information from new contact Gregor Mi where he/she wants you to put data..."
+    - "You just received updated information from your existing contact Gregor Mi where he/she wants you to put data..."
+    - in both cases: "if in doubt about this message, ask on a different channel"
+
+- name of subfolder to store on server: publickey_fingerprint
+- Currently, there is only one pk
+  - there should be more than one for mobile devices if one would like to use more than one key
+```
