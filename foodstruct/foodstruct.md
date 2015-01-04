@@ -5,7 +5,7 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
-Leichtgrüner Birnen-Banen-Ingwer-Drink
+Leichtgrüner Birnen-Bananen-Ingwer-Drink
 --------------------------------------
 04.01.2015
 
