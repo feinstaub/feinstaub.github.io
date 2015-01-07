@@ -5,6 +5,24 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
+Omas Krautsalat
+---------------
+07.01.2015 - (Rezept deutlich älter)
+
+### Bausteine
+
+* 1 kleiner Kopf **Weißkraut** (Weißkohl)
+* 3 EL Essig
+* 3 EL Öl
+* Salz, Pfeffer
+
+### Anleitung
+
+Weißkohl hobeln. Salz, Pfeffer, Essig, Öl darübergeben und mit dem Kartoffelstampfer gut unterstampfen.
+Guten Appetit.
+Was nicht aufgegessen wird, in ein Glasgefäß drücken und verschließen. Hält ca. 1 Woche.
+
+
 Leichtgrüner Birnen-Bananen-Ingwer-Drink
 --------------------------------------
 04.01.2015
