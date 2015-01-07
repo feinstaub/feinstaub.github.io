@@ -1,5 +1,5 @@
-foodstructs basics
-==================
+foodstruct basics
+=================
 
 Bausteine
 ---------
