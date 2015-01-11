@@ -1,6 +1,8 @@
 foodstruct basics
 =================
 
+Zurück zu **[Rezepte](foodstruct.md)**
+
 Bausteine
 ---------
 Sammlung von Zutaten aus denen sich leckere Dinge machen lassen:
