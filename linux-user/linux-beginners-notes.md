@@ -8,6 +8,7 @@ See also:
 * http://publicstatic.de/gnu/linux/todo-and-solved.html
 * http://www.tweakhound.com/2014/11/14/opensuse-13-2-tips-tricks-and-tweaks/
 
+
 Format external USB hard drive
 ------------------------------
 1) Create Partition:
@@ -263,3 +264,13 @@ Ctrl+D to log out of chroot environment.
 $ reboot
 ```
 FIXED.
+
+
+EU-Politik und Freie Software
+-----------------------------
+"Die 10 Unternehmen, die am meisten Geld für **Lobbyismus in Brüssel** ausgeben, investieren
+zusammen 39 Mio EUR/Jahr in ihre Lobbyarbeit. Die Liste wird angeführt von:
+ 1) Philip Morris (Tabak)
+ 2) ExxonMobil (Öl)
+ 3) **Microsoft** (Software)"
+*Quelle: LobbyControl, Dezember 2014, https://www.lobbycontrol.de/*
