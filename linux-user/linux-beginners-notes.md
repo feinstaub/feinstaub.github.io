@@ -269,8 +269,8 @@ FIXED.
 EU-Politik und Freie Software
 -----------------------------
 "Die 10 Unternehmen, die am meisten Geld für **Lobbyismus in Brüssel** ausgeben, investieren
-zusammen 39 Mio EUR/Jahr in ihre Lobbyarbeit. Die Liste wird angeführt von:
- 1) Philip Morris (Tabak)
- 2) ExxonMobil (Öl)
- 3) **Microsoft** (Software)"
-*Quelle: LobbyControl, Dezember 2014, https://www.lobbycontrol.de/*
+zusammen 39 Mio EUR/Jahr in ihre Lobbyarbeit. Die Liste wird u. a. angeführt von:
+ - Philip Morris (Tabak)
+ - ExxonMobil (Öl)
+ - **Microsoft** (Software)"
+*Quelle: LobbyControl, Dezember 2014, http://lobbyfacts.eu/reports/expenditure/companies, https://www.lobbycontrol.de/*
