@@ -266,6 +266,11 @@ $ reboot
 FIXED.
 
 
+VLC does not find some codecs
+-----------------------------
+Use smplayer (or smplayer2) instead. Very smooth player.
+
+
 EU-Politik und Freie Software
 -----------------------------
 "Die 10 Unternehmen, die am meisten Geld für **Lobbyismus in Brüssel** ausgeben, investieren

@@ -5,6 +5,19 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
+Strandgelber Banane-Orange-Mandarine-Apfel-Kokos-Drink
+------------------------------------------------------
+17.01.2015
+
+* 1 Banane
+* 1 Orange
+* 1 Mandarine
+* ca. 3 mittlere Äpfel
+* eine Handvoll Kokosflocken
+* auf 1200 ml auffüllen
+
+---
+
 Omas Krautsalat
 ---------------
 07.01.2015 - (Rezept deutlich älter)
@@ -22,9 +35,10 @@ Weißkohl hobeln. Salz, Pfeffer, Essig, Öl darübergeben und mit dem Kartoffels
 Guten Appetit.
 Was nicht aufgegessen wird, in ein Glasgefäß drücken und verschließen. Hält ca. 1 Woche.
 
+---
 
 Leichtgrüner Birnen-Bananen-Ingwer-Drink
---------------------------------------
+----------------------------------------
 04.01.2015
 
 * 3 Birnen
@@ -33,6 +47,7 @@ Leichtgrüner Birnen-Bananen-Ingwer-Drink
 * auf 1200 ml mit Wasser auffüllen.
 * Gut durchmixen.
 
+---
 
 Hellgrüner Apfel-Spinat-Ingwer-Drink
 ------------------------------------
@@ -50,8 +65,6 @@ Milder Rote-Beete-Smoothie
 --------------------------
 26.11.2014
 
-### Bausteine
-
 * 1/2 **Rote Beete**
 * 1 **Banane**
 + 3 "Bällchen" tiefgefrorener **Spinat**
@@ -65,19 +78,23 @@ Das Ergebnis ist hell-rosa durchsetzt von weißen Drink-Partikeln mit einer scha
 
 ---
 
-Salbei-Veggiebelle-Knoblauch-Soße
----------------------------------
+Salbei-Veggiebelle-Knoblauch-"Soße"
+-----------------------------------
 20.11.2014
 
-**Knoblauch** und geschnittene eingelegte **getrocknete Tomaten** in **Olivenöl** andünsten. Dann **Veggiebelle** und **Salbei**blätter hinzugeben. Ggf. mit Pfeffer abschmecken und auf **Nudeln** servieren.
+**Knoblauch** (2 Zehen) und
+geschnittene eingelegte **getrocknete Tomaten** (1/2 Glas, 10 Stücke)
+(bei Bedarf auch gerne **frische Cherry-Tomaten** klein geschnitten)
+in **Olivenöl** andünsten.
+Dann **Veggiebelle** (200 g)
+und **Salbei**blätter (einige, gerupft) hinzugeben.
+Ggf. mit Pfeffer abschmecken und auf **Nudeln** oder Linsen servieren.
 
 ---
 
 Avocado mit Vinaigrette
 -----------------------
 17.11.2014
-
-### Bausteine
 
 * 1 **Avocado**
 * **Essig, Öl, Pfeffer**
@@ -114,7 +131,9 @@ Helle Mehlschwitze
 ------------------
 15.08.2014
 
-**Alsana** in einem Topf erhitzen. **Lupinenmehl** unterrühren bis eine Paste entsteht. Dann etwas X-Drink dazugeben. TODO...
+**Alsana** in einem Topf erhitzen. **Lupinenmehl** unterrühren bis eine Paste entsteht. Dann etwas X-Drink dazugeben.
+
+TODO...
 
 ---
 
