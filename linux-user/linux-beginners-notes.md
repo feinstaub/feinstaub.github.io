@@ -98,6 +98,47 @@ Creating a file with root user works.
 Reason: drive was mounted with wrong permissions. See previous section of how to deal with that.
 
 
+Working /etc/fstab file with comments
+-------------------------------------
+```
+/dev/disk/by-id/ata-Samsung_SSD_840_Series_S14LNEAD117615F-part5 swap                 swap       defaults              0 0
+/dev/disk/by-id/ata-Samsung_SSD_840_Series_S14LNEAD117615F-part6 /                    ext4       acl,user_xattr        1 1
+/dev/disk/by-id/ata-Samsung_SSD_840_Series_S14LNEAD117615F-part7 /home                ext4       defaults              1 2
+/dev/disk/by-id/ata-Samsung_SSD_840_Series_S14LNEAD117615F-part2 /home/gregor/mnt/windows_c ntfs-3g    users,gid=users,uid=gregor,fmask=133,dmask=022,locale=en_GB.UTF-8,exec    0 0
+# deleted (NOTE that if a deleted partition is kept here the system won't boot):
+# /dev/disk/by-id/ata-Samsung_SSD_840_Series_S14LNEAD117615F-part4 /home/gregor/mnt/windows_d ntfs-3g    users,uid=gregor,gid=users,fmask=133,dmask=022,locale=en_GB.UTF-8    0 0
+/dev/disk/by-id/ata-ST500LM021-1KJ152_W6215S84-part1 /run/media/gregor/backup2014/ ext4       user,noauto,acl,nofail 0 0
+
+# more space for root partition / part 1:
+UUID=277f8aa6-978d-45b8-b5a4-0f7f60674b8f /m1                  btrfs      defaults              0 0
+
+# more space for root partition / part 2:
+# http://serverfault.com/questions/613179/how-do-i-do-mount-bind-in-etc-fstab
+# /media/3tb-vol1/Private/ /srv/Private        none    bind
+# remount without reboot: mount -a
+/m1/tmp /tmp none bind
+
+# the original /tmp data:
+# http://unix.stackexchange.com/questions/37765/mounting-to-non-empty-directory-then-later-deleting-original-files
+# Why? Because when mounting /m1/tmp over /tmp then the data in tmp/ will not be deleted which is cool.
+#      But we want to be able to delete it later if everything works fine
+# /tmp /tmp-orig-see-fstab none bind # this does not work after reboot
+# But this
+#   (see http://unix.stackexchange.com/questions/37765/mounting-to-non-empty-directory-then-later-deleting-original-files)
+#  $ mkdir /mnt/root1
+#  $ mount /dev/sda6 /mnt/root1/
+# Now delete old contents from /mnt/root1/tmp/
+
+# cp -a /usr/src/* /m1/usr/src/
+# 2.2 GB (250.000 files)
+/m1/usr/src /usr/src none bind
+
+# cp -a /var/tmp/* /m1/var/tmp/
+# 1.1 GB (2.000 files)
+/m1/var/tmp /var/tmp none bind
+```
+
+
 openSUSE: upgrade from 13.1 to 13.2
 -----------------------------------
 

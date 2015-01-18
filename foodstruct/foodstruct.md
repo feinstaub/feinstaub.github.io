@@ -5,8 +5,8 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
-Strandgelber Banane-Orange-Mandarine-Apfel-Kokos-Drink
-------------------------------------------------------
+Indisch-Gelber Banane-Orange-Mandarine-Apfel-Kokos-Drink
+--------------------------------------------------------
 17.01.2015
 
 * 1 Banane
