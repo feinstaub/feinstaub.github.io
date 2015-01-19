@@ -98,8 +98,8 @@ Creating a file with root user works.
 Reason: drive was mounted with wrong permissions. See previous section of how to deal with that.
 
 
-Working /etc/fstab file with comments
--------------------------------------
+/etc/fstab with NTFS partitions and bind to move root disk space
+--------------------------------------------------------------
 ```
 /dev/disk/by-id/ata-Samsung_SSD_840_Series_S14LNEAD117615F-part5 swap                 swap       defaults              0 0
 /dev/disk/by-id/ata-Samsung_SSD_840_Series_S14LNEAD117615F-part6 /                    ext4       acl,user_xattr        1 1
@@ -136,6 +136,13 @@ UUID=277f8aa6-978d-45b8-b5a4-0f7f60674b8f /m1                  btrfs      defaul
 # cp -a /var/tmp/* /m1/var/tmp/
 # 1.1 GB (2.000 files)
 /m1/var/tmp /var/tmp none bind
+
+# see http://en.wikipedia.org/wiki/Rsync#Examples
+# we do NOT use --safe-link         because there are several absolute and relative ones
+#               --prune-empty-dirs  because sometimes the source contains empty dirs
+# rsync -avz --delete /usr/share/ /m1/usr/share-TESTTEST-notused/
+# currently we got differences when doing a Dolphin-->Properties over all files. Why?
+# /usr/share:  5.5 GB (280.000 files)
 ```
 
 
