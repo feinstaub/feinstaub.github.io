@@ -5,6 +5,18 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
+Salbeigrüner Salbei-Drink
+-------------------------
+18.01.2015
+
+* 3-4 mittlere Äpfel
+* 1 Element **Tiefkühlspinat** (für die Farbe)
+* ein paar Wahlnüsse
+* ein paar frische **Salbei-Blätter**
+* auf 1200 ml mit Wasser auffüllen
+
+---
+
 Indisch-Gelber Banane-Orange-Mandarine-Apfel-Kokos-Drink
 --------------------------------------------------------
 17.01.2015
@@ -14,7 +26,7 @@ Indisch-Gelber Banane-Orange-Mandarine-Apfel-Kokos-Drink
 * 1 Mandarine
 * ca. 3 mittlere Äpfel
 * eine Handvoll Kokosflocken
-* auf 1200 ml auffüllen
+* auf 1200 ml mit Wasser auffüllen
 
 ---
 
