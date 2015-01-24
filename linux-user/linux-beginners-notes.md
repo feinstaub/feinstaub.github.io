@@ -165,11 +165,16 @@ FreeFileSync
 
 ### Default ignored files list
 
-Trash is not in backup.
+Not in backup:
+
+* Trash contents
+* Mozilla Firefox extension settings
+* Cache and lock files
 
 ```
 *_NOBACKUP_*
 */cache.*
+*.lock
 *.parentlock
 /.adobe/
 /.AMD/
@@ -182,6 +187,7 @@ Trash is not in backup.
 /.config/Clementine/moodbarcache/
 /.config/Clementine/networkcache/
 /.config/decibel-audio-player/Logs/log
+/.config/ibus/
 /.config/libreoffice/4-suse/user/psprint/pspfontcache
 /.config/libreoffice/4-suse/user/store/.templdir.cache
 /.config/pulse/
@@ -209,6 +215,7 @@ Trash is not in backup.
 /.litecoin/blocks/*
 /.litecoin/chainstate/*
 /.local/share/gvfs-metadata/
+/.local/share/NuGet/Cache/
 /.local/share/Trash/
 /.local/share/systemd/
 /.local5/
@@ -216,14 +223,9 @@ Trash is not in backup.
 /.macromedia/Flash_Player/
 /.mono/
 /.mozilla/firefox/Crash Reports/
-/.mozilla/firefox/h7l648nr.default/adblockplus/
-/.mozilla/firefox/h7l648nr.default/extensions/
-/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/Cache/*
-/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/indexedDB/*
-/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/OfflineCache/*
-/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/startupCache/*
-/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/webapps/*
-/.mozilla/firefox/h7l648nr.default/lock
+/.mozilla/firefox/*.default/adblockplus/
+/.mozilla/firefox/*.default/extensions/
+/.mozilla/firefox/*.default/lock
 /.nv/GLCache/*
 /.npm/*
 /.PyCharm30/system/caches/
