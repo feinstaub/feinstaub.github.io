@@ -167,9 +167,6 @@ FreeFileSync
 
 ```
 *_NOBACKUP_*
-*.directory;
-*/.android_secure/*
-*/.Xauthority
 */cache.*
 /.adobe/
 /.cache/
@@ -228,6 +225,7 @@ FreeFileSync
 /.thunderbird/gregormail.default/Cache.*
 /.thunderbird/gregormail.default/lock
 /.VirtualBox/VBoxSVC.log*
+/.Xauthority
 /.xine/
 /.xsession-*
 /.y2log
