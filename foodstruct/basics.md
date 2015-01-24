@@ -13,6 +13,7 @@ Sammlung von Zutaten aus denen sich leckere Dinge machen lassen:
 * Kichererbsen, Avocado
 * Rote Beete, Spinat
 * Soyananda
+* Fire Roasted Pasta: http://www.ppura.ch/de/la-pasta/fireroasted-pasta
 
 
 X-Drinks
