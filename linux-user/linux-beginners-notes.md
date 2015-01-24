@@ -163,43 +163,54 @@ FreeFileSync
 * Help: https://sourceforge.net/p/freefilesync/discussion/
 
 
-### Generic ignored files list
+### Default ignored files list
+
+Trash is not in backup.
 
 ```
 *_NOBACKUP_*
 */cache.*
+*.parentlock
 /.adobe/
+/.AMD/
 /.cache/
 /.cache4dev/*
 /.cache5/
 /.config/akonadi/
 /.config/chromium/Default/Extensions/*
 /.config/chromium/Default/File System/*
-/.config/Clementine/clementine.db.bak
 /.config/Clementine/moodbarcache/
 /.config/Clementine/networkcache/
+/.config/decibel-audio-player/Logs/log
+/.config/libreoffice/4-suse/user/psprint/pspfontcache
+/.config/libreoffice/4-suse/user/store/.templdir.cache
 /.config/pulse/
 /.config/smplayer/
 /.config/stetic/library-cache/
 /.config5/
 /.dbus/
 /.debug/*
+/.gstreamer-0.10/
 /.dropbox-dist/*
 /.dropbox/*
 /.dvdcss/
 /.eclipse/*
+/.esd_auth
+/.fonts/*
 /.FreeFileSync/LastSyncs.log
 /.giteye/
+/.hplip/*
+/.icedtea/*
 /.kde4/cache-*
-/.kde4/share/
-/.kde4/share/apps/nepomuk/
+/.kde4/share/apps/nepomuk/repository
 /.kde4/share/apps/RecentDocuments/
 /.kde4/socket-*
 /.kde4/tmp-*
 /.litecoin/blocks/*
 /.litecoin/chainstate/*
-/.local/
+/.local/share/gvfs-metadata/
 /.local/share/Trash/
+/.local/share/systemd/
 /.local5/
 /.m2/*
 /.macromedia/Flash_Player/
@@ -213,17 +224,19 @@ FreeFileSync
 /.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/startupCache/*
 /.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/webapps/*
 /.mozilla/firefox/h7l648nr.default/lock
+/.nv/GLCache/*
 /.npm/*
 /.PyCharm30/system/caches/
 /.PyCharm30/system/index/
 /.rcc/
 /.recently-used
-/.recycle/
 /.sK1/*
+/.skel/*
 /.speech-dispatcher/
 /.thumbnails/
-/.thunderbird/gregormail.default/Cache.*
-/.thunderbird/gregormail.default/lock
+/.thunderbird/*/Cache.*
+/.thunderbird/*/lock
+/.wine/drive_c/users/Public/Application Data/Package Cache/
 /.VirtualBox/VBoxSVC.log*
 /.Xauthority
 /.xine/
@@ -231,6 +244,8 @@ FreeFileSync
 /.y2log
 /.y2usersettings
 ```
+
+history of this list: https://github.com/feinstaub/feinstaub.github.io/commits/master/linux-user/linux-beginners-notes.md
 
 
 openSUSE: upgrade from 13.1 to 13.2
