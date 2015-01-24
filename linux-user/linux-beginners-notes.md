@@ -145,6 +145,95 @@ UUID=277f8aa6-978d-45b8-b5a4-0f7f60674b8f /m1                  btrfs      defaul
 # /usr/share:  5.5 GB (280.000 files)
 ```
 
+Backup user data
+----------------
+On Linux doing a backup and restore is quite simple.
+
+Follow these steps:
+
+(TODO)
+
+All the data that needs to be backed up is in the home directory.
+But there are some files that don't need to or should not to be restored.
+So it is best to ignore them from the beginning.
+
+FreeFileSync
+
+* Download for openSUSE: http://software.opensuse.org/package/FreeFileSync
+* Help: https://sourceforge.net/p/freefilesync/discussion/
+
+
+### Generic ignored files list
+
+```
+*_NOBACKUP_*
+*.directory;
+*/.android_secure/*
+*/.Xauthority
+*/cache.*
+/.adobe/
+/.cache/
+/.cache4dev/*
+/.cache5/
+/.config/akonadi/
+/.config/chromium/Default/Extensions/*
+/.config/chromium/Default/File System/*
+/.config/Clementine/clementine.db.bak
+/.config/Clementine/moodbarcache/
+/.config/Clementine/networkcache/
+/.config/pulse/
+/.config/smplayer/
+/.config/stetic/library-cache/
+/.config5/
+/.dbus/
+/.debug/*
+/.dropbox-dist/*
+/.dropbox/*
+/.dvdcss/
+/.eclipse/*
+/.FreeFileSync/LastSyncs.log
+/.giteye/
+/.kde4/cache-*
+/.kde4/share/
+/.kde4/share/apps/nepomuk/
+/.kde4/share/apps/RecentDocuments/
+/.kde4/socket-*
+/.kde4/tmp-*
+/.litecoin/blocks/*
+/.litecoin/chainstate/*
+/.local/
+/.local/share/Trash/
+/.local5/
+/.m2/*
+/.macromedia/Flash_Player/
+/.mono/
+/.mozilla/firefox/Crash Reports/
+/.mozilla/firefox/h7l648nr.default/adblockplus/
+/.mozilla/firefox/h7l648nr.default/extensions/
+/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/Cache/*
+/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/indexedDB/*
+/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/OfflineCache/*
+/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/startupCache/*
+/.mozilla/firefox/h7l648nr.default/extensions/r2d2b2g@mozilla.org/profile/webapps/*
+/.mozilla/firefox/h7l648nr.default/lock
+/.npm/*
+/.PyCharm30/system/caches/
+/.PyCharm30/system/index/
+/.rcc/
+/.recently-used
+/.recycle/
+/.sK1/*
+/.speech-dispatcher/
+/.thumbnails/
+/.thunderbird/gregormail.default/Cache.*
+/.thunderbird/gregormail.default/lock
+/.VirtualBox/VBoxSVC.log*
+/.xine/
+/.xsession-*
+/.y2log
+/.y2usersettings
+```
+
 
 openSUSE: upgrade from 13.1 to 13.2
 -----------------------------------
