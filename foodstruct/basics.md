@@ -1,7 +1,7 @@
-foodstruct basics
-=================
+foodstruct - basics
+===================
 
-Zurück zu **[Rezepte](foodstruct.md)**
+Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 Bausteine
 ---------
