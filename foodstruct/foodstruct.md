@@ -5,6 +5,20 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
+Mango-Lassi-X
+-------------
+27.01.2015
+
+* 1 Mango (nur Fruchtfleisch)
+* Soja-Jogurth
+* Hafer-Drink oder Wasser
+* etwas Xucker zur Süßung
+* Zimt
+* Muskat
+
+Alles mixen.
+
+
 Salbeigrüner Salbei-Drink
 -------------------------
 18.01.2015
@@ -90,7 +104,7 @@ Das Ergebnis ist hell-rosa durchsetzt von weißen Drink-Partikeln mit einer scha
 
 ---
 
-Salbei-Veggiebelle-Knoblauch-"Soße"
+Salbei-Vegiebelle-Knoblauch-"Soße"
 -----------------------------------
 20.11.2014
 

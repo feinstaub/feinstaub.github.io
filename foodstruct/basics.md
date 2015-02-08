@@ -8,13 +8,14 @@ Bausteine
 Sammlung von Zutaten aus denen sich leckere Dinge machen lassen:
 
 * Süßkartoffeln
-* Sprossen ([Trip to India](http://www.healthypowerfood.de/))
+* Sprossen ([Trip to India](http://www.healthypowerfood.de/) aus Worms)
 * Nüsse (Hasel, Wal, Para, Erd)
 * Kichererbsen, Avocado
 * Rote Beete, Spinat
-* Soyananda
+* **Soyananda** (frisch fermentierter Frischkäse) von Soyana - aus der Schweiz: http://www.soyana.ch/
+* **VegiBelle** - "the first real vegan cheese" - http://www.vegibelle.com/ - aus Hamburg: http://www.tofunagel.de/ueber-uns/
+  * Empfehlung die Variante "pur" nach Hirtenart
 * Fire Roasted Pasta: http://www.ppura.ch/de/la-pasta/fireroasted-pasta
-
 
 X-Drinks
 --------
