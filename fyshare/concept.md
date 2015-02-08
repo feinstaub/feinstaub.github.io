@@ -107,3 +107,22 @@ Copy this message to clipboard (Ctrl+A, Ctrl+C) and open fyshare to receive furt
 - Currently, there is only one pk
   - there should be more than one for mobile devices if one would like to use more than one key
 ```
+
+Misc - send file with ready file
+--------------------------------
+1. Sender sends encrypted file data using zip with pw or gpg (`http://www.cyberciti.biz/tips/linux-how-to-encrypt-and-decrypt-files-with-a-password.html`)
+    <sender_hash>/<YYYYMMDDThhmmss,ticks>.data
+      (can be deleted as soon as all receivers sent their .acc)
+2. Sender sends omen file (tells the receiver that data is about to be delivered)
+    <sender_hash>/<receiver_hash>/<YYYYMMDDThhmmss,ticks>.omen
+      (contains the symmectric key to access .data (in asymmetrically encrypted form).)
+      (Can be deleted as soon receiver sends .acc)
+3. Sender sends ready file
+    <sender_hash>/<YYYYMMDDThhmmss,ticks>.rdy
+      (contains meta data about decryption settings)
+      (can be deleted together with .data)
+4. Receiver send acc file
+    <receiver_hash>/<sender_hash>/<YYYYMMDDThhmmss,ticks>.acc
+      (can be deleted by receiver as soon as .data is deleted by sender)
+
+Scenario: Hey, I will post you something.
