@@ -13,9 +13,9 @@ Süßkartoffelscheiben aus dem Ofen
 
 * Eine dicke **Süßkartoffel** in ca. 1 cm dicke Scheiben schneiden und auf ein Backpapier legen.
 * (z. B. mit einem Esslöffel) oben mit **Olivenöl** bestreichen.
-* (Cayenne)**Pfeffer**, **Salz**, ggf. **Bohnenkraut** draufstreuen
+* (Cayenne)**Pfeffer**, **Salz**, ggf. **Bohnenkraut** draufstreuen.
 * Bei 150 Grad Umluft ca. 10 bis 15 Minuten **im Ofen** backen bis die Scheiben sich mit der Gabel durchstechen lassen.
-* (Bei Bedarf zusammen mit Soyanada servieren.)
+* (Bei Bedarf zusammen mit [Soyanada](http://www.alles-vegetarisch.de/frischkaese-vegan-bio-soja-streichkaese-wie-rahm-pflanzlich,art-4688) (Frischkäse) servieren.)
 
 ---
 
