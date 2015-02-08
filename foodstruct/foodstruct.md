@@ -5,6 +5,18 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 ---
 
+Süßkartoffelscheiben aus dem Ofen
+---------------------------------
+08.02.2015
+
+* Eine dicke **Süßkartoffel** in ca. 1 cm dicke Scheiben schneiden und auf ein Backpapier legen.
+* (z. B. mit einem Esslöffel) oben mit **Olivenöl** bestreichen.
+* (Cayenne)**Pfeffer**, **Salz**, ggf. **Bohnenkraut** draufstreuen
+* Bei 150 Grad Umluft ca. 10 bis 15 Minuten **im Ofen** backen bis die Scheiben sich mit der Gabel durchstechen lassen.
+* (Bei Bedarf zusammen mit Soyanada servieren.)
+
+---
+
 Mango-Lassi-X
 -------------
 27.01.2015
