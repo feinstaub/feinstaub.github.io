@@ -65,3 +65,11 @@ Name=org.freedesktop.FileManager1
 # Note this has to be done everytime the file gets overwritten.
 ```
 see https://forums.opensuse.org/showthread.php/456698-How-use-Dolphin-to-quot-open-containing-folder-quot-from-firefox-downloads?p=2688494#post2688494
+
+
+Oracle VirtualBox
+-----------------
+Resize .vdi drive:
+1. `VBoxManage modifyhd MyHardDisk.vdi --resize 42000` resizes to 42.000 KB = about 42 GB
+2. In der Datenträgerverwaltung "Volume erweitern"
+
