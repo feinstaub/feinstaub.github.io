@@ -5,10 +5,43 @@ Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezept
 
 Mix-Drinks sind im **[foodfluid](foodfluid.md)** zu finden.
 
+**[plantstruct](plantstruct.md)**
+
+Kochbücher:
+
+    * Vegan Lecker Lecker
+    * The Vegan Zombie
+
 ---
 
-Süßkartoffelscheiben aus dem Ofen
----------------------------------
+Ofen: Gemüseblech mit Zitronen
+------------------------------
+28.02.2015
+
+Teil 1:
+
+* 1 Sellerie
+* 1 Fenchel
+* 1 - 2 Paprika
+* 1 - 2 Möhren
+* Tomaten (wer mag)
+* 1 Zitronen --> Zitronenscheiben mit Schale (plus Saft, aber ohne Kerne)
+* Süßkartoffelscheiben
+* 1/2 Tempeh in Scheiben (wer mag)
+* 1 Zwiebel
+* Olivenöl (zum Drübergießen)
+
+Das alles auf ein Backblech in den Ofen bei 175 Grad Umluft ca. 20 Minuten (bis die ersten Sachen schwarz werden und die harten Sachen weich).
+
+Teil 2:
+
+Reis und Salat oder Nudeln als Beilage.
+Plus Pfeffer.
+Plus bei Bedarf Arche Curry Sate Sauce, damit das ganze etwas flüssiger wird.
+
+
+Ofen: Süßkartoffelscheiben
+--------------------------
 08.02.2015
 
 * Eine dicke **Süßkartoffel** in ca. 1 cm dicke Scheiben schneiden und auf ein Backpapier legen.
@@ -118,8 +151,8 @@ Alles mit dem Stabmixer **mixen**. Kalt, z. B. zu warmen Nudeln oder Linsen serv
 
 ---
 
-Avocadocreme
-------------
+Avocadocreme / Guacamole
+------------------------
 26.11.2013
 
 ### Bausteine
@@ -129,4 +162,5 @@ Avocadocreme
 * Tomatenmark
 * **Olivenöl**
 * **Pfeffer**, ggf. **Zimt, Muskat**
-* bei Bedarf: wenig Zwiebel, etwas Soja-Jogurth
+* bei Bedarf: wenig Zwiebel, etwas Soja-Jogurth, Leinöl
+* 03.03.2015: Geheimtipp: **Hanföl** und ein wenig **Ingwer**

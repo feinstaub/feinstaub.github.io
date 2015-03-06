@@ -5,6 +5,21 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 ---
 
+Spinatlastiger Matcha-Mix
+-------------------------
+09.02.2015
+
+Frei nach der Green-Smoothie-Formel [1](www.weltveganmagazin.de, Ausgabe 01, 2015):
+
+1) Basis:       **Wasser** (auf 1250 ml auffüllen)
+2) Das Grün:    6 **Spinat**-Elemente
+3) Das Obst:    3 **Äpfel**, 1 Karotte, 1 Banane
+4) Die Booster: 1 kleiner Teelöffel **Matcha**, 1 Scheibe **Ingwer**, ein paar Walnüsse
+
+Mindestens 2 Minuten gut durchmixen.
+
+---
+
 Mango-Lassi-X
 -------------
 27.01.2015

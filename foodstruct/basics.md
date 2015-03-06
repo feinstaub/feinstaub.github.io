@@ -15,7 +15,12 @@ Sammlung von Zutaten aus denen sich leckere Dinge machen lassen:
 * **Soyananda** (frisch fermentierter Frischkäse) von Soyana - aus der Schweiz: http://www.soyana.ch/
 * **VegiBelle** - "the first real vegan cheese" - http://www.vegibelle.com/ - aus Hamburg: http://www.tofunagel.de/ueber-uns/
   * Empfehlung die Variante "pur" nach Hirtenart
+* Apfelkraut (als Aufstrich etc.)
 * Fire Roasted Pasta: http://www.ppura.ch/de/la-pasta/fireroasted-pasta
+
+Quick-Stuff
+-----------
+* Trek-Riegel, Organic-Foodbar-Riegel (Veganz FFM)
 
 X-Drinks
 --------
