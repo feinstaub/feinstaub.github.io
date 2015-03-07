@@ -9,8 +9,43 @@ Mix-Drinks sind im **[foodfluid](foodfluid.md)** zu finden.
 
 Kochbücher:
 
-    * Vegan Lecker Lecker
-    * The Vegan Zombie
+* Vegan Lecker Lecker
+* [The Vegan Zombie](http://www.amazon.de/Vegan-Zombie-Koche-%C3%9Cberlebe/dp/3955750205/ref=sr_1_1?s=books&ie=UTF8&qid=1425158089&sr=1-1&keywords=vegan+zombie)
+
+---
+
+Blätterteig: Pizzarollen mit Wurst
+----------------------------------
+07.03.2015
+
+abgewandelt aus The Vegan Zombie, S. 125, (10+15min)
+
+* **Ofen** auf 180 Grad Umluft vorheizen
+* **Blätterteig** antauen lassen und vierteln (ca. 15x15 cm große Stücke, mancher Blätterteig kommt auch schon in der Größe)
+* **Mexican Salsa Sauce** (oder Tomatenmark) auf die Viertel verteilen, aber min 1 cm Rand lassen
+* **Oregano**, **Bohnenkraut** und Pfeffer drauf und frischer **Basilikum**
+* je 1 kleine **Scheibe Käse** drauf (z. B. Wilmersburger Cheddar Style)
+* je 1 **Würstchen** (z. B. Wheaty Bauernknacker) passend zurechtschneiden und drauflegen
+* Den Blätterteig vorsichtig um das Würstchen rollen und die Enden zusammenpressen.
+* 15 Minuten backen.
+
+---
+
+Blätterteig: Mohnschnecken
+--------------------------
+07.03.2015
+
+aus [1](http://www.vegan-news.de/)
+
+* **Ofen** auf 180 Grad Umluft vorheizen
+* **Blätterteig** antauen lassen (geht auch ähnlich mit vorgevierteltem Teig)
+* In 1 **Topf** 100 ml **Hafermilch** erwärmen. Wenn die Milch zu dampfen beginnt, dann vom Herd nehmen
+* 30 g **Dinkelgries**, 70 g **Mohn**, 2 TL **Vanille-Xucker** einrühren und daraus einen Griesbrei rühren
+* **Granberries** dazu
+* Mischung auf dem Blätterteig verteilen, min. 1 cm Rand
+* Blätterteig aufrollen und von dieser Rolle ca. 3 cm breite Scheiben abschneiden.
+* Auf ein Backblech setzen und ca. 15 Minuten gold-braun backen.
+
 
 ---
 

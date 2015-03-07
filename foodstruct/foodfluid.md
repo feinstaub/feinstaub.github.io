@@ -5,8 +5,26 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 ---
 
-Spinatlastiger Matcha-Mix
--------------------------
+Orange County (Orangen & Gojibeeren)
+------------------------------------
+07.03.2015
+
+Abgewandelt aus [1](Für mich vegan, Heft 1, 2014)
+
+* 4 **Orangen**
+* 1 **Banane**
+* 4 TL **Gojibeeren**
+* 3 TL **Mandelmuß** (für die Cremigkeit)
+* 1/2 Daumen **Ingwer**
+* Gewürze: Muskat (am meisten), Zimt, Kardamom
+* ca 200 ml **Haferdrink**
+* auf cal 1000 ml mit Wasser auffüllen
+
+Gut durchmixen.
+
+
+Spinat-Matcha-Mix
+-----------------
 09.02.2015
 
 Frei nach der Green-Smoothie-Formel [1](www.weltveganmagazin.de, Ausgabe 01, 2015):

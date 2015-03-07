@@ -5,11 +5,27 @@ Vegan/bio/freundlich Ausgehen und Einkaufen im Rhein-Main-Gebiet.
 
 Angaben zu Öffnungszeiten sind konservativ.
 
+Raum FFM
+--------
+- .1. V-Restaurant [Chimichurri](http://www.chimichurri-frankfurt.de/), Im Prüfling 63, 60389, 9:00-24:00
+- .2. V-Restaurant [Wondergood](http://www.wondergood.de/), Preungesheimer Str. 1, 60389
+- .2. Restaurant [ginkgo](http://www.ginkgo-frankfurt.de/), Bergerstrasse 81, 60316
+    "Seit 2012 interessieren wir uns persönlich mehr und mehr für die vegane und vegetarische Ernährung – ein Einfluss, der sich natürlich auch auf der Karte zeigt."
+- V-Imbiss bio Spahn (todo: wo)
+- (V)-Restaurant [Naturbar](http://www.naturbarfrankfurt.de/), Oederweg 26, 60318, Mo-Fr: 11:30-15:30, 18:00-23:00, Sa: 18:00-23:00, So/Ft zu
+- V-Cafe [http://www.edelkiosk.de/](http://www.edelkiosk.de/index.html), Rhönstraße 119, 60385, Mo zu
 
-Raum HD
+- todo/Nur Lieferservice?: [Veggie House](http://www.veggiehouse-frankfurt.de/), Schlossstr. 125
+
+- burittobande
+- hauptbahnhof curry ding
+- le crobaq
+
+Raum DA
 -------
-red
-
+* (V)-Bistro www.cafe-habibi.de, Landwehrstraße 13, Darmstadt
+* Bistro www.mondo-daily.de, Grafenstraße 31, Darmstadt
+* (V)-Restaurant radieschen.com, Reuterallee 37, Darmstadt (Eberstadt)
 
 Raum HP
 -------
@@ -27,28 +43,13 @@ Raum Odenwald
 * todo [Landgasthof Dorflinde](http://www.landgasthof-dorflinde.de/restaurant-und-erlebniswelt/), Siegfriedstraße 14, 64689 Gras-Ellenbach
 * todo Cafe in Fürth?
 
-
-Raum DA
+Raum HD
 -------
-* Bistro www.cafe-habibi.de, Landwehrstraße 13, Darmstadt
-* Bistro www.mondo-daily.de, Grafenstraße 31, Darmstadt
-* Restaurant radieschen.com, Reuterallee 37, Darmstadt (Eberstadt)
+* red
 
-Raum FFM
---------
-- .1. Restaurant [Chimichurri](http://www.chimichurri-frankfurt.de/) (V), Im Prüfling 63, 60389, 9:00-24:00
-- .2. Restaurant [Wondergood](http://www.wondergood.de/) (V), Preungesheimer Str. 1, 60389
-- .2. Restaurant [ginkgo](http://www.ginkgo-frankfurt.de/), Bergerstrasse 81, 60316
-    "Seit 2012 interessieren wir uns persönlich mehr und mehr für die vegane und vegetarische Ernährung – ein Einfluss, der sich natürlich auch auf der Karte zeigt."
-- Imbiss bio Spahn
-- Restaurant [Naturbar](http://www.naturbarfrankfurt.de/), Oederweg 26, 60318, Mo-Fr: 11:30-15:30, 18:00-23:00, Sa: 18:00-23:00, So/Ft zu
-- Cafe [http://www.edelkiosk.de/](http://www.edelkiosk.de/index.html), Rhönstraße 119, 60385, Mo zu
-
-- todo/Nur Lieferservice?: [Veggie House](http://www.veggiehouse-frankfurt.de/), Schlossstr. 125
-
-- burittobande
-- hauptbahnhof curry ding
-- le crobaq
+Raum Freiburg
+-------------
+* (V)-Restaurant [El Haso](http://el-haso.de/), Leopoldring 1, 79098 Freiburg, Di - Sa ab 18 Uhr
 
 
 Related
