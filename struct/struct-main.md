@@ -4,20 +4,6 @@ This page collects issues I stumbled on when using Linux with KDE.
 
 * [Desktop Misc](struct-desktop-misc.md)
 
-More Tools Suggestions Framework
---------------------------------
-Concept: https://community.kde.org/Scratchpad/MoreToolsSuggestionFramework
-
-Advertisement:
-[Imagine the following text spoken at high pace by a professional speaker with a
-full and likable voice with perfect but slighly exaggerated accentuation]:
-"Hi, today I will speak to free software application developers. I would like to introduce the MTS framework.
-MTS stands for MoreToolsSuggestion. The MTS framework provides an API to give your users hints to other applications that can help
-to solve a given task. If you add many hints you don't have to worry about cluttered menus because the MTS provides means to handle this.
-So, with the MTS framework you can add hints in a standardized way to more tools in less time to your application.
-If you are not yet a free software developer but want to become one, visit www dot kde dot org."
-
-
 dolphin [several]
 -----------------
 [Bugs, annoyances and wishes / KDE UI / Dolphin](struct-dolphin.md)
