@@ -11,8 +11,29 @@ Kochbücher:
 
 * Vegan Lecker Lecker
 * [The Vegan Zombie](http://www.amazon.de/Vegan-Zombie-Koche-%C3%9Cberlebe/dp/3955750205/ref=sr_1_1?s=books&ie=UTF8&qid=1425158089&sr=1-1&keywords=vegan+zombie)
+* Raw Soul Food
 
 ---
+
+Raw: Zucchini-Avocado-Püree (Green Harmony)
+-------------------------------------------
+08.03.2015
+
+aus Raw Soul Food, S. 56
+
+In den Mixer:
+
+* 2 **Zucchinis**
+* 1 **Pastinake**
+* 1 **Avocado** (ohne Kern und Schale, versteht sich)
+* ein paar frische **Basilikumblätter**
+* **Gewürze:** Paprika edelsüß, Pfeffer, Curry scharf, Muskat, etwas Salz
+
+Der Mixer ist nun recht voll. Bis zur Hälfte mit Wasser auffüllen.
+Mixen (nicht zu lang). Fertig.
+
+2 - 3 EL geröstete Pinienkerne und frische Basilikumblätter zum Garnieren. 
+
 
 Blätterteig: Pizzarollen mit Wurst
 ----------------------------------
