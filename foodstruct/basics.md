@@ -20,8 +20,8 @@ Sammlung von Zutaten aus denen sich leckere Dinge machen lassen:
 
 Quick-Stuff
 -----------
-* Trek-Riegel (Veganz FFM)
-* Organic-Foodbar-Riegel "Active Greens Chocolate" (Veganz FFM)
+* "Trek"-Riegel (Veganz FFM)
+* "Raw-Organic-Foodbar"-Riegel "Active Greens Chocolate", "chocolate coconut" (Veganz FFM)
 * Raw Bite - Vanilla Berries
 
 X-Drinks

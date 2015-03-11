@@ -5,6 +5,24 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 ---
 
+Wenn der Mixmann zweimal klingelt (dunkel-lila)
+-----------------------------------------------
+11.03.2015
+
+(Erster Drink: Pina-Colada mit Kokosmilch, Hafersahne und viel Ananas)
+
+Zweiter Drink:
+
+* 3 mittlere Äpfel
+* 1 kleine Banane
+* 1 große Möhre
+* 1 Daumenspitze Ingwer
+* 6 Spinatelemente
+* eine Handvoll tiefgefrorene **Heidelbeeren**
+* ein bisschen **frische Minze**
+* Auffüllen mit Wasser auf 1300 ml
+
+
 Orange County (Orangen & Gojibeeren)
 ------------------------------------
 07.03.2015
@@ -73,7 +91,7 @@ Indisch-Gelber Banane-Orange-Mandarine-Apfel-Kokos-Drink
 * 1 Orange
 * 1 Mandarine
 * ca. 3 mittlere Äpfel
-* eine Handvoll Kokosflocken
+* eine Handvoll **Kokosflocken**
 * auf 1200 ml mit Wasser auffüllen
 
 ---
