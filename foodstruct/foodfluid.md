@@ -9,9 +9,11 @@ Wenn der Mixmann zweimal klingelt (dunkel-lila)
 -----------------------------------------------
 11.03.2015
 
-(Erster Drink: Pina-Colada mit Kokosmilch, Hafersahne und viel Ananas)
+(Erster Drink: Pina-Colada mit Kokosmilch, Hafersahne und viel Ananas und frische Minze und Wasser)
 
 Zweiter Drink:
+
+Übrigens: **50:50** ist ein gutes Verhältnis von Frucht und Grün (zumindest laut [Grüne Smoothies von GU](http://www.gu.de/buecher/kochbuecher/gesunde-leichte-kueche/441986-gruene-smoothies/)).
 
 * 3 mittlere Äpfel
 * 1 kleine Banane
