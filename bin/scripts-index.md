@@ -3,7 +3,6 @@
 [./disable-scr-impl](web-gen/disable-scr-impl.txt)
 [./home-lupe-off](web-gen/home-lupe-off.txt)
 [./home-lupe-on](web-gen/home-lupe-on.txt)
-[./scripts-index.md](web-gen/scripts-index.md.txt)
 [./zypper-update-interactive](web-gen/zypper-update-interactive.txt)
 [./zzz-gen-scripts.sh](web-gen/zzz-gen-scripts.sh.txt)
 [./bash/colors-set-local.src.sh](web-gen/colors-set-local.src.sh.txt)
