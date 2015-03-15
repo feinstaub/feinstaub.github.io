@@ -1,0 +1,11 @@
+
+[./zzz-gen-scripts.sh](./zzz-gen-scripts.sh)
+[./disable-scr-impl](./disable-scr-impl)
+[./home-lupe-off](./home-lupe-off)
+[./zypper-update-interactive](./zypper-update-interactive)
+[./home-lupe-on](./home-lupe-on)
+[./bash/colors-set-local.src.sh](./bash/colors-set-local.src.sh)
+[./bash/git-prompt.src.sh](./bash/git-prompt.src.sh)
+[./bash/set-prompt.src.sh](./bash/set-prompt.src.sh)
+[./bash/git-completion.src.sh](./bash/git-completion.src.sh)
+[./disable_screensaver](./disable_screensaver)
