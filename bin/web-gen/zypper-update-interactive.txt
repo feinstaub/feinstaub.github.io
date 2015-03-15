@@ -1,0 +1,11 @@
+#!/bin/bash
+
+konsole --hold --hide-tabbar --hide-menubar -e bash -ci "\
+echo 'If the Software Updater applet fails to work for some reason (and there are a few), you can run:' ;\
+echo '' ;\
+echo '$ sudo zypper patch' ;\
+echo '' ;\
+sudo zypper patch ;\
+echo '----------------------------------------------------' ;\
+echo 'Process finished. Close the konsole window when done.' ;\
+echo '----------------------------------------------------' ;"
