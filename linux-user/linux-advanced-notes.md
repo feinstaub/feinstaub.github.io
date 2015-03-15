@@ -13,6 +13,10 @@ How to do mass ReplayGain? How to see which files are already gained?
 ...
 
 
+Scripts
+-------
+[bin](../bin)
+
 Fix openSUSE Firefox KDE integration
 ------------------------------------
 
