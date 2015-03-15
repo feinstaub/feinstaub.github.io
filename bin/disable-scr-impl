@@ -1,0 +1,3 @@
+#!/bin/bash
+# Simulate User activity every 30s
+while /bin/true; do qdbus org.freedesktop.ScreenSaver /ScreenSaver SimulateUserActivity > /dev/null; sleep 30s; echo "Rumpel"; done
