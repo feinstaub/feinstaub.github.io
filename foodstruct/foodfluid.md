@@ -13,6 +13,7 @@ Fenchelsamen etc.
 * 2 mittlere Äpfel
 * 5 Elemente Spinat
 * 1 Handvoll Kokosflocken
+* 3 **Datteln** (kleingeschnitten)
 * 3 TL weißes Mandelmuß
 * 1 TL **Fenchelsamen** (lecker!)
 * 1/2 TL **Macis (Muskatblüte)**
