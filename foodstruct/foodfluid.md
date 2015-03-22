@@ -5,6 +5,20 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 ---
 
+Fenchelsamen etc.
+-----------------
+22.03.2015
+
+* 1 Orange
+* 2 mittlere Äpfel
+* 5 Elemente Spinat
+* 1 Handvoll Kokosflocken
+* 3 TL weißes Mandelmuß
+* 1 TL **Fenchelsamen** (lecker!)
+* 1/2 TL **Macis (Muskatblüte)**
+* Auffüllen auf ca. 1000 ml mit Wasser
+
+
 Wenn der Mixmann zweimal klingelt (dunkel-lila)
 -----------------------------------------------
 11.03.2015
