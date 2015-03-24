@@ -1,6 +1,8 @@
-Bugs, annoyances and wishes / KDE UI / Dolphin
+KDE UI / Dolphin: suggestions and next steps
 ==============================================
+
 On this page: dolphin related topics | [Go up to main page](struct-main.md)
+
 
 kurlnavigator [usability] Navigate to parent folder should select child folder
 ------------------------------------------------------------------------------

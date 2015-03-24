@@ -1,21 +1,18 @@
 # codestruct
 
-[Linux User / todo and solved]()
+[Linux User]()
 
   * [Beginners](linux-user/linux-beginners-notes.md)
   * [Advanced](linux-user/linux-advanced-notes.md)
   * [Firefox](linux-user/browser-notes.md)
 
-[dev]()
+[code]()
 
   * [C++ dev hints](dev/dev-hints.md)
-
-[struct]()
-
-  * # KDE UI: Bugs, annoyances and wishes
-  * [general](struct/struct-main.md)
-  * [dolphin](struct/struct-dolphin.md)
-  * [Desktop Misc](struct/struct-desktop-misc.md)
+  * # KDE UI suggestions / next steps
+  * [KDE: General](struct/struct-main.md)
+  * [KDE: Dolphin](struct/struct-dolphin.md)
+  * [Linux Desktop: Verschiedenes](struct/struct-desktop-misc.md)
 
 [foodstruct]()
 

@@ -1,5 +1,6 @@
-Bugs, annoyances and wishes / KDE UI
-====================================
+KDE UI: suggestions and next steps
+==================================
+
 This page collects issues I stumbled on when using Linux with KDE.
 
 * [Desktop Misc](struct-desktop-misc.md)
