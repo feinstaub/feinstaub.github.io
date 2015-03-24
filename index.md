@@ -3,16 +3,9 @@ codestruct
 
 This... is the codestruct.
 
-  * [kreenshot-editor](kreenshot-editor/index.htm)
   * linux user
-    * [beginners](linux-user/linux-beginners-notes.md)
-    * [advanced](linux-user/linux-advanced-notes.md)
-  * dev
-    * [dev hints for QT, KDE, C++, cmake](dev/dev-hints.md)
-    * see menu
-  * struct - collections and thoughts on ongoing topics:
-    * [Bugs, annoyances and wishes / KDE UI](struct/struct-main.md)
-    * [KDE: Symlink handling](struct/symlink-handling.md)
-  * [fyshare](fyshare/index.md)
-  * [foodstruct](foodstruct/foodstruct.md)
+  * code
+  * kreenshot-editor
+  * fyshare
+  * foodstruct
   * [meta](meta.md)

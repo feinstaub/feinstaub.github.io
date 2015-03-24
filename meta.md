@@ -1,7 +1,8 @@
 Meta
 ====
 
-**codestruct** content currently hosted at feinstaub.github.io
+The **codestruct** is currently hosted at feinstaub.github.io
+
 
 Why mdwiki?
 -----------
@@ -9,6 +10,7 @@ http://dynalon.github.io/mdwiki
 
 * PRO:
   * navigation bar is always visible
+  * local edits
 * CON:
   * not indexable by google (yet)
   * bugs
