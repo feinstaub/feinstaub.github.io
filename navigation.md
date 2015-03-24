@@ -15,6 +15,7 @@
 [code]()
 
   * [C++ dev hints](dev/dev-hints.md)
+  * [Scripts](bin/scripts-index.md)
 
 [kreenshot-editor]()
 
