@@ -17,4 +17,12 @@
   * [dolphin](struct/struct-dolphin.md)
   * [Desktop Misc](struct/struct-desktop-misc.md)
 
-[kreenshot-editor](kreenshot-editor/index.htm)
+[foodstruct]()
+
+  * [Rezepte](foodstruct/index.md)
+  * [Drinks](foodstruct/foodfluid.md)
+  * [Auswärts](foodstruct/plantstruct.md)
+
+[kreenshot-editor]()
+
+  * [kreenshot-editor - homepage](kreenshot-editor/index.htm)
