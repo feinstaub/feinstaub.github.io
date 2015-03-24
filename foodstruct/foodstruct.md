@@ -15,6 +15,20 @@ Kochbücher:
 
 ---
 
+Weißer Bohnensalat mit Kapern
+-----------------------------
+23.03.2015
+
+* 1/2 Dose **weiße Bohnen**
+* 1/2 Gläschen **Kapern**
+* 1/2 Grafitti-Tofu in Würfeln
+* Etwas gehackte **Zwiebel**
+* Hanföl, Olivenöl, Balsamico-Essig
+* Pfeffer, Muskat
+
+Alles in eine Schüssel geben und mischen.
+
+
 Raw: Zucchini-Avocado-Püree (Green Harmony)
 -------------------------------------------
 08.03.2015
