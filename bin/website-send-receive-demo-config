@@ -1,0 +1,28 @@
+[
+{
+    "Filename": "test1-javascript-wget-ERR.png",
+    "Description": "Test",
+    "Uri": "http://feinstaub.github.io/#!linux-user/browser-notes.md",
+    "Tool": "wget-web"
+},
+{
+    "Filename": "test2-javascript-photo-ERR.png",
+    "Description": "Test",
+    "Uri": "http://feinstaub.github.io/#!linux-user/browser-notes.md",
+    "Tool": "gnome-web-photo",
+    "Timeout": 10
+},
+{
+    "Filename": "test3-wetter-ffm-page.png",
+    "Description": "Wetter FFM Page",
+    "Uri": "http://wetterstationen.meteomedia.de/station=106370&wahl=vorhersage",
+    "Tool": "gnome-web-photo",
+    "Timeout": 10
+},
+{
+    "Filename": "test4-wetter-hd-Image.png",
+    "Description": "Wetter HD Image",
+    "Uri": "wetterstationen.meteomedia.de/messnetz/vorhersagegrafik/107330.png",
+    "Tool": "wget-file"
+}
+]

@@ -1,0 +1,57 @@
+#!/usr/bin/python
+
+# general:
+# http://stackoverflow.com/questions/125951/command-line-program-to-create-website-screenshots-on-linux
+
+# gnome-web-photo:
+#
+# http://xmodulo.com/how-to-take-full-length-screenshot-of-web-page-in-linux.html
+# gnome-web-photo -t 20 -m photo http://xmodulo.com/how-to-take-full-length-screenshot-of-web-page-in-linux.html out.png
+#
+# gnome-web-photo -t 20 -m photo http://192.168.2.200/visu.html?mode=1&flag=16&offset=-1 out2.png
+# Timed out while loading 'http://192.168.2.200/visu.html?mode=1&flag=16&offset=-1'. Nothing to output...
+
+# http://cutycapt.sourceforge.net/
+# ...
+
+# Unit test
+# cd ~/tmp/webphoto
+# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config
+
+import argparse
+import json
+from subprocess import call
+
+parser = argparse.ArgumentParser(description='website-send-receive')
+parser.add_argument('configfile')
+args = parser.parse_args()
+print("config file: {0}".format(args.configfile))
+
+cfgfile = open(args.configfile, 'r')
+cfg = json.load(cfgfile)
+cfgfile.close()
+
+print("config:--------")
+print(cfg)
+print("--------")
+
+for item in cfg:
+    #print(item)
+    filename = item["Filename"];
+    desc = item["Description"];
+    uri = item["Uri"];
+    tool = item["Tool"];
+    print("Name: {0}, Uri: {1}".format(filename, uri))
+
+    if tool == "gnome-web-photo":
+        timeout = item["Timeout"];
+
+        # gnome-web-photo -t 20 -m photo http://kde.org. out2.png
+        call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
+    elif tool == "wget-file":
+        call(["wget", uri, "-O", filename])
+    elif tool == "wget-web":
+        call(["wget", uri])
+    else:
+        print("UNKNOWN TOOL: {0}".format(tool))
+
