@@ -18,7 +18,7 @@ Kochbücher:
 
 Weißer Bohnensalat mit Kapern
 -----------------------------
-23.03.2015, selbst
+23.03.2015, selbst, partytauglich
 
 * 1/2 Glas **weiße Bohnen**
 * 1/2 Gläschen **Kapern**
