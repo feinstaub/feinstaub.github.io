@@ -1,5 +1,6 @@
 foodstruct
 ==========
+
 Im foodstruct finden sich Essenskonstruktionen aus pflanzlichen Bausteinen.
 Siehe auch **[basics](basics.md)**. Die folgenden foodnotes zeigen einige Rezeptentwürfe.
 
@@ -17,23 +18,22 @@ Kochbücher:
 
 Weißer Bohnensalat mit Kapern
 -----------------------------
-23.03.2015
+23.03.2015, selbst
 
-* 1/2 Dose **weiße Bohnen**
+* 1/2 Glas **weiße Bohnen**
 * 1/2 Gläschen **Kapern**
-* 1/2 Grafitti-Tofu in Würfeln
+* 1/2 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln
 * Etwas gehackte **Zwiebel**
 * Hanföl, Olivenöl, Balsamico-Essig
 * Pfeffer, Muskat
+* Optional: Passierte Tomaten, [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685)
 
 Alles in eine Schüssel geben und mischen.
 
 
 Raw: Zucchini-Avocado-Püree (Green Harmony)
 -------------------------------------------
-08.03.2015
-
-aus Raw Soul Food, S. 56
+08.03.2015, aus Raw Soul Food, S. 56
 
 In den Mixer:
 
@@ -52,9 +52,7 @@ Mixen (nicht zu lang). Fertig.
 
 Blätterteig: Pizzarollen mit Wurst
 ----------------------------------
-07.03.2015
-
-abgewandelt aus The Vegan Zombie, S. 125, (10+15min)
+07.03.2015, abgewandelt aus The Vegan Zombie, S. 125, (10+15min)
 
 * **Ofen** auf 180 Grad Umluft vorheizen
 * **Blätterteig** antauen lassen und vierteln (ca. 15x15 cm große Stücke, mancher Blätterteig kommt auch schon in der Größe)
@@ -69,9 +67,7 @@ abgewandelt aus The Vegan Zombie, S. 125, (10+15min)
 
 Blätterteig: Mohnschnecken
 --------------------------
-07.03.2015
-
-aus [1](http://www.vegan-news.de/)
+07.03.2015, aus [1](http://www.vegan-news.de/)
 
 * **Ofen** auf 180 Grad Umluft vorheizen
 * **Blätterteig** antauen lassen (geht auch ähnlich mit vorgevierteltem Teig)
@@ -87,7 +83,7 @@ aus [1](http://www.vegan-news.de/)
 
 Ofen: Gemüseblech mit Zitronen
 ------------------------------
-28.02.2015
+28.02.2015, von T..a/Ö
 
 Teil 1:
 
@@ -113,7 +109,7 @@ Plus bei Bedarf Arche Curry Sate Sauce, damit das ganze etwas flüssiger wird.
 
 Ofen: Süßkartoffelscheiben
 --------------------------
-08.02.2015
+08.02.2015, von: Kollege K.
 
 * Eine dicke **Süßkartoffel** in ca. 1 cm dicke Scheiben schneiden und auf ein Backpapier legen.
 * (z. B. mit einem Esslöffel) oben mit **Olivenöl** bestreichen.
@@ -125,7 +121,7 @@ Ofen: Süßkartoffelscheiben
 
 Omas Krautsalat
 ---------------
-07.01.2015 - (Rezept deutlich älter)
+07.01.2015, von Oma (Rezept deutlich älter)
 
 ### Bausteine
 
@@ -144,7 +140,7 @@ Was nicht aufgegessen wird, in ein Glasgefäß drücken und verschließen. Hält
 
 Salbei-Vegiebelle-Knoblauch-"Soße"
 -----------------------------------
-20.11.2014
+20.11.2014, von R.
 
 **Knoblauch** (2 Zehen) und
 geschnittene eingelegte **getrocknete Tomaten** (1/2 Glas, 10 Stücke)
@@ -158,7 +154,7 @@ Ggf. mit Pfeffer abschmecken und auf **Nudeln** oder Linsen servieren.
 
 Avocado in Scheiben mit Vinaigrette
 -----------------------------------
-17.11.2014
+17.11.2014, von Kollege K.
 
 * 1 **Avocado**
 * **Essig, Öl, Pfeffer**
@@ -170,7 +166,7 @@ Zusammen mit **Weißbrot** servieren - ggf. mit Frischkäse (Soyanada). Oder ohn
 
 Gemüsenudeln mit Cashew-Pesto
 -----------------------------
-24.08.2014
+24.08.2014, selbst
 
 ### Bausteine
 
@@ -193,7 +189,7 @@ Zusammen mit einer gewünschten Menge an Gepa Salsa Curry (muss nicht extra warm
 
 Helle Mehlschwitze
 ------------------
-15.08.2014
+15.08.2014, von M..a
 
 **Alsana** in einem Topf erhitzen. **Lupinenmehl** unterrühren bis eine Paste entsteht. Dann etwas X-Drink dazugeben.
 
@@ -203,7 +199,7 @@ TODO...
 
 Humus
 -----
-16.06.2014 / https://de.wikipedia.org/wiki/Hummus
+16.06.2014, Biomarkt-Tipp / s. a. https://de.wikipedia.org/wiki/Hummus
 
 ### Bausteine
 
@@ -224,7 +220,7 @@ Alles mit dem Stabmixer **mixen**. Kalt, z. B. zu warmen Nudeln oder Linsen serv
 
 Avocadocreme / Guacamole
 ------------------------
-26.11.2013
+26.11.2013, selbst
 
 ### Bausteine
 

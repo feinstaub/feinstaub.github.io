@@ -1,5 +1,5 @@
-foodstruct - foodfluid
-======================
+foodfluid
+=========
 
 Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
