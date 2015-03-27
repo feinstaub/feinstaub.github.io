@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-#
 # Copyright (C) 2015 by Gregor Mi <codestruct@posteo.org>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -10,17 +9,18 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the
 # Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
-#
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
+#
 # general:
 # http://stackoverflow.com/questions/125951/command-line-program-to-create-website-screenshots-on-linux
+#
 
 # gnome-web-photo:
 #
@@ -74,14 +74,20 @@ configId = cfg["Id"]
 
 #
 # compresses the sourceDir to one file
+# returns the resulting filename
 #
-def zipOrSo(sourceDir, targetFilenameBase):
-    print("zipOrSo")
+def archiveToFile(sourceDir, targetFilenameBase):
+    print("archiveToFile")
     # tar -zcvf test.tar.gz 2015-03-25T22_18_46.529128/
     # http://www.cyberciti.biz/faq/how-do-i-compress-a-whole-linux-or-unix-directory/
     targetFilename = targetFilenameBase + ".tar.gz"
     call(["tar", "-zcvf", targetFilename, sourceDir])
     return targetFilename
+
+def extractArchive(inputFilename, targetDir):
+    print("extractArchive")
+    call(["tar", "-zxvf", inputFilename, "-C", targetDir])
+
 
 #
 # encrypts the file
@@ -110,7 +116,16 @@ def doUnpack(inputFilename):
     print("decrypted: {0}".format(uncryptedFile))
 
     unpackBaseDir = cfg["Unpack"]["BaseDir"]
-    os.makedirs(unpackBaseDir)
+    print("unpackBaseDir: {0}".format(unpackBaseDir))
+
+    unpackDir = os.path.join(unpackBaseDir, configId)
+    print("unpackDir: {0}".format(unpackDir))
+
+    if not os.path.exists(unpackDir): # create dir if not exists
+        os.makedirs(unpackDir)
+
+    extractArchive(uncryptedFile, unpackDir)
+    print("unpacked to: {0}".format(unpackDir))
 
 if args.action == "send":
     #
@@ -126,14 +141,14 @@ if args.action == "send":
     #
     if args.unittest == "use-fake-source":
         print("UNIT TEST because --unittest use-fake-source")
-        with open(sourcesTargetDir + "/unit-test-file.txt", "w") as text_file:
+        with open(os.path.join(sourcesTargetDir, "unit-test-file.txt"), "w") as text_file:
             text_file.write("This is a test file")
     else:
         sourceList = cfg["SourceList"]
 
         for item in sourceList:
             #print(item)
-            filename = sourcesTargetDir + "/" + item["Filename"];
+            filename = os.path.join(sourcesTargetDir, item["Filename"]);
             desc = item["Description"];
             uri = item["Uri"];
             tool = item["Tool"];
@@ -156,7 +171,7 @@ if args.action == "send":
     # make package
     #
     packageBasename = configId + "-" + sourcesTargetDir
-    zippedFilename = zipOrSo(sourcesTargetDir, packageBasename)
+    zippedFilename = archiveToFile(sourcesTargetDir, packageBasename)
     print("zipped: {0}".format(zippedFilename))
 
     packageFilename = packageBasename + ".pak"
