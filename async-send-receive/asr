@@ -1,5 +1,24 @@
 #!/usr/bin/python
 
+#
+# Copyright (C) 2015 by Gregor Mi <codestruct@posteo.org>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the
+# Free Software Foundation, Inc.,
+# 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+#
+
 # general:
 # http://stackoverflow.com/questions/125951/command-line-program-to-create-website-screenshots-on-linux
 
@@ -17,9 +36,10 @@
 #
 # Unit test
 # cd ~/tmp/webphoto
-# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action send
-# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action send --unittest use-fake-source
-# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action unpack-only --packagefile demo1-2015-03-27T09_58_16.823101.pak
+# ~/dev/src/feinstaub.github.io/async-send-receive/asr -h
+# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send
+# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send --unittest use-fake-source
+# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action unpack-only --packagefile demo1-2015-03-27T09_58_16.823101.pak
 #
 
 import argparse
@@ -31,7 +51,7 @@ from subprocess import call
 #
 # use option -h to show help
 #
-parser = argparse.ArgumentParser(description='website-send-receive')
+parser = argparse.ArgumentParser(description='asr (async-send-receive) by Gregor Mi (2015)')
 parser.add_argument('configfile', help="The config file shared with sender and receiver")
 parser.add_argument('--action', help="'send': retrieve source, make package and send | 'receive': retrieve package and unpack | 'unpack-only': unpacks a given package file (see --packagefile)")
 parser.add_argument('--packagefile', help="filename to a package file; needed for --action unpack")
