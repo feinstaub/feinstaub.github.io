@@ -19,6 +19,7 @@
 # cd ~/tmp/webphoto
 # ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action send
 # ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action send --unittest use-fake-source
+# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action unpack-only --packagefile demo1-2015-03-27T09_58_16.823101.pak
 #
 
 import argparse
@@ -49,6 +50,8 @@ print("config:--------")
 print(cfg)
 print("--------")
 
+configId = cfg["Id"]
+
 #
 # compresses the sourceDir to one file
 #
@@ -76,6 +79,18 @@ def encrypt(sourceFilename, pw, targetFilename):
     #http://askubuntu.com/questions/17641/create-encrypted-password-protected-zip-file
     #http://www.cyberciti.biz/tips/linux-how-to-encrypt-and-decrypt-files-with-a-password.html
 
+def decrypt(inputFilename, pw, outputFilename):
+    # openssl aes-128-cbc -d -salt -in t1.enc -out t1.dec -k abcPW
+    call(["openssl", "aes-128-cbc", "-d", "-salt", "-in", inputFilename, "-out", outputFilename, "-k", pw])
+
+def doUnpack(inputFilename):
+    print("UNPACK")
+    uncryptedFile = args.packagefile + ".tar.gz"
+    decrypt(args.packagefile, cfg["Package"]["Password"], uncryptedFile)
+    print("decrypted: {0}".format(uncryptedFile))
+
+    unpackBaseDir = cfg["Unpack"]["BaseDir"]
+    os.makedirs(unpackBaseDir)
 
 if args.action == "send":
     #
@@ -84,7 +99,7 @@ if args.action == "send":
     now = datetime.today()
     sourcesTargetDir = now.isoformat().replace(":", "_")
     print("sourcesTargetDir: {0}".format(sourcesTargetDir))
-    os.mkdir(sourcesTargetDir)
+    os.mkdir(sourcesTargetDir) # raises error if dir already exists
 
     #
     # Process sources
@@ -120,17 +135,20 @@ if args.action == "send":
     #
     # make package
     #
-    zippedFilename = zipOrSo(sourcesTargetDir, sourcesTargetDir)
+    packageBasename = configId + "-" + sourcesTargetDir
+    zippedFilename = zipOrSo(sourcesTargetDir, packageBasename)
     print("zipped: {0}".format(zippedFilename))
 
-    encFilename = zippedFilename + ".enc"
-    encrypt(zippedFilename, cfg["Package"]["Password"], encFilename)
+    packageFilename = packageBasename + ".pak"
+    encrypt(zippedFilename, cfg["Package"]["Password"], packageFilename)
+    print("package filename: {0}".format(packageFilename))
 elif args.action == "receive":
     print("TODO: receive")
     exit(20)
 elif args.action == "unpack-only":
-    print("TODO: unpack-only")
-    exit(20)
+    print("--action: unpack-only")
+    print("--packagefile: {0}".format(args.packagefile))
+    doUnpack(args.packagefile)
 else:
     print("UNKNOWN OR EMPTY --action value")
     exit(1)

@@ -5,6 +5,7 @@
         "Uri": "http://feinstaub.github.io/#!linux-user/browser-notes.md",
         "Tool": "wget-web"
     },
+"Id": "demo1",
 "SourceList":
     [
     {
@@ -29,5 +30,7 @@
     }
     ],
 "Package": { "Password": "hallo" },
-"ExchangePoint": { "Type": "directory" }
+"ExchangePointSend": { "Type": "directory-todo" },
+"ExchangePointReceive": { "Type": "directory-todo" },
+"Unpack": { "BaseDir": "received-unpacked" }
 }
