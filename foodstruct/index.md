@@ -20,15 +20,15 @@ Weißer Bohnensalat mit Kapern
 -----------------------------
 23.03.2015, selbst, partytauglich
 
-* 1/2 Glas **weiße Bohnen**
-* 1/2 Gläschen **Kapern**
-* 1/2 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln
+* 1 Glas **weiße Bohnen**
+* 1 kleines Gläschen **Kapern**
+* 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln
 * Etwas gehackte **Zwiebel**
 * Hanföl, Olivenöl, Balsamico-Essig
 * Pfeffer, Muskat
 * Optional: Passierte Tomaten, [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685)
 
-Alles in eine Schüssel geben und mischen. Tipp: Flüssiges vorher mischen dann erst die Feststoffe dazu.
+Alles in eine Schüssel geben und mischen. T.i.p.p.: Flüssiges vorher mischen dann erst die Feststoffe dazu.
 
 
 Raw: Zucchini-Avocado-Püree (Green Harmony)
