@@ -28,7 +28,7 @@ Weißer Bohnensalat mit Kapern
 * Pfeffer, Muskat
 * Optional: Passierte Tomaten, [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685)
 
-Alles in eine Schüssel geben und mischen.
+Alles in eine Schüssel geben und mischen. Tipp: Flüssiges vorher mischen dann erst die Feststoffe dazu.
 
 
 Raw: Zucchini-Avocado-Püree (Green Harmony)
