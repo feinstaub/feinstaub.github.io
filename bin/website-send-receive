@@ -14,18 +14,32 @@
 # http://cutycapt.sourceforge.net/
 # ...
 
+#
 # Unit test
 # cd ~/tmp/webphoto
-# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config
+# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action send
+# ~/dev/src/feinstaub.github.io/bin/website-send-receive ~/dev/src/feinstaub.github.io/bin/website-send-receive-demo-config --action send --unittest use-fake-source
+#
 
 import argparse
 import json
+from datetime import datetime
+import os
 from subprocess import call
 
+#
+# use option -h to show help
+#
 parser = argparse.ArgumentParser(description='website-send-receive')
-parser.add_argument('configfile')
+parser.add_argument('configfile', help="The config file shared with sender and receiver")
+parser.add_argument('--action', help="'send': retrieve source, make package and send | 'receive': retrieve package and unpack | 'unpack-only': unpacks a given package file (see --packagefile)")
+parser.add_argument('--packagefile', help="filename to a package file; needed for --action unpack")
+parser.add_argument('--unittest', help="'use-fake-source': don't process source defined in config file but create a fake file")
 args = parser.parse_args()
-print("config file: {0}".format(args.configfile))
+print("ARGS: configfile: {0}".format(args.configfile))
+print("ARGS: action: {0}".format(args.action))
+print("ARGS: packagefile: {0}".format(args.packagefile))
+print("ARGS: unittest: {0}".format(args.unittest))
 
 cfgfile = open(args.configfile, 'r')
 cfg = json.load(cfgfile)
@@ -35,23 +49,88 @@ print("config:--------")
 print(cfg)
 print("--------")
 
-for item in cfg:
-    #print(item)
-    filename = item["Filename"];
-    desc = item["Description"];
-    uri = item["Uri"];
-    tool = item["Tool"];
-    print("Name: {0}, Uri: {1}".format(filename, uri))
+#
+# compresses the sourceDir to one file
+#
+def zipOrSo(sourceDir, targetFilenameBase):
+    print("zipOrSo")
+    # tar -zcvf test.tar.gz 2015-03-25T22_18_46.529128/
+    # http://www.cyberciti.biz/faq/how-do-i-compress-a-whole-linux-or-unix-directory/
+    targetFilename = targetFilenameBase + ".tar.gz"
+    call(["tar", "-zcvf", targetFilename, sourceDir])
+    return targetFilename
 
-    if tool == "gnome-web-photo":
-        timeout = item["Timeout"];
+#
+# encrypts the file
+#
+def encrypt(sourceFilename, pw, targetFilename):
+    print("encrypt")
+    # openssl aes-128-cbc -salt -in t1 -out t1.enc -k abcPW
+    # http://serverfault.com/questions/489140/what-is-a-good-solution-to-encrypt-some-files-in-unix
+    # NOTE: https://www.openssl.org/docs/apps/enc.html
+    # - The -salt option should ALWAYS be used if the key is being derived from a password unless you want compatibility with previous versions of OpenSSL and SSLeay.
+    #- see there also for cyphers
+    call(["openssl", "aes-128-cbc", "-salt", "-in", sourceFilename, "-out", targetFilename, "-k", pw])
 
-        # gnome-web-photo -t 20 -m photo http://kde.org. out2.png
-        call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
-    elif tool == "wget-file":
-        call(["wget", uri, "-O", filename])
-    elif tool == "wget-web":
-        call(["wget", uri])
+    # not used: gpg
+    #http://askubuntu.com/questions/17641/create-encrypted-password-protected-zip-file
+    #http://www.cyberciti.biz/tips/linux-how-to-encrypt-and-decrypt-files-with-a-password.html
+
+
+if args.action == "send":
+    #
+    # generate sourcesTargetDir
+    #
+    now = datetime.today()
+    sourcesTargetDir = now.isoformat().replace(":", "_")
+    print("sourcesTargetDir: {0}".format(sourcesTargetDir))
+    os.mkdir(sourcesTargetDir)
+
+    #
+    # Process sources
+    #
+    if args.unittest == "use-fake-source":
+        print("UNIT TEST because --unittest use-fake-source")
+        with open(sourcesTargetDir + "/unit-test-file.txt", "w") as text_file:
+            text_file.write("This is a test file")
     else:
-        print("UNKNOWN TOOL: {0}".format(tool))
+        sourceList = cfg["SourceList"]
 
+        for item in sourceList:
+            #print(item)
+            filename = sourcesTargetDir + "/" + item["Filename"];
+            desc = item["Description"];
+            uri = item["Uri"];
+            tool = item["Tool"];
+            print("Name: {0}, Uri: {1}".format(filename, uri))
+
+            if tool == "gnome-web-photo":
+                timeout = item["Timeout"];
+
+                # gnome-web-photo -t 20 -m photo http://kde.org. out2.png
+                # http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
+                call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
+            elif tool == "wget-file":
+                call(["wget", uri, "-O", filename])
+            elif tool == "wget-web":
+                call(["wget", uri])
+            else:
+                print("UNKNOWN TOOL: {0}".format(tool))
+
+    #
+    # make package
+    #
+    zippedFilename = zipOrSo(sourcesTargetDir, sourcesTargetDir)
+    print("zipped: {0}".format(zippedFilename))
+
+    encFilename = zippedFilename + ".enc"
+    encrypt(zippedFilename, cfg["Package"]["Password"], encFilename)
+elif args.action == "receive":
+    print("TODO: receive")
+    exit(20)
+elif args.action == "unpack-only":
+    print("TODO: unpack-only")
+    exit(20)
+else:
+    print("UNKNOWN OR EMPTY --action value")
+    exit(1)
