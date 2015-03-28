@@ -185,7 +185,7 @@ def doUnpack(inputFilename):
     decrypt(args.packagefile, cfg["Package"]["Password"], uncryptedFile)
     print("decrypted: {0}".format(uncryptedFile))
 
-    unpackBaseDir = cfg["Unpack"]["BaseDir"]
+    unpackBaseDir = cfg["Receive"]["UnpackDir"]
     print("unpackBaseDir: {0}".format(unpackBaseDir))
 
     unpackDir = os.path.join(unpackBaseDir, configId, dateTimeNowIso())
@@ -272,42 +272,52 @@ def sendPackage(pakFilename):
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
 
+def receivePackage():
+    print("TODO")
+
+def actionSend():
+    #
+    # Process sources
+    #
+    sourceDir = processSources()
+    print("sourceDir: {0}".format(os.path.abspath(sourceDir)))
+
+    #
+    # make package
+    #
+    outboxPackagesBaseDir = cfg["Send"]["OutboxDir"]
+
+    if not os.path.exists(outboxPackagesBaseDir): # create dir if not exists
+        os.makedirs(outboxPackagesBaseDir)
+
+    # todo: make hash out of configId?
+    # https://docs.python.org/2/library/hashlib.html
+    packageBaseFilename = os.path.join(outboxPackagesBaseDir, "{0}-{1}".format(configId, dateTimeNowIso()))
+    print("packageBaseFilename: {0}".format(os.path.abspath(packageBaseFilename)))
+
+    pakFilename = archiveToFile(sourceDir, packageBaseFilename)
+    print("zipped: {0}".format(os.path.abspath(pakFilename)))
+
+    packageFilename = packageBaseFilename + ".pak"
+    encrypt(pakFilename, cfg["Package"]["Password"], packageFilename)
+    print("package filename: {0}".format(packageFilename))
+
+    #
+    # send
+    #
+    sendPackage(packageFilename)
+
+def actionReceive():
+    print("TODO: receive")
+    receivePackage() # TODO
+    exit(20)
+
 def mainProcess():
     if args.action == "send":
-        #
-        # Process sources
-        #
-        sourceDir = processSources()
-        print("sourceDir: {0}".format(os.path.abspath(sourceDir)))
-
-        #
-        # make package
-        #
-        outboxPackagesBaseDir = cfg["Pack"]["OutboxBaseDir"]
-
-        if not os.path.exists(outboxPackagesBaseDir): # create dir if not exists
-            os.makedirs(outboxPackagesBaseDir)
-
-        # todo: make hash out of configId?
-        # https://docs.python.org/2/library/hashlib.html
-        packageBaseFilename = os.path.join(outboxPackagesBaseDir, "{0}-{1}".format(configId, dateTimeNowIso()))
-        print("packageBaseFilename: {0}".format(os.path.abspath(packageBaseFilename)))
-
-        pakFilename = archiveToFile(sourceDir, packageBaseFilename)
-        print("zipped: {0}".format(os.path.abspath(pakFilename)))
-
-        packageFilename = packageBaseFilename + ".pak"
-        encrypt(pakFilename, cfg["Package"]["Password"], packageFilename)
-        print("package filename: {0}".format(packageFilename))
-
-        #
-        # send
-        #
-        sendPackage(packageFilename)
+        actionSend()
 
     elif args.action == "receive":
-        print("TODO: receive")
-        exit(20)
+        actionReceive()
 
     elif args.action == "unpack-only":
         print("--action unpack-only")
