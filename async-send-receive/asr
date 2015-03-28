@@ -192,6 +192,7 @@ def doUnpack(inputFilename):
     print("unpackDir: {0}".format(unpackDir))
 
     if not os.path.exists(unpackDir): # create dir if not exists
+        print("unpackDir does not exist. CREATE: {0}".format(unpackDir))
         os.makedirs(unpackDir)
 
     extractArchive(uncryptedFile, unpackDir)
@@ -272,8 +273,49 @@ def sendPackage(pakFilename):
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
 
-def receivePackage():
-    print("TODO")
+def downloadPackagesToInbox():
+    """Copies all packages prefixed with the config id from the configured exchange point
+    and stores them to the configured inbox dir.
+
+    TODO: implement mechanism of deleting the remote files
+    """
+    cfgExchangePointType = cfg["ExchangePointReceive"]["Type"]
+
+    if cfgExchangePointType == "filesystem":
+        print("cfgExchangePointType == filesystem")
+        sourceDir = cfg["ExchangePointReceive"]["FilesystemConfig"]["Path"]
+        absSourceDir = os.path.abspath(sourceDir)
+        print("sourceDir: configured='{0}', absolute='{1}'".format(sourceDir, absSourceDir))
+        if not os.path.exists(sourceDir):
+            raise Exception("ERROR: sourceDir must exist: {0}".format(absSourceDir))
+
+        sourceFileList = os.listdir(sourceDir)
+        print("SOURCE file list: " + str(sourceFileList))
+
+        downloadBaseDir = cfg["Receive"]["DownloadDir"]
+
+        if not os.path.exists(downloadBaseDir):
+            print("downloadBaseDir does not exist. CREATE: {0}".format(downloadBaseDir))
+            os.makedirs(downloadBaseDir)
+
+        inboxFileList = os.listdir(downloadBaseDir)
+        print("INBOX file list: " + str(sourceFileList))
+
+        for filename in sourceFileList:
+            if filename.startswith(configId):
+                if filename not in inboxFileList:
+                    print("{0} not downloaded yet. Download".format(filename))
+                    shutil.copy(os.path.join(sourceDir, filename), downloadBaseDir)
+                else:
+                    print("{0} already downloaded. Skip.".format(filename))
+
+    elif cfgExchangePointType == "ftp":
+        print("cfgExchangePointType == ftp")
+        print("TODO")
+        exit(20)
+
+    else:
+        raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
 
 def actionSend():
     #
@@ -287,7 +329,8 @@ def actionSend():
     #
     outboxPackagesBaseDir = cfg["Send"]["OutboxDir"]
 
-    if not os.path.exists(outboxPackagesBaseDir): # create dir if not exists
+    if not os.path.exists(outboxPackagesBaseDir):
+        print("outboxPackagesBaseDir does not exist. CREATE: {0}".format(outboxPackagesBaseDir))
         os.makedirs(outboxPackagesBaseDir)
 
     # todo: make hash out of configId?
@@ -309,7 +352,7 @@ def actionSend():
 
 def actionReceive():
     print("TODO: receive")
-    receivePackage() # TODO
+    downloadPackagesToInbox() # TODO
     exit(20)
 
 def mainProcess():
