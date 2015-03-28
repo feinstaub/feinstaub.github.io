@@ -461,7 +461,7 @@ def actionSend():
     #
     subjectLineFileName = os.path.join(sourceDir, SUBJECTLINE_FILENAME)
     if os.path.exists(subjectLineFileName):
-        raise Exception("subjectLineFileName must not exist in source dir")
+        raise Exception("SUBJECTLINE_FILENAME must not exist in source dir")
     subjectLineFile = open(subjectLineFileName, 'w')
     subjectLineFile.write(g_subjectLine)
     subjectLineFile.close()
@@ -483,7 +483,12 @@ def actionSend():
     print("packageBaseFilename: {0}".format(os.path.abspath(packageBaseFilename)))
 
     pakFilename = archiveToFile(sourceDir, packageBaseFilename)
-    print("zipped: {0}".format(os.path.abspath(pakFilename)))
+    print("archived: {0}".format(os.path.abspath(pakFilename)))
+
+
+    print("remove SUBJECTLINE_FILENAME")
+    os.remove(subjectLineFileName)
+
 
     packageFilename = packageBaseFilename + PAK_EXT
     encrypt(pakFilename, cfg["Package"]["Password"], packageFilename)
