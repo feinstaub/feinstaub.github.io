@@ -218,7 +218,8 @@ def decrypt(inputFilename, pw, outputFilename):
     subprocess.check_call(["openssl", "aes-128-cbc", "-d", "-salt", "-in", inputFilename, "-out", outputFilename, "-k", pw])
 
 def unpackPackageToInbox(inputFilename):
-    """NOTE that inputFilename can contain an absolute path
+    """NOTE that inputFilename can contain an absolute path.
+    Respects and processes ASR_SUBJECTLINE.
     """
     print("unpackPackageToInbox")
     inputBasename = os.path.basename(inputFilename) # final component of pathname
@@ -244,10 +245,28 @@ def unpackPackageToInbox(inputFilename):
         print("unpackDir does not exist. CREATE: {0}".format(unpackDir))
         os.makedirs(unpackDir)
     else:
-        raise Exception("unpackDir already exists. Either delete it or delete the downloaded pak file or specifiy another package file from command line.")
+        raise Exception("unpackDir (or its proxyfile) already exists. Either delete it or delete the downloaded pak file or specifiy another package file from command line.")
 
     extractArchive(uncryptedFilename, unpackDir)
     print("unpacked to: {0}".format(os.path.abspath(unpackDir)))
+
+    #
+    # process subject line
+    #
+    subjectLineFileName = os.path.join(unpackDir, SUBJECTLINE_FILENAME)
+    if os.path.exists(subjectLineFileName):
+        subjectLineFile = open(subjectLineFileName, 'r')
+        subjectLine = subjectLineFile.readline()
+        subjectLineFile.close()
+
+        os.remove(subjectLineFileName)
+
+        subjectedDirName = "{0} - {1}".format(unpackDir, subjectLine)
+        shutil.move(unpackDir, subjectedDirName)
+
+        proxyFileForOriginalDir = open(unpackDir, 'w')
+        proxyFileForOriginalDir.write("WAS MOVED TO: {0}".format(subjectedDirName))
+        proxyFileForOriginalDir.close()
 
 def processSources():
     """either processes the SourceList defined in the config file
