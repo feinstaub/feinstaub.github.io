@@ -21,3 +21,7 @@ http://dynalon.github.io/mdwiki
     * CON: navigation links are on the top only
   * wordpress.com
     * CON: no automatic navigation generation possible
+  * see https://www.staticgen.com/
+    * http://blog.getpelican.com/ (GPL)
+        * http://docs.getpelican.com/en/3.5.0/quickstart.html
+    * http://jekyllrb.com/ (MIT license)
