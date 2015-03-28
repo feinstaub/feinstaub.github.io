@@ -1,7 +1,7 @@
 {
 "SenderId": "demo-s-1",
 "ReceiverId": "demo-r-1",
-"Subject": "Demo Subject 1 TODO",
+"SubjectLine": "Demo Subject 1",
 "SourceList":
     [
     {

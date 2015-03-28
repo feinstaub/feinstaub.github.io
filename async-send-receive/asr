@@ -141,6 +141,8 @@ print("--------")
 
 g_senderId = cfg["SenderId"] # TODO: let this be overridable by command line arguments
 g_receiverId = cfg["ReceiverId"] # TODO: let this be overridable by command line arguments
+# subjectLine must be a valid filename
+g_subjectLine = cfg["SubjectLine"] # TODO: let this be overridable by command line arguments
 g_outboxDir = os.path.expanduser("~/asr/outbox") # todo: let this be overridable by some config file
 g_inboxDir = os.path.expanduser("~/asr/inbox") # todo: let this be overridable by some config file
 
@@ -151,6 +153,7 @@ DONE_EXT = ".done"
 DOWNLOADED_SUBDIR = "1_downloaded"
 DECRYPTED_SUBDIR = "2_decrypted"
 UNPACKED_SUBDIR = "unpacked"
+SUBJECTLINE_FILENAME = "ASR_SUBJECTLINE"
 
 def dateTimeNowIso():
     """Returns e.g. "2015-03-28T11_36_51-099832"
@@ -411,6 +414,16 @@ def actionSend():
     #
     sourceDir = processSources()
     print("sourceDir: {0}".format(os.path.abspath(sourceDir)))
+
+    #
+    # put subject file to sourceDir
+    #
+    subjectLineFileName = os.path.join(sourceDir, SUBJECTLINE_FILENAME)
+    if os.path.exists(subjectLineFileName):
+        raise Exception("subjectLineFileName must not exist in source dir")
+    subjectLineFile = open(subjectLineFileName, 'w')
+    subjectLineFile.write(g_subjectLine)
+    subjectLineFile.close()
 
     #
     # make package
