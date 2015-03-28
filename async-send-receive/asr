@@ -122,6 +122,13 @@ print("--------")
 
 configId = cfg["Id"]
 
+def dateTimeNowIso():
+    """Returns e.g. "2015-03-28T11_36_51-099832"
+    """
+    now = datetime.today()
+    nowStr = now.isoformat().replace(":", "_").replace(".", "-")
+    return nowStr
+
 def archiveToFile(sourceDir, targetFilenameBase):
     """compresses the sourceDir to one file
     returns the resulting filename.
@@ -181,7 +188,7 @@ def doUnpack(inputFilename):
     unpackBaseDir = cfg["Unpack"]["BaseDir"]
     print("unpackBaseDir: {0}".format(unpackBaseDir))
 
-    unpackDir = os.path.join(unpackBaseDir, configId)
+    unpackDir = os.path.join(unpackBaseDir, configId, dateTimeNowIso())
     print("unpackDir: {0}".format(unpackDir))
 
     if not os.path.exists(unpackDir): # create dir if not exists
@@ -256,15 +263,13 @@ def mainProcess():
         # make package
         #
         outboxPackagesBaseDir = cfg["Pack"]["OutboxBaseDir"]
-        now = datetime.today()
-        nowStr = now.isoformat().replace(":", "_")
 
         if not os.path.exists(outboxPackagesBaseDir): # create dir if not exists
             os.makedirs(outboxPackagesBaseDir)
 
         # todo: make hash out of configId?
         # https://docs.python.org/2/library/hashlib.html
-        packageBaseFilename = os.path.join(outboxPackagesBaseDir, "{0}-{1}".format(configId, nowStr))
+        packageBaseFilename = os.path.join(outboxPackagesBaseDir, "{0}-{1}".format(configId, dateTimeNowIso()))
         print("packageBaseFilename: {0}".format(os.path.abspath(packageBaseFilename)))
 
         pakFilename = archiveToFile(sourceDir, packageBaseFilename)
@@ -283,7 +288,7 @@ def mainProcess():
         print("TODO: receive")
         exit(20)
     elif args.action == "unpack-only":
-        print("--action: unpack-only")
+        print("--action unpack-only")
         print("--packagefile: {0}".format(args.packagefile))
         doUnpack(args.packagefile)
     else:
