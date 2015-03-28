@@ -118,6 +118,8 @@ import shutil
 #
 # use option -h to show help
 #
+# see https://docs.python.org/3/library/argparse.html
+#
 parser = argparse.ArgumentParser(description='asr (async-send-receive) by Gregor Mi (2015)')
 parser.add_argument('configfile', help="The config file shared with sender and receiver")
 parser.add_argument('--action', help="'send': retrieve source, make package and send | 'receive': retrieve package and unpack | 'unpack-only': unpacks a given package file (see --packagefile)")
@@ -146,10 +148,9 @@ g_subjectLine = cfg["SubjectLine"] # TODO: let this be overridable by command li
 g_outboxDir = os.path.expanduser("~/asr/outbox") # todo: let this be overridable by some config file
 g_inboxDir = os.path.expanduser("~/asr/inbox") # todo: let this be overridable by some config file
 
-# TODO use os.path.expanduser(path) when reading config paths
-
 PAK_EXT = ".pak"
 DONE_EXT = ".done"
+ARCHIVED_EXT = ".tar"
 DOWNLOADED_SUBDIR = "1_downloaded"
 DECRYPTED_SUBDIR = "2_decrypted"
 UNPACKED_SUBDIR = "unpacked"
@@ -166,33 +167,43 @@ def archiveToFile(sourceDir, targetFilenameBase):
     """compresses the sourceDir to one file
     returns the resulting filename.
     Directory where targetFilenameBase should be created must exist!
+
+    todo/later: make compression optional
     """
-    methodCallStr = "archiveToFile: sourceDir:{0}, targetFilenameBase:{1}".format(sourceDir, targetFilenameBase)
-    print(methodCallStr)
+    print("archiveToFile: sourceDir:{0}, targetFilenameBase:{1}".format(sourceDir, targetFilenameBase))
 
     # tar -zcvf test.tar.gz 2015-03-25T22_18_46.529128/
     # http://www.cyberciti.biz/faq/how-do-i-compress-a-whole-linux-or-unix-directory/
     # http://stackoverflow.com/questions/939982/how-do-i-tar-a-directory-of-files-and-folders-without-including-the-directory-it
-    targetFilename = targetFilenameBase + ".tar.gz"
+    targetFilename = targetFilenameBase + ARCHIVED_EXT
 
     #print(os.path.basename(sourceDir))
     #print(os.path.dirname(sourceDir))
 
+    print("[STATUS]: Archiving... Please wait...")
+
     sys.stdout.flush() # flush all python prints so far
     #                            sourceDir="/tmp/hallo/test" =>   /tmp/hallo                  test
     #retCode = call(["tar", "-zcvf", targetFilename, "-C", os.path.dirname(sourceDir), os.path.basename(sourceDir)])
-    retCode = subprocess.check_call(["tar", "-zcvf", targetFilename, "-C", sourceDir, "."])
+    # do not use -z (=> no compression)
+    retCode = subprocess.check_call(["tar", "-cvf", targetFilename, "-C", sourceDir, "."])
     return targetFilename
 
 def extractArchive(inputFilename, targetDir):
-    print("extractArchive")
+    print("extractArchive: inputFilename:{0}, targetDir:{1}".format(inputFilename, targetDir))
+    print("[STATUS]: Extracting archive... Please wait...")
+    
     sys.stdout.flush() # flush all python prints so far
-    subprocess.check_call(["tar", "-zxvf", inputFilename, "-C", targetDir])
+    # do not use -z (=> no compression)
+    subprocess.check_call(["tar", "-xvf", inputFilename, "-C", targetDir])
 
 def encrypt(sourceFilename, pw, targetFilename):
     """encrypts the file
     """
-    print("encrypt")
+    print("encrypt: sourceFilename:{0}, pw:(secret), targetFilename:{1}".format(sourceFilename, targetFilename))
+
+    print("[STATUS]: Encrypting... Please wait...")
+
     # openssl aes-128-cbc -salt -in t1 -out t1.enc -k abcPW
     # http://serverfault.com/questions/489140/what-is-a-good-solution-to-encrypt-some-files-in-unix
     # NOTE: https://www.openssl.org/docs/apps/enc.html
@@ -209,11 +220,15 @@ def decrypt(inputFilename, pw, outputFilename):
     """# openssl aes-128-cbc -d -salt -in t1.enc -out t1.dec -k abcPW
     Creates the intermediate directories of outputFilename if not exist
     """
-    sys.stdout.flush() # flush all python prints so far
+    print("decrypt: inputFilename:{0}, pw:(secret), outputFilename:{1}".format(inputFilename, outputFilename))
+    print("[STATUS]: Decrypting... Please wait...")
+
     p1 = os.path.dirname(outputFilename)
     if not os.path.exists(p1):
         print("decrypt target dir does not exist. CREATE: {0}".format(p1))
         os.makedirs(p1)
+
+    sys.stdout.flush() # flush all python prints so far
 
     subprocess.check_call(["openssl", "aes-128-cbc", "-d", "-salt", "-in", inputFilename, "-out", outputFilename, "-k", pw])
 
@@ -229,7 +244,7 @@ def unpackPackageToInbox(inputFilename):
 
     print("packageName: {0}".format(packageName))
 
-    uncryptedFilename = os.path.join(g_inboxDir, DECRYPTED_SUBDIR, g_senderId, packageName + ".tar.gz")
+    uncryptedFilename = os.path.join(g_inboxDir, DECRYPTED_SUBDIR, g_senderId, packageName + ARCHIVED_EXT)
 
     decrypt(inputFilename, cfg["Package"]["Password"], uncryptedFilename)
 
@@ -277,6 +292,8 @@ def processSources():
     """
     if (args.sourcedir is not None):
         print("processSources: take --sourcedir which is: {0}. Absolute: {1}".format(args.sourcedir, os.path.abspath(args.sourcedir)))
+        if not os.path.exists(args.sourcedir):
+            raise Exception("args.sourcedir must exist")
         return args.sourcedir
     else:
         print("processSources: use SourceList from config file")
@@ -323,6 +340,10 @@ def processSources():
         return sourcesTargetDir
 
 def sendPackage(pakFilename, senderId, receiverId):
+
+    print("sendPackage: pakFilename:{0}, senderId:{1}, receiverId:{2}".format(pakFilename, senderId, receiverId))
+    print("[STATUS]: Sending package... Please wait...")
+
     cfgExchangePointType = cfg["ExchangePointSend"]["Type"]
 
     if cfgExchangePointType == "filesystem":
@@ -385,6 +406,7 @@ def downloadPackages():
                 print("{0} already unpacked. Skip. (todo: delete from remote)".format(filename))
             else:
                 print("{0} not downloaded yet. Download.".format(filename))
+                print("[STATUS]: Downloading... Please wait...")
                 shutil.copy(os.path.join(sourceDir, filename), downloadDir)
 
     elif cfgExchangePointType == "ftp":
@@ -455,8 +477,8 @@ def actionSend():
         print("outboxDir does not exist. CREATE: {0}".format(outboxDir))
         os.makedirs(outboxDir)
 
-    # todo: make hash out of senderId?
-    # https://docs.python.org/2/library/hashlib.html
+    # todo: make hash out of senderId? (https://docs.python.org/2/library/hashlib.html)
+
     packageBaseFilename = os.path.join(outboxDir, dateTimeNowIso())
     print("packageBaseFilename: {0}".format(os.path.abspath(packageBaseFilename)))
 
