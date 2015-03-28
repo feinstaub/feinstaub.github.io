@@ -1,11 +1,7 @@
 {
-"Comment": {
-        "Filename": "test1-javascript-wget-ERR.png",
-        "Description": "Test",
-        "Uri": "http://feinstaub.github.io/#!linux-user/browser-notes.md",
-        "Tool": "wget-web"
-    },
-"Id": "demo1",
+"SenderId": "demo-s-1",
+"ReceiverId": "demo-r-1",
+"Subject": "Demo Subject 1 TODO",
 "SourceList":
     [
     {
@@ -30,8 +26,8 @@
     }
     ],
 "Package": { "Password": "hallo" },
-"Send": { "OutboxDir": "asr/1_outbox-pak" },
+"Send": { "OutboxDir": "NOT USED YET asr/1_outbox-pak" },
 "ExchangePointSend": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/2_remote-exchange" } },
 "ExchangePointReceive": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/2_remote-exchange" } },
-"Receive": { "InboxDir": "asr/3_inbox" }
+"Receive": { "InboxDir": "NOT USED YET asr/3_inbox" }
 }
