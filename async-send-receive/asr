@@ -296,16 +296,21 @@ def processSources():
 
         return sourcesTargetDir
 
-def sendPackage(pakFilename):
+def sendPackage(pakFilename, senderId, receiverId):
     cfgExchangePointType = cfg["ExchangePointSend"]["Type"]
 
     if cfgExchangePointType == "filesystem":
         print("cfgExchangePointType == filesystem")
-        targetDir = os.path.expanduser(cfg["ExchangePointSend"]["FilesystemConfig"]["Path"])
-        absTargetDir = os.path.abspath(targetDir)
-        print("targetDir: configured='{0}', absolute='{1}'".format(targetDir, absTargetDir))
-        if not os.path.exists(targetDir):
+        targetBaseDir = os.path.expanduser(cfg["ExchangePointSend"]["FilesystemConfig"]["Path"])
+        absTargetDir = os.path.abspath(targetBaseDir)
+        print("targetDir: configured='{0}', absolute='{1}'".format(targetBaseDir, absTargetDir))
+        if not os.path.exists(targetBaseDir):
             raise Exception("ERROR: targetDir must exist: {0}".format(absTargetDir))
+
+        targetDir = os.path.join(targetBaseDir, senderId, receiverId)
+        if not os.path.exists(targetDir):
+            print("targetDir does not exist. CREATE: {0}".format(targetDir))
+            os.makedirs(targetDir)
 
         shutil.copy(pakFilename, targetDir)
 
@@ -415,7 +420,7 @@ def actionSend():
     #
     # send
     #
-    sendPackage(packageFilename)
+    sendPackage(packageFilename, g_senderId, g_receiverId)
 
 def actionReceive():
     downloadPackages()
