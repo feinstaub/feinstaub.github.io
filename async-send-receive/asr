@@ -22,10 +22,27 @@
 ## asr - async send receive
 ## ------------------------
 ##
-## asr is a tool built around the idea to exchange data between
-## two computers using a third, completely untrusted, party (like
-## internet services, corporate network shares etc.) in an
-## asynchronous way.
+## Asr is a tool built around the idea to exchange data between
+## two computers using a third, potentially completely untrusted, party
+## (like internet hosting services, corporate network shares etc.)
+## in an asynchronous way.
+##
+## Asr currently does not target the ultra-mobile-cloud-user audience
+## but more the being-offline kind of use cases. Places in the Internet
+## are classified as untrusted sites and private data should lie
+## around needlessly or even unprotected.
+## So asr tries to provide an electronic way of sending someone a
+## package via postal service; including privacy of correspondence,
+## posts and telecommunications.
+##
+## If you send someone a postal package there is usually no trace of the
+## package's content between sender and receiver. The only metadata
+## which is tracked is who sent it and who received it. Asr also
+## tries to minimize public metadata.
+##
+## As with regular email, the process of sending and receiving is
+## asynchronous. The receiver does not have to be online when a package
+## is sent.
 ##
 #####################################################################
 
@@ -122,7 +139,12 @@ print("config:--------")
 print(cfg)
 print("--------")
 
-configId = cfg["Id"]
+configId = cfg["Id"] # todo: replace/augement with receiverId?
+
+# TODO use os.path.expanduser(path) when reading config paths
+
+PAK_EXT = ".pak"
+DONE_EXT = ".done"
 
 def dateTimeNowIso():
     """Returns e.g. "2015-03-28T11_36_51-099832"
@@ -179,13 +201,13 @@ def decrypt(inputFilename, pw, outputFilename):
     sys.stdout.flush() # flush all python prints so far
     subprocess.check_call(["openssl", "aes-128-cbc", "-d", "-salt", "-in", inputFilename, "-out", outputFilename, "-k", pw])
 
-def doUnpack(inputFilename):
+def unpackPackageToInbox(inputFilename):
     print("UNPACK")
-    uncryptedFile = args.packagefile + ".tar.gz"
-    decrypt(args.packagefile, cfg["Package"]["Password"], uncryptedFile)
+    uncryptedFile = inputFilename + ".tar.gz"
+    decrypt(inputFilename, cfg["Package"]["Password"], uncryptedFile)
     print("decrypted: {0}".format(uncryptedFile))
 
-    unpackBaseDir = cfg["Receive"]["UnpackDir"]
+    unpackBaseDir = os.path.join(cfg["Receive"]["InboxDir"], "unpacked")
     print("unpackBaseDir: {0}".format(unpackBaseDir))
 
     unpackDir = os.path.join(unpackBaseDir, configId, dateTimeNowIso())
@@ -273,9 +295,9 @@ def sendPackage(pakFilename):
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
 
-def downloadPackagesToInbox():
+def downloadPackages():
     """Copies all packages prefixed with the config id from the configured exchange point
-    and stores them to the configured inbox dir.
+    and stores them to the configured download dir.
 
     TODO: implement mechanism of deleting the remote files
     """
@@ -292,22 +314,26 @@ def downloadPackagesToInbox():
         sourceFileList = os.listdir(sourceDir)
         print("SOURCE file list: " + str(sourceFileList))
 
-        downloadBaseDir = cfg["Receive"]["DownloadDir"]
+        downloadBaseDir = os.path.join(cfg["Receive"]["InboxDir"], "downloaded")
+        downloadDir = os.path.join(downloadBaseDir, configId)
 
-        if not os.path.exists(downloadBaseDir):
-            print("downloadBaseDir does not exist. CREATE: {0}".format(downloadBaseDir))
-            os.makedirs(downloadBaseDir)
+        if not os.path.exists(downloadDir):
+            print("downloadBaseDir does not exist. CREATE: {0}".format(downloadDir))
+            os.makedirs(downloadDir)
 
-        inboxFileList = os.listdir(downloadBaseDir)
+        inboxFileList = os.listdir(downloadDir)
         print("INBOX file list: " + str(sourceFileList))
 
         for filename in sourceFileList:
-            if filename.startswith(configId):
-                if filename not in inboxFileList:
-                    print("{0} not downloaded yet. Download".format(filename))
-                    shutil.copy(os.path.join(sourceDir, filename), downloadBaseDir)
-                else:
+            packageName = os.path.splitext(filename)[0]
+            if packageName.startswith(configId): # look only at those with the given configId so that we don't download too much
+                if packageName + PAK_EXT in inboxFileList:
                     print("{0} already downloaded. Skip.".format(filename))
+                elif packageName + DONE_EXT in inboxFileList:
+                    print("{0} already unpacked. Skip.".format(filename))
+                else:
+                    print("{0} not downloaded yet. Download.".format(filename))
+                    shutil.copy(os.path.join(sourceDir, filename), downloadDir)
 
     elif cfgExchangePointType == "ftp":
         print("cfgExchangePointType == ftp")
@@ -316,6 +342,24 @@ def downloadPackagesToInbox():
 
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
+
+def unpackDownloadedPackages():
+    """Processes all not processed packages (".pak" is not processed, ".done" is processed)
+    and unpacks them to the unpack dir.
+    """
+    downloadBaseDir = os.path.join(cfg["Receive"]["InboxDir"], "downloaded")
+    downloadDir = os.path.join(downloadBaseDir, configId)
+
+    downloadedFilesList = os.listdir(downloadDir)
+    for filename in downloadedFilesList:
+        (packageName, ext) = os.path.splitext(filename)
+        if ext == PAK_EXT:
+            unpackPackageToInbox(os.path.join(downloadDir, filename))
+        elif ext == DONE_EXT:
+            # ignore because already done
+            pass
+        else:
+            print("WARN: unknown filename extension in download dir: {0}".format(ext))
 
 def actionSend():
     #
@@ -341,7 +385,7 @@ def actionSend():
     pakFilename = archiveToFile(sourceDir, packageBaseFilename)
     print("zipped: {0}".format(os.path.abspath(pakFilename)))
 
-    packageFilename = packageBaseFilename + ".pak"
+    packageFilename = packageBaseFilename + PAK_EXT
     encrypt(pakFilename, cfg["Package"]["Password"], packageFilename)
     print("package filename: {0}".format(packageFilename))
 
@@ -351,8 +395,9 @@ def actionSend():
     sendPackage(packageFilename)
 
 def actionReceive():
-    print("TODO: receive")
-    downloadPackagesToInbox() # TODO
+    downloadPackages()
+    unpackDownloadedPackages()
+    print("TODO: ..........")
     exit(20)
 
 def mainProcess():
@@ -365,7 +410,7 @@ def mainProcess():
     elif args.action == "unpack-only":
         print("--action unpack-only")
         print("--packagefile: {0}".format(args.packagefile))
-        doUnpack(args.packagefile)
+        unpackPackageToInbox(args.packagefile)
 
     else:
         print("UNKNOWN OR EMPTY --action value")

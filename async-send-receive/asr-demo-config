@@ -33,5 +33,5 @@
 "Send": { "OutboxDir": "asr/1_outbox-pak" },
 "ExchangePointSend": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/2_remote-exchange" } },
 "ExchangePointReceive": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/2_remote-exchange" } },
-"Receive": { "DownloadDir": "asr/3_download", "UnpackDir": "asr/4_unpacked" }
+"Receive": { "InboxDir": "asr/3_inbox" }
 }
