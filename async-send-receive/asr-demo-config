@@ -30,8 +30,8 @@
     }
     ],
 "Package": { "Password": "hallo" },
-"ExchangePointSend": { "Type": "directory-todo" },
-"ExchangePointReceive": { "Type": "directory-todo" },
+"ExchangePointSend": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/remote-exchange" } },
+"ExchangePointReceive": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/remote-exchange" } },
 "Pack": { "OutboxBaseDir": "asr/outbox-pak" },
 "Unpack": { "BaseDir": "asr/received-unpacked" }
 }

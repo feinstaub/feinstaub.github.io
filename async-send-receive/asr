@@ -88,9 +88,11 @@ import argparse
 import json
 from datetime import datetime
 import os
-from subprocess import call
+#from subprocess import call
+import subprocess
 import tempfile
 import sys
+import shutil
 
 # import guidata
 
@@ -148,15 +150,13 @@ def archiveToFile(sourceDir, targetFilenameBase):
     sys.stdout.flush() # flush all python prints so far
     #                            sourceDir="/tmp/hallo/test" =>   /tmp/hallo                  test
     #retCode = call(["tar", "-zcvf", targetFilename, "-C", os.path.dirname(sourceDir), os.path.basename(sourceDir)])
-    retCode = call(["tar", "-zcvf", targetFilename, "-C", sourceDir, "."])
-    if retCode != 0:
-        raise Exception("FAILED: " + methodCallStr)
+    retCode = subprocess.check_call(["tar", "-zcvf", targetFilename, "-C", sourceDir, "."])
     return targetFilename
 
 def extractArchive(inputFilename, targetDir):
     print("extractArchive")
     sys.stdout.flush() # flush all python prints so far
-    call(["tar", "-zxvf", inputFilename, "-C", targetDir])
+    subprocess.check_call(["tar", "-zxvf", inputFilename, "-C", targetDir])
 
 def encrypt(sourceFilename, pw, targetFilename):
     """encrypts the file
@@ -168,7 +168,7 @@ def encrypt(sourceFilename, pw, targetFilename):
     # - The -salt option should ALWAYS be used if the key is being derived from a password unless you want compatibility with previous versions of OpenSSL and SSLeay.
     #- see there also for cyphers
     sys.stdout.flush() # flush all python prints so far
-    call(["openssl", "aes-128-cbc", "-salt", "-in", sourceFilename, "-out", targetFilename, "-k", pw])
+    subprocess.check_call(["openssl", "aes-128-cbc", "-salt", "-in", sourceFilename, "-out", targetFilename, "-k", pw])
 
     # not used: gpg
     #http://askubuntu.com/questions/17641/create-encrypted-password-protected-zip-file
@@ -177,7 +177,7 @@ def encrypt(sourceFilename, pw, targetFilename):
 def decrypt(inputFilename, pw, outputFilename):
     # openssl aes-128-cbc -d -salt -in t1.enc -out t1.dec -k abcPW
     sys.stdout.flush() # flush all python prints so far
-    call(["openssl", "aes-128-cbc", "-d", "-salt", "-in", inputFilename, "-out", outputFilename, "-k", pw])
+    subprocess.check_call(["openssl", "aes-128-cbc", "-d", "-salt", "-in", inputFilename, "-out", outputFilename, "-k", pw])
 
 def doUnpack(inputFilename):
     print("UNPACK")
@@ -239,17 +239,38 @@ def processSources():
                     # gnome-web-photo -t 20 -m photo http://kde.org. out2.png
                     # http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
                     sys.stdout.flush() # flush all python prints so far
-                    call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
+                    subprocess.check_call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
                 elif tool == "wget-file":
                     sys.stdout.flush() # flush all python prints so far
-                    call(["wget", uri, "-O", filename])
+                    subprocess.check_call(["wget", uri, "-O", filename])
                 elif tool == "wget-web":
                     sys.stdout.flush() # flush all python prints so far
-                    call(["wget", uri])
+                    subprocess.check_call(["wget", uri])
                 else:
                     print("UNKNOWN TOOL: {0}".format(tool))
 
         return sourcesTargetDir
+
+def sendPackage(pakFilename):
+    cfgExchangePointType = cfg["ExchangePointSend"]["Type"]
+
+    if cfgExchangePointType == "filesystem":
+        print("cfgExchangePointType == filesystem")
+        targetDir = cfg["ExchangePointSend"]["FilesystemConfig"]["Path"]
+        absTargetDir = os.path.abspath(targetDir)
+        print("targetDir: configured='{0}', absolute='{1}'".format(targetDir, absTargetDir))
+        if not os.path.exists(targetDir):
+            raise Exception("ERROR: targetDir must exist: {0}".format(absTargetDir))
+
+        shutil.copy(pakFilename, targetDir)
+
+    elif cfgExchangePointType == "ftp":
+        print("cfgExchangePointType == ftp")
+        print("TODO")
+        exit(20)
+
+    else:
+        raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
 
 def mainProcess():
     if args.action == "send":
@@ -282,15 +303,17 @@ def mainProcess():
         #
         # send
         #
-        print("....todo send....")
-        #
+        sendPackage(packageFilename)
+
     elif args.action == "receive":
         print("TODO: receive")
         exit(20)
+
     elif args.action == "unpack-only":
         print("--action unpack-only")
         print("--packagefile: {0}".format(args.packagefile))
         doUnpack(args.packagefile)
+
     else:
         print("UNKNOWN OR EMPTY --action value")
         # https://pythonhosted.org/guidata/examples.html#basic-example
@@ -299,6 +322,6 @@ def mainProcess():
         exit(1)
 
 #
-# run
+# run main
 #
 mainProcess()
