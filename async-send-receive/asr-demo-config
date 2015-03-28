@@ -27,7 +27,9 @@
     ],
 "Package": { "Password": "hallo" },
 "Send": { "OutboxDir": "NOT USED YET asr/1_outbox-pak" },
-"ExchangePointSend": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/2_remote-exchange" } },
-"ExchangePointReceive": { "Type": "filesystem", "FilesystemConfig": { "Path": "asr/2_remote-exchange" } },
+"off_ExchangePointSend": { "Type": "filesystem", "filesystem_config": { "Path": "asr/2_remote-exchange" } },
+"off_ExchangePointReceive": { "Type": "filesystem", "filesystem_config": { "Path": "asr/2_remote-exchange" } },
+"ExchangePointSend": { "Type": "ftp", "ftp_config": { "TODO": "asr/2_remote-exchange" } },
+"ExchangePointReceive": { "Type": "ftp", "ftp_config": { "TODO": "asr/2_remote-exchange" } },
 "Receive": { "InboxDir": "NOT USED YET asr/3_inbox" }
 }

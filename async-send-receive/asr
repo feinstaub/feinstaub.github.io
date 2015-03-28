@@ -192,7 +192,7 @@ def archiveToFile(sourceDir, targetFilenameBase):
 def extractArchive(inputFilename, targetDir):
     print("extractArchive: inputFilename:{0}, targetDir:{1}".format(inputFilename, targetDir))
     print("[STATUS]: Extracting archive... Please wait...")
-    
+
     sys.stdout.flush() # flush all python prints so far
     # do not use -z (=> no compression)
     subprocess.check_call(["tar", "-xvf", inputFilename, "-C", targetDir])
@@ -348,7 +348,7 @@ def sendPackage(pakFilename, senderId, receiverId):
 
     if cfgExchangePointType == "filesystem":
         print("cfgExchangePointType == filesystem")
-        targetBaseDir = os.path.expanduser(cfg["ExchangePointSend"]["FilesystemConfig"]["Path"])
+        targetBaseDir = os.path.expanduser(cfg["ExchangePointSend"]["filesystem_config"]["Path"])
         absTargetDir = os.path.abspath(targetBaseDir)
         print("targetDir: configured='{0}', absolute='{1}'".format(targetBaseDir, absTargetDir))
         if not os.path.exists(targetBaseDir):
@@ -379,7 +379,7 @@ def downloadPackages():
 
     if cfgExchangePointType == "filesystem":
         print("cfgExchangePointType == filesystem")
-        sourceDir = os.path.join(cfg["ExchangePointReceive"]["FilesystemConfig"]["Path"], g_senderId, g_receiverId)
+        sourceDir = os.path.join(cfg["ExchangePointReceive"]["filesystem_config"]["Path"], g_senderId, g_receiverId)
         absSourceDir = os.path.abspath(sourceDir)
         print("sourceDir: configured='{0}', absolute='{1}'".format(sourceDir, absSourceDir))
         if not os.path.exists(sourceDir):
