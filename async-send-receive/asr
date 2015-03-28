@@ -225,8 +225,10 @@ def unpackPackageToInbox(inputFilename):
 
     print("packageName: {0}".format(packageName))
 
-    uncryptedFilename = os.path.join(g_inboxDir, DECRYPTED_SUBDIR, packageName + ".tar.gz")
+    uncryptedFilename = os.path.join(g_inboxDir, DECRYPTED_SUBDIR, g_senderId, packageName + ".tar.gz")
+
     decrypt(inputFilename, cfg["Package"]["Password"], uncryptedFilename)
+
     print("decrypted: {0}".format(uncryptedFilename))
 
     unpackBaseDir = os.path.join(g_inboxDir, UNPACKED_SUBDIR)
@@ -238,6 +240,8 @@ def unpackPackageToInbox(inputFilename):
     if not os.path.exists(unpackDir):
         print("unpackDir does not exist. CREATE: {0}".format(unpackDir))
         os.makedirs(unpackDir)
+    else:
+        raise Exception("unpackDir already exists. Either delete it or delete the downloaded pak file or specifiy another package file from command line.")
 
     extractArchive(uncryptedFilename, unpackDir)
     print("unpacked to: {0}".format(os.path.abspath(unpackDir)))
@@ -354,9 +358,9 @@ def downloadPackages():
         for filename in sourceFileList:
             packageName = os.path.splitext(filename)[0]
             if packageName + PAK_EXT in inboxFileList:
-                print("{0} already downloaded. Skip.".format(filename))
+                print("{0} already downloaded. Skip. (normally a downloaded package will unpacked and marked as done)".format(filename))
             elif packageName + DONE_EXT in inboxFileList:
-                print("{0} already unpacked. Skip.".format(filename))
+                print("{0} already unpacked. Skip. (todo: delete from remote)".format(filename))
             else:
                 print("{0} not downloaded yet. Download.".format(filename))
                 shutil.copy(os.path.join(sourceDir, filename), downloadDir)
@@ -372,6 +376,8 @@ def downloadPackages():
 def unpackDownloadedPackages():
     """Processes all not processed packages (".pak" is not processed, ".done" is processed)
     and unpacks them to the unpack dir.
+    The contents of a pak files marked as "done" will be cleared since we still have the unencrypted
+    files present.
     """
     downloadBaseDir = os.path.join(g_inboxDir, DOWNLOADED_SUBDIR)
     downloadDir = os.path.join(downloadBaseDir, g_senderId)
@@ -380,7 +386,19 @@ def unpackDownloadedPackages():
     for filename in downloadedFilesList:
         (packageName, ext) = os.path.splitext(filename)
         if ext == PAK_EXT:
-            unpackPackageToInbox(os.path.join(downloadDir, filename))
+            packageFilename = os.path.join(downloadDir, filename)
+
+            unpackPackageToInbox(packageFilename)
+
+            #
+            # now mark as done to prevent double processing
+            #
+            open(packageFilename, 'w').close() # erase contents !!!
+
+            # /path/to/packageName.pak --> /path/to/packageName.done
+            doneName = os.path.join(os.path.dirname(packageFilename), packageName + DONE_EXT)
+            shutil.move(packageFilename, doneName)
+
         elif ext == DONE_EXT:
             # ignore because already done
             pass
