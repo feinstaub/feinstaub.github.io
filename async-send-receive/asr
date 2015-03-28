@@ -17,6 +17,35 @@
 # Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
+#####################################################################
+##
+## asr - async send receive
+## ------------------------
+##
+## asr is a tool built around the idea to exchange data between
+## two computers using a third, completely untrusted, party (like
+## internet services, corporate network shares etc.) in an
+## asynchronous way.
+##
+#####################################################################
+
+#
+# This file is was edited using kdevelop's Python plugin.
+# Praise for kdevelop's plugin:
+#   "I just started editing another python script file and remembered that there was the kdevelop-python-plugin.
+#   I always thought it comes with kdevelop until I realized it is a separate package.
+#   Now that it is installed I can tell you I love it.
+#   It makes python editing as fun as it is supposed to be! Great stuff!"
+#
+
+#
+# Requirements
+# - tar
+# - openssl
+# - python-guidata (has some more python deps)
+# - gnome-web-photo (optional)
+# - wget (optional)
+
 #
 # general:
 # http://stackoverflow.com/questions/125951/command-line-program-to-create-website-screenshots-on-linux
@@ -34,11 +63,24 @@
 # ...
 
 #
-# Unit test
+# Integration tests:
+# -----------------
+#
 # cd ~/tmp/webphoto
+#
+## show help:
 # ~/dev/src/feinstaub.github.io/async-send-receive/asr -h
+#
+## send SourceList as configured in given demo-config
 # ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send
+#
+## send given source dir
+# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send --sourcedir ~/tmp/apidocs
+#
+## send given some fake source
 # ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send --unittest use-fake-source
+#
+## unpack (unencrypt, extract to target dir) given package
 # ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action unpack-only --packagefile demo1-2015-03-27T09_58_16.823101.pak
 #
 
@@ -47,18 +89,26 @@ import json
 from datetime import datetime
 import os
 from subprocess import call
+import tempfile
+import sys
 
+# import guidata
+
+#
+# globals
 #
 # use option -h to show help
 #
 parser = argparse.ArgumentParser(description='asr (async-send-receive) by Gregor Mi (2015)')
 parser.add_argument('configfile', help="The config file shared with sender and receiver")
 parser.add_argument('--action', help="'send': retrieve source, make package and send | 'receive': retrieve package and unpack | 'unpack-only': unpacks a given package file (see --packagefile)")
+parser.add_argument('--sourcedir', help="for --action send: use this directory instead of the configured ones in the configfile (SourceList)")
 parser.add_argument('--packagefile', help="filename to a package file; needed for --action unpack")
 parser.add_argument('--unittest', help="'use-fake-source': don't process source defined in config file but create a fake file")
 args = parser.parse_args()
 print("ARGS: configfile: {0}".format(args.configfile))
 print("ARGS: action: {0}".format(args.action))
+print("ARGS: sourcedir: {0}".format(args.sourcedir))
 print("ARGS: packagefile: {0}".format(args.packagefile))
 print("ARGS: unittest: {0}".format(args.unittest))
 
@@ -72,33 +122,45 @@ print("--------")
 
 configId = cfg["Id"]
 
-#
-# compresses the sourceDir to one file
-# returns the resulting filename
-#
 def archiveToFile(sourceDir, targetFilenameBase):
-    print("archiveToFile")
+    """compresses the sourceDir to one file
+    returns the resulting filename.
+    Directory where targetFilenameBase should be created must exist!
+    """
+    methodCallStr = "archiveToFile: sourceDir:{0}, targetFilenameBase:{1}".format(sourceDir, targetFilenameBase)
+    print(methodCallStr)
+
     # tar -zcvf test.tar.gz 2015-03-25T22_18_46.529128/
     # http://www.cyberciti.biz/faq/how-do-i-compress-a-whole-linux-or-unix-directory/
+    # http://stackoverflow.com/questions/939982/how-do-i-tar-a-directory-of-files-and-folders-without-including-the-directory-it
     targetFilename = targetFilenameBase + ".tar.gz"
-    call(["tar", "-zcvf", targetFilename, sourceDir])
+
+    #print(os.path.basename(sourceDir))
+    #print(os.path.dirname(sourceDir))
+
+    sys.stdout.flush() # flush all python prints so far
+    #                            sourceDir="/tmp/hallo/test" =>   /tmp/hallo                  test
+    #retCode = call(["tar", "-zcvf", targetFilename, "-C", os.path.dirname(sourceDir), os.path.basename(sourceDir)])
+    retCode = call(["tar", "-zcvf", targetFilename, "-C", sourceDir, "."])
+    if retCode != 0:
+        raise Exception("FAILED: " + methodCallStr)
     return targetFilename
 
 def extractArchive(inputFilename, targetDir):
     print("extractArchive")
+    sys.stdout.flush() # flush all python prints so far
     call(["tar", "-zxvf", inputFilename, "-C", targetDir])
 
-
-#
-# encrypts the file
-#
 def encrypt(sourceFilename, pw, targetFilename):
+    """encrypts the file
+    """
     print("encrypt")
     # openssl aes-128-cbc -salt -in t1 -out t1.enc -k abcPW
     # http://serverfault.com/questions/489140/what-is-a-good-solution-to-encrypt-some-files-in-unix
     # NOTE: https://www.openssl.org/docs/apps/enc.html
     # - The -salt option should ALWAYS be used if the key is being derived from a password unless you want compatibility with previous versions of OpenSSL and SSLeay.
     #- see there also for cyphers
+    sys.stdout.flush() # flush all python prints so far
     call(["openssl", "aes-128-cbc", "-salt", "-in", sourceFilename, "-out", targetFilename, "-k", pw])
 
     # not used: gpg
@@ -107,6 +169,7 @@ def encrypt(sourceFilename, pw, targetFilename):
 
 def decrypt(inputFilename, pw, outputFilename):
     # openssl aes-128-cbc -d -salt -in t1.enc -out t1.dec -k abcPW
+    sys.stdout.flush() # flush all python prints so far
     call(["openssl", "aes-128-cbc", "-d", "-salt", "-in", inputFilename, "-out", outputFilename, "-k", pw])
 
 def doUnpack(inputFilename):
@@ -125,65 +188,112 @@ def doUnpack(inputFilename):
         os.makedirs(unpackDir)
 
     extractArchive(uncryptedFile, unpackDir)
-    print("unpacked to: {0}".format(unpackDir))
+    print("unpacked to: {0}".format(os.path.abspath(unpackDir)))
 
-if args.action == "send":
-    #
-    # generate sourcesTargetDir
-    #
-    now = datetime.today()
-    sourcesTargetDir = now.isoformat().replace(":", "_")
-    print("sourcesTargetDir: {0}".format(sourcesTargetDir))
-    os.mkdir(sourcesTargetDir) # raises error if dir already exists
+def processSources():
+    """either processes the SourceList defined in the config file
+    or takes the --sourcedir argument from command line.
 
-    #
-    # Process sources
-    #
-    if args.unittest == "use-fake-source":
-        print("UNIT TEST because --unittest use-fake-source")
-        with open(os.path.join(sourcesTargetDir, "unit-test-file.txt"), "w") as text_file:
-            text_file.write("This is a test file")
+    In the first case the generated temp directory path is returned.
+    In the second case the --sourcedir argument is returned as is.
+    """
+    if (args.sourcedir is not None):
+        print("processSources: take --sourcedir which is: {0}. Absolute: {1}".format(args.sourcedir, os.path.abspath(args.sourcedir)))
+        return args.sourcedir
     else:
-        sourceList = cfg["SourceList"]
+        print("processSources: use SourceList from config file")
 
-        for item in sourceList:
-            #print(item)
-            filename = os.path.join(sourcesTargetDir, item["Filename"]);
-            desc = item["Description"];
-            uri = item["Uri"];
-            tool = item["Tool"];
-            print("Name: {0}, Uri: {1}".format(filename, uri))
+        #
+        # generate sourcesTargetDir
+        #
+        sourcesTargetDir = tempfile.mkdtemp()
 
-            if tool == "gnome-web-photo":
-                timeout = item["Timeout"];
+        #
+        # process SourceList or Unit test
+        #
+        if args.unittest == "use-fake-source":
+            print("UNIT TEST because --unittest use-fake-source")
+            with open(os.path.join(sourcesTargetDir, "unit-test-file.txt"), "w") as text_file:
+                text_file.write("This is a test file")
+        else:
+            sourceList = cfg["SourceList"]
 
-                # gnome-web-photo -t 20 -m photo http://kde.org. out2.png
-                # http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
-                call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
-            elif tool == "wget-file":
-                call(["wget", uri, "-O", filename])
-            elif tool == "wget-web":
-                call(["wget", uri])
-            else:
-                print("UNKNOWN TOOL: {0}".format(tool))
+            for item in sourceList:
+                #print(item)
+                filename = os.path.join(sourcesTargetDir, item["Filename"]);
+                desc = item["Description"];
+                uri = item["Uri"];
+                tool = item["Tool"];
+                print("Name: {0}, Uri: {1}".format(filename, uri))
 
-    #
-    # make package
-    #
-    packageBasename = configId + "-" + sourcesTargetDir
-    zippedFilename = archiveToFile(sourcesTargetDir, packageBasename)
-    print("zipped: {0}".format(zippedFilename))
+                if tool == "gnome-web-photo":
+                    timeout = item["Timeout"];
 
-    packageFilename = packageBasename + ".pak"
-    encrypt(zippedFilename, cfg["Package"]["Password"], packageFilename)
-    print("package filename: {0}".format(packageFilename))
-elif args.action == "receive":
-    print("TODO: receive")
-    exit(20)
-elif args.action == "unpack-only":
-    print("--action: unpack-only")
-    print("--packagefile: {0}".format(args.packagefile))
-    doUnpack(args.packagefile)
-else:
-    print("UNKNOWN OR EMPTY --action value")
-    exit(1)
+                    # gnome-web-photo -t 20 -m photo http://kde.org. out2.png
+                    # http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
+                    sys.stdout.flush() # flush all python prints so far
+                    call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
+                elif tool == "wget-file":
+                    sys.stdout.flush() # flush all python prints so far
+                    call(["wget", uri, "-O", filename])
+                elif tool == "wget-web":
+                    sys.stdout.flush() # flush all python prints so far
+                    call(["wget", uri])
+                else:
+                    print("UNKNOWN TOOL: {0}".format(tool))
+
+        return sourcesTargetDir
+
+def mainProcess():
+    if args.action == "send":
+        #
+        # Process sources
+        #
+        sourceDir = processSources()
+        print("sourceDir: {0}".format(os.path.abspath(sourceDir)))
+
+        #
+        # make package
+        #
+        outboxPackagesBaseDir = cfg["Pack"]["OutboxBaseDir"]
+        now = datetime.today()
+        nowStr = now.isoformat().replace(":", "_")
+
+        if not os.path.exists(outboxPackagesBaseDir): # create dir if not exists
+            os.makedirs(outboxPackagesBaseDir)
+
+        # todo: make hash out of configId?
+        # https://docs.python.org/2/library/hashlib.html
+        packageBaseFilename = os.path.join(outboxPackagesBaseDir, "{0}-{1}".format(configId, nowStr))
+        print("packageBaseFilename: {0}".format(os.path.abspath(packageBaseFilename)))
+
+        pakFilename = archiveToFile(sourceDir, packageBaseFilename)
+        print("zipped: {0}".format(os.path.abspath(pakFilename)))
+
+        packageFilename = packageBaseFilename + ".pak"
+        encrypt(pakFilename, cfg["Package"]["Password"], packageFilename)
+        print("package filename: {0}".format(packageFilename))
+
+        #
+        # send
+        #
+        print("....todo send....")
+        #
+    elif args.action == "receive":
+        print("TODO: receive")
+        exit(20)
+    elif args.action == "unpack-only":
+        print("--action: unpack-only")
+        print("--packagefile: {0}".format(args.packagefile))
+        doUnpack(args.packagefile)
+    else:
+        print("UNKNOWN OR EMPTY --action value")
+        # https://pythonhosted.org/guidata/examples.html#basic-example
+        # from guidata import tests
+        # tests.run()
+        exit(1)
+
+#
+# run
+#
+mainProcess()
