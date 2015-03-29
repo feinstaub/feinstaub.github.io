@@ -30,6 +30,7 @@ import subprocess
 
 TESTDATA_DIR = "generated-testdata"
 
+
 def createTestdataFile(name, contents):
 
     if not os.path.exists(TESTDATA_DIR):
@@ -41,15 +42,18 @@ def createTestdataFile(name, contents):
 
     return filename
 
+
 def readTestdataFile(name):
     with open(os.path.join(TESTDATA_DIR, name), "r") as text_file:
         return text_file.readline()
+
 
 class SelfTest(unittest.TestCase):
 
     def test1(self):
         createTestdataFile("selftest", "hallo")
         self.assertEquals(readTestdataFile("selftest"), "hallo")
+
 
 class EncryptDecryptTest(unittest.TestCase):
 
@@ -84,6 +88,35 @@ class EncryptDecryptTest(unittest.TestCase):
         asr.decrypt(filenameEnc, "muh", filenameDecrypted)
         outputContents = readTestdataFile("encdec-decrypted")
         self.assertEqual(outputContents, "hallo world")
+
+
+class FilesystemExchangePointTest(unittest.TestCase):
+
+    def testUpload(self):
+        exPoint = asr.FilesystemExchangePoint()
+        expointPath = os.path.join(TESTDATA_DIR, "expoint-fs")
+        if not os.path.exists(expointPath):
+            os.mkdir(expointPath)
+
+        exPoint.readConfig({ "Path": expointPath })
+        pakFilename = createTestdataFile("FilesystemExchangePointTest-1", "Hallo Welt")
+        exPoint.uploadPackage(pakFilename, "sender-1", "receiver-1")
+        #
+        # no automatic assert
+        #
+
+
+class FtpExchangePointTest(unittest.TestCase):
+
+    def testUpload(self):
+        exPoint = asr.FtpExchangePoint()
+        cfg = asr.readConfigFile(os.path.expanduser("~/asr/configfiles/send-via-biohost-ftp"))
+        exPoint.readConfig(cfg["ExchangePointSend"]["ftp_config"])
+        pakFilename = createTestdataFile("FilesystemExchangePointTest-1", "Hallo Welt")
+        exPoint.uploadPackage(pakFilename, "unittest-sender-1", "unittest-receiver-1")
+        #
+        # no automatic assert
+        #
 
 def main():
     unittest.main()

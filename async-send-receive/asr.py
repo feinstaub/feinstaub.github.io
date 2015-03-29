@@ -328,35 +328,49 @@ def processSources():
 
         return sourcesTargetDir
 
-def sendPackage(pakFilename, senderId, receiverId):
 
-    print("sendPackage: pakFilename:{0}, senderId:{1}, receiverId:{2}".format(pakFilename, senderId, receiverId))
-    print("[STATUS]: Sending package... Please wait...")
+class FilesystemExchangePoint:
 
-    cfgExchangePointType = cfg["ExchangePointSend"]["Type"]
+    targetBaseDir = None
 
-    if cfgExchangePointType == "filesystem":
+    def __init__(self):
         print("cfgExchangePointType == filesystem")
-        targetBaseDir = os.path.expanduser(cfg["ExchangePointSend"]["filesystem_config"]["Path"])
-        absTargetDir = os.path.abspath(targetBaseDir)
-        print("targetDir: configured='{0}', absolute='{1}'".format(targetBaseDir, absTargetDir))
-        if not os.path.exists(targetBaseDir):
-            raise Exception("ERROR: targetDir must exist: {0}".format(absTargetDir))
 
-        targetDir = os.path.join(targetBaseDir, senderId, receiverId)
+    def readConfig(self, configObj):
+        configPath = configObj["Path"]
+
+        self.targetBaseDir = os.path.expanduser(configObj["Path"])
+        absTargetBaseDir = os.path.abspath(self.targetBaseDir)
+        print("targetDir: configured='{0}', absolute='{1}'".format(self.targetBaseDir, absTargetBaseDir))
+        if not os.path.exists(self.targetBaseDir):
+            raise Exception("ERROR: targetDir must exist: {0}".format(absTargetBaseDir))
+
+    def uploadPackage(self, pakFilename, senderId, receiverId):
+        targetDir = os.path.join(self.targetBaseDir, senderId, receiverId)
         if not os.path.exists(targetDir):
             print("targetDir does not exist. CREATE: {0}".format(targetDir))
             os.makedirs(targetDir)
 
         shutil.copy(pakFilename, targetDir)
 
-    elif cfgExchangePointType == "ftp":
+
+class FtpExchangePoint:
+
+    host = None
+    user = None
+    pw = None
+
+    def __init__(self):
         print("cfgExchangePointType == ftp")
 
-        import ftplib
+    def readConfig(self, configObj):
+        self.host = configObj["host"]
+        self.user = configObj["user"]
+        self.pw = configObj["pw"]
 
-        ftpConfig = cfg["ExchangePointSend"]["ftp_config"]
-        ftp = ftplib.FTP(ftpConfig["host"], ftpConfig["user"], ftpConfig["pw"])
+    def uploadPackage(self, pakFilename, senderId, receiverId):
+        import ftplib
+        ftp = ftplib.FTP(self.host, self.user, self.pw)
 
         if not senderId in ftp.nlst():
             print("senderId does not exist. CREATE: {0}".format(senderId))
@@ -384,8 +398,28 @@ def sendPackage(pakFilename, senderId, receiverId):
         print("ftp.quit()")
         ftp.quit()
 
+
+def sendPackage(pakFilename, senderId, receiverId):
+
+    print("sendPackage: pakFilename:{0}, senderId:{1}, receiverId:{2}".format(pakFilename, senderId, receiverId))
+    print("[STATUS]: Sending package... Please wait...")
+
+    cfgExchangePointType = cfg["ExchangePointSend"]["Type"]
+
+    exPoint = None
+
+    if cfgExchangePointType == "filesystem":
+        exPoint = FilesystemExchangePoint()
+        exPoint.readConfig(cfg["ExchangePointSend"]["filesystem_config"])
+
+    elif cfgExchangePointType == "ftp":
+        exPoint = FtpExchangePoint()
+        exPoint.readConfig(cfg["ExchangePointSend"]["ftp_config"])
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
+
+    exPoint.uploadPackage(pakFilename, senderId, receiverId)
+
 
 def downloadPackages():
     """Copies all packages from the given g_senderId/g_receiverId subfolder
@@ -558,6 +592,11 @@ def actionReceive():
     downloadPackages()
     unpackDownloadedPackages()
 
+def readConfigFile(configFilename):
+    with open(configFilename, 'r') as cfgfile:
+        cfg = json.load(cfgfile)
+        return cfg
+
 def main():
     #
     # globals
@@ -580,10 +619,8 @@ def main():
     print("ARGS: packagefile: {0}".format(args.packagefile))
     print("ARGS: unittest: {0}".format(args.unittest))
 
-    cfgfile = open(args.configfile, 'r')
     global cfg # TODO: refactor this
-    cfg = json.load(cfgfile)
-    cfgfile.close()
+    cfg = readConfigFile(args.configfile)
 
     #print("debug config:--------")
     #print(cfg)
