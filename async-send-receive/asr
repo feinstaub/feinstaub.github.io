@@ -1,3 +1,4 @@
 #/usr/bin/bash
 
-python asr.py "$@"
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+python $DIR/asr.py "$@"
