@@ -46,6 +46,28 @@
 ##
 #####################################################################
 
+"""
+Requirements
+------------
+- tar
+- openssl
+- python-guidata (has some more python deps)
+- gnome-web-photo (optional)
+- wget (optional)
+"""
+
+"""
+TODOs
+-----
+* instead of $ asr --action send write $ asr send
+    * $ asr receive   $ asr unpack
+* add --keep-intermediate-files to debug things, otherwise delete old stuff
+* $ asr send <files>
+  => asks for receiver via GUI (see configfiles)
+* common config of senderId (extra file)
+* common config of exchange points and then reference only (extra file)
+"""
+
 #
 # This file is was edited using kdevelop's Python plugin.
 # Praise for kdevelop's plugin:
@@ -54,14 +76,6 @@
 #   Now that it is installed I can tell you I love it.
 #   It makes python editing as fun as it is supposed to be! Great stuff!"
 #
-
-#
-# Requirements
-# - tar
-# - openssl
-# - python-guidata (has some more python deps)
-# - gnome-web-photo (optional)
-# - wget (optional)
 
 #
 # general:
@@ -363,8 +377,36 @@ def sendPackage(pakFilename, senderId, receiverId):
 
     elif cfgExchangePointType == "ftp":
         print("cfgExchangePointType == ftp")
-        print("TODO")
-        exit(20)
+        import ftplib
+
+        ftpConfig = cfg["ExchangePointSend"]["ftp_config"]
+        ftp = ftplib.FTP(ftpConfig["host"], ftpConfig["user"], ftpConfig["pw"])
+
+        if not senderId in ftp.nlst():
+            print("senderId does not exist. CREATE: {0}".format(senderId))
+            ftp.mkd(senderId)
+
+        print("cwd {0}".format(senderId))
+        ftp.cwd(senderId)
+
+        if not receiverId in ftp.nlst():
+            print("receiverId does not exist. CREATE: {0}".format(receiverId))
+            ftp.mkd(receiverId)
+
+        print("cwd {0}".format(receiverId))
+        ftp.cwd(receiverId)
+
+        pakBasename = os.path.basename(pakFilename)
+        print("STOR binary: pakBasename: {0}. Please wait...".format(pakBasename))
+
+        sys.stdout.flush() # flush all python prints so far
+
+        pakFileObject = open(pakFilename, 'r')
+        ftp.storbinary("STOR {0}.".format(pakBasename), pakFileObject)
+        pakFileObject.close()
+
+        print("ftp.quit()")
+        ftp.quit()
 
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
@@ -518,12 +560,23 @@ def mainProcess():
 
     else:
         print("UNKNOWN OR EMPTY --action value")
-        # https://pythonhosted.org/guidata/examples.html#basic-example
-        # from guidata import tests
-        # tests.run()
         exit(1)
+
+
+def tests():
+    # https://pythonhosted.org/guidata/examples.html#basic-example
+    # from guidata import tests
+    # tests.run()
+
+    #import webbrowser
+    # url = " mailto:abc@gmx.de"
+    # webbrowser.open(url,new=1)
+    print("nothing")
+
+
 
 #
 # run main
 #
 mainProcess()
+# tests()
