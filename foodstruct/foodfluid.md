@@ -5,6 +5,19 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 ---
 
+Neue Zutaten: Paranüsse und Seidentofu
+--------------------------------------
+29.03.2015
+
+* 1 Orange
+* 1 Banane
+* 2 mittlere Äpfel
+* ein paar **Paranüsse**
+* 250 g **Seidentofu** => damit es lassiartig wird
+* Wasser
+
+---
+
 Neue Zutaten: Fenchelsamen etc.
 -------------------------------
 22.03.2015
