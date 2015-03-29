@@ -29,7 +29,7 @@ in an asynchronous way.
 
 Asr currently does not target the ultra-mobile-cloud-user audience
 but more the being-offline kind of use cases. Places in the Internet
-are classified as untrusted sites and private data should lie
+are classified as untrusted sites and private data should not lie
 around needlessly or even unprotected.
 So asr tries to provide an electronic way of sending someone a
 package via postal service; including privacy of correspondence,

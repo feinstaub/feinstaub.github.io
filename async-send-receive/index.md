@@ -14,7 +14,7 @@ in an asynchronous way.
 
 Asr currently does not target the ultra-mobile-cloud-user audience
 but more the being-offline kind of use cases. Places in the Internet
-are classified as untrusted sites and private data should lie
+are classified as untrusted sites and private data should not lie
 around needlessly or even unprotected.
 So asr tries to provide an electronic way of sending someone a
 package via postal service; including privacy of correspondence,
@@ -31,6 +31,10 @@ is sent.
 
 Currently, there is no push notification on new packages
 and so the self-collector principle applies (as with regular email).
+
+### Exchange points
+
+Write something about throw-away exchange points. ...
 
 
 Requirements
@@ -52,11 +56,22 @@ Download alpha version
 * [asr-unit-test.py](asr-unit-test.py)
 
 
-Quickstart
-----------
+Quickstart: Send someone encrypted files
+----------------------------------------
+### Scenario
+You would like to send someone familiar some photos. With high probability
+you will do that more than once.
+
+### Initial setup for the sender
 * Download asr and put it in your PATH.
+
+* Choose / setup an exchange point: TODO
 
 * Create the directory `~/asr/configfiles` and place the asr-demo-config inside.
 
 * TODO
 
+### Initial setup for the receiver
+* Download asr and put it in your PATH.
+
+* TODO
