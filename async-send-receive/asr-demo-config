@@ -29,5 +29,5 @@
 "ExchangePointSend": { "Type": "filesystem", "filesystem_config": { "Path": "~/asr/TEST_remote-exchange" } },
 "ExchangePointReceive": { "Type": "filesystem", "filesystem_config": { "Path": "~/asr/TEST_remote-exchange" } },
 "off_ExchangePointSend": { "Type": "ftp", "ftp_config": { "host": "...", "user": "...", "pw": "..." } },
-"off_ExchangePointReceive": { "Type": "ftp", "ftp_config": { "host": "...", "user": "...", "pw": "..." } },
+"off_ExchangePointReceive": { "Type": "ftp", "ftp_config": { "host": "...", "user": "...", "pw": "..." } }
 }

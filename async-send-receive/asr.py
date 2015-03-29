@@ -59,11 +59,10 @@
 """
     TODOs
     -----
-    * instead of $ asr --action send write $ asr send
-        * $ asr receive   $ asr unpack
     * add --keep-intermediate-files to debug things, otherwise delete old stuff
+    * "Package": { "PasswordFromFile": "~/common-secrets/alice-bob" },
     * $ asr send <files>
-    => asks for receiver via GUI (see configfiles)
+       => asks for receiver via GUI (see configfiles)
     * common config of senderId (extra file)
     * common config of exchange points and then reference only (extra file)
     * asr receive <list of sender ids> or --all
@@ -100,22 +99,25 @@
 # Integration tests:
 # -----------------
 #
-# cd ~/tmp/webphoto
+# cd ~/dev/src/feinstaub.github.io/async-send-receive
 #
 ## show help:
-# ~/dev/src/feinstaub.github.io/async-send-receive/asr -h
+# ./asr -h
 #
 ## send SourceList as configured in given demo-config
-# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send
+# ./asr send --configfile asr-demo-config
 #
 ## send given source dir
-# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send --sourcedir ~/tmp/apidocs
+# ./asr send --sourcedir ~/tmp/apidocs --configfile asr-demo-config
 #
 ## send given some fake source
-# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action send --unittest use-fake-source
+# ./asr send --unittest use-fake-source --configfile asr-demo-config
 #
 ## unpack (unencrypt, extract to target dir) given package
-# ~/dev/src/feinstaub.github.io/async-send-receive/asr ~/dev/src/feinstaub.github.io/async-send-receive/asr-demo-config --action unpack-only --packagefile demo1-2015-03-27T09_58_16.823101.pak
+# ./asr unpack-only --packagefile demo1-2015-03-27T09_58_16.823101.pak --configfile asr-demo-config
+#
+## process sources and show output directory
+# ./async-send-receive/asr process-sources-only --configfile asr-demo-config
 #
 
 import argparse
@@ -635,15 +637,15 @@ def main():
     # see https://docs.python.org/3/library/argparse.html
     #
     parser = argparse.ArgumentParser(description='asr (async-send-receive) by Gregor Mi (2015)')
-    parser.add_argument('configfile', help="The config file shared with sender and receiver")
-    parser.add_argument('--action', help="'send': retrieve source, make package and send | 'receive': retrieve package and unpack | 'unpack-only': unpacks a given package file (see --packagefile)")
+    parser.add_argument('action', help="'send': retrieve source, make package and send | 'receive': retrieve package and unpack | 'process-sources-only': only processes the sources defined in SourceList | 'unpack-only': unpacks a given package file (see --packagefile)")
+    parser.add_argument('--configfile', help="The config file shared with sender and receiver")
     parser.add_argument('--sourcedir', help="for --action send: use this directory instead of the configured ones in the configfile (SourceList)")
     parser.add_argument('--packagefile', help="filename to a package file; needed for --action unpack")
     parser.add_argument('--unittest', help="'use-fake-source': don't process source defined in config file but create a fake file")
     global args # TODO: refactor this
     args = parser.parse_args()
-    print("ARGS: configfile: {0}".format(args.configfile))
     print("ARGS: action: {0}".format(args.action))
+    print("ARGS: configfile: {0}".format(args.configfile))
     print("ARGS: sourcedir: {0}".format(args.sourcedir))
     print("ARGS: packagefile: {0}".format(args.packagefile))
     print("ARGS: unittest: {0}".format(args.unittest))
@@ -678,10 +680,17 @@ def main():
         actionReceive()
 
     elif args.action == "unpack-only":
-        print("--action unpack-only")
+        print("unpack-only")
         print("--packagefile: {0}".format(args.packagefile))
         # g_senderId must be defined (todo: set unknownSender by default)
         unpackPackageToInbox(args.packagefile)
+
+    elif args.action == "process-sources-only":
+        print("process-sources-only")
+        processResultDir = processSources()
+        print("--------------------")
+        print("processResultDir: {0}".format(processResultDir))
+        print("--------------------")
 
     else:
         print("UNKNOWN OR EMPTY --action value")
@@ -697,7 +706,6 @@ def tests():
     # url = " mailto:abc@gmx.de"
     # webbrowser.open(url,new=1)
     print("nothing")
-
 
 
 #
