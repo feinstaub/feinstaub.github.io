@@ -21,11 +21,16 @@ asr is a Python script which currently has the following dependencies:
 - wget (optional)
 
 
-More to come...
-
-
 Download alpha version
 ----------------------
 * [asr](asr)
 * [asr-demo-config](asr-demo-config)
 
+
+Quickstart
+----------
+* Download asr and put it in your PATH.
+
+* Create the directory `~/asr/configfiles` and place the asr-demo-config inside.
+
+* ...

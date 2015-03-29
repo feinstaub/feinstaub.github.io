@@ -47,25 +47,27 @@
 #####################################################################
 
 """
-Requirements
-------------
-- tar
-- openssl
-- python-guidata (has some more python deps)
-- gnome-web-photo (optional)
-- wget (optional)
+    Requirements
+    ------------
+    - tar
+    - openssl
+    - python-guidata (has some more python deps)
+    - gnome-web-photo (optional)
+    - wget (optional)
 """
 
 """
-TODOs
------
-* instead of $ asr --action send write $ asr send
-    * $ asr receive   $ asr unpack
-* add --keep-intermediate-files to debug things, otherwise delete old stuff
-* $ asr send <files>
-  => asks for receiver via GUI (see configfiles)
-* common config of senderId (extra file)
-* common config of exchange points and then reference only (extra file)
+    TODOs
+    -----
+    * instead of $ asr --action send write $ asr send
+        * $ asr receive   $ asr unpack
+    * add --keep-intermediate-files to debug things, otherwise delete old stuff
+    * $ asr send <files>
+    => asks for receiver via GUI (see configfiles)
+    * common config of senderId (extra file)
+    * common config of exchange points and then reference only (extra file)
+    * asr receive <list of sender ids> or --all
+    * use some git bundle mechanism to keep two git repos in private sync
 """
 
 #
@@ -151,9 +153,9 @@ cfgfile = open(args.configfile, 'r')
 cfg = json.load(cfgfile)
 cfgfile.close()
 
-print("config:--------")
-print(cfg)
-print("--------")
+#print("debug config:--------")
+#print(cfg)
+#print("--------")
 
 g_senderId = cfg["SenderId"] # TODO: let this be overridable by command line arguments
 g_receiverId = cfg["ReceiverId"] # TODO: let this be overridable by command line arguments
@@ -165,8 +167,8 @@ g_inboxDir = os.path.expanduser("~/asr/inbox") # todo: let this be overridable b
 PAK_EXT = ".pak"
 DONE_EXT = ".done"
 ARCHIVED_EXT = ".tar"
-DOWNLOADED_SUBDIR = "1_downloaded"
-DECRYPTED_SUBDIR = "2_decrypted"
+DOWNLOADED_SUBDIR = "_intermediate/1_downloaded" # will ideally eventually contain 0 byte .done files
+DECRYPTED_SUBDIR = "_intermediate/2_decrypted"   # created file will be cleaned after unpack (TODO)
 UNPACKED_SUBDIR = "unpacked"
 SUBJECTLINE_FILENAME = "ASR_SUBJECTLINE"
 
@@ -377,6 +379,7 @@ def sendPackage(pakFilename, senderId, receiverId):
 
     elif cfgExchangePointType == "ftp":
         print("cfgExchangePointType == ftp")
+
         import ftplib
 
         ftpConfig = cfg["ExchangePointSend"]["ftp_config"]
@@ -402,7 +405,7 @@ def sendPackage(pakFilename, senderId, receiverId):
         sys.stdout.flush() # flush all python prints so far
 
         pakFileObject = open(pakFilename, 'r')
-        ftp.storbinary("STOR {0}.".format(pakBasename), pakFileObject)
+        ftp.storbinary("STOR {0}".format(pakBasename), pakFileObject)
         pakFileObject.close()
 
         print("ftp.quit()")
@@ -453,8 +456,41 @@ def downloadPackages():
 
     elif cfgExchangePointType == "ftp":
         print("cfgExchangePointType == ftp")
-        print("TODO")
-        exit(20)
+
+        import ftplib
+
+        ftpConfig = cfg["ExchangePointSend"]["ftp_config"]
+        ftp = ftplib.FTP(ftpConfig["host"], ftpConfig["user"], ftpConfig["pw"])
+
+        if not g_senderId in ftp.nlst():
+            print("senderId ({0}) does not exist. Nothing to do.".format(g_senderId))
+            return
+
+        print("cwd {0}".format(g_senderId))
+        ftp.cwd(g_senderId)
+
+        if not g_receiverId in ftp.nlst():
+            print("receiverId does not exist. CREATE: {0}".format(g_receiverId))
+            ftp.mkd(g_receiverId)
+
+        print("cwd {0}".format(g_receiverId))
+        ftp.cwd(g_receiverId)
+
+        print("# TODO: reuse matching logic from filesystem type!!!")
+
+        #pakBasename = os.path.basename(pakFilename)
+        #print("STOR binary: pakBasename: {0}. Please wait...".format(pakBasename))
+
+        #sys.stdout.flush() # flush all python prints so far
+
+        #pakFileObject = open(pakFilename, 'r')
+        #ftp.storbinary("STOR {0}.".format(pakBasename), pakFileObject)
+        #pakFileObject.close()
+
+        print("ftp.quit()")
+        ftp.quit()
+
+
 
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
@@ -467,6 +503,10 @@ def unpackDownloadedPackages():
     """
     downloadBaseDir = os.path.join(g_inboxDir, DOWNLOADED_SUBDIR)
     downloadDir = os.path.join(downloadBaseDir, g_senderId)
+
+    if not os.path.exists(downloadDir):
+        print("downloadDir '{0}' does not exist. Nothing to do.".format(downloadDir))
+        return
 
     downloadedFilesList = os.listdir(downloadDir)
     for filename in downloadedFilesList:
@@ -545,7 +585,7 @@ def actionReceive():
     downloadPackages()
     unpackDownloadedPackages()
 
-def mainProcess():
+def main():
     if args.action == "send":
         actionSend()
 
@@ -578,5 +618,5 @@ def tests():
 #
 # run main
 #
-mainProcess()
+main()
 # tests()
