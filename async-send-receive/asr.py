@@ -18,32 +18,35 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 
 #####################################################################
-##
-## asr - async send receive
-## ------------------------
-##
-## Asr is a tool built around the idea to exchange data between
-## two computers using a third, potentially completely untrusted, party
-## (like internet hosting services, corporate network shares etc.)
-## in an asynchronous way.
-##
-## Asr currently does not target the ultra-mobile-cloud-user audience
-## but more the being-offline kind of use cases. Places in the Internet
-## are classified as untrusted sites and private data should lie
-## around needlessly or even unprotected.
-## So asr tries to provide an electronic way of sending someone a
-## package via postal service; including privacy of correspondence,
-## posts and telecommunications.
-##
-## If you send someone a postal package there is usually no trace of the
-## package's content between sender and receiver. The only metadata
-## which is tracked is who sent it and who received it. Asr also
-## tries to minimize public metadata.
-##
-## As with regular email, the process of sending and receiving is
-## asynchronous. The receiver does not have to be online when a package
-## is sent.
-##
+"""
+asr - async send receive
+------------------------
+
+Asr is a tool built around the idea to exchange data between
+two computers using a third, potentially completely untrusted, party
+(like internet hosting services, corporate network shares etc.)
+in an asynchronous way.
+
+Asr currently does not target the ultra-mobile-cloud-user audience
+but more the being-offline kind of use cases. Places in the Internet
+are classified as untrusted sites and private data should lie
+around needlessly or even unprotected.
+So asr tries to provide an electronic way of sending someone a
+package via postal service; including privacy of correspondence,
+posts and telecommunications.
+
+If you send someone a postal package there is usually no trace of the
+package's content between sender and receiver. The only metadata
+which is tracked is who sent it and who received it. Asr also
+tries to minimize public metadata.
+
+As with regular email, the process of sending and receiving is
+asynchronous. The receiver does not have to be online when a package
+is sent.
+
+Currently, there is no push notification on new packages
+and so the self-collector principle applies (as with regular email).
+"""
 #####################################################################
 
 """
