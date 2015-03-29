@@ -68,6 +68,7 @@
     * common config of exchange points and then reference only (extra file)
     * asr receive <list of sender ids> or --all
     * use some git bundle mechanism to keep two git repos in private sync
+    * Cache FTP connection to avoid IP blocking
 """
 
 #
@@ -393,6 +394,8 @@ class FtpExchangePoint:
 
     def uploadFile(self, pakFilename, senderId, receiverId):
         import ftplib
+        print("Connect to FTP: host={0}, user={1}, ...".format(self.host, self.user))
+        sys.stdout.flush() # flush all python prints so far
         ftp = ftplib.FTP(self.host, self.user, self.pw)
 
         if not senderId in ftp.nlst():

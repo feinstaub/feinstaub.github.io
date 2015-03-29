@@ -1,7 +1,7 @@
 {
 "SenderId": "alice",
 "ReceiverId": "bob",
-"SubjectLine": "Vaction video",
+"SubjectLine": "Our vacation video",
 "SourceList":
     [
     {
@@ -25,11 +25,9 @@
         "Tool": "wget-file"
     }
     ],
-"Package": { "Password": "hallo" },
-"Send": { "OutboxDir": "NOT IMPL YET asr/1_outbox-pak" },
+"Package": { "Password": "A secret shared between alice and bob but noone else!" },
 "ExchangePointSend": { "Type": "filesystem", "filesystem_config": { "Path": "~/asr/TEST_remote-exchange" } },
 "ExchangePointReceive": { "Type": "filesystem", "filesystem_config": { "Path": "~/asr/TEST_remote-exchange" } },
 "off_ExchangePointSend": { "Type": "ftp", "ftp_config": { "host": "...", "user": "...", "pw": "..." } },
 "off_ExchangePointReceive": { "Type": "ftp", "ftp_config": { "host": "...", "user": "...", "pw": "..." } },
-"Receive": { "InboxDir": "NOT IMPL YET asr/3_inbox" }
 }
