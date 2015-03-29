@@ -2,7 +2,7 @@ asr - async-send-receive
 ========================
 
 First alpha version: 2015-03-27
-Content last updated: 2015-03-28
+Content last updated: 2015-03-29
 
 
 Introduction
@@ -34,7 +34,35 @@ and so the self-collector principle applies (as with regular email).
 
 ### Exchange points
 
-Write something about throw-away exchange points. ...
+Write something about shareable and throw-away exchange points. ...
+
+* Cheap:
+    * On the one hand, an exchange point is like the storage place where your
+      postal package is kept until you pick it up.
+    * On the other hand, it can be cheap because if someone breaks in
+      the package can be stolen but not opened because it is end-to-end encrypted.
+    * The exchange point must only contain as much data as the packages which are
+      not yet fetched. The data can be deleted as soon as the package is delivered.
+
+* Throw-awayable:
+    * If you find out that an exchange point has been compromised just setup another
+      (one or change the password.)
+
+* Shareable:
+    * Once an internet exchange point is setup you can grant access to
+      reliable persons.
+
+* Dumb:
+    * list files
+    * upload files
+    * create directories
+    * change to directory
+    * download files
+    * delete files and directories
+
+* Multiple:
+    * You can (in the future) setup asr to fetch multiple exchange points.
+    * Possible types of exchange points: filesystem, FTP, email (future), ...
 
 
 Requirements
@@ -62,7 +90,7 @@ Quickstart: Send someone encrypted files
 You would like to send someone familiar some photos. With high probability
 you will do that more than once.
 
-### Initial setup for the sender
+### Initial setup for the sender (who setups the exchange point)
 * Download asr and put it in your PATH.
 
 * Choose / setup an exchange point: TODO
