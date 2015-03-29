@@ -24,7 +24,9 @@
 
 import unittest
 import os
+
 import asr
+import subprocess
 
 TESTDATA_DIR = "generated-testdata"
 
@@ -33,8 +35,11 @@ def createTestdataFile(name, contents):
     if not os.path.exists(TESTDATA_DIR):
         os.makedirs(TESTDATA_DIR)
 
-    with open(os.path.join(TESTDATA_DIR, name), "w") as text_file:
+    filename = os.path.join(TESTDATA_DIR, name)
+    with open(filename, "w") as text_file:
         text_file.write(contents)
+
+    return filename
 
 def readTestdataFile(name):
     with open(os.path.join(TESTDATA_DIR, name), "r") as text_file:
@@ -49,8 +54,36 @@ class SelfTest(unittest.TestCase):
 class EncryptDecryptTest(unittest.TestCase):
 
     def test1(self):
-        #asr.decrypt("a", "b", "c")
-        print("test1")
+        filenamePlain = createTestdataFile("encdec-clear", "hallo world")
+        filenameEnc = os.path.join(TESTDATA_DIR, "encdec-enc")
+        filenameDecrypted = os.path.join(TESTDATA_DIR, "encdec-decrypted")
+
+        asr.encrypt(filenamePlain, "muh", filenameEnc)
+
+        #
+        # assert input and output are not the same
+        #
+        outputContents = readTestdataFile("encdec-enc")
+        self.assertNotEqual(outputContents, "hallo world")
+
+        #
+        # assert wrong password throws
+        #
+        try:
+            asr.decrypt(filenameEnc, "wrong", filenameDecrypted)
+            self.fail()
+        #except Exception as e:
+        except subprocess.CalledProcessError as e:
+            print(type(e))
+            print(e)
+            self.assertTrue(True)
+
+        #
+        # assert correct pw gets original content
+        #
+        asr.decrypt(filenameEnc, "muh", filenameDecrypted)
+        outputContents = readTestdataFile("encdec-decrypted")
+        self.assertEqual(outputContents, "hallo world")
 
 def main():
     unittest.main()
