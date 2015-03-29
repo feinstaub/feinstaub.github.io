@@ -44,6 +44,9 @@ def createTestdataFile(name, contents):
 
 
 def readTestdataFile(name):
+    if not os.path.exists(os.path.join(TESTDATA_DIR, name)):
+        return None
+
     with open(os.path.join(TESTDATA_DIR, name), "r") as text_file:
         return text_file.readline()
 
@@ -90,33 +93,49 @@ class EncryptDecryptTest(unittest.TestCase):
         self.assertEqual(outputContents, "hallo world")
 
 
-class FilesystemExchangePointTest(unittest.TestCase):
+class ExchangePointsTest(unittest.TestCase):
 
-    def testUpload(self):
+    # @unittest.skip("not a test") # http://pybites.blogspot.de/2009/03/unittest-now-with-test-skipping-finally.html
+    # http://stackoverflow.com/questions/6961099/non-test-methods-in-a-python-testcase
+    def helperUploadDownloadAbstract(self, name, exPoint):
+
+        testPakFilename = "ExchangePointTest-" + name
+        pakFilename = createTestdataFile(testPakFilename, "Hallo Welt")
+        exPoint.uploadFile(pakFilename, "ut-sender-1", "ut-receiver-1")
+        #
+        # no automatic assert
+        #
+
+        self.assertEqual(len(exPoint.listDir("ut-sender-1", "receiver-non-ex")), 0)
+
+        self.assertEqual(len(exPoint.listDir("ut-sender-1", "ut-receiver-1")), 1)
+
+        downloadDir = os.path.join(TESTDATA_DIR, "download", name)
+        if not os.path.exists(downloadDir):
+            os.makedirs(downloadDir)
+
+        exPoint.downloadFile("ut-sender-1", "ut-receiver-1", testPakFilename, downloadDir)
+
+        downloadedContents = readTestdataFile(os.path.join("download", name, testPakFilename))
+        self.assertEqual(downloadedContents, "Hallo Welt")
+
+    def testUploadDownloadFilesystem(self):
         exPoint = asr.FilesystemExchangePoint()
         expointPath = os.path.join(TESTDATA_DIR, "expoint-fs")
         if not os.path.exists(expointPath):
             os.mkdir(expointPath)
 
         exPoint.readConfig({ "Path": expointPath })
-        pakFilename = createTestdataFile("FilesystemExchangePointTest-1", "Hallo Welt")
-        exPoint.uploadPackage(pakFilename, "sender-1", "receiver-1")
-        #
-        # no automatic assert
-        #
 
+        self.helperUploadDownloadAbstract("filesystem", exPoint)
 
-class FtpExchangePointTest(unittest.TestCase):
-
-    def testUpload(self):
+    def off_testUploadDownloadFtp(self):
         exPoint = asr.FtpExchangePoint()
         cfg = asr.readConfigFile(os.path.expanduser("~/asr/configfiles/send-via-biohost-ftp"))
         exPoint.readConfig(cfg["ExchangePointSend"]["ftp_config"])
-        pakFilename = createTestdataFile("FilesystemExchangePointTest-1", "Hallo Welt")
-        exPoint.uploadPackage(pakFilename, "unittest-sender-1", "unittest-receiver-1")
-        #
-        # no automatic assert
-        #
+
+        self.helperUploadDownloadAbstract("ftp", exPoint)
+
 
 def main():
     unittest.main()

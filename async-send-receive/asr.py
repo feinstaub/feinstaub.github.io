@@ -328,10 +328,19 @@ def processSources():
 
         return sourcesTargetDir
 
+"""
+ExchangePoint type
+------------------
+methods
+    * readConfig(self, configObj)
+    * uploadFile(self, pakFilename, senderId, receiverId)
+    * listDir(self, senderId, receiverId)
+    * downloadFile(self, senderId, receiverId, filename, downloadDir)
+"""
 
 class FilesystemExchangePoint:
 
-    targetBaseDir = None
+    exchangeBaseDir = None
 
     def __init__(self):
         print("cfgExchangePointType == filesystem")
@@ -339,19 +348,33 @@ class FilesystemExchangePoint:
     def readConfig(self, configObj):
         configPath = configObj["Path"]
 
-        self.targetBaseDir = os.path.expanduser(configObj["Path"])
-        absTargetBaseDir = os.path.abspath(self.targetBaseDir)
-        print("targetDir: configured='{0}', absolute='{1}'".format(self.targetBaseDir, absTargetBaseDir))
-        if not os.path.exists(self.targetBaseDir):
-            raise Exception("ERROR: targetDir must exist: {0}".format(absTargetBaseDir))
+        self.exchangeBaseDir = os.path.expanduser(configObj["Path"])
+        absTargetBaseDir = os.path.abspath(self.exchangeBaseDir)
+        print("targetDir: configured='{0}', absolute='{1}'".format(self.exchangeBaseDir, absTargetBaseDir))
+        if not os.path.exists(self.exchangeBaseDir):
+            raise Exception("ERROR: exchangeBaseDir must exist: {0}".format(absTargetBaseDir))
 
-    def uploadPackage(self, pakFilename, senderId, receiverId):
-        targetDir = os.path.join(self.targetBaseDir, senderId, receiverId)
+    def uploadFile(self, pakFilename, senderId, receiverId):
+        targetDir = os.path.join(self.exchangeBaseDir, senderId, receiverId)
         if not os.path.exists(targetDir):
             print("targetDir does not exist. CREATE: {0}".format(targetDir))
             os.makedirs(targetDir)
 
         shutil.copy(pakFilename, targetDir)
+
+    def listDir(self, senderId, receiverId):
+        sourceDir = os.path.join(self.exchangeBaseDir, senderId, receiverId)
+
+        if not os.path.exists(sourceDir):
+            print("sourceDir does not exist. Nothing to do")
+            return []
+
+        sourceFileList = os.listdir(sourceDir)
+        return sourceFileList
+
+    def downloadFile(self, senderId, receiverId, filename, downloadDir):
+        sourceDir = os.path.join(self.exchangeBaseDir, senderId, receiverId)
+        shutil.copy(os.path.join(sourceDir, filename), downloadDir)
 
 
 class FtpExchangePoint:
@@ -368,7 +391,7 @@ class FtpExchangePoint:
         self.user = configObj["user"]
         self.pw = configObj["pw"]
 
-    def uploadPackage(self, pakFilename, senderId, receiverId):
+    def uploadFile(self, pakFilename, senderId, receiverId):
         import ftplib
         ftp = ftplib.FTP(self.host, self.user, self.pw)
 
@@ -398,11 +421,50 @@ class FtpExchangePoint:
         print("ftp.quit()")
         ftp.quit()
 
+    def listDir(self, senderId, receiverId):
+        import ftplib
+        ftp = ftplib.FTP(self.host, self.user, self.pw)
+
+        if not senderId in ftp.nlst():
+            print("senderId ({0}) does not exist. Nothing to do.".format(senderId))
+            return []
+
+        print("cwd {0}".format(senderId))
+        ftp.cwd(senderId)
+
+        if not receiverId in ftp.nlst():
+            print("receiverId ({0}) does not exist. Nothing to do.".format(receiverId))
+            return []
+
+        print("cwd {0}".format(receiverId))
+        ftp.cwd(receiverId)
+
+        sourceFileList = ftp.nlst()
+
+        print("ftp.quit()")
+        ftp.quit()
+
+        return sourceFileList
+
+    def downloadFile(self, senderId, receiverId, filename, downloadDir):
+        import ftplib
+        ftp = ftplib.FTP(self.host, self.user, self.pw)
+
+        ftp.cwd(senderId)
+        ftp.cwd(receiverId)
+
+        ftp.retrbinary("RETR {0}".format(filename), open(os.path.join(downloadDir, filename), 'wb').write)
+
+        print("ftp.quit()")
+        ftp.quit()
+
 
 def sendPackage(pakFilename, senderId, receiverId):
 
     print("sendPackage: pakFilename:{0}, senderId:{1}, receiverId:{2}".format(pakFilename, senderId, receiverId))
     print("[STATUS]: Sending package... Please wait...")
+
+    sys.stdout.flush() # flush all python prints so far
 
     cfgExchangePointType = cfg["ExchangePointSend"]["Type"]
 
@@ -418,7 +480,8 @@ def sendPackage(pakFilename, senderId, receiverId):
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
 
-    exPoint.uploadPackage(pakFilename, senderId, receiverId)
+    sys.stdout.flush() # flush all python prints so far
+    exPoint.uploadFile(pakFilename, senderId, receiverId)
 
 
 def downloadPackages():
@@ -429,78 +492,41 @@ def downloadPackages():
     """
     cfgExchangePointType = cfg["ExchangePointReceive"]["Type"]
 
+    exPoint = None
+
     if cfgExchangePointType == "filesystem":
-        print("cfgExchangePointType == filesystem")
-        sourceDir = os.path.join(cfg["ExchangePointReceive"]["filesystem_config"]["Path"], g_senderId, g_receiverId)
-        absSourceDir = os.path.abspath(sourceDir)
-        print("sourceDir: configured='{0}', absolute='{1}'".format(sourceDir, absSourceDir))
-        if not os.path.exists(sourceDir):
-            raise Exception("ERROR: sourceDir must exist: {0}".format(absSourceDir))
-
-        sourceFileList = os.listdir(sourceDir)
-        print("SOURCE file list: " + str(sourceFileList))
-
-        downloadBaseDir = os.path.join(g_inboxDir, DOWNLOADED_SUBDIR)
-        downloadDir = os.path.join(downloadBaseDir, g_senderId)
-
-        if not os.path.exists(downloadDir):
-            print("downloadBaseDir does not exist. CREATE: {0}".format(downloadDir))
-            os.makedirs(downloadDir)
-
-        inboxFileList = os.listdir(downloadDir)
-        print("INBOX file list: " + str(sourceFileList))
-
-        for filename in sourceFileList:
-            packageName = os.path.splitext(filename)[0]
-            if packageName + PAK_EXT in inboxFileList:
-                print("{0} already downloaded. Skip. (normally a downloaded package will unpacked and marked as done)".format(filename))
-            elif packageName + DONE_EXT in inboxFileList:
-                print("{0} already unpacked. Skip. (todo: delete from remote)".format(filename))
-            else:
-                print("{0} not downloaded yet. Download.".format(filename))
-                print("[STATUS]: Downloading... Please wait...")
-                shutil.copy(os.path.join(sourceDir, filename), downloadDir)
-
+        exPoint = FilesystemExchangePoint()
+        exPoint.readConfig(cfg["ExchangePointReceive"]["filesystem_config"])
     elif cfgExchangePointType == "ftp":
-        print("cfgExchangePointType == ftp")
-
-        import ftplib
-
-        ftpConfig = cfg["ExchangePointSend"]["ftp_config"]
-        ftp = ftplib.FTP(ftpConfig["host"], ftpConfig["user"], ftpConfig["pw"])
-
-        if not g_senderId in ftp.nlst():
-            print("senderId ({0}) does not exist. Nothing to do.".format(g_senderId))
-            return
-
-        print("cwd {0}".format(g_senderId))
-        ftp.cwd(g_senderId)
-
-        if not g_receiverId in ftp.nlst():
-            print("receiverId does not exist. CREATE: {0}".format(g_receiverId))
-            ftp.mkd(g_receiverId)
-
-        print("cwd {0}".format(g_receiverId))
-        ftp.cwd(g_receiverId)
-
-        print("# TODO: reuse matching logic from filesystem type!!!")
-
-        #pakBasename = os.path.basename(pakFilename)
-        #print("STOR binary: pakBasename: {0}. Please wait...".format(pakBasename))
-
-        #sys.stdout.flush() # flush all python prints so far
-
-        #pakFileObject = open(pakFilename, 'r')
-        #ftp.storbinary("STOR {0}.".format(pakBasename), pakFileObject)
-        #pakFileObject.close()
-
-        print("ftp.quit()")
-        ftp.quit()
-
-
-
+        exPoint = FtpExchangePoint()
+        exPoint.readConfig(cfg["ExchangePointSend"]["ftp_config"])
     else:
         raise Exception("ERROR: cfgExchangePointType unknown: {0}".format(cfgExchangePointType))
+
+    sourceFileList = exPoint.listDir(g_senderId, g_receiverId)
+    print("SOURCE file list: " + str(sourceFileList))
+
+    downloadBaseDir = os.path.join(g_inboxDir, DOWNLOADED_SUBDIR)
+    downloadDir = os.path.join(downloadBaseDir, g_senderId)
+
+    if not os.path.exists(downloadDir):
+        print("downloadBaseDir does not exist. CREATE: {0}".format(downloadDir))
+        os.makedirs(downloadDir)
+
+    inboxFileList = os.listdir(downloadDir)
+    print("INBOX file list: " + str(sourceFileList))
+
+    for filename in sourceFileList:
+        packageName = os.path.splitext(filename)[0]
+        if packageName + PAK_EXT in inboxFileList:
+            print("{0} already downloaded. Skip. (normally a downloaded package will unpacked and marked as done)".format(filename))
+        elif packageName + DONE_EXT in inboxFileList:
+            print("{0} already unpacked. Skip. (todo: delete from remote)".format(filename))
+        else:
+            print("{0} not downloaded yet. Download.".format(filename))
+            print("[STATUS]: Downloading... Please wait...")
+            exPoint.downloadFile(g_senderId, g_receiverId, filename, downloadDir)
+
 
 def unpackDownloadedPackages():
     """Processes all not processed packages (".pak" is not processed, ".done" is processed)
