@@ -16,6 +16,18 @@ Kochbücher:
 
 ---
 
+Tzatziki (Veganitzki)
+---------------------
+30.03.2015, von S., partytauglich
+
+* 1 Menge **Soja-Jogurth**
+* 1/6 Menge **saure Gurken** (kleingeschnitten)
+* **Knoblauch** kleingeschnitten (so klein wie es geht)
+* bei Bedarf Zwiebeln
+* Salz und Pfeffer, bei Bedarf Cayenne-Pfeffer, sonstige Kräuter
+
+---
+
 Weißer Bohnensalat mit Kapern
 -----------------------------
 23.03.2015, selbst, partytauglich
@@ -30,6 +42,7 @@ Weißer Bohnensalat mit Kapern
 
 Alles in eine Schüssel geben und mischen. T.i.p.p.: Flüssiges vorher mischen dann erst die Feststoffe dazu.
 
+---
 
 Raw: Zucchini-Avocado-Püree (Green Harmony)
 -------------------------------------------
