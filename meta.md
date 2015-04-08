@@ -24,4 +24,5 @@ http://dynalon.github.io/mdwiki
   * see https://staticsitegenerators.net/ or https://www.staticgen.com/
     * http://blog.getpelican.com/ (GPL)
         * http://docs.getpelican.com/en/3.5.0/quickstart.html
+            * TODO: Table of contents, navigation, more?
     * http://jekyllrb.com/ (MIT license)

@@ -82,13 +82,16 @@ HP, Odenwald, HD
 
 * Laden [Biomarkt Heppenheim](http://www.biomarkt-hp.de/Naturkostladen.aspx), Marktstraße 15, 64646 (beim Marktplatz)
 
-
 * (todo?) [Landgasthof Dorflinde](http://www.landgasthof-dorflinde.de/restaurant-und-erlebniswelt/), Siegfriedstraße 14, 64689 Gras-Ellenbach
-* (todo?) Kultur-Cafe in Fürth/Grasellenbach? (derzeit zu?)
+* [Kunst-Kiosk Erlenbach](https://www.facebook.com/KunstKioskErlenbach/info?tab=page_info), kunstverein erlenbach, 64658 Fürth-Erlenbach, So: 11:00-18:30 (06253/22663)
 
-* (todo?) [Clubrestaurant La Pineta](www.tc-schriesheim.de/clubrestaurant/), schriesheim
+* (todo?) [Clubrestaurant La Pineta](www.tc-schriesheim.de/clubrestaurant/), Schriesheim
 
+
+HD
+--
 * (V)-Selbstbedienungsrestaurant red, HD, Mo-Fr 11:00-22:00
+* V-friendly [Malaysisches Restaurant Serai](http://www.serai.de/de/about/lage), Schillerstrasse 28-30, Weststadt, Vegan-Büffet am ersten Montag im Monat 18:00-22:00, Di-Fr: 12:00-14:00, 18:00-22:00, Sa: 18:00-23:00, So+Mo zu
 
 
 Mannheim

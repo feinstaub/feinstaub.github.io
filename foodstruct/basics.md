@@ -92,9 +92,12 @@ Beispiele:
   * Bezugsquellen: Bio-Laden
 
 
-Kochen lassen / Links
-----------------------
-  * http://www.veganmania.at
+Links
+-----
+* Benjamin Lupton's vegan page (includes links to films): http://balupton.com/v
+    * [gary yourofsky speech](http://balupton.tumblr.com/post/64768966299/best-speech-you-will-ever-hear-gary-yourofsky)
+* Kochen lassen: http://www.veganmania.at
+* http://albert-schweitzer-stiftung.de/
 
 ### Schwedische Apfeltorte
 eingestellt am 12.01.2014
