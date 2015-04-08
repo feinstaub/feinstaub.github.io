@@ -16,6 +16,30 @@ Kochbücher:
 
 ---
 
+Kartoffelsalat
+--------------
+08.04.2015
+
+Konzept:
+
+* aus The Vegan Zombie
+* Kartoffeln kleingeschnitten gar kochen, aber nicht weich
+* mit Paprika
+* mit Remoulade mit Dill und Gurken (todo: Marke?)
+
+---
+
+Tortillas mit Kidneybohnencreme
+-------------------------------
+07.04.2015
+
+Konzept:
+
+* (Weizen?)Tortillas mit Tomatenmark, Gewürzen, veg. Streukäse
+* Bohnencreme mit Stabmixer
+
+---
+
 Tzatziki (Veganitzki)
 ---------------------
 30.03.2015, von S., partytauglich

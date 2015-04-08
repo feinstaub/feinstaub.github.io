@@ -99,6 +99,12 @@ Mannheim
 * TODO: V-Restaurant [LöVenzahn](http://www.loevenzahn.de/), Eichelsheimer Str.42, 68163 Mannheim-Lindenhof, Telefon: MA (06 21) 43 95 40 00, [Anfahrt, am Hbf](https://www.google.de/maps/place/Eichelsheimer+Str.+42,+68163+Mannheim/@49.4738982,8.467845,16z/data=!4m2!3m1!1s0x4797cc1ce4db0e95:0x7e630152aeebbea1)
 * (V)-[Cafe Vogelfrei](https://de-de.facebook.com/cafevogelfrei) (Essen vegan, aber es gibt auch Kuhmilch), C3-20 Mannheim, Mo: zu, Di-Sa: 11:00–19:00, So: 14:00–22:00
 * TODO: Cafe Rost, Pflügersgrundstr. 16 (nördlich des Neckars)
+* (V) SB-Restaurant Heller's
+
+* todo: (V) Kombüse (Restaurant / Cafe), Jungbuschstraße 23, 68159 Mannheim
+* todo: (V) Sonnenblume (Restaurant), T 3,7, 68161 Mannheim
+* todo: (V) Supan's Küche (thailändischer Imbiss), P 2,6, 68161 Mannheim
+* todo: (V) Restaurant Lindbergh, Seckenheimer Landstraße 170, 68163 Mannheim
 
 
 Karlsruhe, Raum Baden-Baden
