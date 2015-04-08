@@ -56,6 +56,7 @@ and so the self-collector principle applies (as with regular email).
     - openssl
     - python-guidata (has some more python deps)
     - gnome-web-photo (optional)
+    - webkit-image (optional, software.opensuse.org)
     - wget (optional)
 """
 
@@ -308,29 +309,76 @@ def processSources():
         else:
             sourceList = cfg["SourceList"]
 
+            print("SourcList: {0} item(s)".format(len(sourceList)))
+
             for item in sourceList:
-                #print(item)
-                filename = os.path.join(sourcesTargetDir, item["Filename"]);
-                desc = item["Description"];
-                uri = item["Uri"];
-                tool = item["Tool"];
-                print("Name: {0}, Uri: {1}".format(filename, uri))
+                filename = os.path.join(sourcesTargetDir, item["Filename"])
+
+                uri = item["Uri"]
+                tool = item["Tool"]
+
+                desc = ""
+                if "Description" in item:
+                    desc = item["Description"]
+
+                user = None
+                if "User" in item:
+                    user = item["User"]
+
+                pw = None
+                if "Pw" in item:
+                    pw = item["Pw"]
+
+                # only works for curl if the http header is set
+                # see http://curl.haxx.se/mail/lib-2008-09/0224.html
+                # it then prevents curl from starting at all
+                #maxFileSizeKb = None
+                #if "MaxFilesizeKb" in item:
+                    #maxFileSizeKb = item["MaxFilesizeKb"]
+
+                truncateFileToSizeKb = None
+                if "TruncateFileToSizeKb" in item:
+                    truncateFileToSizeKb = int(item["TruncateFileToSizeKb"]) # might raise
+
+                print("Source item: Filename:    {0}".format(filename)) # including path!
+                print("             Description: {0}".format(desc))
+                print("             Tool:        {0}".format(tool))
+                print("             Uri:         {0}".format(uri))
+
+                sys.stdout.flush() # flush all python prints so far
 
                 if tool == "gnome-web-photo":
                     timeout = item["Timeout"];
-
                     # gnome-web-photo -t 20 -m photo http://kde.org. out2.png
                     # http://stackoverflow.com/questions/89228/calling-an-external-command-in-python
-                    sys.stdout.flush() # flush all python prints so far
                     subprocess.check_call(["gnome-web-photo", "-t", str(timeout), "-m", "photo", uri, filename])
+                elif tool == "webkit-image":
+                    # maybe do something to preload the site
+                    with open(filename, 'w') as std_out_file:
+                        subprocess.check_call(["webkit-image", uri], stdout=std_out_file)
                 elif tool == "wget-file":
-                    sys.stdout.flush() # flush all python prints so far
-                    subprocess.check_call(["wget", uri, "-O", filename])
+                    cmd = ["wget", uri, "-O", filename]
+                    if user != None and pw != None:
+                        cmd.extend(["--user", user, "--password", pw])
+                    subprocess.check_call(cmd)
                 elif tool == "wget-web":
-                    sys.stdout.flush() # flush all python prints so far
                     subprocess.check_call(["wget", uri])
+                elif tool == "curl":
+                    cmd = ["curl", "-o", filename]
+                    #if maxFileSizeKb != None:
+                        #cmd.extend(["--max-filesize", maxFileSizeKb])
+                    cmd.extend([uri])
+                    subprocess.check_call(cmd)
                 else:
                     print("UNKNOWN TOOL: {0}".format(tool))
+                    pass
+
+                if truncateFileToSizeKb != None:
+                    print("!!! truncateFileToSizeKb: {0}".format(truncateFileToSizeKb))
+                    subprocess.check_call(["truncate", "-s", str(truncateFileToSizeKb * 1024), filename])
+
+                print("Item end.")
+                print("")
 
         return sourcesTargetDir
 
@@ -698,6 +746,8 @@ def main():
     else:
         print("UNKNOWN OR EMPTY --action value")
         exit(1)
+
+    print("asr done.")
 
 
 def tests():
