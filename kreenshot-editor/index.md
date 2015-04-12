@@ -1,14 +1,14 @@
 Kreenshot Editor
 ================
-kreenshot-editor -- **screenshot image editing**
+kreenshot-editor --**screenshot-image-editing**
 
 License: (L)GPL
-
-Note! kreenshot-editor is *INCUBATING* and not yet ready for production use. But it already can be used to edit screenshots.
 
 kreenshot-editor is written in Qt 5.3 with Linux as target platform.
 
 It was inspired by [Greenshot](http://getgreenshot.org/) (GPL).
+
+Note! kreenshot-editor is *INCUBATING* but it already can be used to edit screenshots.
 
 
 News
@@ -64,7 +64,7 @@ Discuss
 Contribute
 ----------
 * Source code hosted on [projects.kde.org:playground/graphics/kreenshot-editor](https://projects.kde.org/projects/playground/graphics/kreenshot-editor)
-* [README](https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository/revisions/master/entry/README.md) with build instructions and current TODOs and open issues.
+    * See [README](https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository/revisions/master/entry/README.md) for build instructions and current TODOs and open issues.
 * Code contributions: See this [Sample review request](https://git.reviewboard.kde.org/r/121029/) on https://git.reviewboard.kde.org to find out how to fill in the fields correctly.
 * Bug reports go to here: [discussion forum](https://forum.kde.org/viewtopic.php?f=19&t=125841) (todo later create a https://bugs.kde.org/ product for kreenshot-editor)
 
