@@ -61,6 +61,7 @@ Download
 Discuss
 -------
 * Discussion forum: https://forum.kde.org/viewtopic.php?f=19&t=125841
+* All bugs and wishes: [kreenshot-editor on bugs.kde.org](https://bugs.kde.org/buglist.cgi?component=general&list_id=1245204&product=kreenshot-editor&resolution=---)
 
 Contribute
 ----------
