@@ -55,7 +55,8 @@ Thus, the mouse cursor can always be captured and the user decides later.
 
 Download
 --------
-* Currently there is only a [binary package for openSUSE 13.2](https://software.opensuse.org/package/kreenshot-editor)
+* Currently there is a binary package only [for openSUSE 13.2](https://software.opensuse.org/package/kreenshot-editor)
+* For source code dowload see "Contribute" section below.
 
 Discuss
 -------
