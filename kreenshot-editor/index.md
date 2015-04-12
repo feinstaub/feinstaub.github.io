@@ -2,12 +2,20 @@ Kreenshot Editor
 ================
 kreenshot-editor -- **screenshot image editing**
 
+License: (L)GPL
+
 Note! kreenshot-editor is *INCUBATING* and not yet ready for production use. Target schedule for first release: end of 2014.
 
 kreenshot-editor is written in Qt 5.3 with Linux as target platform.
 
+It was inspired by [Greenshot](http://getgreenshot.org/) (GPL).
+
+
 News
 ----
+**2015-04-12, Sun**
+Discussion page created: https://forum.kde.org/viewtopic.php?f=19&t=125841
+
 **2014-11-06, Thu**
 Master source code repository moved to https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository
 Project page: https://projects.kde.org/projects/playground/graphics/kreenshot-editor
@@ -46,6 +54,7 @@ Thus, the mouse cursor can always be captured and the user decides later.
 
 Code and Contribute
 -------------------
+* Discussion forum: https://forum.kde.org/viewtopic.php?f=19&t=125841
 * Source code hosted on [projects.kde.org](https://projects.kde.org/projects/playground/graphics/kreenshot-editor)
 * [README](https://projects.kde.org/projects/playground/graphics/kreenshot-editor/repository/revisions/master/entry/README.md) with build instructions and current TODOs and open issues.
 
@@ -75,8 +84,6 @@ A screenshot tool in general comprises of three parts:
 kreenshot-editor aims to support the user with task No. 2 and 3.
 
 One goal is to help fixing this [ksnapshot](https://www.kde.org/applications/graphics/ksnapshot/) issue: [Bug 268260 - WISH - Add basic draw functions](https://bugs.kde.org/show_bug.cgi?id=268260)
-
-Inspired by: [Greenshot](http://getgreenshot.org/)
 
 Screenshots
 -----------
