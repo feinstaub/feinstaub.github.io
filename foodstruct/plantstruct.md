@@ -39,7 +39,7 @@ FFM
 - V-Restaurant [Wondergood](http://www.wondergood.de/), Preungesheimer Str. 1, 60389
 - Restaurant [ginkgo](http://www.ginkgo-frankfurt.de/), Bergerstrasse 81, 60316
     "Seit 2012 interessieren wir uns persönlich mehr und mehr für die vegane und vegetarische Ernährung – ein Einfluss, der sich natürlich auch auf der Karte zeigt."
-- V-Imbiss direkt vom Metzger [bioSpahn vegan](http://biospahn-vegan.de/), [Vegan-Info](Info: http://biospahn-vegan.de/de/vegan-info?coID=11), Berger Strasse 222, Bornheim, Mo-Sa
+- V-Imbiss direkt vom Metzger [bioSpahn vegan](http://biospahn-vegan.de/), [Vegan-Info](Info: http://biospahn-vegan.de/de/vegan-info?coID=11), Berger Strasse 222, Bornheim, Mo-Sa, Uhrzeit?
 - Bio-(V)-Restaurant [VEVAY](http://www.vevay.net/), Neue Mainzer Straße 20, 60311 FFM, Mo-Fr 9:00-21:00, Sa 10:00-21:00, So zu
 - TODO: (V)-Restaurant [savory](http://www.savory-thevegtory.de),  Burgfriedenstraße 2 / Ecke Alt-Rödelheim, Di-Fr: 11:30-20:00 Uhr, Sa: 11:00-16:00 Uhr
     - [Anfahrt](https://www.google.de/maps/dir/Hauptbahnhof,+Frankfurt/Burgfriedenstra%C3%9Fe+2,+60489+Frankfurt/@50.114939,8.6257427,14z/data=!4m14!4m13!1m5!1m1!1s0x47bd0955616e2395:0x651064cdb7f56566!2m2!1d8.664613!2d50.107733!1m5!1m1!1s0x47bd099b88ff3e33:0xa1def54c9951cdc8!2m2!1d8.6121931!2d50.1251901!3e3)
