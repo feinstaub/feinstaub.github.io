@@ -61,14 +61,40 @@ FFM
 
 Mainz
 -----
-* todo: V-Eco-Cafe [Möhren Milieu-Eco Café](http://moehren-milieu.de)
+* siehe [vegan-o-mania blog](http://vegan-o-mania.blogspot.de/p/uber-mich.html)
+* todo: [MoschMosch](http://vegan-o-mania.blogspot.de/2014/05/moschmosch-der-veganer-der-ersten.html), Mailandsgasse 3, Mo-Sa: 11:00-23:00, So: 13.00-22.00
+    "Edamame" - frische, gekochte Sojabohnen zum Auszuzeln
+    [Abstand zur Rheingoldhalle: 400 m, 5 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Mailandsgasse+3,+55116+Mainz/@50.0009213,8.2730414,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd971b1bdbab99:0xcd86b73dc733010c!2m2!1d8.27439!2d50!3e2)
+* todo: "Le cedre du Liban (libanesischer Imbiss) kann man auch den Falafel-Sandwich sowie den Makali-Sandwich vegan bestellen"
+    [yelp](http://www.yelp.de/biz/le-c%C3%A8dre-du-liban-mainz), Emmeransstr. 35, Mo-Sa: 11:00-21:00, So: zu
+    [Abstand zur Rheingoldhalle: 650 m, 8 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Emmeransstra%C3%9Fe+35,+55116+Mainz/@50.0017028,8.2713794,18z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd97032d2aa57f:0xa04a1f382923b90e!2m2!1d8.26959!2d50.00199!3e2)
+* todo: wo ist das? "Die besten Falafel gibt es mit ABSTAND beim Libanesen an der Ecke hinterm Kaufhof, wo früher das Konservatorium war!"
+* todo: "Hier gibt es vegetarischen und veganen Kuchen. Ausprobiert habe ich die Bäckerei aber noch nicht."
+    [kornland-baeckerei](http://www.kornland-baeckerei.de/), Weißliliengasse 23, Montag - Freitag: 07:00 - 18:00 Uhr, Samstag: 08:00 - 14:00 Uhr
+    [Abstand zur Rheingoldhalle: 1 km, 12 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Wei%C3%9Fliliengasse+23,+55116+Mainz/@49.999092,8.2722321,17z/data=!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd971955cd4bc5:0x16a3ec90ad53f40a!2m2!1d8.271!2d49.99656!3e2)
+* todo: V-Eco-Cafe [Möhren Milieu-Eco Café](http://moehren-milieu.de), Adam-Karrillon Straße 5, 55118 Mainz,
+    Mo: zu, Di-Sa: 10:00-20:00, So:10:00-18:00
+    [Abstand zur Rheingoldhalle: 1.3 km, 17 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Adam-Karrillon-Stra%C3%9Fe+5,+55118+Mainz/@50.0038241,8.2615702,16z/data=!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd96fc8cf68f83:0x1b8c9679b803cedf!2m2!1d8.261494!2d50.004616!3e2)
+* todo: ["Big Döner" am Mainzer Hauptbahnhof](http://vegan-o-mania.blogspot.de/2013/05/die-besten-falafel-der-stadt-bei-big.html), Bahnhofplatz 1, "Falafelrolle vegan, bitte",
+    So,Mo,Di: 9:00-03:00, Mi,Do: 9:00-06:00, Fr,Sa: 9:00-07:00,
+    [Abstand zur Rheingoldhalle: 1.5 km, 18 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Bahnhofplatz+1,+55116+Mainz/@50.0017124,8.2585773,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd96e4a43036c7:0x369c1263c0ef3ae5!2m2!1d8.25866!2d50.00193!3e2)
+* todo: "Es gibt noch ein veganes Frühstück bei der AnnaBatterie in der Neustadt
+* (todo:) [Sichtbar Vegan - Mainz](https://www.facebook.com/SichtbarVeganMainz?fref=ts), [vegan-o-mania-Kommentar](http://vegan-o-mania.blogspot.de/2013/07/vegan-schlemmen-in-der-sichtbar-in-mainz_21.html), Hintere Bleiche 29
+    Mo: zu?, Di-So: 18.00-22:00, Sa: 19:00-22:00
+    [Abstand zur Rheingoldhalle: 1 km, 13 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Hintere+Bleiche+29,+55116+Mainz/@50.0019249,8.2675237,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd96fd352c77f9:0x78e4e6a56cd7e8c0!2m2!1d8.264!2d50.0024!3e2)
+* todo: (V)-Restaurant [Schrebergarten](https://www.facebook.com/schrebergartenmainz/info?tab=page_info), Kurfürstenstr. 9, Mo-Fr: 11:30–20:30, Sat-Sun: 12:00–20:00
+    [Abstand zur Rheingoldhalle: 1,5 km, 20 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Kurf%C3%BCrstenstra%C3%9Fe+9,+55118+Mainz/@50.0032232,8.2624922,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd96fb9a18f615:0x939151b2669d28ec!2m2!1d8.2591032!2d50.0058923!3e2)
+* todo: "Im [Restaurant Kupferberg Terrassen](http://www.restaurant-kupferberg.de/) gibt es ein veganes 4-Gang-Menü", Kupferbergterrasse 17-19
+    Warme Küche: von 11:30 Uhr bis 14 Uhr und 17:30 Uhr bis 22 Uhr
+    [Abstand zur Rheingoldhalle: 1,4 km, 19 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Kupferbergterrasse+19,+55116+Mainz/@49.9993923,8.2671204,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd96e21c075155:0x9f3fb1886a224c24!2m2!1d8.2632!2d49.9976!3e2)
+* todo, siehe Liste [veganice.eu/restaurants/mainz](https://veganice.eu/restaurants/mainz)
 
 DA
 ---
 * V-Cafe [Veelgood](https://www.facebook.com/www.veelgood.de), Mühlstrasse 76, DA, 06151 6011450, Mo-Do 9:00-19:30, Fr-Sa: 11:00-22:00
 * (V)-Bistro www.cafe-habibi.de, Landwehrstraße 13, Darmstadt
 * Bistro www.mondo-daily.de, Grafenstraße 31, Darmstadt
-* (V)-Restaurant radieschen.com, Reuterallee 37, Darmstadt (Eberstadt)
+* (V)-Restaurant [Radieschen](http://radieschen.com/speisebuch/), Reuterallee 37, Darmstadt (Eberstadt)
 
 
 HP, Odenwald, HD
@@ -89,7 +115,7 @@ HP, Odenwald, HD
 
 
 HD
---
+---
 * (V)-Selbstbedienungsrestaurant red, HD, Mo-Fr 11:00-22:00
 * V-friendly [Malaysisches Restaurant Serai](http://www.serai.de/de/about/lage), Schillerstrasse 28-30, Weststadt, Vegan-Büffet am ersten Montag im Monat 18:00-22:00, Di-Fr: 12:00-14:00, 18:00-22:00, Sa: 18:00-23:00, So+Mo zu
 
