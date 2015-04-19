@@ -16,13 +16,40 @@ Kochbücher:
 
 ---
 
+Quick-Bohnen mit Senf, Hanföl, Ahornsirup
+-----------------------------------------
+19.04.2015, selbst, ROH
+
+* 1 Schale mit Kidneybohnen (50 - 100 g)
+* 1 Teelöffel Senf
+* 1 Schuss Hanföl
+* 1 Schuss Ahornsirup
+* 1 Schuss weißer Balsamico
+* 1 bisschen Sesam
+* Pfeffer
+* Muskat
+
+Fertig. Ausbaufähig zum partytauglichen Bohnensalat.
+
+---
+
+Tahin-Dressing
+--------------
+19.04.2015, aus "Rohkost macht glücklich" (J. Lechner, A. Teichmann)
+
+* 2 EL Tahin
+* 1 EL Tamari(Soja)-Soße
+* 1 EL Agaven-Dicksaft
+* 2 TL Zironensaft
+
+---
+
 Kartoffelsalat
 --------------
-08.04.2015
+08.04.2015, aus The Vegan Zombie
 
 Konzept:
 
-* aus The Vegan Zombie
 * Kartoffeln kleingeschnitten gar kochen, aber nicht weich
 * mit Paprika
 * mit Remoulade mit Dill und Gurken (todo: Marke?)
@@ -31,7 +58,7 @@ Konzept:
 
 Tortillas mit Kidneybohnencreme
 -------------------------------
-07.04.2015
+07.04.2015, von StSt
 
 Konzept:
 
@@ -42,7 +69,7 @@ Konzept:
 
 Tzatziki (Veganitzki)
 ---------------------
-30.03.2015, von S., partytauglich
+30.03.2015, von StSt, partytauglich
 
 * 1 Menge **Soja-Jogurth**
 * 1/6 Menge **saure Gurken** (kleingeschnitten)
