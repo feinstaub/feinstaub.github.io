@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>codestruct - kde</title>
+        <description>Posts categorized as 'kde'</description>
+        <link>http://feinstaub.github.com</link>
+        <atom:link href="http://feinstaub.github.com/feed.category.xml" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>Incubating kreenshot-editor</title>
+
+                <description>&lt;p&gt;Those of you who often do screenshots under MS Windows will probably know
+&lt;a href=&quot;http://getgreenshot.org/&quot;&gt;Greenshot&lt;/a&gt; which is - as they say on their website -
+“a free screenshot tool optimized for productivity”. It is GPL licensed and
+written in C#.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;built-in image editor of Greenshot&lt;/strong&gt; is specifically designed to edit
+screenshot images. You can draw basic shapes like rectangles, ellipses,
+and arrows. You can draw text. But you can also apply a pixelizing
+or blurring rectangluar areas. Each of these objects is movable, resizable and
+deletable and there is undo/redo.&lt;/p&gt;
+
+&lt;p&gt;Noteably, the mouse cursor is (optionally) captured as
+separate object which then can be moved or deleted after taking the screenshot.&lt;/p&gt;
+
+&lt;p&gt;Now, &lt;strong&gt;kreenshot-editor&lt;/strong&gt; is a new Qt-based project hosted on KDE playground
+that was inspired by Greenshot’s image editor. It focuses on the image editing
+task, can be invoked from command line and  should also provide a resuable
+editor component which could be integrated into other screencapture tools.
+The current code is already separated into an image editor widget and the
+main application.&lt;/p&gt;
+
+&lt;p&gt;Kreenshot-editor is still experimental, only basic features are implemented
+and there are currently some non-functional UI elements. Yet, it is already usable - if
+you don’t care that the color of objects is fixed to red ;-). Currently, you can
+create new objects, move them around, delete them, do undo/redo, load/save image,
+configure output filename pattern etc.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://feinstaub.github.io/kreenshot-editor/&quot;&gt;Website&lt;/a&gt;
+  (includes some screenshots and hints how to contribute)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forum.kde.org/viewtopic.php?f=19&amp;amp;t=125841&quot;&gt;Discussions go here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+
+                
+
+                <pubDate>Sun, 26 Apr 2015 23:45:00 +0200</pubDate>
+                <link>http://feinstaub.github.com/kde/2015/04/26/kreenshot-editor-introduce.html</link>
+                <guid isPermaLink="true">http://feinstaub.github.com/kde/2015/04/26/kreenshot-editor-introduce.html</guid>
+            </item>
+        
+    </channel>
+</rss>
