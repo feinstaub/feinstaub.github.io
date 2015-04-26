@@ -10,8 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-     
-      codestruct blog 
+    
+      Incubating kreenshot-editor &middot; codestruct
     
   </title>
 
@@ -91,40 +91,67 @@
       </div>
 
       <div class="container content">
-        <div class="home">
+        <div class="post">
+  <h1 class="post-title">Incubating kreenshot-editor</h1>
+  <span class="post-date">26 Apr 2015</span>
+  <p>Those of you who often do screenshots under MS Windows will probably know
+<a href="http://getgreenshot.org/">Greenshot</a> which is - as they say on their website -
+“a free screenshot tool optimized for productivity”. It is GPL licensed and
+written in C#.</p>
 
-  <h1 class="page-heading">Posts</h1>
+<p>The <strong>built-in image editor of Greenshot</strong> is specifically designed to edit
+screenshot images. You can draw basic shapes like rectangles, ellipses,
+and arrows. You can draw text. But you can also apply a pixelizing
+or blurring rectangluar areas. Each of these objects is movable, resizable and
+deletable and there is undo/redo.</p>
 
-  <ul class="post-list">
+<p>Noteably, the mouse cursor is (optionally) captured as
+separate object which then can be moved or deleted after taking the screenshot.</p>
+
+<p>Now, <strong>kreenshot-editor</strong> is a new Qt-based project hosted on KDE playground
+that was inspired by Greenshot’s image editor. It focuses on the image editing
+task, can be invoked from command line and  should also provide a resuable
+editor component which could be integrated into other screencapture tools.
+The current code is already separated into an image editor widget and the
+main application.</p>
+
+<p>Kreenshot-editor is still experimental, only basic features are implemented
+and there are currently some non-functional UI elements. Yet, it is already usable - if
+you don’t care that the color of objects is fixed to red ;-). Currently, you can
+create new objects, move them around, delete them, do undo/redo, load/save image,
+configure output filename pattern etc.</p>
+
+<ul>
+  <li><a href="http://feinstaub.github.io/kreenshot-editor/">Website</a>
+  (includes some screenshots and hints how to contribute)</li>
+  <li><a href="https://forum.kde.org/viewtopic.php?f=19&amp;t=125841">Discussions go here</a></li>
+</ul>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
     
       <li>
-        <span class="post-meta">Apr 26, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/blog/kde/2015/04/26/kreenshot-editor-introduce.html">Incubating kreenshot-editor</a>
-        </h2>
+        <h3>
+          <a href="/blog/jekyll/2015/04/18/x-jekyll-help.html">
+            Test blog entry
+            <small>18 Apr 2015</small>
+          </a>
+        </h3>
       </li>
     
       <li>
-        <span class="post-meta">Apr 18, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/blog/jekyll/2015/04/18/x-jekyll-help.html">Test blog entry</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 18, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/blog/jekyll/2015/04/18/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
+        <h3>
+          <a href="/blog/jekyll/2015/04/18/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+            <small>18 Apr 2015</small>
+          </a>
+        </h3>
       </li>
     
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/blog/feed.xml">via RSS</a></p>
-
 </div>
 
       </div>

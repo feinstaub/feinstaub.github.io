@@ -6,9 +6,57 @@
 </description>
     <link>http://feinstaub.github.com/blog/</link>
     <atom:link href="http://feinstaub.github.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Apr 2015 21:29:43 +0200</pubDate>
-    <lastBuildDate>Sun, 26 Apr 2015 21:29:43 +0200</lastBuildDate>
+    <pubDate>Sun, 26 Apr 2015 23:31:35 +0200</pubDate>
+    <lastBuildDate>Sun, 26 Apr 2015 23:31:35 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Incubating kreenshot-editor</title>
+        <description>&lt;p&gt;Those of you who often do screenshots under MS Windows will probably know
+&lt;a href=&quot;http://getgreenshot.org/&quot;&gt;Greenshot&lt;/a&gt; which is - as they say on their website -
+“a free screenshot tool optimized for productivity”. It is GPL licensed and
+written in C#.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;built-in image editor of Greenshot&lt;/strong&gt; is specifically designed to edit
+screenshot images. You can draw basic shapes like rectangles, ellipses,
+and arrows. You can draw text. But you can also apply a pixelizing
+or blurring rectangluar areas. Each of these objects is movable, resizable and
+deletable and there is undo/redo.&lt;/p&gt;
+
+&lt;p&gt;Noteably, the mouse cursor is (optionally) captured as
+separate object which then can be moved or deleted after taking the screenshot.&lt;/p&gt;
+
+&lt;p&gt;Now, &lt;strong&gt;kreenshot-editor&lt;/strong&gt; is a new Qt-based project hosted on KDE playground
+that was inspired by Greenshot’s image editor. It focuses on the image editing
+task, can be invoked from command line and  should also provide a resuable
+editor component which could be integrated into other screencapture tools.
+The current code is already separated into an image editor widget and the
+main application.&lt;/p&gt;
+
+&lt;p&gt;Kreenshot-editor is still experimental, only basic features are implemented
+and there are currently some non-functional UI elements. Yet, it is already usable - if
+you don’t care that the color of objects is fixed to red ;-). Currently, you can
+create new objects, move them around, delete them, do undo/redo, load/save image,
+configure output filename pattern etc.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://feinstaub.github.io/kreenshot-editor/&quot;&gt;Website&lt;/a&gt;
+  (includes some screenshots and hints how to contribute)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forum.kde.org/viewtopic.php?f=19&amp;amp;t=125841&quot;&gt;Discussions go here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 26 Apr 2015 23:45:00 +0200</pubDate>
+        <link>http://feinstaub.github.com/blog/kde/2015/04/26/kreenshot-editor-introduce.html</link>
+        <guid isPermaLink="true">http://feinstaub.github.com/blog/kde/2015/04/26/kreenshot-editor-introduce.html</guid>
+        
+        <category>qt</category>
+        
+        <category>screenshots</category>
+        
+        
+        <category>kde</category>
+        
+      </item>
     
       <item>
         <title>Test blog entry</title>
@@ -19,6 +67,11 @@
 &lt;h3 id=&quot;heading-2&quot;&gt;Heading 2&lt;/h3&gt;
 
 &lt;p&gt;Test 2 lorem ipsum&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;NOTES&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;categories are reflected in the URL!&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 22:35:00 +0200</pubDate>
         <link>http://feinstaub.github.com/blog/jekyll/2015/04/18/x-jekyll-help.html</link>
@@ -47,13 +100,11 @@
 
 </description>
         <pubDate>Sat, 18 Apr 2015 22:26:41 +0200</pubDate>
-        <link>http://feinstaub.github.com/blog/jekyll/update/2015/04/18/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://feinstaub.github.com/blog/jekyll/update/2015/04/18/welcome-to-jekyll.html</guid>
+        <link>http://feinstaub.github.com/blog/jekyll/2015/04/18/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://feinstaub.github.com/blog/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
