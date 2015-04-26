@@ -10,7 +10,6 @@
         
             <item>
                 <title>Incubating kreenshot-editor</title>
-
                 <description>&lt;p&gt;With this post I would like to introduce a new project: kreenshot-editor.&lt;/p&gt;
 
 &lt;p&gt;Those of you who often do screenshots under MS Windows will probably know
@@ -46,9 +45,9 @@ configure output filename pattern etc.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://forum.kde.org/viewtopic.php?f=19&amp;amp;t=125841&quot;&gt;Discussions go here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+                <link>http://feinstaub.github.com/blog/kde/2015/04/26/kreenshot-editor-introduce.html</link>
 
                 <pubDate>Sun, 26 Apr 2015 23:45:00 +0200</pubDate>
-                <link>http://feinstaub.github.com/kde/2015/04/26/kreenshot-editor-introduce.html</link>
                 <guid isPermaLink="true">http://feinstaub.github.com/blog/kde/2015/04/26/kreenshot-editor-introduce.html</guid>
             </item>
         
