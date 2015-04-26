@@ -5,7 +5,8 @@
         <title>codestruct - kde</title>
         <description>Posts categorized as 'kde'</description>
         <link>http://feinstaub.github.com</link>
-        <atom:link href="http://feinstaub.github.com/feed.category.xml" rel="self" type="application/rss+xml" />
+
+        <atom:link href="http://feinstaub.github.com/blog/feed.kde.xml" rel="self" type="application/rss+xml"/>
         
             <item>
                 <title>Incubating kreenshot-editor</title>
@@ -46,11 +47,9 @@ configure output filename pattern etc.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
 
-                
-
                 <pubDate>Sun, 26 Apr 2015 23:45:00 +0200</pubDate>
                 <link>http://feinstaub.github.com/kde/2015/04/26/kreenshot-editor-introduce.html</link>
-                <guid isPermaLink="true">http://feinstaub.github.com/kde/2015/04/26/kreenshot-editor-introduce.html</guid>
+                <guid isPermaLink="true">http://feinstaub.github.com/blog/kde/2015/04/26/kreenshot-editor-introduce.html</guid>
             </item>
         
     </channel>
