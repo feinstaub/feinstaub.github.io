@@ -96,23 +96,25 @@
         <div class="post">
   <h1 class="post-title">Incubating kreenshot-editor</h1>
   <span class="post-date">26 Apr 2015</span>
-  <p>Those of you who often do screenshots under MS Windows will probably know
+  <p>With this post I would like to introduce a new project: kreenshot-editor.</p>
+
+<p>Those of you who often do screenshots under MS Windows will probably know
 <a href="http://getgreenshot.org/">Greenshot</a> which is - as they say on their website -
 “a free screenshot tool optimized for productivity”. It is GPL licensed and
 written in C#.</p>
 
 <p>The <strong>built-in image editor of Greenshot</strong> is specifically designed to edit
 screenshot images. You can draw basic shapes like rectangles, ellipses,
-and arrows. You can draw text. But you can also apply a pixelizing
-or blurring rectangluar areas. Each of these objects is movable, resizable and
-deletable and there is undo/redo.</p>
+and arrows, add text and also apply a pixelizing or blurring rectangluar areas.
+Each of these objects is movable, resizable and deletable and there is undo/redo.</p>
 
 <p>Noteably, the mouse cursor is (optionally) captured as
 separate object which then can be moved or deleted after taking the screenshot.</p>
 
-<p>Now, <strong>kreenshot-editor</strong> is a new Qt-based project hosted on KDE playground
-that was inspired by Greenshot’s image editor. It focuses on the image editing
-task, can be invoked from command line and  should also provide a resuable
+<p>Now, <strong>kreenshot-editor</strong> is a new Qt-based project that was inspired by Greenshot’s image editor.
+It is hosted on <a href="https://projects.kde.org/projects/playground/graphics/kreenshot-editor">KDE playground</a>.
+It focuses on the image editing
+task, can be invoked from command line and should also provide a resuable
 editor component which could be integrated into other screencapture tools.
 The current code is already separated into an image editor widget and the
 main application.</p>
