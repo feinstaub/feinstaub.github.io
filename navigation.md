@@ -34,3 +34,5 @@
   * [Rezepte](foodstruct/index.md)
   * [Drinks](foodstruct/foodfluid.md)
   * [Auswärts](foodstruct/plantstruct.md)
+
+[blog](blog/index.html)
