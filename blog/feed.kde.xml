@@ -4,7 +4,7 @@
     <channel>
         <title>codestruct - kde</title>
         <description>Posts categorized as 'kde'</description>
-        <link>http://feinstaub.github.com</link>
+        <link>http://feinstaub.github.com/blog/</link>
 
         <atom:link href="http://feinstaub.github.com/blog/feed.kde.xml" rel="self" type="application/rss+xml"/>
         
