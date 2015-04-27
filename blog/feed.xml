@@ -4,10 +4,10 @@
     <title>codestruct</title>
     <description>This... is the codestruct.
 </description>
-    <link>http://feinstaub.github.com/blog/</link>
-    <atom:link href="http://feinstaub.github.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Apr 2015 00:54:03 +0200</pubDate>
-    <lastBuildDate>Mon, 27 Apr 2015 00:54:03 +0200</lastBuildDate>
+    <link>http://feinstaub.github.io/blog/</link>
+    <atom:link href="http://feinstaub.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 27 Apr 2015 21:42:46 +0200</pubDate>
+    <lastBuildDate>Mon, 27 Apr 2015 21:42:46 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -48,8 +48,8 @@ configure output filename pattern etc.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 26 Apr 2015 23:45:00 +0200</pubDate>
-        <link>http://feinstaub.github.com/blog/kde/2015/04/26/kreenshot-editor-introduce.html</link>
-        <guid isPermaLink="true">http://feinstaub.github.com/blog/kde/2015/04/26/kreenshot-editor-introduce.html</guid>
+        <link>http://feinstaub.github.io/blog/kde/2015/04/26/kreenshot-editor-introduce.html</link>
+        <guid isPermaLink="true">http://feinstaub.github.io/blog/kde/2015/04/26/kreenshot-editor-introduce.html</guid>
         
         <category>qt</category>
         
@@ -76,8 +76,8 @@ configure output filename pattern etc.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 22:35:00 +0200</pubDate>
-        <link>http://feinstaub.github.com/blog/jekyll/2015/04/18/x-jekyll-help.html</link>
-        <guid isPermaLink="true">http://feinstaub.github.com/blog/jekyll/2015/04/18/x-jekyll-help.html</guid>
+        <link>http://feinstaub.github.io/blog/jekyll/2015/04/18/x-jekyll-help.html</link>
+        <guid isPermaLink="true">http://feinstaub.github.io/blog/jekyll/2015/04/18/x-jekyll-help.html</guid>
         
         
         <category>jekyll</category>
@@ -102,8 +102,8 @@ configure output filename pattern etc.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 18 Apr 2015 22:26:41 +0200</pubDate>
-        <link>http://feinstaub.github.com/blog/jekyll/2015/04/18/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://feinstaub.github.com/blog/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
+        <link>http://feinstaub.github.io/blog/jekyll/2015/04/18/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://feinstaub.github.io/blog/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
