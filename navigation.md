@@ -17,7 +17,7 @@
 
 [kreenshot-editor]()
 
-  * [homepage (external)](kreenshot-editor/index.htm)
+  * [Start](kreenshot-editor/index.htm)
 
 [asr]()
 
@@ -32,4 +32,7 @@
   * # ---
   * [Other Alternatives](alt-struct/index.md)
 
-[blog](blog/index.html)
+[blog]()
+
+  * [codestruct blog](blog/index.html)
+  * [Blogrolle](blogs-other.md)
