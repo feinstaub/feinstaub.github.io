@@ -30,8 +30,15 @@ Drag and Drop of attachment files from Mozilla Thunderbird to the KDE Desktop is
 Bug exists since 2007 in TB: [Bug 377621 - Drag and Drop attachments to desktop or folders doesn't work ](https://bugzilla.mozilla.org/show_bug.cgi?id=377621)
 
 
-Plasma [usability]: flash modal
--------------------------------
+WAIT KF5 / Bug 311991 - Taskbar buttons for minimized apps should not use disabled state
+----------------------------------------------------------------------------------------
+2014-04-30
+
+see https://bugs.kde.org/show_bug.cgi?id=311991
+
+
+WAIT KF5 / Plasma [usability]: flash modal
+------------------------------------------
 2014-10-26, WAIT for KF5, not reported yet, no existing bug searched yet
 
 A modal dialog should flash or similar when the gray dolphin window is clicked.
@@ -40,7 +47,7 @@ Currently it does nothing.
 ![](img/plasma-flash-modal.png "Modal dialog should flash or similar when the gray dolphin window is clicked")
 
 
-Plasma [usability]: ! Plus/minus file selection "buttons" should have hover effect
+WAIT KF5 / Plasma [usability]: ! Plus/minus file selection "buttons" should have hover effect
 --------------------------------------------------------------------------------
 2014-09-20, WAIT for KF5, not reported yet, no existing bug searched yet
 
@@ -58,7 +65,7 @@ SUGGESTION:
 Add a hover effect to the plus/minus button so that the user can see that there is a different operation.
 
 
-Plasma [usability]: Panel unlock und lock should be at the same location
+WAIT KF5 / Plasma [usability]: Panel unlock und lock should be at the same location
 ------------------------------------------------------------------------
 2014-08-27, WAIT for KF5, not reported yet
 Current situation:
@@ -70,3 +77,27 @@ Current situation:
 
 SUGGESTION:
 Step 4 should be removed.
+
+
+WAIT KF5 / ShowDesktop
+----------------------
+2014
+
+see http://codestruct.jimdo.com/struct/showdeskboard/
+
+
+WAIT KF5 / Pastebin, Quickshare
+-------------------------------
+2014
+
+see http://codestruct.jimdo.com/struct/confirmation-before-share/
+see https://git.reviewboard.kde.org/r/117041/
+
+
+WAIT KF5 / Put Trashcan on KDE Desktop
+--------------------------------------
+2014
+
+see https://forums.opensuse.org/showthread.php/477049-Putting-Home-amp-Trashcan-on-KDE-Desktop-openSUSE-12-1
+see https://features.opensuse.org/318123
+
