@@ -30,7 +30,7 @@
   * [Drinks](foodstruct/foodfluid.md)
   * [Auswärts](foodstruct/plantstruct.md)
   * # ---
-  * [Other Alternatives](alt-struct/index.md)
+  * [Alternativen](alt-struct/index.md)
 
 [blog]()
 
