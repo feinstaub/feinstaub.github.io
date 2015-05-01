@@ -15,6 +15,11 @@
   * [C++ dev hints](dev/dev-hints.md)
   * [Scripts](bin/scripts-index.md)
 
+[KMoreTools]()
+
+  * [KDE API Doc](http://api.kde.org/frameworks-api/frameworks5-apidocs/knewstuff/html/annotated.html)
+  * [lxr.kde.org](http://lxr.kde.org/ident?v=kf5-qt5&_i=KMoreTools)
+
 [kreenshot-editor]()
 
   * [Start](kreenshot-editor/index.htm)
@@ -36,3 +41,7 @@
 
   * [codestruct blog](blog/index.html)
   * [Blogrolle](blogs-other.md)
+  * # Links
+  * [Mailinglist archive mail-archive.com kde-devel](https://www.mail-archive.com/kde-devel@kde.org/)
+  * [Mailinglist archive osdir.com](http://osdir.com/ml/)
+  * [Freenode Channel Guidelines](https://freenode.net/channel_guidelines.shtml)
