@@ -14,4 +14,7 @@ FAQ:
 | Deos ohne Aluminium | [Speick](http://www.speick.de/en/) in der Drogerie, [wolkenseifen](http://www.wolkenseifen.de/) im Internet  | [Warum? (kontrovers)](https://de.wikipedia.org/wiki/Aluminium#Toxizit.C3.A4t) |
 | EEG | Siehe eigener Stromanbieter |  |
 | Ernährung | [Oligopole vermeiden](http://www.handelsblatt.com/unternehmen/handel-konsumgueter/kartellamt-warnt-aldi-und-co-nutzen-marktmacht-aus/10748874.html), [Der vegane Metzger](http://biospahn-vegan.de/de/vegan-info?coID=11), [Bio-Lebensmittel](https://de.wikipedia.org/wiki/Bio-Lebensmittel) (nicht perfekt, aber ein Anfang) | [Qualität des Endprodukts vs. Produktionsprozess](http://www.supermarktmacht.de/preiskampf/) |
+| Replace MS Office | [LibreOffice](https://de.libreoffice.org/) |  |
+| Online-E-Mail only? | [Thunderbird](https://de.wikipedia.org/wiki/Mozilla_Thunderbird) and [Backup](http://www.freefilesync.org/) |  |
+
 
