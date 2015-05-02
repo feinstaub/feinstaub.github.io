@@ -19,6 +19,7 @@
 
   * [KDE API Doc](http://api.kde.org/frameworks-api/frameworks5-apidocs/knewstuff/html/annotated.html)
   * [lxr.kde.org](http://lxr.kde.org/ident?v=kf5-qt5&_i=KMoreTools)
+  * [code.woboq.org](http://code.woboq.org/qt5/qtbase/src/dbus/qdbusconnection.h.html#67)
 
 [kreenshot-editor]()
 
