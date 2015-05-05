@@ -14,6 +14,7 @@ Erweitert:
 
 * [Benjamin Lupton's README file](https://github.com/balupton/plant-vs-animal-products/blob/master/README.md#readme) (Australian Open-Collaboration Entrepreneur)
 * Gary Yourofsky speech
+* [Gary Yourofsky interview](https://www.youtube.com/watch?v=xYP1GGdRMYo) (Untertitel einschalten)
 
 Erweitert 2:
 

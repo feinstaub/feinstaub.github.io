@@ -2,16 +2,16 @@
 
 [linux user and dev]()
 
-  * # Hints
+  * # Hints:
   * [Beginners](linux-user/linux-beginners-notes.md)
   * [Advanced](linux-user/linux-advanced-notes.md)
   * [Firefox](linux-user/browser-notes.md)
-  * # KDE UI suggestions / next steps
+  * # KDE UI suggestions / next steps:
   * [KDE: General](struct/struct-main.md)
   * [KDE: Dolphin](struct/struct-dolphin.md)
   * [Linux Desktop: Verschiedenes](struct/struct-desktop-misc.md)
   * [KDE: Symlink handling](struct/symlink-handling.md)
-  * # Code
+  * # Code:
   * [C++ dev hints](dev/dev-hints.md)
   * [Scripts](bin/scripts-index.md)
 
@@ -30,7 +30,8 @@
 [asr]()
 
   * [Start](asr/index.md)
-  * [old: fyshare concept draft](fyshare/index.md)
+  * # old:
+  * [fyshare concept draft](fyshare/index.md)
 
 [foodstruct]()
 
@@ -43,8 +44,9 @@
 [blog]()
 
   * [codestruct blog](blog/index.html)
+  * [Theater](blog-theater.md)
+  * # Links:
   * [Blogrolle](blogs-other.md)
-  * # Links
   * [Mailinglist archive mail-archive.com kde-devel](https://www.mail-archive.com/kde-devel@kde.org/)
   * [Mailinglist archive osdir.com](http://osdir.com/ml/)
   * [Freenode Channel Guidelines](https://freenode.net/channel_guidelines.shtml)
