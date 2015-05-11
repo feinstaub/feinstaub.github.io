@@ -5,6 +5,8 @@ Vegan/bio/freundlich Ausgehen und Einkaufen im Rhein-Main-Gebiet.
 
 Angaben zu Öffnungszeiten sind konservativ. V: rein vegan, (V): vegetarisch
 
+todo/gut?: http://www.vegman.org/ (für Reisen)
+
 
 Oldenburg/Hostein
 -----------------
@@ -62,6 +64,7 @@ FFM
 Mainz
 -----
 * siehe [vegan-o-mania blog](http://vegan-o-mania.blogspot.de/p/uber-mich.html)
+* TODO: am "Kardinal Volk Platz": Thai Express mit Vegan-Ente
 * todo: [MoschMosch](http://vegan-o-mania.blogspot.de/2014/05/moschmosch-der-veganer-der-ersten.html), Mailandsgasse 3, Mo-Sa: 11:00-23:00, So: 13.00-22.00
     "Edamame" - frische, gekochte Sojabohnen zum Auszuzeln
     [Abstand zur Rheingoldhalle: 400 m, 5 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Mailandsgasse+3,+55116+Mainz/@50.0009213,8.2730414,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd971b1bdbab99:0xcd86b73dc733010c!2m2!1d8.27439!2d50!3e2)

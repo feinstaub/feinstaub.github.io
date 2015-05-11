@@ -12,3 +12,9 @@ lawstruct
 |  |  |  |
 |  |  |  |
 |  |  |  |
+
+
+Unsorted
+--------
+
+* http://www.friedensbildung.org/stiftungszweck/
