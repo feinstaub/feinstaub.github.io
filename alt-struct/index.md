@@ -14,6 +14,15 @@ FAQ:
 | Deos ohne Aluminium | [Speick](http://www.speick.de/en/) in der Drogerie, [wolkenseifen](http://www.wolkenseifen.de/) im Internet | [Wiki](https://de.wikipedia.org/wiki/Aluminium#Toxizit.C3.A4t) |
 | EEG | Siehe eigener Stromanbieter |  |
 | Ernährung | [Der vegane Metzger](http://biospahn-vegan.de/de/vegan-info?coID=11), [Bio-Lebensmittel](https://de.wikipedia.org/wiki/Bio-Lebensmittel), [Oligopole vermeiden](http://www.handelsblatt.com/unternehmen/handel-konsumgueter/kartellamt-warnt-aldi-und-co-nutzen-marktmacht-aus/10748874.html) | [Qualität des Endprodukts vs. Produktionsprozess](http://www.supermarktmacht.de/preiskampf/), [kuh-info](kuh-info.md) |
+| Schokolade | [Ohne Sklavenarbeit](http://www.foodispower.org/schokoladenliste/) | [Blogeintrag aus 2011](http://appetiteforjustice.blogspot.de/2011/05/understanding-food-empowerment-projects.html) |
 | Replace MS Office | [LibreOffice](https://de.libreoffice.org/) |  |
 | Online-E-Mail only? | [Thunderbird](https://de.wikipedia.org/wiki/Mozilla_Thunderbird) and [Backup](http://www.freefilesync.org/) |  |
 | Kleidung | 1. weniger ist mehr, 2. [google-Suche](https://www.google.de/search?q=nachhaltige+kleidung) | [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0) |
+
+Unsorted
+--------
+### Free software
+
+* todo: good stallman video / Free Software Foundation
+* [open technology for free societies](http://aseigo.blogspot.de/), e.g. [30 min keynote](https://exote.ch/blogs/aseigo/2015/05/06/the-best-feature-of-free-software/)
+  * Today's societies are dependent on software (email, private and corporate communication, shopping, political campaigns) => The society can only be as free as the software is that it makes use of.

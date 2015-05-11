@@ -13,10 +13,18 @@ Sammlung von Zutaten aus denen sich leckere Dinge machen lassen:
 * Kichererbsen, Avocado
 * Rote Beete, Spinat
 * **Soyananda** (frisch fermentierter Frischkäse) von Soyana - aus der Schweiz: http://www.soyana.ch/
+* Soyana Sauerrahm
 * **VegiBelle** - "the first real vegan cheese" - http://www.vegibelle.com/ - aus Hamburg: http://www.tofunagel.de/ueber-uns/
   * Empfehlung die Variante "pur" nach Hirtenart
 * Apfelkraut (als Aufstrich etc.)
 * Fire Roasted Pasta: http://www.ppura.ch/de/la-pasta/fireroasted-pasta
+* Blumenkohl, Zuccini, Paprika
+* "Dinkel wie Reis"
+* Olivenöl mit Zitrone
+* Muskat, Pfeffer
+* Kidneybohnen
+* Ahornsirup
+* Rohe Kakaobohnen (von z. B. [Kallari-Futuro GmbH](http://kallari-eg.de/))
 
 Quick-Stuff
 -----------

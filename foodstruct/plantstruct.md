@@ -118,6 +118,7 @@ HD
 ---
 * (V)-Selbstbedienungsrestaurant red, HD, Mo-Fr 11:00-22:00
 * V-friendly [Malaysisches Restaurant Serai](http://www.serai.de/de/about/lage), Schillerstrasse 28-30, Weststadt, Vegan-Büffet am ersten Montag im Monat 18:00-22:00, Di-Fr: 12:00-14:00, 18:00-22:00, Sa: 18:00-23:00, So+Mo zu
+* TODO: holy kitchen Cafe, ca. 11-19 Uhr
 
 
 Mannheim
@@ -166,7 +167,7 @@ Friedberg, Augsburg, Nürnberg
 -----------------------------
 * todo: V-Cafe [COSMOSCAFE e.V.](http://cosmoscafe.jimdo.com), Jungbräustrasse 8, 86316 FRIEDBERG
 
-* todo: V-Biorestaurant [The Tasty Leaf](http://www.tasty-leaf.de), Nürnberg
+* todo: V-Biorestaurant [The Tasty Leaf](http://www.tasty-leaf.de), Nürnberg, Di-Do 11:30-22:00, Fr 11:30-23:00, Sa 15:00-23:00, So 10:00-15:30
 
 
 Bad Waldsee, Singen
