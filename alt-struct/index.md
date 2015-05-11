@@ -19,6 +19,8 @@ FAQ:
 | Online-E-Mail only? | [Thunderbird](https://de.wikipedia.org/wiki/Mozilla_Thunderbird) and [Backup](http://www.freefilesync.org/) |  |
 | Kleidung | 1. weniger ist mehr, 2. [google-Suche](https://www.google.de/search?q=nachhaltige+kleidung) | [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0) |
 
+[lawstruct](lawstruct.md)
+
 Unsorted
 --------
 ### Free software
