@@ -1,10 +1,9 @@
 GKV oder PKV?
 =============
 
-Tabelle
--------
+### Tabelle
 
-Argumente auf Basis der derzeitigen Ausgestaltung der Systeme.
+Argumentesammlung auf Basis der derzeitigen Ausgestaltung der Systeme.
 
 | Pro GKV  | Contra Priv-KV | Contra GKV | Pro Priv-KV | Quelle(n) / Nachweise |
 | -------- | -------------- | ---------- | ----------- | --------------------- |
@@ -19,21 +18,19 @@ Argumente auf Basis der derzeitigen Ausgestaltung der Systeme.
 | Bei Inanspruchnahme von Leistungen: Abrechnung wird im Hintergrund erledigt. | Wenn ich krank bin, muss ich mich auch noch um die Rechnungen kümmern. Vorkasse. Papierkram. |  |  |  |
 
 
-Verbesserungswege für die KV
-----------------------------
+### Verbesserungswege für die KV
 Die GKV ist auch nicht perfekt, daher, z. B. [TK-Chef fordert einheitlichen Versicherungsmarkt, 06.08.2014, Versicherungsbote](http://www.versicherungsbote.de/id/4801462/Techniker-Krankenkasse-Jens-Baas-Buergerversicherung).
 
 Misswirtschaft gibt es überall (PKV und GKV). Bei den GKV sollte man ansetzen. Dort ist es besser möglich, nachhaltige Transparenz zu schaffen.
 
 
-Verschiedenes / Sortieren
--------------------------
+### Verschiedenes / Sortieren
 http://www.handelsblatt.com/finanzen/vorsorge/versicherung/pkv-versus-gkv-was-versicherte-besser-wissen-sollten/3440154.html (ca. 2010)
 
 - Bei der gesetzlichen Krankenversicherung (GKV) sind Ehepartner und Kinder kostenlos mitversichert.
 - Bei der privaten muss für jedes Familienmitglied ein einzelner Vertrag abgeschlossen werden. Der Gesamtbeitrag ist dann **oft höher als der Höchstsatz der gesetzlichen Krankenversicherung**.
 
-### Geräte-These
+#### Geräte-These
 
 PKV sagt (https://www.pkv.de/themen/krankenversicherung/pkv-im-gesundheitssystem/)
 "Zudem fließen jedes Jahr 28,6 Milliarden Euro durch Privatversicherte ins Gesundheitssystem. Dank der Einnahmen aus der Privaten Krankenversicherung können Ärzte und Krankenhäuser investieren und so den hohen medizinischen Standard sichern, von dem alle profitieren. Wären die Privatversicherten in der Gesetzlichen Krankenversicherung mit einem anderen Vergütungssystem versichert, würde das Gesundheitswesen **11 Milliarden** Euro verlieren - Praxen müssten schließen, Jobs gingen verloren. Ohne die Privatversicherten hätte zum Beispiel jede Arztpraxis in Deutschland durchschnittlich 43.000 weniger zur Verfügung, die sie in personal oder Ausstattung investieren kann."
