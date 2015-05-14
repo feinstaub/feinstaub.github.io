@@ -9,6 +9,22 @@ See also:
 * http://www.tweakhound.com/2014/11/14/opensuse-13-2-tips-tricks-and-tweaks/
 
 
+Empfehlenswerte Drucker und Scanner
+-----------------------------------
+### 2015
+Zusammenfassung: **Drucker von HP** sind derzeit für Linux zu empfehlen. Z. B.  HP Officejet 6500 A oder ähnliche Officejets
+
+Preis für das Einsteiger-Kombigerät: zwischen 100 und 200 EUR.
+
+Das wichtigste bei Linux sind die Treiber, ohne die druckt oder scannt die beste Hardware nicht.
+
+Früher konnte man drei Marken empfehlen: HP, Epson, Canon (siehe z. B. http://www.pcwelt.de/ratgeber/Drucker-Vorteil-HP-167717.html)
+
+* Epson produziert meist Billig-Drucker. Linux-Scanner-Treiber werden nicht mehr weiterentwickelt.
+* Canon hat früher sehr günstige (kompatible) Patronen gehabt, das gibt es jetzt aber nicht mehr. Früher gab es auch gute Linux-Treiber, aber die Entwicklung wurde weitgehend eingestellt.
+* Bleibt nur noch HP übrig. Gute Hardware. Treiber werden OpenSource entwickelt (HpLip) und auf dem aktuellen Stand gehalten.
+
+
 Format external USB hard drive
 ------------------------------
 1) Create Partition:
