@@ -1,11 +1,11 @@
 alt-struct
 ==========
 
-Dinge für 1 Person:
+List of positive and practical alternatives per individual.
 
-| Impossible?  | Alternatives | More / Related |
-| -----------  | ------------ | -------------- |
-| Ohnmacht des Einzelnen? | Siehe J. Weizenbaum - [Kurs auf den Eisberg](http://www.zvab.com/advancedSearch.do?title=%22Kurs+auf+den+Eisberg%22) (1988), [vgl. 1989](https://de.wikipedia.org/wiki/Internet#Ab_1989_Kommerzialisierung_und_das_WWW) | [Die sog. Ohnmacht des Einzelnen...](https://ohneamazon.wordpress.com/2014/01/31/die-sogenannte-ohnmacht-des-einzelnen-ist-vielleicht-die-gefahrlichste-illusion-die-ein-mensch-haben-kann/), [Rosa Parks](https://de.wikipedia.org/wiki/Rosa_Parks), A. Schweitzer - [Aus meinem Leben und Denken](http://www.fischerverlage.de/buch/aus_meinem_leben_und_denken/9783596128761) |
+| Topic  | Alternatives | Background |
+| -----  | ------------ | ---------- |
+|  | Ohnmacht des Einzelnen? - Siehe J. Weizenbaum - [Kurs auf den Eisberg](http://www.zvab.com/advancedSearch.do?title=%22Kurs+auf+den+Eisberg%22) (1988), [vgl. 1989](https://de.wikipedia.org/wiki/Internet#Ab_1989_Kommerzialisierung_und_das_WWW) | [Die sog. Ohnmacht des Einzelnen...](https://ohneamazon.wordpress.com/2014/01/31/die-sogenannte-ohnmacht-des-einzelnen-ist-vielleicht-die-gefahrlichste-illusion-die-ein-mensch-haben-kann/), [Rosa Parks](https://de.wikipedia.org/wiki/Rosa_Parks), A. Schweitzer - [Aus meinem Leben und Denken](http://www.fischerverlage.de/buch/aus_meinem_leben_und_denken/9783596128761) |
 | Geld stinkt nicht? | Private Geldanlage muss nicht total anonym sein, siehe z. B. [Anlagekriterien](https://www.gls.de/privatkunden/ueber-die-gls-bank/arbeitsweisen/anlage-und-finanzierungsgrundsaetze/). Geld aus der Förderung von fossilen Energieträgern abziehen: [divest - gofossilfree](http://gofossilfree.org/de/), [Kohlenstoff(wirtschafts)blase](http://de.wikipedia.org/wiki/Kohlenstoffblase) | Netter [Blog "für Leute, die Ihr Geld selbst anlegen"](http://www.finanzwesir.com/), Rüstung: Export von [Kleinwaffen](http://sicherheitspolitik.bpb.de/konventionelle-waffen/hintergrundtexte-m5/kleinwaffen-die-wahren-massenvernichtungswaffen), [Kampfdrohnen](https://daserste.ndr.de/panorama/aktuell/drohnen115.html), [PTBS](http://de.wikipedia.org/wiki/Posttraumatische_Belastungsst%C3%B6rung), [Agent Orange / Vietnam](https://de.wikipedia.org/wiki/Agent_Orange), [guardian: fossil free pension fund](http://www.theguardian.com/money/2015/may/09/how-get-pension-fund-divest-fossil-fuels) (todo, [top 200](http://gofossilfree.org/top-200/), [pushyourparents](http://pushyourparents.org/)) |
 | E-Mail ohne Handel mit Kundendaten | Bekomme genau das, was du bezahlst (anstatt einem impliziten "bezahle mit deinen Daten"); dadurch ohne Werbung für [ab 1 EUR / Monat](https://posteo.de) | Interessant: [TKÜV ab 10.000 Teilnehmern, seit ca. 2002](https://de.wikipedia.org/wiki/Telekommunikations-%C3%9Cberwachungsverordnung) |
 | Unrestricted and secure computing | Use some [free](http://de.wikipedia.org/wiki/Freie_Software) operating system at home ([openSUSE](https://www.opensuse.org/), [Debian](http://www.oreilly.com/openbook/debian/book/ch01_01.html), ...) - self and especially parents | [Warum? (1)](http://de.wikipedia.org/wiki/George_Orwell), [Warum? (2)](https://www.google.de/search?q=microsoft+und+nsa&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JxRCVcOOK5TiasGYgVA#q=microsoft+und+nsa), [Warum? (3)](http://de.wikipedia.org/wiki/1984_%28Roman%29), [Warum? (4)](http://de.wikipedia.org/wiki/%C3%9Cberwachungsstaat), [EFF](https://de.wikipedia.org/wiki/Electronic_Frontier_Foundation), [Wahlcomputer](http://wahlcomputer.ccc.de/) |
@@ -29,8 +29,8 @@ Related:
 
 ### Later
 
-| Topic  | Alternatives | More / Related |
-| -----  | ------------ | -------------- |
+| Topic  | Alternatives | Background |
+| -----  | ------------ | ---------- |
 | Fair produziertes Mobiltelefon | http://www.fairphone.com/ | wo zu kaufen? |
 | Müll | http://www.terracycle.de/de | gesehen in FFM |
 

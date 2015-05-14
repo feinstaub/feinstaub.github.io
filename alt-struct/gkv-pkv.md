@@ -3,7 +3,7 @@ GKV oder PKV?
 
 ### Tabelle
 
-Argumentesammlung auf Basis der derzeitigen Ausgestaltung der Systeme.
+Argumentesammlung auf Basis der derzeitigen Ausgestaltung der gesetzlichen Rahmenbedingungen.
 
 | Pro GKV  | Contra Priv-KV | Contra GKV | Pro Priv-KV | Quelle(n) / Nachweise |
 | -------- | -------------- | ---------- | ----------- | --------------------- |
@@ -29,6 +29,8 @@ http://www.handelsblatt.com/finanzen/vorsorge/versicherung/pkv-versus-gkv-was-ve
 
 - Bei der gesetzlichen Krankenversicherung (GKV) sind Ehepartner und Kinder kostenlos mitversichert.
 - Bei der privaten muss für jedes Familienmitglied ein einzelner Vertrag abgeschlossen werden. Der Gesamtbeitrag ist dann **oft höher als der Höchstsatz der gesetzlichen Krankenversicherung**.
+
+Warum musste neben einem Solidarsystem ein zweites installiert werden?
 
 #### Geräte-These
 

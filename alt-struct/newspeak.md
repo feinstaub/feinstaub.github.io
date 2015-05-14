@@ -4,11 +4,11 @@ newspeak
 
 [Neusprech](https://de.wikipedia.org/wiki/Neusprech) in der heutigen Zeit.
 
-| Davor | Dahinter | ... |
-| ----- | -------- | --- |
-| Ministerium für Reaktorsicherheit | Verwaltungsstelle für zukünftigen Atommüll |  |
-| Verteidigungsminister | Militärminister oder Kriegsminister |  |
-| Kalbfleisch | ... |  |
+| Davor | Dahinter | Hintergrund |
+| ----- | -------- | ----------- |
+| Ministerium für Reaktorsicherheit | Verwaltungsstelle für zukünftigen Atommüll und dessen Kosten |  |
+| Verteidigungsminister | Militärminister oder Kriegsminister | s. G. s. n. |
+| Kalbfleisch | ... | s. kuh-info |
 |  |  |  |
 
 
