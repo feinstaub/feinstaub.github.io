@@ -14,6 +14,8 @@
   * # Code:
   * [C++ dev hints](dev/dev-hints.md)
   * [Scripts](bin/scripts-index.md)
+  * [Review Requests](https://git.reviewboard.kde.org/users/gregormi/)
+  * [Bugs](https://bugs.kde.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=CONFIRMED&bug_status=ASSIGNED&bug_status=REOPENED&email1=codestruct&emailassigned_to1=1&emailcc1=1&emaillongdesc1=1&emailreporter1=1&emailtype1=substring&query_format=advanced)
 
 [KMoreTools]()
 

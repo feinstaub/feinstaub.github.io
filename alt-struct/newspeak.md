@@ -14,5 +14,5 @@ newspeak
 
 ### Unsorted
 
-* http://www.blicklog.com/2014/01/30/das-lexikon-der-euphemismen/ (eher satirisch)
-* http://www.blicklog.com/2014/09/11/das-kleine-lexikon-der-euphemismen-1-nachlieferung/ (eher satirisch)
+* http://www.blicklog.com/2014/01/30/das-lexikon-der-euphemismen/ (eher polemisch)
+* http://www.blicklog.com/2014/09/11/das-kleine-lexikon-der-euphemismen-1-nachlieferung/ (eher polemisch)
