@@ -24,7 +24,6 @@ Related:
 
 * [lawstruct](lawstruct.md)
 * [supportstruct](supportstruct.md)
-* [newspeak](newspeak.md)
 
 
 ### Later

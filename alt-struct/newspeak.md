@@ -1,6 +1,6 @@
 newspeak
 ========
-(im Aufbau)
+(im Aufbau, nicht verlinkt)
 
 [Neusprech](https://de.wikipedia.org/wiki/Neusprech) in der heutigen Zeit.
 
