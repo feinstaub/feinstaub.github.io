@@ -1,7 +1,7 @@
 lawstruct
 =========
 
-Überfällige Gesetze.
+Überfällige Gesetze. Oder: Dinge, gegen die - abgesehen von Partikularinteressen - nichts spricht.
 
 | Thema | Besser wäre... | Hintergrund |
 | ----- | -------------- | ----------- |

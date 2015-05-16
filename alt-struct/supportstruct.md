@@ -8,7 +8,7 @@ supportstruct
 | [Amnesty International](https://www.amnesty.de/) |  Non-Profit-Organisation, die sich weltweit für **Menschenrechte** einsetzt [[1](https://de.wikipedia.org/wiki/Amnesty_International)] | [2015 (trockene) Info](https://www.youtube.com/user/AmnestyDeutschland) | [Journal](https://www.amnesty.de/journal), [Urgent Actions](http://www.amnesty.de/urgent-actions-0), [Folter](https://www.stopfolter.de/), [Privatsphäre](http://action.amnesty.de/l/ger/p/dia/action3/common/public/?action_KEY=9945) |
 | [Albert Schweitzer Stiftung für unsere Mitwelt](https://albert-schweitzer-stiftung.de/) | **Abschaffung der Massentierhaltung** |  | [Jahresrückblicke](http://albert-schweitzer-stiftung.de/kampagnen/erfolge) |
 | [abgeordnetenwatch](http://www.abgeordnetenwatch.de/) | Beteiligungsmöglichkeiten und **Transparenz in der Politik** | [2015 Öffentlichkeit bei Ausschusssitzungen](https://www.youtube.com/watch?v=YT3-SHvufXs), [2012 Nebeneinkünfte, phönix](https://www.youtube.com/watch?v=iEfWWy0VG3I), [2012 Nebeneinkünfte, illner](https://www.youtube.com/watch?v=RJiF50CywQ8) |  |
-| [Lobby Control](https://www.lobbycontrol.de) | todo | todo | todo |
+| [Lobby Control](https://www.lobbycontrol.de) | Initiative für **Transparenz und Demokratie** | [2015 TTIP](https://www.youtube.com/watch?v=iM-HqL4oSVc), [2013 Parteispenden](https://www.youtube.com/watch?v=IuHDoOTAAxQ) | [über uns](https://www.lobbycontrol.de/initiative/), Reiseführer [LobbyPlanet Berlin](https://www.lobbycontrol.de/lobbyplanet-berlin-reisefuhrer-durch-den-lobbydschungel/), [Lobbypedia](https://lobbypedia.de), [gegen Meinungsmache in Schulen](http://www.verbraucherbildung.de/verbraucherwissen/politik-muss-endlich-werbung-und-meinungsmache-schulen-angehen) (2015) |
 | [foodwatch](https://www.foodwatch.org) | **Lebensmittel** | [2015 Fettleibigkeit](https://www.youtube.com/watch?v=m5voj9u8LII), [2015 Smiley-Offensive](https://www.youtube.com/watch?v=MjiwBBDn258) |  |
 
 
@@ -16,4 +16,5 @@ supportstruct
 
 | Org. | Desc. |
 | ---- | ----- |
+| [Ärzte gegen Tierversuche](http://aerzte-gegen-tierversuche.de/de) | "Medizinischer Fortschritt ist wichtig - **Tierversuche** sind der falsche Weg!", Achtung und Ehrfurcht vor dem Leben, animal testing / Tierversuche => [Argumente](https://de.wikipedia.org/wiki/Tierversuch#Argumente_gegen_Tierversuche) (Erkenntnisgewinn, Übertragbarkeit, Aussagekraft, Ethik, Nützlichkeit vs. Ethik), [Animierter Film](Achtung und Ehrfurcht vor dem Leben) (2013, 6 min), [Woran soll man denn sonst testen?](https://www.youtube.com/watch?v=m_a92xvL5is) (2014, 30 min, TODO) |
 | http://www.friedensbildung.org/stiftungszweck/ |  |

@@ -26,3 +26,7 @@ http://dynalon.github.io/mdwiki
         * http://docs.getpelican.com/en/3.5.0/quickstart.html
             * TODO: Table of contents, navigation, more?
     * http://jekyllrb.com/ (MIT license)
+
+More
+----
+* [Gewohnheit, Bequemlichkeit, Tradition und Geschmack](alt-struct/kuh-info.md)
