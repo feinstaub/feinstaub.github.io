@@ -4,8 +4,8 @@ Meta
 The **codestruct** is currently hosted at feinstaub.github.io
 
 
-Why mdwiki?
------------
+### Why mdwiki?
+
 http://dynalon.github.io/mdwiki
 
 * PRO:
@@ -27,6 +27,6 @@ http://dynalon.github.io/mdwiki
             * TODO: Table of contents, navigation, more?
     * http://jekyllrb.com/ (MIT license)
 
-More
-----
+### More
+
 * [Gewohnheit, Bequemlichkeit, Tradition und Geschmack](alt-struct/kuh-info.md)
