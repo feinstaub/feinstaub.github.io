@@ -32,6 +32,14 @@ Misc:
 * [Benjamin Lupton's README file](https://github.com/balupton/plant-vs-animal-products/blob/master/README.md#readme) (Australian Open-Collaboration Entrepreneur)
 * "Solange es Schlachthäuser gibt, wird es auch Schlachtfelder geben." [Leo Tolstoi](http://de.wikiquote.org/wiki/Diskussion:Leo_Tolstoi)
 * Tierwohl vs. Menschenwohl? - Dazu ein kleiner Hinweis: den Menschen in der dritten Welt geht es sicher nicht dadurch besser, dass wir hier möglichst viele Tierprodukte essen.
+
+
+B12:
+
+* [2015 by Sina Jasur](http://sina-jasur.de/2015/04/vegane-mythen-aufgeklaert-vitamin-b12-ein-grund-nicht-vegan-zu-leben/)
+    * B12 wird von Bakterien produziert, die u. a. in Schmutz leben.
+    * Erinnerung: Wir ergänzen bereits Jod und Fluorid. Ist B12 es wert, es über Tiere aufnehmen zu müssen?
+    * Neben Tropfen, gibt es [Zahnpasta](http://www.amazon.de/s/?_encoding=UTF8&camp=1638&creative=19454&field-keywords=b12%20zahnpasta&linkCode=ur2&site-redirect=de&sprefix=b12%20zahn%2Caps%2C174&tag=httppagewi0e7-21&url=search-alias%3Daps&linkId=GYWNR3UTVPSVRN2Z)
 * [B12 myth](https://www.google.de/search?q=gary+b12&ie=utf-8&oe=utf-8&gws_rd=cr&ei=iB5VVZuPOoO3UdqwgZgB#q=b12+mythos), [apo-umschau 2012](http://www.apotheken-umschau.de/Ernaehrung/Vegetarier-Mythen-und-was-wirklich-stimmt-185177.html), siehe auch unten vegan.ch
 
 
@@ -72,3 +80,17 @@ Rationalisation from a programmer's perspective:
 * Constant re-evaluation of the current situation (available hardware, software, platforms, frameworks, services, communities etc.) is needed.
 * How would the food production be organized if one would re-evaluate it on the basis of the current situation? (vs. tradition)
 
+Gewohnheit: geschenkt
+Bequemlichkeit: einfachste Art, friedfertig zu sein
+Tradition: entsteht
+Geschmack: Geschmackssache
+
+
+Sina Jasur:
+
+(todo)
+
+* http://www.sina-jasur.com/2015/02/how-i-use-my-mornung-routine-to-boost.html
+* http://www.sina-jasur.com/2015/01/properly-clean-up-clockwise.html
+* [Minimalist book](http://www.amazon.com/gp/product/150750487X/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=150750487X&linkCode=as2&tag=wwwsinaenglis-20&linkId=UN77ZWVASV2CVPN3)
+* http://sina-jasur.de/100_moeglichkeiten/
