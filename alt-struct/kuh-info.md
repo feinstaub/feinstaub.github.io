@@ -16,6 +16,7 @@ Warum ist das so? -->
 
 Videos:
 
+* [Killing ‘em with Kindness](https://www.youtube.com/watch?v=Pdjje7s8Jgc), 2:30min
 * [Gary Yourofsky speech 2010](https://www.youtube.com/watch?v=U5hGQDLprA8) (at Georgia Tech university), ..., was not **born** as vegan, ..., **slavery** in history and today, ...
     * [speech, updated 2014, City College-New York](https://www.youtube.com/watch?v=_K36Zu0pA4U) (alternate intro: flag vs. animal/steak, so victimized that they are not considered as victims)
     * [Gary Yourofsky - The Excuses Speech, held 2014, Oakland Community College in Royal Oak, Michigan](https://www.youtube.com/watch?v=oHfVajDbyJk) (circle of life, [Cloaca](http://en.wikipedia.org/wiki/Cloaca), "circle of life" with humans?, food eating contest!?, brainwashed not to care, 30:00+ B12 and protein, ..., see YT comments)
