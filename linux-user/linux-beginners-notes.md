@@ -266,6 +266,14 @@ Not in backup:
 history of this list: https://github.com/feinstaub/feinstaub.github.io/commits/master/linux-user/linux-beginners-notes.md
 
 
+openSUSE: packman vs. vlc package repository
+--------------------------------------------
+
+Somewhere I read the packman and the vlc repository should not both be used because they contain conflicting versions of drivers.
+
+So better just use packman which also contains VLC player.
+
+
 openSUSE: upgrade from 13.1 to 13.2
 -----------------------------------
 
