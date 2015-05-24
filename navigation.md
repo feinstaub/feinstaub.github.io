@@ -20,10 +20,13 @@
 [KMoreTools]()
 
   * [KDE API Doc](http://api.kde.org/frameworks-api/frameworks5-apidocs/knewstuff/html/annotated.html)
-  * [lxr.kde.org](http://lxr.kde.org/ident?v=kf5-qt5&_i=KMoreTools)
   * [Build server status](https://build.kde.org/view/Frameworks%20kf5-qt5/job/knewstuff%20master%20kf5-qt5/)
   * [Unit Test Results](https://build.kde.org/view/Frameworks%20kf5-qt5/job/knewstuff%20master%20kf5-qt5/PLATFORM=Linux,compiler=gcc/lastCompletedBuild/testReport/)
   * [code.woboq.org](http://code.woboq.org/qt5/qtbase/src/dbus/qdbusconnection.h.html#67)
+  * # lxr.kde.org:
+  * [KMoreTools](http://lxr.kde.org/ident?v=kf5-qt5&_i=KMoreTools)
+  * [KMoreToolsMenuFactory](http://lxr.kde.org/ident?v=kf5-qt5&_i=KMoreToolsMenuFactory)
+  * [KMoreToolsPresets](http://lxr.kde.org/ident?v=kf5-qt5&_i=KMoreToolsPresets)
 
 [kreenshot-editor]()
 
