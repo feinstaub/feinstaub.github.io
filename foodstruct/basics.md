@@ -25,6 +25,10 @@ Sammlung von Zutaten aus denen sich leckere Dinge machen lassen:
 * Kidneybohnen
 * Ahornsirup
 * Rohe Kakaobohnen (von z. B. [Kallari-Futuro GmbH](http://kallari-eg.de/))
+* weiße Bohnen
+* Weiße Bohnen in Tomatensoße
+* [Veggie Life Räuchertofu Premium](http://www.veggielife.de/tofus/)
+* lifefood Bio Möhrenkräcker (veganz)
 
 Quick-Stuff
 -----------
