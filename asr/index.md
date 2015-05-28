@@ -187,7 +187,7 @@ asr is a Python script which currently has the following dependencies:
 Support
 -------
 
-You would like to support development by donating money? This is currently not possible. Until now, asr is **vegware**. This means if you like it, it would be nice gesture to skip one or more meals which would contain diary products or eggs and consume something mass-exploitation-free instead. Like beer.
+You would like to support the project by donating money? This is not possible at the moment. Until now, asr is **vegware**. This means if you like it, it would be a nice gesture to skip one or more meals which would contain diary products or eggs and consume something mass-exploitation-free instead. Like beer - or be inventive. ;-)
 
 
 Similar Tools
