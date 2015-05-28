@@ -44,7 +44,8 @@ All data and processing logic takes place on the client side. (Almost) everythin
 * License GPLv2, free software, use as you please and on your own risk
 * Written in Python
 * Code hosted on [KDE quickgit](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git)
-* TODO: forum, issue tracker, protocol specification
+* forum, discussion, issue tracker: currently [hosted at github](https://github.com/feinstaub/asr/issues)
+* TODO: protocol specification
 
 
 ### Features
