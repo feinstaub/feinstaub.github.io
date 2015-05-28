@@ -63,7 +63,7 @@ All data and processing logic takes place on the client side. (Almost) everythin
     * An exchange point can be replaced if it goes out of service.
     * The exchange point can be located on your own hardware.
     * Implication: No special installation required on a central server needed. Make use of COTS FTP account, Networkshare, IMAP account.
-
+* Console application with minimal GUI
 
 ### Threat model
 
@@ -87,7 +87,7 @@ Additional prerequisites at runtime:
 
 Step-by-step:
 
-1. Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&f=download-and-install.sh) script.
+1. Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&f=download-and-install.sh) script.
 2. Make it executable and run it in a console. Press Enter to continue when asked.
 => The latest asr release will be downloaded into ~/asr/bin/ (which will be erased beforehand during the process)
 => All unit tests will be excecuted to ensure a functional installation.
