@@ -11,13 +11,14 @@ asr aims to be a free and open, decentralized alternative to proprietary, non-op
 
 All data and processing logic takes place on the client side. (Almost) everything is encrypted on the way between sender and receiver. Sender and receiver are not required to be online at the same time. Therefore there is always a third party computer involved which serves as (dumb) exchange point. Third party computers are treated untrustworthy by design.
 
-### Target use cases
+### Key features
 
-* Send files from one person's computer to another person's computer.
-* Files are potentially larger than they would fit into an email attachment.
-* File transfers should be encrypted.
-* Minimal setup.
-* Encryption should be setup once for a given pair of persons and then reused without having to worry each time.
+* **Send files** from one person's computer to another person's computer.
+* **End-to-end encryption** by default.
+* **Asynchronous**, in a sense that you can send files and the receiver can be offline at that time.
+* **No file size restriction**. The file size is only limited by the total storage capacity of the exchange point.
+* **Independence** of third party service providers because exchange points can be switched any time.
+* **Decentral** logic. All logic is located on the clients. The required third party server only serves as a simple file store.
 
 ### Secure
 
@@ -37,7 +38,7 @@ All data and processing logic takes place on the client side. (Almost) everythin
 
 * Client-side files which are sent are encrypted automatically.
 * Files being received are decrypted automatically.
-
+* Already works with two persons (no special P2P network with minimum number of participants or similar required)
 
 ### Open
 
@@ -48,9 +49,11 @@ All data and processing logic takes place on the client side. (Almost) everythin
 * TODO: protocol specification
 
 
-### Features
+### Feature details
 
 * ...
+* Minimal setup.
+* Encryption must be setup only once for a given pair of persons and then reused without having to worry each time.
 * Automatic file splitting for big files and limited per file size on exchange point [TODO]
 * ...
 
@@ -93,27 +96,28 @@ Step-by-step:
 => All unit tests will be excecuted to ensure a functional installation.
 
 
-Quickstart [under codestruction]
---------------------------------
+Quickstart
+----------
 
-### Scenario: Send someone encrypted files
+UNDER CODESTRUCTION
 
-You would like to send someone familiar some photos. With high probability
-you will do that more than once.
+Scenario: **Send someone some larger files in an easy secure way**
 
-### Initial setup for the sender (who setups the exchange point)
-* Download asr and put it in your PATH.
+
+### Initial setup for the sender
+* Download and install asr (see Download section)
 
 * Choose / setup an exchange point: TODO
 
-* Create the directory `~/asr/configfiles` and place the asr-demo-config inside.
+* TODO: screenshots
 
-* TODO
+### Send files
+* Send email with pickup notice to contact... todo
 
-### Initial setup for the receiver
-* Download asr and put it in your PATH.
+### Receive files
+* Download and install asr (see Download section)
 
-* TODO
+* TODO: import pickup notice
 
 
 Background
@@ -182,6 +186,11 @@ asr is a Python script which currently has the following dependencies:
 - python-guidata (has some more python deps)
 - gnome-web-photo (optional)
 - wget (optional)
+
+
+Protocol
+--------
+TODO: add some screenshots to visualize the flow of data.
 
 
 Support

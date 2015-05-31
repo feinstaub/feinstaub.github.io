@@ -39,5 +39,11 @@ Related:
 #### Free software (free as in freedom)
 
 * todo: good stallman video / Free Software Foundation
+
+    * https://stallman.org/stallman-computing.html (... Amazon, ..., Netflix, ...)
+    * Article and video on copying: https://stallman.org/articles/response-to-emily.html
+    * https://stallman.org/
+    * https://stallman.org/rms-lifestyle.html (... Cola, ..., Clothing/tie, ...)
+
 * [open technology for free societies](http://aseigo.blogspot.de/), e.g. [30 min keynote](https://exote.ch/blogs/aseigo/2015/05/06/the-best-feature-of-free-software/)
   * Today's societies are dependent on software (email, private and corporate communication, shopping, political campaigns) => The society can only be as free as the software is that it makes use of.
