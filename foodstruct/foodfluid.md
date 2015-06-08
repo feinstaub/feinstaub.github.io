@@ -5,6 +5,20 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 ---
 
+Grüner Kobold (Melone & Spinat)
+-------------------------------
+Abgewandelt aus [1](Für mich vegan, Heft 1, 2014).
+
+* 1/2 kleine **Wassermelone** (laut Rezept Honigmelone)
+* 180 g **Spinat** (ca., tiefgefroren)
+* 1 Banane
+* Saft einer 1/2 Zitrone
+* Ein wenig **Lucuma**-Fruchtpulver (sorgt für sehr-leicht-karamelligen Geschmack und etwas Schaum)
+
+(Auf das erste Probieren hat mich das ganze an einen Salatgurkendrink erinnert.
+=> Merke: Additive Gemüsemischung: Wassermelone + Spinat = Salatgurke; oder so ähnlich)
+
+
 Neue Zutaten: Paranüsse und Seidentofu
 --------------------------------------
 29.03.2015
