@@ -20,19 +20,23 @@ All data and processing logic takes place on the client side. (Almost) everythin
 * **Independence** of third party service providers because exchange points can be switched any time.
 * **Decentral** logic. All logic is located on the clients. The required third party server only serves as a simple file store.
 
-### Secure
+### Secure and robust
 
 * **Easy-to-understand** security
     * Why is this important? E.g. read [A Plea for Simplicity](https://www.schneier.com/essays/archives/1999/11/a_plea_for_simplicit.html), 1999 by [Bruce Schneier](http://en.wikipedia.org/wiki/Bruce_Schneier)
     * Currently based on passwords (later maybe on public key infrastructure).
+    * No central data storage for long-term data.
 * **end-to-end encryption**
     * Based on passwords
-    * Since the data is always decrypted after receiving there is no risk to lose data due to a lost password.
+* **Safe and robust**
+    * Since the data is always decrypted after receiving there is **no risk to lose data due to a lost password**, certificate or other stuff that sometimes get lost.
+    * **Easy data routing**: Sender --> Exchange point --> Receiver (no complex P2P network).
 * Most **meta-data** is encrypted.
-    * Especially **filenames** and **subject line** is encrypted.
+    * Especially **filenames** and **subject line** are encrypted.
     * The following meta-data will **not** be encrypted: sender's id, receiver's id, timestamp.
-* **Touch-cloud** solution
-    * This means your data in its encrypted form will only touch the cloud. As soon as the receiver gets it, it will vanish. This minimizes the chances of the (encrypted) data from being copied.
+    * Therefore, exchange point providers cannot violate the user's privacy by accident.
+* Touch-cloud solution
+    * Currently, the term "cloud" is used for all kinds of Internet services. "Touch-cloud" means that your data (always in its encrypted form) will only touch this omnipresent cloud: as soon as the receiver gets it, it will be deleted. This minimizes the chances of the (encrypted) data from being copied.
 
 ### Easy to use
 
