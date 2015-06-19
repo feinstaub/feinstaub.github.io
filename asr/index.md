@@ -13,12 +13,12 @@ All data and processing logic takes place on the client side. (Almost) everythin
 
 ### Key features
 
-* **Send files** from one person's computer to another person's computer.
+* **Send files** from one person's computer to another person's computer as easy as possible.
 * **End-to-end encryption** by default.
-* **Asynchronous**, in a sense that you can send files and the receiver can be offline at that time.
-* **No file size restriction**. The file size is only limited by the total storage capacity of the exchange point.
+* **Asynchronous** in a sense that you can send files and the receiver can be offline at that time.
+* **No file size restriction**. The file size is only limited by the storage capacity/quota of the exchange point.
 * **Independence** of third party service providers because exchange points can be switched any time.
-* **Decentral** logic. All logic is located on the clients. The required third party server only serves as a simple file store.
+* **Decentral** logic. All logic is located on the clients. The required exchange point server only serves as a simple temporary file store and is easily replaceable.
 
 ### Secure and robust
 
@@ -231,3 +231,10 @@ https://syncthing.net/, BSD-License?
 Both parties need to be online?
 
 Written in Go.
+
+
+Unsorted / FAQ
+--------------
+Nothing stored online permanently, so there are no expensive and complex requirements for **datacenters** where exchange points might be located.
+
+**Everything is local**, nothing must be central => You don't have to rely on any central third party which might go away and with it your data. This is possible, because today the client hard-drives are so large that disk-space is (normally) not the problem. Locally there is far more disk space available as with most (cheap or cost-free) online services.
