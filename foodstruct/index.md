@@ -11,7 +11,7 @@ Mix-Drinks sind im **[foodfluid](foodfluid.md)** zu finden.
 Kochbücher:
 
 * Vegan Lecker Lecker
-* [The Vegan Zombie](http://www.amazon.de/Vegan-Zombie-Koche-%C3%9Cberlebe/dp/3955750205/ref=sr_1_1?s=books&ie=UTF8&qid=1425158089&sr=1-1&keywords=vegan+zombie)
+* [The Vegan Zombie](http://www.ventil-verlag.de/titel/1588/the-vegan-zombie-deutsche-ausgabe)
 * Raw Soul Food
 
 ---

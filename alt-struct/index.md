@@ -18,6 +18,7 @@ List of positive and practical alternatives per individual.
 | Replace MS Office | [LibreOffice](https://de.libreoffice.org/) |  |
 | Online-E-Mail only? | [Thunderbird](https://de.wikipedia.org/wiki/Mozilla_Thunderbird) and [Backup](http://www.freefilesync.org/) | ..., [there is always hacking of online services](http://www.heise.de/newsticker/meldung/Photofucket-Macher-von-Hacking-Tool-fuer-Photobucket-verhaftet-2644020.html) |
 | Kleidung | 1. weniger ist mehr, 2. [google-Suche](https://www.google.de/search?q=nachhaltige+kleidung) | [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0) |
+| Fitness ohne Studio | Buch [Fit ohne Geräte](http://www.buecher.de/shop/sport/fit-ohne-geraete/lauren-mark-clark-joshua/products_products/detail/prod_id/33369641/), Buch [Licht auf Yoga](http://www.buecher.de/shop/yoga/licht-auf-yoga/iyengar-b-k-s-/products_products/detail/prod_id/36680964/) |  |
 
 
 Related:
@@ -32,6 +33,7 @@ Related:
 | -----  | ------------ | ---------- |
 | Fair produziertes Mobiltelefon | http://www.fairphone.com/ | wo zu kaufen? |
 | Müll | http://www.terracycle.de/de | gesehen in FFM |
+| No-Amazon | http://www.buecher.de/, http://www.buch.de/, http://www.lovelybooks.de/ | from Stallman's personal site: ["overview of why Amazon's overall activity is harmful", 2013](http://www.theguardian.com/technology/2013/dec/01/week-amazon-insider-feature-treatment-employees-work) |
 
 
 ### Unsorted
@@ -47,3 +49,8 @@ Related:
 
 * [open technology for free societies](http://aseigo.blogspot.de/), e.g. [30 min keynote](https://exote.ch/blogs/aseigo/2015/05/06/the-best-feature-of-free-software/)
   * Today's societies are dependent on software (email, private and corporate communication, shopping, political campaigns) => The society can only be as free as the software is that it makes use of.
+
+#### Money
+
+todo: http://www.monetative.de/understanding-money-videoclips-english/, Giralgeld etc.
+
