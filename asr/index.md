@@ -233,8 +233,8 @@ Both parties need to be online?
 Written in Go.
 
 
-Unsorted / FAQ
---------------
+Unsorted
+--------
 Nothing stored online permanently, so there are no expensive and complex requirements for **datacenters** where exchange points might be located.
 
 **Everything is local**, nothing must be central => You don't have to rely on any central third party which might go away and with it your data. This is possible, because today the client hard-drives are so large that disk-space is (normally) not the problem. Locally there is far more disk space available as with most (cheap or cost-free) online services.
@@ -242,3 +242,13 @@ Nothing stored online permanently, so there are no expensive and complex require
 goals: stable usage pattern (i.e. local usage should be stable and exchange points can vary as they must), secure, independent
 
 todo: http://standards.freedesktop.org/secret-service/ch02.html
+
+Pay for exchange point service if needed.
+
+Not everything everywhere but have your stuff at the right places.
+
+Good when you regularly exchange files with the same person.
+
+* todo: 16.02.2015: Private incremental git (asr-sync): Auf dem zentralen Server werden nur git-Bundle-Objekte ausgetauscht (und sofort wieder gelöscht). Ein Nutzer ist gleicher als die anderen und hat master-Branch. Behandlung von merge-Konflikten?
+    * Teilen von Notizen, Kalender (ics-Kalender-Datei) etc. (Daten werden bei Austausch jedes Mal erneut verschlüsselt)
+    * Lokales Lösen von Konflikten (am besten vermeiden, z. B. jeder hat seinen eigenen Kalender)
