@@ -1,8 +1,8 @@
 asr - async-send-receive
 ========================
 
-First concept: 2014, First prototype version: 2015-03-27
-Web Content last updated: 2015-05-28
+First concept: 2014, First prototype: 2015-03-27
+Web content last updated: 2015-06-19
 
 asr
 ---
