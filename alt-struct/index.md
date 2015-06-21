@@ -12,15 +12,16 @@ List of positive and practical alternatives per individual.
 | Unrestricted and secure computing | Use some [free](http://de.wikipedia.org/wiki/Freie_Software) operating system at home ([openSUSE](https://www.opensuse.org/), [Debian](http://www.oreilly.com/openbook/debian/book/ch01_01.html), ...) - self and especially parents | [Warum? (1)](http://de.wikipedia.org/wiki/George_Orwell), [Warum? (2)](https://www.google.de/search?q=microsoft+und+nsa&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JxRCVcOOK5TiasGYgVA#q=microsoft+und+nsa), [Warum? (3)](http://de.wikipedia.org/wiki/1984_%28Roman%29), [Warum? (4)](http://de.wikipedia.org/wiki/%C3%9Cberwachungsstaat), [EFF](https://de.wikipedia.org/wiki/Electronic_Frontier_Foundation), [Wahlcomputer](http://wahlcomputer.ccc.de/), [Kaufdruck vom eigenen Virenscanner](/home/gregor/dev/src/feinstaub.github.io/alt-struct/img/2015-avira-24h.png) |
 | Krankenversicherung | [GKV oder PKV?](gkv-pkv.md) | |
 | EEG | Siehe eigener Stromanbieter |  |
-| Ernährung | [Der vegane Metzger](http://biospahn-vegan.de/de/vegan-info?coID=11), [Bio-Lebensmittel](https://de.wikipedia.org/wiki/Bio-Lebensmittel), [Oligopole vermeiden](http://www.handelsblatt.com/unternehmen/handel-konsumgueter/kartellamt-warnt-aldi-und-co-nutzen-marktmacht-aus/10748874.html) | [Qualität des Endprodukts vs. Produktionsprozess](http://www.supermarktmacht.de/preiskampf/), [kuh-info](kuh-info.md), [Factory Farm Workers](http://www.foodispower.org/factory-farm-workers/), [Sl House Workers](http://www.foodispower.org/slaughterhouse-workers/), [BKK ProVita vegan](https://www.bkk-provita.de/bekenntnis-der-vorstandes-der-bkk-provita-zu-veganer-ernaehrung/) (10 min Interview mit Vorstand, 2014?, wünscht sich, dass auch andere Menschen Erfahrungen mit veganer Ernährung haben), Brot aus [Sauerteig](https://de.wikipedia.org/wiki/Sauerteig) |
+| Ernährung | [Der vegane Metzger](http://biospahn-vegan.de/de/vegan-info?coID=11), [Bio-Lebensmittel](https://de.wikipedia.org/wiki/Bio-Lebensmittel), [Oligopole vermeiden](http://www.handelsblatt.com/unternehmen/handel-konsumgueter/kartellamt-warnt-aldi-und-co-nutzen-marktmacht-aus/10748874.html) | [Qualität des Endprodukts vs. Produktionsprozess](http://www.supermarktmacht.de/preiskampf/), [kuh-info](kuh-info.md), [Factory Farm Workers](http://www.foodispower.org/factory-farm-workers/), [Sl House Workers](http://www.foodispower.org/slaughterhouse-workers/), [BKK ProVita vegan](https://www.bkk-provita.de/bekenntnis-der-vorstandes-der-bkk-provita-zu-veganer-ernaehrung/) (10 min Interview mit Vorstand, 2014?, wünscht sich, dass auch andere Menschen Erfahrungen mit veganer Ernährung haben), Brot aus [Sauerteig](https://de.wikipedia.org/wiki/Sauerteig), http://www.sagneinzumilch.de/, [Tofufamily: für vegane, veget. und alle anderen Familien](http://www.tofufamily.de/) |
 | Kaugummis ohne Aspartam | [Xucker](https://www.xucker.de/) im Internet, [Miradent Xylitol](http://www.miradent.de/produkte/xylitol_chewing_gum.php)  | [Warum?](https://de.wikipedia.org/wiki/Aspartam#Gesundheitsfragen) |
 | Schokolade | [Positivliste ohne Sklavenarbeit](http://www.foodispower.org/schokoladenliste/) | [Blogeintrag aus 2011](http://appetiteforjustice.blogspot.de/2011/05/understanding-food-empowerment-projects.html) |
 | Replace MS Office | [LibreOffice](https://de.libreoffice.org/) |  |
-| Kleidung | 1. weniger ist mehr, 2. [google-Suche](https://www.google.de/search?q=nachhaltige+kleidung), http://www.fairwear.de (todo), https://www.fairmondo.de/ (todo) | [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0), [Fairer Handel](https://news.utopia.de/ratgeber/fair-trade-fairer-handel-fragen-antworten/?utm_source=Utopia+Newsletter&utm_campaign=dced134dde-Newsletter_15KW23&utm_medium=email&utm_term=0_b26f88423e-dced134dde-261971305) (2015) |
+| Kleidung | 1. weniger ist mehr, 2. [google-Suche](https://www.google.de/search?q=nachhaltige+kleidung), http://www.fairwear.de (todo), https://www.fairmondo.de/ (todo) | [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0) (kik-Chef schiebt Verantwortung auf Kunden, bietet aber selbst nur Sklavenware an), [Fairer Handel](https://news.utopia.de/ratgeber/fair-trade-fairer-handel-fragen-antworten/?utm_source=Utopia+Newsletter&utm_campaign=dced134dde-Newsletter_15KW23&utm_medium=email&utm_term=0_b26f88423e-dced134dde-261971305) (2015) |
 | Fitness ohne Studio | Buch [Fit ohne Geräte](http://www.buecher.de/shop/sport/fit-ohne-geraete/lauren-mark-clark-joshua/products_products/detail/prod_id/33369641/), Buch [Licht auf Yoga](http://www.buecher.de/shop/yoga/licht-auf-yoga/iyengar-b-k-s-/products_products/detail/prod_id/36680964/) |  |
 | Deos ohne Aluminium | [Speick](http://www.speick.de/en/) in der Drogerie, [wolkenseifen](http://www.wolkenseifen.de/) im Internet | [Wiki](https://de.wikipedia.org/wiki/Aluminium#Toxizit.C3.A4t) |
 | Spülen, Waschen | [dm denkmit Geschirrreiniger nature](https://www.dm.de/de_homepage/denkmit_home/produkte/produkte_kueche/produkte_kueche_maschinengeschirr-reinigung/12024/denkmit-geschirr-reiniger-tabs-nature.html), [Frosch Waschmittel Aloe Vera](http://www.frosch.de/Produkte/Waschen/Waschmittel/Aloe-Vera-Waschmittel/) | Je weniger Tenside, desto besser für die Gewässer |
-| Haushalt / Büro | Papier mit blauem Engel, Taschentücher mit blauem Engel (z. B. von dm) | [Der Blaue Engel](https://www.blauer-engel.de/de) ist gut. [Blog-Artikel über Cruelty-Free Kosmetika](http://www.kosmetik-vegan.de/erbse/faq-tierversuche-in-der-kosmetikindustrie/) (2011-2014) |
+| Haushalt / Büro | Papier mit blauem Engel, Taschentücher mit blauem Engel (z. B. von dm) | [Der Blaue Engel](https://www.blauer-engel.de/de) ist gut. [Blog-Artikel über Cruelty-Free Kosmetika](http://www.kosmetik-vegan.de/erbse/faq-tierversuche-in-der-kosmetikindustrie/) (2011-2014). Pflege auf Mineralölbasis vermeiden. |
+| Antibiotika-Resistenzen | Kein Geld für die Tiermast! => vegan werden | Resistenzen: Gefahr für die Medizin. Ursachen: 1. Unkritische Anwendung, 2. Einsatz in der Tiermast, "2012 wurden in Deutschland fast 1.620 Tonnen Antibiotika in der Tiermast eingesetzt" ([siehe wiki](https://de.wikipedia.org/wiki/Antibiotikaresistenz)) |
 | Bio | ... | mehr Geld für Landschaftspflege, weniger Chemie, [bioboden](http://bioboden.de/) |
 
 Related:
@@ -34,8 +35,8 @@ Related:
 | Topic  | Alternatives | Background |
 | -----  | ------------ | ---------- |
 | Fair produziertes Mobiltelefon | http://www.fairphone.com/ | wo zu kaufen? |
-| Müll | http://www.terracycle.de/de | gesehen in FFM |
-| No-Amazon | http://www.buecher.de/, http://www.buch.de/, http://www.lovelybooks.de/ | from Stallman's personal site: ["overview of why Amazon's overall activity is harmful", 2013](http://www.theguardian.com/technology/2013/dec/01/week-amazon-insider-feature-treatment-employees-work) |
+| Müll | http://www.terracycle.de/de (gesehen in FFM) | [Deutsche Umwelthilfe](http://www.duh.de/home.html) |
+| No-Amazon | http://www.buecher.de/, http://www.buch.de/, http://www.lovelybooks.de/, "Nicht-Amazon-Gutschein" | from Stallman's personal site: ["overview of why Amazon's overall activity is harmful", guardian-Artikel, 2013](http://www.theguardian.com/technology/2013/dec/01/week-amazon-insider-feature-treatment-employees-work) |
 
 
 ### Unsorted
@@ -51,6 +52,8 @@ Related:
 
 * [open technology for free societies](http://aseigo.blogspot.de/), e.g. [30 min keynote](https://exote.ch/blogs/aseigo/2015/05/06/the-best-feature-of-free-software/)
   * Today's societies are dependent on software (email, private and corporate communication, shopping, political campaigns) => The society can only be as free as the software is that it makes use of.
+
+* Freie Software für staatliche/hoheitliche Aufgaben (Steuerberechnung, Büro, Kommunikation)
 
 #### Geld
 
@@ -70,3 +73,15 @@ todo: http://www.monetative.de/understanding-money-videoclips-english/, Giralgel
 * [Chronik 2015](http://www.mut-gegen-rechte-gewalt.de/node/12865)
 * http://www.amadeu-antonio-stiftung.de/
     * http://www.amadeu-antonio-stiftung.de/die-stiftung-aktiv/projekte/projekt-aktion-schutzschild/
+
+#### Große Strukturen vermeiden
+
+* Einfache No-Goes: Aldi, Lidl
+* Minimierung: Norma, Netto, Amazon, Cola, biggest in class
+* In kleinen Läden kaufen, solange noch vorhanden, Bäcker
+* Ansonsten immer einheitlichere Sortimente => weniger Wahlfreiheit
+* Oligopolstellung der Geldkartendienste
+
+#### Gesundheit
+
+* [Allergene Ambrosia-Pflanze](http://www.heilpraxisnet.de/naturheilpraxis/massive-ausbreitung-der-ambrosia-pflanze-2015052536577) (2015)
