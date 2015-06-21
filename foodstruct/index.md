@@ -16,6 +16,40 @@ Kochbücher:
 
 ---
 
+Marzipanquader mit Walnuss
+--------------------------
+21.06.2015, selbst, High Cuisine
+
+1 ca. 2x2x1 cm Marzipan-Quader auf einen Teller legen und oben 1/2 Walnuss hochkant reindrücken. Voila.
+
+---
+
+Schoko selbst gemacht
+---------------------
+30.05.2015
+
+Referenzen: [1](http://www.chefkoch.de/rezepte/2309261368477887/Schokolade-selbst-gemacht.html) und [2](http://smort.de/2012/01/19/gesunde-schokolade-selbst-herstellen-rezept/)
+
+Mengen:
+
+90 g Kakaobutter
+4 EL Kakaopulver
+1 EL Agavendicksaft
+2 EL Xucker
+Mandelstifte
+Zimt, Macis, Piment (oder eine andere Kombination)
+
+Durchführung:
+
+1. Alles in Schüssel außer Kakaobutter
+2. geschmolzene (max 45 °C) Kakaobutter dazu
+3. mit Schneebesen gut durchrühren
+4. In flache Schale füllen so hoch wie die Schoko dick sein soll und in den Kühlschrank zum kühlen
+
+Das obige Originalrezept in einer runden Schüssel zum Kühlen gebracht wirkt wegen der Mandelstifte beim Durchscheiden wie eine Blutwurst.
+
+---
+
 Quick-Bohnen mit Senf, Hanföl, Ahornsirup
 -----------------------------------------
 19.04.2015, selbst, ROH
@@ -26,6 +60,7 @@ Quick-Bohnen mit Senf, Hanföl, Ahornsirup
 * 1 Schuss Ahornsirup
 * 1 Schuss weißer Balsamico
 * 1 bisschen Sesam
+* saure Gurken in Würfeln
 * Pfeffer
 * Muskat
 
@@ -85,8 +120,9 @@ Weißer Bohnensalat mit Kapern
 
 * 1 Glas **weiße Bohnen**
 * 1 kleines Gläschen **Kapern**
-* 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln
+* 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln (oder Taifun Japanische Bratfilets)
 * Etwas gehackte **Zwiebel**
+* optional: Saure Gurkenstücke
 * Hanföl, Olivenöl, Balsamico-Essig
 * Pfeffer, Muskat
 * Optional: Passierte Tomaten, [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685)
