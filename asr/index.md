@@ -238,3 +238,7 @@ Unsorted / FAQ
 Nothing stored online permanently, so there are no expensive and complex requirements for **datacenters** where exchange points might be located.
 
 **Everything is local**, nothing must be central => You don't have to rely on any central third party which might go away and with it your data. This is possible, because today the client hard-drives are so large that disk-space is (normally) not the problem. Locally there is far more disk space available as with most (cheap or cost-free) online services.
+
+goals: stable usage pattern (i.e. local usage should be stable and exchange points can vary as they must), secure, independent
+
+todo: http://standards.freedesktop.org/secret-service/ch02.html
