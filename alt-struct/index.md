@@ -16,12 +16,12 @@ List of positive and practical alternatives per individual.
 | Kaugummis ohne Aspartam | [Xucker](https://www.xucker.de/) im Internet, [Miradent Xylitol](http://www.miradent.de/produkte/xylitol_chewing_gum.php)  | [Warum?](https://de.wikipedia.org/wiki/Aspartam#Gesundheitsfragen) |
 | Schokolade | [Positivliste ohne Sklavenarbeit](http://www.foodispower.org/schokoladenliste/) | [Blogeintrag aus 2011](http://appetiteforjustice.blogspot.de/2011/05/understanding-food-empowerment-projects.html) |
 | Replace MS Office | [LibreOffice](https://de.libreoffice.org/) |  |
-| Kleidung | 1. weniger ist mehr, 2. [google-Suche](https://www.google.de/search?q=nachhaltige+kleidung), http://www.fairwear.de | [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0) |
+| Kleidung | 1. weniger ist mehr, 2. [google-Suche](https://www.google.de/search?q=nachhaltige+kleidung), http://www.fairwear.de (todo), https://www.fairmondo.de/ (todo) | [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0), [Fairer Handel](https://news.utopia.de/ratgeber/fair-trade-fairer-handel-fragen-antworten/?utm_source=Utopia+Newsletter&utm_campaign=dced134dde-Newsletter_15KW23&utm_medium=email&utm_term=0_b26f88423e-dced134dde-261971305) (2015) |
 | Fitness ohne Studio | Buch [Fit ohne Geräte](http://www.buecher.de/shop/sport/fit-ohne-geraete/lauren-mark-clark-joshua/products_products/detail/prod_id/33369641/), Buch [Licht auf Yoga](http://www.buecher.de/shop/yoga/licht-auf-yoga/iyengar-b-k-s-/products_products/detail/prod_id/36680964/) |  |
 | Deos ohne Aluminium | [Speick](http://www.speick.de/en/) in der Drogerie, [wolkenseifen](http://www.wolkenseifen.de/) im Internet | [Wiki](https://de.wikipedia.org/wiki/Aluminium#Toxizit.C3.A4t) |
 | Spülen, Waschen | [dm denkmit Geschirrreiniger nature](https://www.dm.de/de_homepage/denkmit_home/produkte/produkte_kueche/produkte_kueche_maschinengeschirr-reinigung/12024/denkmit-geschirr-reiniger-tabs-nature.html), [Frosch Waschmittel Aloe Vera](http://www.frosch.de/Produkte/Waschen/Waschmittel/Aloe-Vera-Waschmittel/) | Je weniger Tenside, desto besser für die Gewässer |
 | Haushalt / Büro | Papier mit blauem Engel, Taschentücher mit blauem Engel (z. B. von dm) | [Der Blaue Engel](https://www.blauer-engel.de/de) ist gut. [Blog-Artikel über Cruelty-Free Kosmetika](http://www.kosmetik-vegan.de/erbse/faq-tierversuche-in-der-kosmetikindustrie/) (2011-2014) |
-| Bio | ... | mehr Geld für Landschaftspflege, weniger Chemie,  |
+| Bio | ... | mehr Geld für Landschaftspflege, weniger Chemie, [bioboden](http://bioboden.de/) |
 
 Related:
 
@@ -63,3 +63,10 @@ todo: http://www.monetative.de/understanding-money-videoclips-english/, Giralgel
 #### Arm und reich
 
 * OECD-Studie 2015-05-22: Die soziale Ungleichheit in den Industriestaaten erreicht Rekordniveau
+
+#### Rechts
+
+* [Chronik 2015](http://www.netz-gegen-nazis.de/artikel/chronik-zu-angriffen-und-hetze-gegen-fl%C3%BCchtlinge-2015-9992)
+* [Chronik 2015](http://www.mut-gegen-rechte-gewalt.de/node/12865)
+* http://www.amadeu-antonio-stiftung.de/
+    * http://www.amadeu-antonio-stiftung.de/die-stiftung-aktiv/projekte/projekt-aktion-schutzschild/

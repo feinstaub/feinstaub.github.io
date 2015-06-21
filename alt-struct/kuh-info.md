@@ -108,3 +108,4 @@ Unsorted:
 
 - veg. Religionen und Völker?
 - Analogie: nur weil man z. B. Kriminalität nicht ganz abschaffen kann, heißt es ja nicht, dass es besser ist, gleich ganz auf das Strafrecht zu verzichten.
+- Pohlmann-Eier-Firma in der Dauerkritik: http://www.br.de/nachrichten/eier-salmonellen-pohlmann-100.html

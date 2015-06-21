@@ -16,5 +16,6 @@ lawstruct
 | Politisch-militärischer Komplex | ?, siehe z. B. [lobbycontrol.de](https://www.lobbycontrol.de/) | [19.05.2015, tagesschau, H&K-Einfluss auf Ministerium](http://www.tagesschau.de/inland/verteidigungsministerium-heckler-koch-101.html) |
 | Gifte | Roundup/Glyphosat-Verkauf verbieten | wie in Frankreich (siehe [tagesschau, 14.06.2015](http://www.tagesschau.de/ausland/glyphosat-101.html). Zunehmende Resistenzen / Mittel billig und wird daher sehr oft eingesetzt. Ende 2015 läuft die EU-Zulassung für Gl. vorläufig aus. |
 | Spezielle Regelungen für Großkonglomerate | ... | Beispiel: siehe z. B. "Big Four" (DLF-Beitrag oben), [Sonderregeln für EU-Großbanken, 2014](http://www.euractiv.de/finanzen-und-wachstum/artikel/eu-kommission-will-grossbanken-risikogeschaefte-austreiben-008495)  |
+| Gekaufte Wissenschaft | siehe Buch [Gekaufte Forschung](http://www.europa-verlag.com/Buecher/32/Gekaufte-Forschung.html) (2015, todo) | siehe auch: https://www.hochschulwatch.de/kontakt.html |
 
 [back to alt-struct](index.md)
