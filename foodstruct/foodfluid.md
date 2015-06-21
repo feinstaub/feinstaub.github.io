@@ -5,6 +5,19 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 
 ---
 
+Papaya, Orange, Lucuma, Minze
+-----------------------------
+21.06.2015, von S.
+
+2 Papaya (schälen und den "Kaviar" vorher rausmachen)
+2 kleine Orangen
+2 EL Lucumapulver
+5 Blätter frische Minze
+Auf 1000 ml mit Wasser auffüllen.
+Mixen.
+
+---
+
 Grüner Kobold (Melone & Spinat)
 -------------------------------
 Abgewandelt aus [1](Für mich vegan, Heft 1, 2014).
@@ -18,6 +31,7 @@ Abgewandelt aus [1](Für mich vegan, Heft 1, 2014).
 (Auf das erste Probieren hat mich das ganze an einen Salatgurkendrink erinnert.
 => Merke: Additive Gemüsemischung: Wassermelone + Spinat = Salatgurke; oder so ähnlich)
 
+---
 
 Neue Zutaten: Paranüsse und Seidentofu
 --------------------------------------
