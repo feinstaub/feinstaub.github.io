@@ -94,7 +94,7 @@ Mainz
 
 DA
 ---
-* V-Cafe [Veelgood](https://www.facebook.com/www.veelgood.de), Mühlstrasse 76, DA, 06151 6011450, Mo-Do 9:00-19:30, Fr-Sa: 11:00-22:00
+* V-Cafe [Veelgood](https://www.facebook.com/www.veelgood.de), Mühlstrasse 76, DA, 06151 6011450, Mo-Do 9:00-19:30, Fr-Sa: 11:00-23:00
 * (V)-Bistro www.cafe-habibi.de, Landwehrstraße 13, Darmstadt
 * Bistro www.mondo-daily.de, Grafenstraße 31, Darmstadt
 * (V)-Restaurant [Radieschen](http://radieschen.com/speisebuch/), Reuterallee 37, Darmstadt (Eberstadt)
