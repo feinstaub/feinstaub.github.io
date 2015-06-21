@@ -37,8 +37,6 @@
 [asr]()
 
   * [Start](asr/index.md)
-  * # old:
-  * [fyshare concept draft](fyshare/index.md)
 
 [foodstruct]()
 

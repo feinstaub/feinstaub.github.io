@@ -252,3 +252,5 @@ Good when you regularly exchange files with the same person.
 * todo: 16.02.2015: Private incremental git (asr-sync): Auf dem zentralen Server werden nur git-Bundle-Objekte ausgetauscht (und sofort wieder gelöscht). Ein Nutzer ist gleicher als die anderen und hat master-Branch. Behandlung von merge-Konflikten?
     * Teilen von Notizen, Kalender (ics-Kalender-Datei) etc. (Daten werden bei Austausch jedes Mal erneut verschlüsselt)
     * Lokales Lösen von Konflikten (am besten vermeiden, z. B. jeder hat seinen eigenen Kalender)
+
+* old: [fyshare concept draft](fyshare/index.md)
