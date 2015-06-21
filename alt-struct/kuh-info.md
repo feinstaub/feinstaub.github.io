@@ -107,3 +107,4 @@ Sina Jasur:
 Unsorted:
 
 - veg. Religionen und Völker?
+- Analogie: nur weil man z. B. Kriminalität nicht ganz abschaffen kann, heißt es ja nicht, dass es besser ist, gleich ganz auf das Strafrecht zu verzichten.

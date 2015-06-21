@@ -86,9 +86,17 @@ Quelle: extravegant.de, abgerufen 08.03.2014
 ![](img/extravegant-tabelle.png)
 
 
-Süßes ohne Kristall-Zucker
---------------------------
+Süßes/Schoko ohne Kristall-Zucker
+---------------------------------
 Ziel: leckere Süßigkeiten, rein pflanzlich, ohne Kristallzucker (z. B. wegen der Haut), ohne Sklavenarbeit, möglichst naturnah.
+
+* [Positivliste ohne Sklavenarbeit](http://www.foodispower.org/schokoladenliste/)
+
+Schokostufen:
+
+- Rohe Kakaobohnen
+- Müsli mit Kakaopulver (ohne Zucker)
+- Fertige Schoko, siehe Beispiele
 
 Beispiele:
 
