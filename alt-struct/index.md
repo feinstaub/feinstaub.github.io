@@ -5,11 +5,11 @@ List of positive and practical alternatives per individual.
 
 | Topic  | Alternatives | Background |
 | -----  | ------------ | ---------- |
-|  | Ohnmacht des Einzelnen? - Siehe J. Weizenbaum - [Kurs auf den Eisberg](http://www.zvab.com/advancedSearch.do?title=%22Kurs+auf+den+Eisberg%22) (1988), [vgl. 1989](https://de.wikipedia.org/wiki/Internet#Ab_1989_Kommerzialisierung_und_das_WWW) | [Die sog. Ohnmacht des Einzelnen...](https://ohneamazon.wordpress.com/2014/01/31/die-sogenannte-ohnmacht-des-einzelnen-ist-vielleicht-die-gefahrlichste-illusion-die-ein-mensch-haben-kann/), [Rosa Parks](https://de.wikipedia.org/wiki/Rosa_Parks), A. Schweitzer - [Aus meinem Leben und Denken](http://www.fischerverlage.de/buch/aus_meinem_leben_und_denken/9783596128761) |
+|        | Ohnmacht des Einzelnen? - Siehe J. Weizenbaum - [Kurs auf den Eisberg](http://www.zvab.com/advancedSearch.do?title=%22Kurs+auf+den+Eisberg%22) (1988), [vgl. 1989](https://de.wikipedia.org/wiki/Internet#Ab_1989_Kommerzialisierung_und_das_WWW) | [Die sog. Ohnmacht des Einzelnen...](https://ohneamazon.wordpress.com/2014/01/31/die-sogenannte-ohnmacht-des-einzelnen-ist-vielleicht-die-gefahrlichste-illusion-die-ein-mensch-haben-kann/), [Rosa Parks](https://de.wikipedia.org/wiki/Rosa_Parks), A. Schweitzer - [Aus meinem Leben und Denken](http://www.fischerverlage.de/buch/aus_meinem_leben_und_denken/9783596128761) |
 | Geld stinkt nicht? | Private Geldanlage muss nicht total anonym sein, siehe z. B. [Anlagekriterien](https://www.gls.de/privatkunden/ueber-die-gls-bank/arbeitsweisen/anlage-und-finanzierungsgrundsaetze/). Geld aus der Förderung von fossilen Energieträgern abziehen: [divest - gofossilfree](http://gofossilfree.org/de/), [Kohlenstoff(wirtschafts)blase](http://de.wikipedia.org/wiki/Kohlenstoffblase) | Netter [Blog "für Leute, die Ihr Geld selbst anlegen"](http://www.finanzwesir.com/), Rüstung: Export von [Kleinwaffen](http://sicherheitspolitik.bpb.de/konventionelle-waffen/hintergrundtexte-m5/kleinwaffen-die-wahren-massenvernichtungswaffen), [Kampfdrohnen](https://daserste.ndr.de/panorama/aktuell/drohnen115.html) - [[2]](http://www.heise.de/newsticker/meldung/Human-Rights-Watch-fordert-Komplettverbot-von-Killerrobotern-2633796.html) - [afgh. TODO, 1h 40min](https://www.youtube.com/watch?v=SjfuyKMgI7s&feature=youtu.be), [PTBS](http://de.wikipedia.org/wiki/Posttraumatische_Belastungsst%C3%B6rung), [Agent Orange / Vietnam](https://de.wikipedia.org/wiki/Agent_Orange), [guardian: fossil free pension fund](http://www.theguardian.com/money/2015/may/09/how-get-pension-fund-divest-fossil-fuels) (todo, [top 200](http://gofossilfree.org/top-200/), [pushyourparents](http://pushyourparents.org/)) |
-| E-Mail ohne Handel mit Kundendaten | Bekomme genau das, was du bezahlst (anstatt einem impliziten "bezahle mit deinen Daten"); dadurch ohne Werbung für [ab 1 EUR / Monat](https://posteo.de); alles Freie Software (auch Eigenentwicklungen), IMAP | [Posteo, Mailbox.org, Tutanota, and ProtonMail compared, 2015](http://www.admin-magazine.com/Archive/2015/26/Posteo-Mailbox.org-Tutanota-and-ProtonMail-compared), Interessant: [TKÜV ab 10.000 Teilnehmern, seit ca. 2002](https://de.wikipedia.org/wiki/Telekommunikations-%C3%9Cberwachungsverordnung) |
-| E-Mail-Clients | POP3-Abruf, [Thunderbird](https://de.wikipedia.org/wiki/Mozilla_Thunderbird) and [Backup](http://www.freefilesync.org/) | ..., [there is always hacking of online services](http://www.heise.de/newsticker/meldung/Photofucket-Macher-von-Hacking-Tool-fuer-Photobucket-verhaftet-2644020.html) |
-| Unrestricted and secure computing | Use some [free](http://de.wikipedia.org/wiki/Freie_Software) operating system at home ([openSUSE](https://www.opensuse.org/), [Debian](http://www.oreilly.com/openbook/debian/book/ch01_01.html), ...) - self and especially parents | [Warum? (1)](http://de.wikipedia.org/wiki/George_Orwell), [Warum? (2)](https://www.google.de/search?q=microsoft+und+nsa&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JxRCVcOOK5TiasGYgVA#q=microsoft+und+nsa), [Warum? (3)](http://de.wikipedia.org/wiki/1984_%28Roman%29), [Warum? (4)](http://de.wikipedia.org/wiki/%C3%9Cberwachungsstaat), [EFF](https://de.wikipedia.org/wiki/Electronic_Frontier_Foundation), [Wahlcomputer](http://wahlcomputer.ccc.de/), [Kaufdruck vom eigenen Virenscanner](/home/gregor/dev/src/feinstaub.github.io/alt-struct/img/2015-avira-24h.png) |
+| E-Mail ohne Handel mit Kundendaten | Bekomme genau das, was du bezahlst (anstatt einem impliziten "bezahle mit deinen Daten"); dadurch ohne Werbung für [ab 1 EUR / Monat](https://posteo.de); alles Freie Software (auch Eigenentwicklungen), IMAP | [Posteo, Mailbox.org, Tutanota, and ProtonMail compared, 2015](http://www.admin-magazine.com/Archive/2015/26/Posteo-Mailbox.org-Tutanota-and-ProtonMail-compared), Interessant: [TKÜV ab 10.000 Teilnehmern, seit ca. 2002](https://de.wikipedia.org/wiki/Telekommunikations-%C3%9Cberwachungsverordnung), [freesoftware](freesoftware.md) |
+| E-Mail-Clients | POP3-Abruf, [Thunderbird](https://de.wikipedia.org/wiki/Mozilla_Thunderbird) and [Backup](http://www.freefilesync.org/) | ..., [there is always hacking of online services](http://www.heise.de/newsticker/meldung/Photofucket-Macher-von-Hacking-Tool-fuer-Photobucket-verhaftet-2644020.html), [freesoftware](freesoftware.md) |
+| Unrestricted and secure computing | Use some [free](http://de.wikipedia.org/wiki/Freie_Software) operating system at home ([openSUSE](https://www.opensuse.org/), [Debian](http://www.oreilly.com/openbook/debian/book/ch01_01.html), ...) - self and especially parents | [Warum? (1)](http://de.wikipedia.org/wiki/George_Orwell), [Warum? (2)](https://www.google.de/search?q=microsoft+und+nsa&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JxRCVcOOK5TiasGYgVA#q=microsoft+und+nsa), [Warum? (3)](http://de.wikipedia.org/wiki/1984_%28Roman%29), [Warum? (4)](http://de.wikipedia.org/wiki/%C3%9Cberwachungsstaat), [EFF](https://de.wikipedia.org/wiki/Electronic_Frontier_Foundation), [Wahlcomputer](http://wahlcomputer.ccc.de/), [Kaufdruck vom eigenen Virenscanner](/home/gregor/dev/src/feinstaub.github.io/alt-struct/img/2015-avira-24h.png), [freesoftware](freesoftware.md) |
 | Krankenversicherung | [GKV oder PKV?](gkv-pkv.md) | |
 | EEG | Siehe eigener Stromanbieter |  |
 | Ernährung | [Der vegane Metzger](http://biospahn-vegan.de/de/vegan-info?coID=11), [Bio-Lebensmittel](https://de.wikipedia.org/wiki/Bio-Lebensmittel), [Oligopole vermeiden](http://www.handelsblatt.com/unternehmen/handel-konsumgueter/kartellamt-warnt-aldi-und-co-nutzen-marktmacht-aus/10748874.html) | [Qualität des Endprodukts vs. Produktionsprozess](http://www.supermarktmacht.de/preiskampf/), [kuh-info](kuh-info.md), [Factory Farm Workers](http://www.foodispower.org/factory-farm-workers/), [Sl House Workers](http://www.foodispower.org/slaughterhouse-workers/), [BKK ProVita vegan](https://www.bkk-provita.de/bekenntnis-der-vorstandes-der-bkk-provita-zu-veganer-ernaehrung/) (10 min Interview mit Vorstand, 2014?, wünscht sich, dass auch andere Menschen Erfahrungen mit veganer Ernährung haben), Brot aus [Sauerteig](https://de.wikipedia.org/wiki/Sauerteig), http://www.sagneinzumilch.de/, [Tofufamily: für vegane, veget. und alle anderen Familien](http://www.tofufamily.de/) |
@@ -22,10 +22,11 @@ List of positive and practical alternatives per individual.
 | Spülen, Waschen | [dm denkmit Geschirrreiniger nature](https://www.dm.de/de_homepage/denkmit_home/produkte/produkte_kueche/produkte_kueche_maschinengeschirr-reinigung/12024/denkmit-geschirr-reiniger-tabs-nature.html), [Frosch Waschmittel Aloe Vera](http://www.frosch.de/Produkte/Waschen/Waschmittel/Aloe-Vera-Waschmittel/) | Je weniger Tenside, desto besser für die Gewässer |
 | Haushalt / Büro | Papier mit blauem Engel, Taschentücher mit blauem Engel (z. B. von dm) | [Der Blaue Engel](https://www.blauer-engel.de/de) ist gut. [Blog-Artikel über Cruelty-Free Kosmetika](http://www.kosmetik-vegan.de/erbse/faq-tierversuche-in-der-kosmetikindustrie/) (2011-2014). Pflege auf Mineralölbasis vermeiden. |
 | Antibiotika-Resistenzen | Kein Geld für die Tiermast! => vegan werden | Resistenzen: Gefahr für die Medizin. Ursachen: 1. Unkritische Anwendung, 2. Einsatz in der Tiermast, "2012 wurden in Deutschland fast 1.620 Tonnen Antibiotika in der Tiermast eingesetzt" ([siehe wiki](https://de.wikipedia.org/wiki/Antibiotikaresistenz)) |
-| Bio | ... | mehr Geld für Landschaftspflege, weniger Chemie, [bioboden](http://bioboden.de/) |
+| Bio | ... | [Studiengang Ökologische Landwirtschaft](http://www.uni-kassel.de/uni/studium/studienangebot/studiengangsseiten/grundstaendige-studiengaenge/b-oeko-landwirtschaft.html) an der Uni Kassel (["Die Uni Kassel richtete vor 20 Jahren einen Studiengang Ökologische Landwirtschaft ein – der erste dieser Art weltweit"](http://www.fnp.de/rhein-main/Keine-Oeko-Spinner-mehr;art801,1459232)) (23.06.2015, fnp), mehr Geld für Landschaftspflege, weniger Chemie, [bioboden](http://bioboden.de/) |
 
 Related:
 
+* [freesoftware](freesoftware.md)
 * [lawstruct](lawstruct.md)
 * [supportstruct](supportstruct.md)
 
@@ -41,20 +42,6 @@ Related:
 
 ### Unsorted
 
-#### Free software (free as in freedom)
-
-* todo: good stallman video / Free Software Foundation
-
-    * https://stallman.org/stallman-computing.html (... Amazon, ..., Netflix, ...)
-    * Article and video on copying: https://stallman.org/articles/response-to-emily.html
-    * https://stallman.org/
-    * https://stallman.org/rms-lifestyle.html (... Cola, ..., Clothing/tie, ...)
-
-* [open technology for free societies](http://aseigo.blogspot.de/), e.g. [30 min keynote](https://exote.ch/blogs/aseigo/2015/05/06/the-best-feature-of-free-software/)
-  * Today's societies are dependent on software (email, private and corporate communication, shopping, political campaigns) => The society can only be as free as the software is that it makes use of.
-
-* Freie Software für staatliche/hoheitliche Aufgaben (Steuerberechnung, Büro, Kommunikation)
-
 #### Geld
 
 todo: http://www.monetative.de/understanding-money-videoclips-english/, Giralgeld etc.
@@ -63,7 +50,7 @@ todo: http://www.monetative.de/understanding-money-videoclips-english/, Giralgel
 
 * [Ehemaliger Soldat über "Afghanistan und Kampfeinsatz" - mit Johannes Clair ](https://www.youtube.com/watch?v=SjfuyKMgI7s) (2015)
 
-#### Arm und reich
+#### Arm / reich
 
 * OECD-Studie 2015-05-22: Die soziale Ungleichheit in den Industriestaaten erreicht Rekordniveau
 
