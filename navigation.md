@@ -46,15 +46,6 @@
   * # ---
   * [Alternativen](alt-struct/index.md)
 
-[blog]()
+[contact]()
 
-  * [codestruct blog](blog/index.html)
-  * [Theater](blog-theater.md)
-  * [Blogrolle](blogs-other.md)
-  * [FS Bergstraße](blog-fs-bergstrasse.md)
-  * # Links:
-  * [Mailinglist archive mail-archive.com kde-devel](https://www.mail-archive.com/kde-devel@kde.org/)
-  * [Mailinglist archive osdir.com](http://osdir.com/ml/)
-  * [Freenode Channel Guidelines](https://freenode.net/channel_guidelines.shtml)
-  * # ---
   * [meta](meta.md)
