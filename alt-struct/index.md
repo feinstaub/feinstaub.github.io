@@ -37,7 +37,7 @@ Related:
 | -----  | ------------ | ---------- |
 | Fair produziertes Mobiltelefon | http://www.fairphone.com/ | wo zu kaufen? |
 | Müll | http://www.terracycle.de/de (gesehen in FFM) | [Deutsche Umwelthilfe](http://www.duh.de/home.html) |
-| No-Amazon | http://www.buecher.de/, http://www.buch.de/, http://www.lovelybooks.de/, "Nicht-Amazon-Gutschein" | from Stallman's personal site: ["overview of why Amazon's overall activity is harmful", guardian-Artikel, 2013](http://www.theguardian.com/technology/2013/dec/01/week-amazon-insider-feature-treatment-employees-work) |
+| No-Amazon | http://www.buecher.de/, http://www.buch.de/, http://www.lovelybooks.de/, "Nicht-Amazon-Gutschein" | from Stallman's personal site: ["overview of why Amazon's overall activity is harmful", guardian-Artikel, 2013](http://www.theguardian.com/technology/2013/dec/01/week-amazon-insider-feature-treatment-employees-work), [2015: Amazon Echo: Wanze mit ständiger Cloudanbindung](http://www.heise.de/newsticker/meldung/Amazon-Echo-Verkaufsstart-in-den-USA-fuer-den-digitalen-Assistenten-2723590.html?hg=1&hgi=4&hgf=false) |
 
 
 ### Unsorted
