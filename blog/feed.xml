@@ -6,9 +6,61 @@
 </description>
     <link>http://feinstaub.github.io/blog/</link>
     <atom:link href="http://feinstaub.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Apr 2015 21:42:46 +0200</pubDate>
-    <lastBuildDate>Mon, 27 Apr 2015 21:42:46 +0200</lastBuildDate>
+    <pubDate>Thu, 25 Jun 2015 22:23:05 +0200</pubDate>
+    <lastBuildDate>Thu, 25 Jun 2015 22:23:05 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>openSUSE 13.2 auf altem Notebook installieren</title>
+        <description>&lt;p&gt;Notizen zur Installation von openSUSE 13.2 auf einem alten Medion-Notebook.&lt;/p&gt;
+
+&lt;p&gt;IST-Zustand war:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Medion Laptop mit Windows XP, das seit 2014 aus der Wartung gelaufen ist.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SOLL-Zustand:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Dual-Boot&lt;/strong&gt; mit vorhandenem Windows XP und openSUSE 13.2. Dual-Boot für den Fall, dass der Anwender doch etwas verwenden möchte, was nur unter Windows funktioniert.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vorgehen&quot;&gt;Vorgehen&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mit &lt;strong&gt;garted&lt;/strong&gt;-Live-CD Festplatte “aufräumen”
+    &lt;ul&gt;
+      &lt;li&gt;C-Partition verkleinern, D-Partition löschen, Restore-Partition löschen&lt;/li&gt;
+      &lt;li&gt;Übrig bleibt C-Partition und eine leere erweiterte Partition (und eine Restore-Partition?)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;openSUSE 13.2 32 Bit&lt;/strong&gt; DVD einlegen und Setup&lt;/li&gt;
+  &lt;li&gt;Anstelle der Voreinstellung btrs als Root-Dateisystem verwende ich &lt;strong&gt;ext4&lt;/strong&gt;. Siehe dazu nächster Abschnitt.&lt;/li&gt;
+  &lt;li&gt;Für die Home-Partition ein &lt;strong&gt;xfs&lt;/strong&gt;-Dateisystem mit &lt;strong&gt;Verschlüsselung&lt;/strong&gt;. Das vergebene Passwort muss dann immer während des Boot-Vorgangs eingegeben werden.&lt;/li&gt;
+  &lt;li&gt;Nötige Anwender-Software nachinstallieren.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fallstricke-und-lsungen&quot;&gt;Fallstricke und Lösungen&lt;/h2&gt;
+&lt;p&gt;Beim Installieren schlägt das openSUSE-Setup btrfs-Dateisystem vor. Dies habe ich auch so durchgeführt, um dann gegen Ende der Installation festzustellen, dass der grub-Bootloader nicht installiert werden kann.&lt;/p&gt;
+
+&lt;p&gt;Das openSUSE-Setup zeigt in diesem Fall nur eine generische Fehlermeldung.&lt;/p&gt;
+
+&lt;p&gt;Mit Hilfe dieser Anleitung &lt;a href=&quot;https://en.opensuse.org/SDB:Repair_MBR_after_Windows_install&quot;&gt;Repair_MBR_after_Windows_install&lt;/a&gt; kann man versuchen, den grub per grub-install per Hand zu installieren und erhält “error: filesystem btrfs doesn’t support blocklists.” als Fehlermeldung. Weiter kam ich damit aber nicht.&lt;/p&gt;
+
+&lt;p&gt;Nach Internet-Recherche (z. B. &lt;a href=&quot;https://forums.opensuse.org/showthread.php/502363-Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2-Legacy-BIOS-amp-Grub2&quot;&gt;Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2&lt;/a&gt;) auf gut Glück das Setup nochmal ausgeführt, &lt;strong&gt;aber diesmal ext4 statt btrfs ausgewählt&lt;/strong&gt;. Damit hat die Installation des Bootloaders dann problemlos funktioniert.&lt;/p&gt;
+
+&lt;p&gt;Siehe auch &lt;a href=&quot;http://www.ulduzsoft.com/2014/11/opensuse-13-2-do-not-use-btrfs-as-rootfs/&quot;&gt;Artikel zu btrfs und openSUSE 13.2, Nov 2014&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Jun 2015 22:00:00 +0200</pubDate>
+        <link>http://feinstaub.github.io/blog/linux/2015/06/25/install-opensuse-on-old-notebook.html</link>
+        <guid isPermaLink="true">http://feinstaub.github.io/blog/linux/2015/06/25/install-opensuse-on-old-notebook.html</guid>
+        
+        <category>install</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>kreenshot-editor is incubating</title>
@@ -21,7 +73,7 @@ written in C#.&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;built-in image editor of Greenshot&lt;/strong&gt; is specifically designed to edit
 screenshot images. You can draw basic shapes like rectangles, ellipses,
-and arrows, add text and also apply a pixelizing or blurring rectangluar areas.
+and arrows, add text and also add rectangular areas which apply a pixelizing or blurring effect.
 Each of these objects is movable, resizable and deletable and there is undo/redo.&lt;/p&gt;
 
 &lt;p&gt;Noteably, the mouse cursor is (optionally) captured as

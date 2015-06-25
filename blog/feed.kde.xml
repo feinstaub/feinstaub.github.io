@@ -19,7 +19,7 @@ written in C#.&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;built-in image editor of Greenshot&lt;/strong&gt; is specifically designed to edit
 screenshot images. You can draw basic shapes like rectangles, ellipses,
-and arrows, add text and also apply a pixelizing or blurring rectangluar areas.
+and arrows, add text and also add rectangular areas which apply a pixelizing or blurring effect.
 Each of these objects is movable, resizable and deletable and there is undo/redo.&lt;/p&gt;
 
 &lt;p&gt;Noteably, the mouse cursor is (optionally) captured as

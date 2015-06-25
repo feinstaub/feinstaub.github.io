@@ -11,7 +11,7 @@
 
   <title>
     
-      kreenshot-editor is incubating &middot; codestruct
+      openSUSE 13.2 auf altem Notebook installieren &middot; codestruct
     
   </title>
 
@@ -105,42 +105,46 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">kreenshot-editor is incubating</h1>
-  <span class="post-date">26 Apr 2015</span>
-  <p>With this post I would like to introduce a new project: kreenshot-editor.</p>
+  <h1 class="post-title">openSUSE 13.2 auf altem Notebook installieren</h1>
+  <span class="post-date">25 Jun 2015</span>
+  <p>Notizen zur Installation von openSUSE 13.2 auf einem alten Medion-Notebook.</p>
 
-<p>Those of you who often do screenshots under MS Windows will probably know
-<a href="http://getgreenshot.org/">Greenshot</a> which is - as they say on their website -
-“a free screenshot tool optimized for productivity”. It is GPL licensed and
-written in C#.</p>
-
-<p>The <strong>built-in image editor of Greenshot</strong> is specifically designed to edit
-screenshot images. You can draw basic shapes like rectangles, ellipses,
-and arrows, add text and also add rectangular areas which apply a pixelizing or blurring effect.
-Each of these objects is movable, resizable and deletable and there is undo/redo.</p>
-
-<p>Noteably, the mouse cursor is (optionally) captured as
-separate object which then can be moved or deleted after taking the screenshot.</p>
-
-<p>Now, <strong>kreenshot-editor</strong> is a new Qt-based project that was inspired by Greenshot’s image editor.
-It is hosted on <a href="https://projects.kde.org/projects/playground/graphics/kreenshot-editor">KDE playground</a>.
-It focuses on the image editing
-task, can be invoked from command line and should also provide a resuable
-editor component which could be integrated into other screencapture tools.
-The current code is already separated into an image editor widget and the
-main application.</p>
-
-<p>Kreenshot-editor is still experimental, only basic features are implemented
-and there are currently some non-functional UI elements. Yet, it is already usable - if
-you don’t care that the color of objects is fixed to red ;-). Currently, you can
-create new objects, move them around, delete them, do undo/redo, load/save image,
-configure output filename pattern etc.</p>
+<p>IST-Zustand war:</p>
 
 <ul>
-  <li><a href="http://feinstaub.github.io/kreenshot-editor/">Website</a>
-  (includes some screenshots and hints how to contribute)</li>
-  <li><a href="https://forum.kde.org/viewtopic.php?f=19&amp;t=125841">Discussions go here</a></li>
+  <li>Medion Laptop mit Windows XP, das seit 2014 aus der Wartung gelaufen ist.</li>
 </ul>
+
+<p>SOLL-Zustand:</p>
+
+<ul>
+  <li><strong>Dual-Boot</strong> mit vorhandenem Windows XP und openSUSE 13.2. Dual-Boot für den Fall, dass der Anwender doch etwas verwenden möchte, was nur unter Windows funktioniert.</li>
+</ul>
+
+<h2 id="vorgehen">Vorgehen</h2>
+<ul>
+  <li>Mit <strong>garted</strong>-Live-CD Festplatte “aufräumen”
+    <ul>
+      <li>C-Partition verkleinern, D-Partition löschen, Restore-Partition löschen</li>
+      <li>Übrig bleibt C-Partition und eine leere erweiterte Partition (und eine Restore-Partition?)</li>
+    </ul>
+  </li>
+  <li><strong>openSUSE 13.2 32 Bit</strong> DVD einlegen und Setup</li>
+  <li>Anstelle der Voreinstellung btrs als Root-Dateisystem verwende ich <strong>ext4</strong>. Siehe dazu nächster Abschnitt.</li>
+  <li>Für die Home-Partition ein <strong>xfs</strong>-Dateisystem mit <strong>Verschlüsselung</strong>. Das vergebene Passwort muss dann immer während des Boot-Vorgangs eingegeben werden.</li>
+  <li>Nötige Anwender-Software nachinstallieren.</li>
+</ul>
+
+<h2 id="fallstricke-und-lsungen">Fallstricke und Lösungen</h2>
+<p>Beim Installieren schlägt das openSUSE-Setup btrfs-Dateisystem vor. Dies habe ich auch so durchgeführt, um dann gegen Ende der Installation festzustellen, dass der grub-Bootloader nicht installiert werden kann.</p>
+
+<p>Das openSUSE-Setup zeigt in diesem Fall nur eine generische Fehlermeldung.</p>
+
+<p>Mit Hilfe dieser Anleitung <a href="https://en.opensuse.org/SDB:Repair_MBR_after_Windows_install">Repair_MBR_after_Windows_install</a> kann man versuchen, den grub per grub-install per Hand zu installieren und erhält “error: filesystem btrfs doesn’t support blocklists.” als Fehlermeldung. Weiter kam ich damit aber nicht.</p>
+
+<p>Nach Internet-Recherche (z. B. <a href="https://forums.opensuse.org/showthread.php/502363-Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2-Legacy-BIOS-amp-Grub2">Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2</a>) auf gut Glück das Setup nochmal ausgeführt, <strong>aber diesmal ext4 statt btrfs ausgewählt</strong>. Damit hat die Installation des Bootloaders dann problemlos funktioniert.</p>
+
+<p>Siehe auch <a href="http://www.ulduzsoft.com/2014/11/opensuse-13-2-do-not-use-btrfs-as-rootfs/">Artikel zu btrfs und openSUSE 13.2, Nov 2014</a></p>
 
 </div>
 
@@ -150,9 +154,9 @@ configure output filename pattern etc.</p>
     
       <li>
         <h3>
-          <a href="/blog/linux/2015/06/25/install-opensuse-on-old-notebook.html">
-            openSUSE 13.2 auf altem Notebook installieren
-            <small>25 Jun 2015</small>
+          <a href="/blog/kde/2015/04/26/kreenshot-editor-introduce.html">
+            kreenshot-editor is incubating
+            <small>26 Apr 2015</small>
           </a>
         </h3>
       </li>
