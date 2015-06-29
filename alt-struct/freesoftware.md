@@ -21,9 +21,19 @@ Programme
     * [jamendo](https://www.jamendo.com/en) - Royalty free music downloads
 
 
+Mobile Programme
+----------------
+* Android-Messenger: [kontalk](http://kontalk.org/), download via [f-droid](https://f-droid.org/repository/browse/?fdid=org.kontalk)
+    * [Distributed server network](https://github.com/kontalk/network/wiki)
+    * [Servers page](https://github.com/kontalk/network/wiki/Servers)
+* Anstelle des Google-Store auf Android: https://f-droid.org/
+* Für Mutige: anstelle Google-Android: [CyanogenMod](http://www.cyanogenmod.org/)
+
+
 Dienste
 -------
 * Online-Videos: [MediathekView](http://zdfmediathk.sourceforge.net/)
+    * siehe auch http://www.mediathekdirekt.de/
 
 
 Infos Freie Software

@@ -1,8 +1,6 @@
 alt-struct
 ==========
 
-List of positive and practical alternatives per individual.
-
 | Topic  | Alternatives | Background |
 | -----  | ------------ | ---------- |
 |        | Ohnmacht des Einzelnen? - Siehe J. Weizenbaum - [Kurs auf den Eisberg](http://www.zvab.com/advancedSearch.do?title=%22Kurs+auf+den+Eisberg%22) (1988), [vgl. 1989](https://de.wikipedia.org/wiki/Internet#Ab_1989_Kommerzialisierung_und_das_WWW) | [Die sog. Ohnmacht des Einzelnen...](https://ohneamazon.wordpress.com/2014/01/31/die-sogenannte-ohnmacht-des-einzelnen-ist-vielleicht-die-gefahrlichste-illusion-die-ein-mensch-haben-kann/), [Rosa Parks](https://de.wikipedia.org/wiki/Rosa_Parks), A. Schweitzer - [Aus meinem Leben und Denken](http://www.fischerverlage.de/buch/aus_meinem_leben_und_denken/9783596128761) |
