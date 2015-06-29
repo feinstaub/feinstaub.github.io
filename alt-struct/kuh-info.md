@@ -18,6 +18,7 @@ Videos:
 
 * THE introduction: [Gary Yourofsky speech 2010, 1h 10min](https://www.youtube.com/watch?v=U5hGQDLprA8) (at Georgia Tech university) (best quality video and audio so far with optional English subtitles)
     * [full transcript](http://lauramarietv.com/en/best-speech-you-will-ever-hear-gary-yourofsky-full-transcript/), [subtitles en](https://dotsub.com/view/5de97c21-1363-4574-a9ee-37f492ecea3e/viewTranscript/eng), ..., politician vs. activist, was not **born** as vegan, ..., the golden rule, ..., **slavery** in history and today, ..., ..., ..., "It's not cute and it's not funny", "It is not your right. It is not your freedom to do this to them.", mistreatment vs. kill, much of McD meat comes from dairy animals, ..., instead of brushing the thought off it is good to see what is actually happening, ..., Cows make milk for their babies and for their babies alone.
+    Meat eating is natural? => where is your meat/flesh eating instinct? (see an animal => got saliva?)
     * [Q&A session, 30min](https://www.youtube.com/watch?v=7PR64HGJoyk)
         * "if you get really creative people into the kitchen, ...", ..., "you have the right to defend yourself and kill something that's harming your", if a bear or human would jump on you => self-defense, "Keep in mind, cows do not attack us. Chickens have never attacked a human being in history.", ..., Food for Life Global, pleny.org, ..., soy is not needed if not wanted, "Is being kind instead of cruel really problematic to people?", ..., animals vs. sweatshops, is ethical clothing expensive?, ..., arrested in max sec as int. terr., jail, money, bail => sex. harr. a w does not affect the economy, ..., hypocrit, pet vs. dinner, ..., don't think it's wrong to take evil money and do good things with it, education is important, ..., don't want people to have to pay to hear about the truth, ..., does not like that women are exploited to sell products (sex sells), ..., (see website on what's wrong with peta and Humane Society), ..., everything is fine with animals in the wild but as pets we have to kill on their _behalf_, overbreeding, (pet food contains dead pets?), "meat not fit for human consumption", better vegan pet diet than this shit, vegancats.com,
     * todo: Führung durch ein Schlachthaus während des Betriebs.
@@ -32,8 +33,15 @@ Videos:
         * "Even the IDF, in which most Israeli young men and women have to serve, now offers soldiers leather-free boots and a small allowance to buy themselves alternatives to the food in mess halls." [2014](http://www.timesofisrael.com/israel-the-promised-land-for-vegans/)
         * [veganwoman](http://www.theveganwoman.com/israel-going-first-vegan-nation/), 2014
         * [JTA article](http://www.jta.org/2014/10/15/life-religion/israelis-growing-hungry-for-vegan-diet), 2014
-* [G. in Jerusalem, TODO](https://www.youtube.com/watch?v=kmZ8mULWSDE), 13 min, 3 min intro by Steve Cutts, ..., degree of victimization, magic trick, ..., they are only animals, ...
-
+* [G. in Jerusalem speech, TODO](https://www.youtube.com/watch?v=kmZ8mULWSDE), 13 min, 3 min intro by Steve Cutts, slide: auschwitz begins...when they say 'they are only animals' (adorno), ..., if god treated the animals as we do he would be the devil => angry towards me? => degree of victimization is so large that animals are not considered victims, they are not considered at all, greates magic trick ever performed: the animation switch, a bible and a flag (both inanimate) if in flames stir up more emotion than the killing of an animal: BBQ is celebrating the dead animal, the person who killed it and the chef who prepares it, ..., hello/shalom, I an animal liberation activist, I am not a guru, ..., fish are not plants, they are animals that simply live underwater, circus = slave show, hypocrit, place yourself in the animals position, animal products: psychotic addiction, ..., valid comparisions: [Dick Gregory](https://de.wikipedia.org/wiki/Dick_Gregory) once said: "when I look a animals held captive by circuses, I think of slavery", animals in circues represent domination and oppression, in relation to animals all humans are Nazis, for the animals it is an eternal [Treblinka](https://de.wikipedia.org/wiki/Vernichtungslager_Treblinka) ("Mitte August 1942 die Zahl der pro Tag in Treblinka ankommenden Opfer deutlich, so dass SS und Trawniki-Männer auch regelmäßig Peitschenhiebe, Schläge mit Gewehrkolben und Schüsse einsetzten, um das Aussteigen aus den Zügen und das Leeren der Rampe zu beschleunigen."), fight veganism is fighting compassion
+* [Gary Yourofsky on horse racing, 2012](https://www.youtube.com/watch?v=3QAt2P5XLo0), 2min
+* [We Are Vegans, Don't Be a Politician - Gary Yourofsky](https://www.youtube.com/watch?v=5PG7NSTSwVw), 2014, 3min, ..., I can be as sweet as Ghandi, I can be as harsh as Malcom X, a person will only listen when he comes with an open heart (if not you can say anything and you will not reach him), say the truth, be genuine, don't be a politician, don't be a marketer, ..., don't tell people what to do (what to eat or not to eat), just say the truth (e.g. I don't need animal products to be healthy, so why SHOULD I eat them?, rape, torture, murder, holocaust, this can be ended by not eating that stuff and sometimes give up some taste, but what is some personal taste compared to the suffering of millions done by the meat industry on my behalf)
+* [Gary Yourofsky FULL Interview, 20 min, 2015](https://www.youtube.com/watch?v=yUBBtbFh2kg), ..., education is the best form of activism (nothing else e.g. demonstrations, talk to politicians, civil disobediance, direct action, doing media interviews, ... works like education), ..., humanity tried to get rid of human discrimination for 1000s of years, why not try something new, like
+teach children not to hate or torture all living beings, that would eradicate evil from the root, ..., violent species, look what we do to the animals and look what we do to each other, ... TODO at 5min?...
+    - [Interview by Ozturk](https://www.youtube.com/watch?v=pfZKSTQNhzg), 30min, 1 Dec 2014, why education is so important, ..., TODO 1min30...
+* [Gary Yourofsky Take on Speciesem And Religion](https://www.youtube.com/watch?v=wMJM4pIscGE), 2013, 3:30min, ..., garden of eden = vegan, end of the world = vegan, ...,  god is in his creations not in books (or crosses etc. made in China), god does certainly not want this stuff to be sold in his name, why do many rel. people do not worship things that god made but instead worship things that we made in this name?, every animal that god made god is inside of, so murdering an animal is killing god
+* [Gary Yourofsky - Please Help Us Stop The Greatest Holocaust on Earth. Rape/Murder/Torture](https://www.youtube.com/watch?v=ovY424_JF0s), 2013, 11min, ..., the truth is harsh, ..., not I think they are Nazis, but the victims/animals think that, it is not imporant what I think, just look from the animals perspective, ..., meat industry intentionally lies to the customers, why don't they show slaugherhouses in the ads saying hey this is where your burger comes from?, what about the people that are involved in this industries?, ..... controversial statements....., ..., no lie or no injustice can last forever (but very long though)
+* [The Myth of Vegan Progress in Israel](http://dylanxpowell.com/2015/02/15/the-myth-of-vegan-progress-in-israel/), 2015, todo
 
 Misc:
 
@@ -109,3 +117,18 @@ Unsorted:
 - veg. Religionen und Völker?
 - Analogie: nur weil man z. B. Kriminalität nicht ganz abschaffen kann, heißt es ja nicht, dass es besser ist, gleich ganz auf das Strafrecht zu verzichten.
 - Pohlmann-Eier-Firma in der Dauerkritik: http://www.br.de/nachrichten/eier-salmonellen-pohlmann-100.html
+
+
+[The real matrix](https://www.youtube.com/watch?v=YnQb58BoBQw), May 2002, 1 h
+
+    - matrix
+    - offering the red pill
+    - milk bottle with a nice farming picture on it: this is the matrix (99 % of milk comes from factory farming)
+    - tradition: taught over and over: our food (meat, cow's milk, eggs) is "natural"
+    - ...
+    - strawberry vs. pig
+    - kill pig yourself (most people would stop someone who does this) vs. let it be killed for you => hypocricy(orth?)
+    - image of a puppy: why not food? This is the **culture**. Other cultures eat dogs. Others not.
+    - 11:10min .... TODO
+
+Living among meat eaters
