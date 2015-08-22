@@ -7,7 +7,23 @@ This page collects issues I stumbled on when using Linux with KDE.
 
 dolphin [several]
 -----------------
-[Bugs, annoyances and wishes / KDE UI / Dolphin](struct-dolphin.md)
+[Bugs and wishes / KDE UI / Dolphin](struct-dolphin.md)
+
+
+Mediaon Laptop display brightness inverted
+------------------------------------------
+FN keys as well as settings when booting or using KDE. Both inverted.
+
+* 2009: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/311716
+
+
+kde 4 system unresponsive when copying large files (1 GB) to USb stick
+----------------------------------------------------------------------
+* see [13.1 freezes while copying files, 2014](https://forums.opensuse.org/showthread.php/498487-13-1-freezes-while-copying-files?highlight=freezes+copying+data)
+    * TODO: read
+    * my post: https://forums.opensuse.org/showthread.php/498487-13-1-freezes-while-copying-files?p=2719917#post2719917
+* see [What's the deal with USB sticks on linux?, 2014](http://crunchbang.org/forums/viewtopic.php?id=34109)
+* see [OpenSuse 12.1 freezes while copying data, 2012](https://forums.opensuse.org/showthread.php/472088-OpenSuse-12-1-freezes-while-copying-data)
 
 
 ksnapshot [several]

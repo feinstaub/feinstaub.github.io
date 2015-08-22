@@ -30,13 +30,6 @@ Drag and Drop of attachment files from Mozilla Thunderbird to the KDE Desktop is
 Bug exists since 2007 in TB: [Bug 377621 - Drag and Drop attachments to desktop or folders doesn't work ](https://bugzilla.mozilla.org/show_bug.cgi?id=377621)
 
 
-WAIT KF5 / Bug 311991 - Taskbar buttons for minimized apps should not use disabled state
-----------------------------------------------------------------------------------------
-2014-04-30
-
-see https://bugs.kde.org/show_bug.cgi?id=311991
-
-
 WAIT KF5 / Plasma [usability]: flash modal
 ------------------------------------------
 2014-10-26, WAIT for KF5, not reported yet, no existing bug searched yet
