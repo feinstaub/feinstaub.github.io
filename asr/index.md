@@ -2,7 +2,7 @@ asr - async-send-receive
 ========================
 
 First concept: 2014, First prototype: 2015-03-27
-Web content last updated: 2015-06-19
+Web content last updated: 2015-08-22
 
 asr
 ---
@@ -80,23 +80,33 @@ All data and processing logic takes place on the client side. (Almost) everythin
 
 Download
 --------
-Prerequisites for installation:
+Prerequisites for installation: some GNU/Linux, python, git
 
-* Some Linux/UNIX
-* python
-* git
+Additional prerequisites at runtime: openssl, pyside, tar
 
-Additional prerequisites at runtime:
-
-* openssl
-* tar
-* python-guidata
+CURRENT VERSION: 0.3.1
 
 Step-by-step:
 
-1. Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&f=download-and-install.sh) script.
-2. Make it executable and run it in a console. Press Enter to continue when asked.
-=> The latest asr release will be downloaded into ~/asr/bin/ (which will be erased beforehand during the process)
+### 1) Install prerequisites
+
+openSUSE:
+`sudo zypper install git python3 python3-virtualenv openssl python3-pyside`
+
+Ubuntu:
+`apt-get install git-core python3 python3-virtualenv openssl python3-pyside` (todo: verify this line)
+
+
+### 2) Download installer file
+
+Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&f=download-and-install.sh) script into a **temporary** directory.
+
+
+### 3) Run installer file
+
+Make it executable and run it in a console. Press Enter to continue when asked.
+=> The latest asr release will be downloaded and installed into ~/asr/bin/
+(~/asr/bin will be erased beforehand during the process, NOTE that the rest of ~/asr/ will stay untouched)
 => All unit tests will be excecuted to ensure a functional installation.
 
 
@@ -200,7 +210,7 @@ TODO: add some screenshots to visualize the flow of data.
 Support
 -------
 
-You would like to support the project by donating money? This is not possible right now. Until now, asr is **vegware**, which means if you like the software, then think of your fellow but hidden sentient beings: they are happy for everyone who is skipping or replacing one or more meals which would contain diary products or eggs.
+You would like to support the project by donating money? This is not possible right now.
 
 
 Similar Tools
@@ -231,6 +241,13 @@ https://syncthing.net/, BSD-License?
 Both parties need to be online?
 
 Written in Go.
+
+
+### sharedrop.io
+
+* https://www.sharedrop.io/ (virtually no setup)
+* https://thomas-leister.de/internet/aus-der-serie-dateien-mal-schnell-ueber-das-netzwerk-schubsen-sharedrop/
+* Both parties have to be online at the same time
 
 
 Unsorted
