@@ -94,7 +94,7 @@ Ziel: leckere Süßigkeiten, rein pflanzlich, ohne Kristallzucker (z. B. wegen d
 
 Schokostufen:
 
-- Rohe Kakaobohnen
+- Rohe Kakaobohnen, Kakaonibs
 - Müsli mit Kakaopulver (ohne Zucker)
 - Fertige Schoko, siehe Beispiele
 
@@ -110,7 +110,9 @@ Beispiele:
   * Zutaten (2014-12): Rohe Kakaomasse, Mandeln (23%), Kakaobutter, getrockneter Kokosblütennektar, getrockneter gekeimte Quinoa, Zimtpulver (1%), Reishi Extrakt (0,5%), Vanillepulver, Meersalz
   * Unternehmen: LOVECHOCK / Asterweg 20 B2 / 1031 HN Amsterdam / Anzahl Mitarbeiter: unbekannt
   * Bezugsquellen: Bio-Laden
-
+* **Raw 70% Cacao with Spirulina Chocolate Bar** von Pacari
+    * http://www.pacari.com/products/raw-70-chocolate-with-spirulina
+    * http://www.pacari.com/pages/about-us
 
 Links
 -----

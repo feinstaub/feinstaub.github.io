@@ -88,6 +88,7 @@ Konzept:
 * Kartoffeln kleingeschnitten gar kochen, aber nicht weich
 * mit Paprika
 * mit Remoulade mit Dill und Gurken (todo: Marke?)
+* Details siehe Kochbuch
 
 ---
 
@@ -118,16 +119,17 @@ Weißer Bohnensalat mit Kapern
 -----------------------------
 23.03.2015, selbst, partytauglich
 
-* 1 Glas **weiße Bohnen**
-* 1 kleines Gläschen **Kapern**
-* 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln (oder Taifun Japanische Bratfilets)
-* Etwas gehackte **Zwiebel**
-* optional: Saure Gurkenstücke
-* Hanföl, Olivenöl, Balsamico-Essig
-* Pfeffer, Muskat
-* Optional: Passierte Tomaten, [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685)
+Reihenfolge wie es in die Schüssel kommt:
 
-Alles in eine Schüssel geben und mischen. T.i.p.p.: Flüssiges vorher mischen dann erst die Feststoffe dazu.
+* Hanföl, Olivenöl (mit Zitrone oder Zitrone extra), Balsamico-Essig
+* Optional: Passierte Tomaten oder 2 EL Tomatenmark, [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685) (oder Soyanada)
+* Pfeffer, Muskat
+* 1 kleines Gläschen **Kapern** (optional: Saure Gurkenstücke)
+* etwas gehackte **Zwiebel** (optional)
+* 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln (oder Taifun Japanische Bratfilets)
+* 1 Glas **weiße Bohnen** (gewaschen)
+
+Alles in eine Schüssel geben und mischen.
 
 ---
 
@@ -146,7 +148,7 @@ In den Mixer:
 Der Mixer ist nun recht voll. Bis zur Hälfte mit Wasser auffüllen.
 Mixen (nicht zu lang). Fertig.
 
-2 - 3 EL geröstete Pinienkerne und frische Basilikumblätter zum Garnieren. 
+2 - 3 EL geröstete Pinienkerne und frische Basilikumblätter zum Garnieren.
 
 ---
 
