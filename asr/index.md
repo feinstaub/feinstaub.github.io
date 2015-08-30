@@ -140,8 +140,8 @@ Scenario: **Send someone some larger files in an easy secure way**
 * TODO: import pickup notice
 
 
-More details
-------------
+More info
+---------
 
 ### Background
 Asr is a tool built around the idea to exchange data between
@@ -269,6 +269,27 @@ Good when you regularly exchange files with the same person.
 
 * old: [fyshare concept draft](fyshare/index.md)
 
+
+Use under MS Windows
+--------------------
+
+### Native
+
+There is no native port yet though it should not be that hard.
+
+...in progress...
+
+* [Install git](https://git-scm.com/download/win)
+* [Install Python 3.4.x](https://www.python.org/downloads/)
+* [Install PySide](https://wiki.qt.io/PySide_Binaries_Windows)
+    * Use the `pip install -U PySide` command. NOT easy_install!
+
+### With VM
+...in progress...
+
+* [Install VirtualBox](https://www.virtualbox.org/)
+* [Download openSUSE 13.2 image](http://www.osboxes.org/opensuse/) for VirtualBox
+* Run the VM and install asr.
 
 ---
 
