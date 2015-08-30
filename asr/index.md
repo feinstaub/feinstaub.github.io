@@ -36,14 +36,16 @@ Details see on [required packages](#Required_packages).
 
 ### 2) Download installer file
 
-Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&f=download-and-install.sh) script into a **temporary** directory.
+Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&o=plain&f=download-and-install.sh) script ([view online](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&f=download-and-install.sh)) into a **temporary** directory.
 
 
 ### 3) Run installer file
 
-Make installer script executable (chmod +x) and run it in a console.
+Make installer script executable and run it in a console.
+`chmod +x download-and-install.sh`
 `./download-and-install.sh`
-Press Enter to continue when asked.
+
+=> Press Enter to continue when asked.
 
 => The latest asr release will be downloaded from the code repository and installed into the ~/asr/src/ directory.
 NOTE that ~/asr/src/ will be erased beforehand during the process, BUT that the rest of ~/asr/ will stay untouched.
