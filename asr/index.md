@@ -20,7 +20,7 @@ Download
 --------
 Currently available for GNU/Linux only but could be ported to other systems.
 
-CURRENT VERSION: 0.4.1
+[View current version number](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&o=plain&f=asr_version.py).
 
 
 ### 1) Install prerequisites
