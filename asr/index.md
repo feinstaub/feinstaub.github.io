@@ -1,65 +1,101 @@
 asr - async-send-receive
 ========================
 
-First concept: 2014, First prototype: 2015-03-27
-Web content last updated: 2015-08-22
+Intro
+-----
 
-asr
----
-
-asr aims to be a free and open, decentralized alternative to proprietary, non-open sync, cloud and file hosting services when it comes to exchange potentially large files over the Internet.
-
-All data and processing logic takes place on the client side. (Almost) everything is encrypted on the way between sender and receiver. Sender and receiver are not required to be online at the same time. Therefore there is always a third party computer involved which serves as (dumb) exchange point. Third party computers are treated untrustworthy by design.
+asr aims to be a free and open, decentralized alternative to non-free online file sending and sync services - especially when it comes to exchange potentially large files over the Internet.
 
 ### Key features
 
 * **Send files** from one person's computer to another person's computer as easy as possible.
 * **End-to-end encryption** by default.
-* **Asynchronous** in a sense that you can send files and the receiver can be offline at that time.
-* **No file size restriction**. The file size is only limited by the storage capacity/quota of the exchange point.
-* **Independence** of third party service providers because exchange points can be switched any time.
-* **Decentral** logic. All logic is located on the clients. The required exchange point server only serves as a simple temporary file store and is easily replaceable.
+* **Asynchronous** in a sense that you can send files while the receiver can be offline.
+* **No artificial file size restriction**. Via file splitting (not impl yet) it is possible to send files which are larger than the storage quota of the given exchange point.
+* **Decentral** logic. All processing logic is located on the clients. The required exchange point server only serves as a simple temporary file store and is easily replaceable.
+* **No long-term dependence** of anonymous service providers because they can easily be replaced.
+
+
+Download
+--------
+Currently available for GNU/Linux only but could be ported to other systems.
+
+CURRENT VERSION: 0.4.1
+
+
+### 1) Install prerequisites
+
+openSUSE 13.2:
+`sudo zypper install git python3 python3-virtualenv tar openssl python3-pyside`
+
+Ubuntu:
+`apt-get install git-core python3 python3-virtualenv tar openssl python3-pyside` (todo: verify this line)
+
+Details see on [required packages](#Required_packages).
+
+
+### 2) Download installer file
+
+Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&f=download-and-install.sh) script into a **temporary** directory.
+
+
+### 3) Run installer file
+
+Make installer script executable (chmod +x) and run it in a console.
+`./download-and-install.sh`
+Press Enter to continue when asked.
+
+=> The latest asr release will be downloaded from the code repository and installed into the ~/asr/src/ directory.
+NOTE that ~/asr/src/ will be erased beforehand during the process, BUT that the rest of ~/asr/ will stay untouched.
+
+=> Desktop integration files are installed.
+
+=> Some additional Python dependencies are downloaded from Python package site.
+
+=> Unit tests will be excecuted to ensure a functional installation.
+
+
+### 4) Run
+Put the directory ~/asr/src/bin/ in the executable path to make the following two commands available: `asr`, `asrgui`.
+
+
+Details
+-------
 
 ### Secure and robust
 
 * **Easy-to-understand** security
     * Why is this important? E.g. read [A Plea for Simplicity](https://www.schneier.com/essays/archives/1999/11/a_plea_for_simplicit.html), 1999 by [Bruce Schneier](http://en.wikipedia.org/wiki/Bruce_Schneier)
-    * Currently based on passwords (later maybe on public key infrastructure).
-    * No central data storage for long-term data.
+    * Security currently based on common passphrases (could later be extended with an asymmetric procedure).
+    * No central data storage for long-term data because transfered packages will be deleted as soon as they are received.
+    * Third party computers are treated untrustworthy by design.
 * **end-to-end encryption**
     * Based on passwords
 * **Safe and robust**
     * Since the data is always decrypted after receiving there is **no risk to lose data due to a lost password**, certificate or other stuff that sometimes get lost.
     * **Easy data routing**: Sender --> Exchange point --> Receiver (no complex P2P network).
-* Most **meta-data** is encrypted.
+* **Most meta-data** is encrypted.
     * Especially **filenames** and **subject line** are encrypted.
     * The following meta-data will **not** be encrypted: sender's id, receiver's id, timestamp.
     * Therefore, exchange point providers cannot violate the user's privacy by accident.
-* Touch-cloud solution
-    * Currently, the term "cloud" is used for all kinds of Internet services. "Touch-cloud" means that your data (always in its encrypted form) will only touch this omnipresent cloud: as soon as the receiver gets it, it will be deleted. This minimizes the chances of the (encrypted) data from being copied.
 
 ### Easy to use
 
-* Client-side files which are sent are encrypted automatically.
-* Files being received are decrypted automatically.
-* Already works with two persons (no special P2P network with minimum number of participants or similar required)
+* Minimal setup.
+* Client-side files are encrypted automatically before they are being sent over the Internet.
+* Received packages are decrypted automatically.
+* Encryption must be setup only once for a given pair of persons and then reused without having to worry each time.
+* No special P2P network with minimum number of participants or similar required. The sender will initially configure an exchange point, the receiver gets a pickup notice on first receive and then the exchange channel between those two participants is setup.
+* todo: Automatic file splitting for big files and limited per file size on exchange point
 
 ### Open
 
-* License GPLv2, free software, use as you please and on your own risk
+* License GPLv3+, free software, use as you please and on your own risk
 * Written in Python
 * Code hosted on [KDE quickgit](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git)
-* forum, discussion, issue tracker: currently [hosted at github](https://github.com/feinstaub/asr/issues)
-* TODO: protocol specification
+* Forum, discussion, issue tracker: currently [hosted at github](https://github.com/feinstaub/asr/issues)
+* todo: protocol specification (until then look at the source code)
 
-
-### Feature details
-
-* ...
-* Minimal setup.
-* Encryption must be setup only once for a given pair of persons and then reused without having to worry each time.
-* Automatic file splitting for big files and limited per file size on exchange point [TODO]
-* ...
 
 ### Architecture
 
@@ -76,38 +112,6 @@ All data and processing logic takes place on the client side. (Almost) everythin
 
 * v1.0 (planned)
     * If someone snatches the common login data for the exchange point, a DOS attach can be launched by deleting all files that appear on the exchange point.
-
-
-Download
---------
-Prerequisites for installation: some GNU/Linux, python, git
-
-Additional prerequisites at runtime: openssl, pyside, tar
-
-CURRENT VERSION: 0.3.1
-
-Step-by-step:
-
-### 1) Install prerequisites
-
-openSUSE:
-`sudo zypper install git python3 python3-virtualenv openssl python3-pyside`
-
-Ubuntu:
-`apt-get install git-core python3 python3-virtualenv openssl python3-pyside` (todo: verify this line)
-
-
-### 2) Download installer file
-
-Download the [download-and-install.sh](http://quickgit.kde.org/?p=scratch%2Fgregormi%2Fasr.git&a=blob&hb=release&f=download-and-install.sh) script into a **temporary** directory.
-
-
-### 3) Run installer file
-
-Make it executable and run it in a console. Press Enter to continue when asked.
-=> The latest asr release will be downloaded and installed into ~/asr/bin/
-(~/asr/bin will be erased beforehand during the process, NOTE that the rest of ~/asr/ will stay untouched)
-=> All unit tests will be excecuted to ensure a functional installation.
 
 
 Quickstart
@@ -134,8 +138,10 @@ Scenario: **Send someone some larger files in an easy secure way**
 * TODO: import pickup notice
 
 
-Background
-----------
+More details
+------------
+
+### Background
 Asr is a tool built around the idea to exchange data between
 two computers using a third - potentially completely untrusted - party
 (like internet hosting services, corporate network shares etc.)
@@ -152,71 +158,57 @@ package's content on the way between sender and receiver. The only metadata
 which is tracked is who sent the package and who received it.
 
 It is not expected that the sender's and receiver's computer is online
-at the sametime. Therefore, the process of sending and receiving is
-asynchronous.
+at the same time.
 
-Currently, there is no push notification on new packages
-and so polling or notification over another channel is required.
 
 ### Exchange points
 
-Write something about shareable and throw-away exchange points. ...
+... DRAFT ...
 
 * Cheap:
-    * On the one hand, an exchange point is like the storage place where your
-      postal package is kept until you pick it up.
-    * On the other hand, it can be cheap because if someone breaks in
-      the package can be stolen but not opened because it is end-to-end encrypted.
-    * The exchange point must only contain as much data as the packages which are
-      not yet fetched. The data can be deleted as soon as the package is delivered.
+    * On the one hand, an exchange point is like the storage place where your postal package is kept until you pick it up.
+    * On the other hand, it can be cheap because if someone breaks in the package can be stolen but not opened because it is end-to-end encrypted.
+    * The exchange point should only contain as much data as the packages which are not yet fetched. The data can be deleted as soon as the package is delivered.
 
 * Throw-awayable:
-    * If you find out that an exchange point has been compromised just setup another
-      (one or change the password.)
+    * If you find out that an exchange point has been compromised just setup another on (or change the password).
 
 * Shareable:
-    * Once an internet exchange point is setup you can grant access to
-      reliable persons.
+    * Once an internet exchange point is setup you can grant access to reliable persons.
 
 * Dumb:
     * list files
     * upload files
     * create directories
-    * change to directory
     * download files
     * delete files and directories
 
-* Multiple:
-    * You can (in the future) setup asr to fetch multiple exchange points.
-    * Possible types of exchange points: filesystem, FTP, email (future), ...
+* Extendable:
+    * These services are supported at the moment: plain filesystem (for local testing or mounted network shares), FTP, dropbox.com
 
 
-### Required packages [revise later]
+### Required packages
 
-asr is a Python script which currently has the following dependencies:
+asr is a [Python3](https://www.python.org/) application which currently has the following dependencies:
 
-- tar
-- openssl
-- python-guidata (has some more python deps)
-- gnome-web-photo (optional)
-- wget (optional)
+- [git](https://git-scm.com/)
+- [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
+- [tar](http://www.gnu.org/software/tar/)
+- [openssl](https://www.openssl.org/)
+- [PySide](https://en.wikipedia.org/wiki/PySide)
 
 
-Protocol
---------
+### Protocol
 TODO: add some screenshots to visualize the flow of data.
 
 
-Support
--------
-
+### Support
 You would like to support the project by donating money? This is not possible right now.
 
 
-Similar Tools
--------------
+### Similar Tools
 
-### SparkleShare
+**SparkleShare**
 
 http://sparkleshare.org/, GPLv3
 
@@ -234,7 +226,7 @@ Auto-sync with a git repository in the middle.
 
 Written in C#, based on Mono.
 
-### Syncthing
+**Syncthing**
 
 https://syncthing.net/, BSD-License?
 
@@ -243,15 +235,18 @@ Both parties need to be online?
 Written in Go.
 
 
-### sharedrop.io
+**sharedrop.io**
 
 * https://www.sharedrop.io/ (virtually no setup)
 * https://thomas-leister.de/internet/aus-der-serie-dateien-mal-schnell-ueber-das-netzwerk-schubsen-sharedrop/
 * Both parties have to be online at the same time
 
 
-Unsorted
---------
+### Outlook
+* Currently, there is no push notification on new packages and so polling or notification over another channel is required.
+
+
+### Unsorted
 Nothing stored online permanently, so there are no expensive and complex requirements for **datacenters** where exchange points might be located.
 
 **Everything is local**, nothing must be central => You don't have to rely on any central third party which might go away and with it your data. This is possible, because today the client hard-drives are so large that disk-space is (normally) not the problem. Locally there is far more disk space available as with most (cheap or cost-free) online services.
@@ -266,8 +261,13 @@ Not everything everywhere but have your stuff at the right places.
 
 Good when you regularly exchange files with the same person.
 
-* todo: 16.02.2015: Private incremental git (asr-sync): Auf dem zentralen Server werden nur git-Bundle-Objekte ausgetauscht (und sofort wieder gelöscht). Ein Nutzer ist gleicher als die anderen und hat master-Branch. Behandlung von merge-Konflikten?
+* todo: idea since 16.02.2015: Private incremental git (asr-sync): Auf dem zentralen Server werden nur git-Bundle-Objekte ausgetauscht (und sofort wieder gelöscht). Ein Nutzer ist gleicher als die anderen und hat master-Branch. Behandlung von merge-Konflikten?
     * Teilen von Notizen, Kalender (ics-Kalender-Datei) etc. (Daten werden bei Austausch jedes Mal erneut verschlüsselt)
     * Lokales Lösen von Konflikten (am besten vermeiden, z. B. jeder hat seinen eigenen Kalender)
 
 * old: [fyshare concept draft](fyshare/index.md)
+
+
+---
+
+asr: First concept: 2014, First prototype: 2015-03-27 / Web content last updated: 2015-08-20
