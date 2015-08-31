@@ -12,8 +12,8 @@ asr aims to be a free and open, decentralized alternative to non-free online fil
 * **End-to-end encryption** by default.
 * **Asynchronous** in a sense that you can send files while the receiver can be offline.
 * **No artificial file size restriction**. Via file splitting (not impl yet) it is possible to send files which are larger than the storage quota of the given exchange point.
-* **Decentral** logic. All processing logic is located on the clients. The required exchange point server only serves as a simple temporary file store and is easily replaceable.
-* **No long-term dependence** of anonymous service providers because they can easily be replaced.
+* **Decentral** logic. All processing logic is located on the clients. The required exchange point server only serves as a simple temporary file store and is easily replaceable. Thus, also no long-term dependence of anonymous service providers.
+* **Free software** which is giving you the [four freedoms](https://en.wikipedia.org/wiki/Free_software#Definition_and_the_Four_Freedoms) with all their [implications](https://en.wikipedia.org/wiki/Free_software).
 
 
 Download
@@ -90,7 +90,7 @@ Details
 * No special P2P network with minimum number of participants or similar required. The sender will initially configure an exchange point, the receiver gets a pickup notice on first receive and then the exchange channel between those two participants is setup.
 * todo: Automatic file splitting for big files and limited per file size on exchange point
 
-### Open
+### Open / Contribute
 
 * License GPLv3+, free software, use as you please and on your own risk
 * Written in Python
@@ -116,25 +116,24 @@ Details
     * If someone snatches the common login data for the exchange point, a DOS attach can be launched by deleting all files that appear on the exchange point.
 
 
-Quickstart
-----------
+### Quickstart
 
-UNDER CODESTRUCTION
+...UNDER CODESTRUCTION...
 
 Scenario: **Send someone some larger files in an easy secure way**
 
 
-### Initial setup for the sender
+#### Initial setup for the sender
 * Download and install asr (see Download section)
 
 * Choose / setup an exchange point: TODO
 
 * TODO: screenshots
 
-### Send files
+#### Send files
 * Send email with pickup notice to contact... todo
 
-### Receive files
+#### Receive files
 * Download and install asr (see Download section)
 
 * TODO: import pickup notice
@@ -197,7 +196,7 @@ asr is a [Python3](https://www.python.org/) application which currently has the 
 - [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 - [tar](http://www.gnu.org/software/tar/)
 - [openssl](https://www.openssl.org/)
-- [PySide](https://en.wikipedia.org/wiki/PySide)
+- [PySide](https://en.wikipedia.org/wiki/PySide) - Qt binding for Python
 
 
 ### Protocol
@@ -244,6 +243,27 @@ Written in Go.
 * Both parties have to be online at the same time
 
 
+### Use under MS Windows
+
+**Native**
+
+There is no native port yet though it should not be that hard.
+
+...in progress...
+
+* [Install git](https://git-scm.com/download/win)
+* [Install Python 3.4.x](https://www.python.org/downloads/)
+* [Install PySide](https://wiki.qt.io/PySide_Binaries_Windows)
+    * Use the `pip install -U PySide` command. NOT easy_install!
+
+**With VM**
+...in progress...
+
+* [Install VirtualBox](https://www.virtualbox.org/)
+* [Download openSUSE 13.2 image](http://www.osboxes.org/opensuse/) for VirtualBox
+* Run the VM and install asr.
+
+
 ### Outlook
 * Currently, there is no push notification on new packages and so polling or notification over another channel is required.
 
@@ -269,27 +289,6 @@ Good when you regularly exchange files with the same person.
 
 * old: [fyshare concept draft](fyshare/index.md)
 
-
-Use under MS Windows
---------------------
-
-### Native
-
-There is no native port yet though it should not be that hard.
-
-...in progress...
-
-* [Install git](https://git-scm.com/download/win)
-* [Install Python 3.4.x](https://www.python.org/downloads/)
-* [Install PySide](https://wiki.qt.io/PySide_Binaries_Windows)
-    * Use the `pip install -U PySide` command. NOT easy_install!
-
-### With VM
-...in progress...
-
-* [Install VirtualBox](https://www.virtualbox.org/)
-* [Download openSUSE 13.2 image](http://www.osboxes.org/opensuse/) for VirtualBox
-* Run the VM and install asr.
 
 ---
 
