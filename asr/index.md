@@ -25,11 +25,12 @@ Currently available for GNU/Linux only but could be ported to other systems.
 
 ### 1) Install prerequisites
 
-openSUSE 13.2:
+**openSUSE 13.2:**
 `sudo zypper install git python3 python3-virtualenv tar openssl python3-pyside`
+Note, that the Python3 version of the official Qt binding PySide is currently only available via a non-offical openSUSE repository: you can use 1 Click Install from here: [python3-pyside](https://software.opensuse.org/package/python3-pyside)
 
-Ubuntu:
-`apt-get install git-core python3 python3-virtualenv tar openssl python3-pyside` (todo: verify this line)
+**Ubuntu:**
+`sudo apt-get install git-core python3 python3-virtualenv tar openssl python3-pyside` (todo: verify this line)
 
 Details see on [required packages](#Required_packages).
 
