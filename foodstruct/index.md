@@ -121,12 +121,15 @@ Weißer Bohnensalat mit Kapern
 
 Reihenfolge wie es in die Schüssel kommt:
 
-* Hanföl, Olivenöl (mit Zitrone oder Zitrone extra), Balsamico-Essig
-* Optional: Passierte Tomaten oder 2 EL Tomatenmark, [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685) (oder Soyanada)
+* Hanföl, Oliven**öl** (mit Zitrone oder Zitrone separat oder ohne Zitrone), Balsamico-**Essig**
+* 2 EL Tomatenmark (oder passierte Tomaten)
+* [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685) (oder [Soyanada](http://www.alles-vegetarisch.de/frischkaese-vegan-bio-soja-streichkaese-wie-rahm-pflanzlich,art-4688) oder Jogurth-Produkt)
 * Pfeffer, Muskat
 * 1 kleines Gläschen **Kapern** (optional: Saure Gurkenstücke)
-* etwas gehackte **Zwiebel** (optional)
-* 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln (oder Taifun Japanische Bratfilets)
+* gehackte **Zwiebeln**
+* Kau-Elemente:
+    - 1 [Taifun Japanisches Bratfilet](https://www.taifun-tofu.de/de/japanische-bratfilets) (gewürfelt) und 1/2 (ca. 100 g) [Vegiebelle](http://www.tofunagel.de/produkte/sojakaese/pur/) (gewürfelt)
+    - oder alternativ: 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln
 * 1 Glas **weiße Bohnen** (gewaschen)
 
 Alles in eine Schüssel geben und mischen.
