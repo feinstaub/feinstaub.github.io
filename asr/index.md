@@ -236,6 +236,17 @@ Both parties need to be online?
 
 Written in Go.
 
+**BitTorrent Sync**
+
+https://en.wikipedia.org/wiki/BitTorrent_Sync
+
+Non-free software
+
+**Further**
+
+* [Comparison_of_file_synchronization_software](https://en.wikipedia.org/wiki/Comparison_of_file_synchronization_software)
+* [the-best-free-programs-and-online-services-for-sending-and-sharing-large-files](http://www.howtogeek.com/133761/the-best-free-programs-and-online-services-for-sending-and-sharing-large-files/)
+
 
 **sharedrop.io**
 
