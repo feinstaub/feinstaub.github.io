@@ -119,19 +119,23 @@ HP, Odenwald, HD
 
 HD
 ---
-* (V)-Selbstbedienungsrestaurant red, HD, Mo-Fr 11:00-22:00
+* http://heidelberg-vegan.org/
+* (V)-Selbstbedienungsrestaurant **red**, HD, Mo-Fr 11:00-22:00
 * V-friendly [Malaysisches Restaurant Serai](http://www.serai.de/de/about/lage), Schillerstrasse 28-30, Weststadt, Vegan-Büffet am ersten Montag im Monat 18:00-22:00, Di-Fr: 12:00-14:00, 18:00-22:00, Sa: 18:00-23:00, So+Mo zu
-* TODO: holy kitchen Cafe, ca. 11-19 Uhr
+* V-Cafe: holy kitchen, ca. 11-19 Uhr
+* todo: Schmidt's (vegane Kuchen, Sojamilch, leckere Kakaos und Kaffee)
+- Die Kuh, die lacht (komplett vegane Burger im Angebot)
 
 
 Mannheim
 --------
-* TODO: V-Restaurant [LöVenzahn](http://www.loevenzahn.de/), Eichelsheimer Str.42, 68163 Mannheim-Lindenhof, Telefon: MA (06 21) 43 95 40 00, [Anfahrt, am Hbf](https://www.google.de/maps/place/Eichelsheimer+Str.+42,+68163+Mannheim/@49.4738982,8.467845,16z/data=!4m2!3m1!1s0x4797cc1ce4db0e95:0x7e630152aeebbea1)
+* https://de-de.facebook.com/VeganInMannheim
+* V-Restaurant [LöVenzahn](http://www.loevenzahn.de/), Eichelsheimer Str.42, 68163 Mannheim-Lindenhof, Telefon: MA (06 21) 43 95 40 00, [Anfahrt, am Hbf](https://www.google.de/maps/place/Eichelsheimer+Str.+42,+68163+Mannheim/@49.4738982,8.467845,16z/data=!4m2!3m1!1s0x4797cc1ce4db0e95:0x7e630152aeebbea1) (noch geöffnet?)
 * (V)-[Cafe Vogelfrei](https://de-de.facebook.com/cafevogelfrei) (Essen vegan, aber es gibt auch Kuhmilch), C3-20 Mannheim, Mo: zu, Di-Sa: 11:00–19:00, So: 14:00–22:00
-* TODO: Cafe Rost, Pflügersgrundstr. 16 (nördlich des Neckars)
 * (V) SB-Restaurant Heller's
-
 * todo: (V) Kombüse (Restaurant / Cafe), Jungbuschstraße 23, 68159 Mannheim
+* TODO: Cafe Rost, Pflügersgrundstr. 16 (nördlich des Neckars)
+
 * todo: (V) Sonnenblume (Restaurant), T 3,7, 68161 Mannheim
 * todo: (V) Supan's Küche (thailändischer Imbiss), P 2,6, 68161 Mannheim
 * todo: (V) Restaurant Lindbergh, Seckenheimer Landstraße 170, 68163 Mannheim
@@ -155,6 +159,12 @@ todo:
 - superjami V
 
 
+Köln
+----
+* TODO: [Bunte Burger](http://www.bunteburger.de/ueber-uns/), vegane Burger, Hospeltstraße 1, 50825 Köln
+
+
+
 Baiersbronn
 -----------
 * (todo?) [Holzschuh's Schwarzwaldhotel](http://www.schwarzwaldhotel.de/), [V-Biozimmer](http://www.schwarzwaldhotel.de/?lang_id=DE&page_id=78#A_904)
@@ -170,7 +180,10 @@ Friedberg, Augsburg, Nürnberg
 -----------------------------
 * todo: V-Cafe [COSMOSCAFE e.V.](http://cosmoscafe.jimdo.com), Jungbräustrasse 8, 86316 FRIEDBERG
 
-* todo: V-Biorestaurant [The Tasty Leaf](http://www.tasty-leaf.de), Nürnberg, Di-Do 11:30-22:00, Fr 11:30-23:00, Sa 15:00-23:00, So 10:00-15:30
+* [Mount Lavinia](http://www.mountlavinia.de/), ceylonesischen Restaurant, Jakobsplatz 22, 90402 **Nürnberg**
+
+* todo: V-Biorestaurant [The Tasty Leaf](http://www.tasty-leaf.de), **Nürnberg**, Di-Do 11:30-22:00, Fr 11:30-23:00, Sa 15:00-23:00, So 10:00-15:30
+
 
 
 Bad Waldsee, Singen
