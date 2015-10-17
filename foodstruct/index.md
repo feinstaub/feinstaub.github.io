@@ -336,3 +336,13 @@ Avocadocreme / Guacamole
 * **Pfeffer**, ggf. **Zimt, Muskat**
 * bei Bedarf: wenig Zwiebel, etwas Soja-Jogurth, Leinöl
 * 03.03.2015: Geheimtipp: **Hanföl** und ein wenig **Ingwer**
+
+---
+
+Bilder
+------
+
+![](img/2015-SAM_1010.JPG)
+![](img/2015-SAM_1090.JPG)
+![](img/2015-SAM_1092.JPG)
+![](img/2015-SAM_1094.JPG)
