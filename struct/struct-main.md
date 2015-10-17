@@ -141,7 +141,8 @@ Right click on image file -> Actions:
   * 50
   * 75
 
-todo: suggest that this menu to be added to the std service menu in KDE
+DONE: suggest that this menu to be added to the std service menu in KDE
+WAIT / https://bugs.kde.org/show_bug.cgi?id=354017 "Bug 354017 - Add Resize images to service menu"
 
 
 kdiskfree [usability]: F5 to refresh / also refresh when USB drives get disconnected

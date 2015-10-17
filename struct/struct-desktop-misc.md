@@ -1,6 +1,23 @@
 Desktop Misc
 ============
 
+Apper: Set HidePackages=true by default to prevent Apper to show too many updates
+---------------------------------------------------------------------------------
+2015-10-17
+
+Reported: https://bugs.freedesktop.org/show_bug.cgi?id=92511
+
+https://en.opensuse.org/SDB:Apper says:
+
+```
+If you want Apper to only notify you about official patches edit the file /etc/PackageKit/ZYpp.conf to say:
+
+HidePackages=true
+```
+
+$ kdesu kate /etc/PackageKit/ZYpp.conf
+
+
 Font Installer [usability]: enter password for each font
 --------------------------------------------------------
 2014-08, not reported yet, WAIT for KF5
