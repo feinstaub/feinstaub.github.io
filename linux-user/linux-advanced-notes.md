@@ -1,6 +1,62 @@
 Linux advanced notes
 ====================
 
+Upgrade from Plasma 4 to Plasma 5 and problem solving
+-----------------------------------------------------
+
+Got help with konversation in #plasma channel using IceWM.
+
+
+1. Clean up installed packages
+
+http://unix.stackexchange.com/questions/53474/opensuse-find-all-packages-without-a-repository
+
+`rpm -qa --qf '%-30{DISTRIBUTION} %{NAME}\n'| sort`
+
+Gives a list of packages and their repository source.
+Now look for old or unwanted repositories and remove those packages
+
+`zypper ls -u` Lists all repos and their URL
+
+`sudo zypper rr 11 12` Removes two repos from the list
+
+`sudo zypper dup --from repo-oss` Performs a dist upgrade from the given repo (== "switch system packages")
+
+`sudo zypper se --verbose kernel-default` Finds with more information
+
+A note on repos: "KDE:Frameworks5 requires KDE:Qt5. plain 13.2 works with just plain 13.2, and plain TW works with just plain TW" (shumski)
+
+
+2. Install Plasma
+
+udo zypper install plasma5-desktop
+
+
+3. Debug X errors
+
+~/.xsession-errors-:0 contains useful information
+
+kwin_x11 --replace
+
+Reason for nasty crashes: Did use nouveau drivers instead of the Nvidia drivers:
+
+Easy installation which also detects correct drivers for installed card: https://en.opensuse.org/SDB:NVIDIA_drivers
+
+
+4. Switch display manager from KDM to SDDM
+
+`sudo /usr/sbin/yast2`
+
+System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (change from kdm to sddm)
+
+
+5. Detected issues
+
+
+
+
+
+
 ReplayGain
 ----------
 How to do mass ReplayGain? How to see which files are already gained?
