@@ -13,9 +13,11 @@ How to do mass ReplayGain? How to see which files are already gained?
 ...
 
 
+
 Scripts
 -------
 [bin](../bin/scripts-index.md)
+
 
 Fix openSUSE Firefox KDE integration
 ------------------------------------
@@ -69,6 +71,7 @@ Name=org.freedesktop.FileManager1
 # Note this has to be done everytime the file gets overwritten.
 ```
 see https://forums.opensuse.org/showthread.php/456698-How-use-Dolphin-to-quot-open-containing-folder-quot-from-firefox-downloads?p=2688494#post2688494
+
 
 
 Oracle VirtualBox

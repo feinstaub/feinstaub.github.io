@@ -161,6 +161,22 @@ UUID=277f8aa6-978d-45b8-b5a4-0f7f60674b8f /m1                  btrfs      defaul
 # /usr/share:  5.5 GB (280.000 files)
 ```
 
+
+Hibernate / suspend not working on openSUSE
+-------------------------------------------
+2014
+
+see https://forum.kde.org/viewtopic.php?f=285&t=128846
+
+Solution 1: `sudo zypper rm suspend pm-utils`
+=> Disable Hibernate completely.
+
+Solution 2:
+* `sudo zypper rm pm-utils`
+* Edit /usr/lib64/pm-utils/defaults (or /usr/lib/pm-utils/defaults)
+    * See SLEEP_MODULE="kernel" which by now (2015-10) should be set by default.
+
+
 Backup user data
 ----------------
 On Linux doing a backup and restore is quite simple.
