@@ -16,6 +16,22 @@ Kochbücher:
 
 ---
 
+Schokomousse auf Cashew-Basis
+-----------------------------
+08.10.2015, Schauspielerin aus einer Fernsehshow
+
+* 3/4 Tasse Cashewnüsse
+* 3/4 Tasse Wasser
+* 1 Banane
+* 3 - 4 EL Kakaopulver
+* 1 TL Zimt
+* 1 Prise Salz
+* 1 Spritzer Zitrone
+
+Alles in den Mixer geben und mixen. Etwas warten, weil (angeblich) noch nachdickt.
+
+---
+
 Marzipanquader mit Walnuss
 --------------------------
 21.06.2015, selbst, High Cuisine
@@ -117,18 +133,19 @@ Tzatziki (Veganitzki)
 
 Weißer Bohnensalat mit Kapern
 -----------------------------
-23.03.2015, selbst, partytauglich
+23.03.2015, selbst, partytauglich, zuletzt aktualisiert 23.10.2015
 
 Reihenfolge wie es in die Schüssel kommt:
 
-* Hanföl, Oliven**öl** (mit Zitrone oder Zitrone separat oder ohne Zitrone), Balsamico-**Essig**
+* Oliven**öl** (mit Zitrone oder Zitrone separat oder ohne Zitrone), Balsamico-**Essig**, Soja-Sauce, Hanföl
 * 2 EL Tomatenmark (oder passierte Tomaten)
 * [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685) (oder [Soyanada](http://www.alles-vegetarisch.de/frischkaese-vegan-bio-soja-streichkaese-wie-rahm-pflanzlich,art-4688) oder Jogurth-Produkt)
+* Ahornsirup
 * Pfeffer, Muskat
 * 1 kleines Gläschen **Kapern** (optional: Saure Gurkenstücke)
 * gehackte **Zwiebeln**
 * Kau-Elemente:
-    - 1 [Taifun Japanisches Bratfilet](https://www.taifun-tofu.de/de/japanische-bratfilets) (gewürfelt) und 1/2 (ca. 100 g) [Vegiebelle](http://www.tofunagel.de/produkte/sojakaese/pur/) (gewürfelt)
+    - 1 [Taifun Japanisches Bratfilet](https://www.taifun-tofu.de/de/japanische-bratfilets) (gewürfelt) und/oder 1/2 (ca. 100 g) [Vegiebelle](http://www.tofunagel.de/produkte/sojakaese/pur/) (gewürfelt)
     - oder alternativ: 1 [Grafitti-Tofu](https://taifun-tofu.de/de/tofu-terrine-graffiti) in Würfeln
 * 1 Glas **weiße Bohnen** (gewaschen)
 
