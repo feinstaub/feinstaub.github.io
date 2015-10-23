@@ -67,7 +67,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 * COOL: Alt+Tab shows clutterfree and fast a menu on the left side of the screen
 
 
-* Open some windows
+* OPEN/WAIT: Open some windows
     -> Click Show Desktop
     -> Open Plasma Menu
     -> Choose Leave
@@ -76,48 +76,96 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 
 * OPEN: plasma there is no show desktop applet on the default panel
-    * reported here: https://forum.kde.org/viewtopic.php?f=285&t=128872
+    * reported here: https://forum.kde.org/viewtopic.php?f=285&t=128872, 2015-10-19
+    * and here: https://bugs.kde.org/show_bug.cgi?id=354240, 2015-10-23
     * TODO: "there is no default shortcut for show desktop"
 
 
-* OPEN: Delete an item with DEL key has a delay and shows no confirmation
-    * https://bugs.kde.org/show_bug.cgi?id=354100
+* OPEN/WAIT: Glitch: Delete an item with DEL key has a delay and shows no confirmation
+    * Response to delete by keyboard shortcut very slow: https://bugs.kde.org/show_bug.cgi?id=354100
+    * TODO: report "In dolphin this behaviour is configurable in the Confirmations tab of the General category of the Preferences dialog. (On a side note, with dolphin 15.07.90, this seems to be broken: I got no confirmation regardless of the setting)" as separate issue
 
 
-* OPEN: F2 key on selected item has no effect - expect rename item  / F2 on desktop items does not work
-    * https://bugs.kde.org/show_bug.cgi?id=354101
-        * duplicate of "Shortcut configuration for Folder View actions not handled by standard keys" - https://bugs.kde.org/show_bug.cgi?id=344969
+* OPEN/WAIT: F2 key on selected item has no effect - expect rename item  / F2 on desktop items does not work
+    * my duplicate: https://bugs.kde.org/show_bug.cgi?id=354101
+    * https://bugs.kde.org/show_bug.cgi?id=344969 - "Shortcut configuration for Folder View actions not handled by standard keys" -
 
 
-* OPEN: Show Desktop, put item in rename mode, hit ESC unshows desktop
+* OPEN/WAIT: Glitch: Show Desktop, put item in rename mode, hit ESC unshows desktop
     * https://bugs.kde.org/show_bug.cgi?id=352988
 
 
-* OPEN: Thunderbird tray icon not visible
+* OPEN/WAIT: Thunderbird tray icon not visible
     * https://bugs.kde.org/show_bug.cgi?id=354103
 
 
-* OPEN: Plasma desktop new file is created top right instead of where the mouse is
+* OPEN/WAIT: Plasma desktop new file is created top right instead of where the mouse is
     * Right click to create a file creates the item next to the top-right item instead of where the mouse was clicked
     * https://bugs.kde.org/show_bug.cgi?id=354104
 
 
-* OPEN: sddm (login screen) is shown on closed laptop display instead of primary screen
+* OPEN/WAIT: sddm (login screen) is shown on closed laptop display instead of primary screen
     * https://bugs.kde.org/show_bug.cgi?id=354105
 
 
-* OPEN: No Trash/Wastebin on desktop or panel by default?
+* OPEN/WAIT: No Trash/Wastebin on desktop or panel by default?
     * https://forum.kde.org/viewtopic.php?f=285&t=128894
+    * see also https://forum.kde.org/viewtopic.php?f=285&t=127490
+    * wait for more user feedback
 
 
-* OPEN: QuickLaunch wiget is missing, which makes the following scripts disappear:
+* FIXED: Wastebin / trash widget: Malformed URL trash:/
+    * https://bugs.kde.org/show_bug.cgi?id=354241
+    * see also https://forum.kde.org/viewtopic.php?f=22&t=100899&p=327782
+
+
+* OPEN: Alt+F1 does not work anymore for "Application Launcher"
+    * TODO: find bug
+    * does not happen with new user
+
+
+* OPEN: Glitch: Choose Leave -> Switch user -> "New session" -> "ok"
+    -> Standby mode (happens only the first time after reboot)
+    not reported yet
+
+
+* "If the new user works, then you have to clean your plasma settings with removing the plasma* files from ~/.config
+    or to be more precise it are the files plasmashellrc and plasmarc"
+    --> renamed ~/.config/plasmashellrc, the other file was not present
+
+
+* OPEN/WAIT: krunner crashes at startup
+    * does not happen with new user
+    * deleted ~/.config/krunnerrc -> did not help
+    * see https://bugs.kde.org/show_bug.cgi?id=343982
+
+
+* OPEN/WAIT: drkonqi can't report bugs about krunner the version is 0.1 which bugzilla claims is not active
+    * https://bugs.kde.org/show_bug.cgi?id=353994
+        * also: Dialog has two Help buttons
+
+
+* OPEN/WAIT: Leave logout shows buttons (Cancel, Shutdown) in unexpected order
+    * https://bugs.kde.org/show_bug.cgi?id=354244
+
+
+
+* OPEN/WAIT: Device Notifier does not react on inserted DVD
+    * https://bugs.kde.org/show_bug.cgi?id=354245
+
+
+* OPEN/WAIT: disable taskbar dimming for minimized apps by default
+    * https://bugs.kde.org/show_bug.cgi?id=311991
+    * https://git.reviewboard.kde.org/r/124675/
+
+
+* OPEN/WAIT 5.5: QuickLaunch wiget is missing, which makes the following scripts disappear:
     - Lupe on/off (big icons)
     - zypper update
     - create KF5 documenation
     - ???
     - TODO..... report
 
-* OPEN: TODO: nachhaken taskbar dimming!!!
 
 * WAIT?/STRANGE: plasma font and some images (like login image) stretched...?
 
