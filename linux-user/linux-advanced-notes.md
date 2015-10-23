@@ -1,13 +1,13 @@
 Linux advanced notes
 ====================
 
-Upgrade from Plasma 4 to Plasma 5 and problem solving
------------------------------------------------------
+Upgrade from Plasma 4 to Plasma 5.4.2 and solved problems
+---------------------------------------------------------
 
 Got help with konversation in #plasma channel using IceWM.
 
 
-1. Clean up installed packages
+### Clean up installed packages
 
 http://unix.stackexchange.com/questions/53474/opensuse-find-all-packages-without-a-repository
 
@@ -27,33 +27,99 @@ Now look for old or unwanted repositories and remove those packages
 A note on repos: "KDE:Frameworks5 requires KDE:Qt5. plain 13.2 works with just plain 13.2, and plain TW works with just plain TW" (shumski)
 
 
-2. Install Plasma
+### Install Plasma
 
-udo zypper install plasma5-desktop
+`sudo zypper install plasma5-desktop`
+
+`plasmashell --version` --> 5.4.2
 
 
-3. Debug X errors
+### Debug X errors / graphic card drivers
 
 ~/.xsession-errors-:0 contains useful information
 
-kwin_x11 --replace
+`kwin_x11 --replace` starts kwin5 if crashed
 
 Reason for nasty crashes: Did use nouveau drivers instead of the Nvidia drivers:
 
 Easy installation which also detects correct drivers for installed card: https://en.opensuse.org/SDB:NVIDIA_drivers
 
 
-4. Switch display manager from KDM to SDDM
+### Switch display manager from KDM to SDDM
 
 `sudo /usr/sbin/yast2`
 
 System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (change from kdm to sddm)
 
 
-5. Detected issues
+### Detected issues
+
+* OPEN: How to get Plasma's version other than plasmashell --version?
+    * e.g. Plasma menu > About...
+    * https://forum.kde.org/viewtopic.php?f=285&t=128873
 
 
+* OPEN: kinfocenter is not installed by default
+    * part of this discussion: https://forum.kde.org/viewtopic.php?f=285&t=128873
+    * sudo zypper install kinfocenter5
 
+
+* COOL: Alt+Tab shows clutterfree and fast a menu on the left side of the screen
+
+
+* Open some windows
+    -> Click Show Desktop
+    -> Open Plasma Menu
+    -> Choose Leave
+    -> the logout bar (the one the with timeout) appears but is barely readable because the windows are now have-transparent overlapping
+    * https://bugs.kde.org/show_bug.cgi?id=354102
+
+
+* OPEN: plasma there is no show desktop applet on the default panel
+    * reported here: https://forum.kde.org/viewtopic.php?f=285&t=128872
+    * TODO: "there is no default shortcut for show desktop"
+
+
+* OPEN: Delete an item with DEL key has a delay and shows no confirmation
+    * https://bugs.kde.org/show_bug.cgi?id=354100
+
+
+* OPEN: F2 key on selected item has no effect - expect rename item  / F2 on desktop items does not work
+    * https://bugs.kde.org/show_bug.cgi?id=354101
+        * duplicate of "Shortcut configuration for Folder View actions not handled by standard keys" - https://bugs.kde.org/show_bug.cgi?id=344969
+
+
+* OPEN: Show Desktop, put item in rename mode, hit ESC unshows desktop
+    * https://bugs.kde.org/show_bug.cgi?id=352988
+
+
+* OPEN: Thunderbird tray icon not visible
+    * https://bugs.kde.org/show_bug.cgi?id=354103
+
+
+* OPEN: Plasma desktop new file is created top right instead of where the mouse is
+    * Right click to create a file creates the item next to the top-right item instead of where the mouse was clicked
+    * https://bugs.kde.org/show_bug.cgi?id=354104
+
+
+* OPEN: sddm (login screen) is shown on closed laptop display instead of primary screen
+    * https://bugs.kde.org/show_bug.cgi?id=354105
+
+
+* OPEN: No Trash/Wastebin on desktop or panel by default?
+    * https://forum.kde.org/viewtopic.php?f=285&t=128894
+
+
+* OPEN: QuickLaunch wiget is missing, which makes the following scripts disappear:
+    - Lupe on/off (big icons)
+    - zypper update
+    - create KF5 documenation
+    - ???
+    - TODO..... report
+
+* OPEN: TODO: nachhaken taskbar dimming!!!
+
+* WAIT?/STRANGE: plasma font and some images (like login image) stretched...?
 
 
 
