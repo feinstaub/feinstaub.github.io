@@ -32,11 +32,14 @@ Instead of the information a question should be asked:
 
 Dolphin [wish, symlinks]: Symlink --> Show original file
 --------------------------------------------------------
-v4.11.5, 2014, not reported yet, WAIT for KF5
+v4.11.5, 2014
 
 There is currently no quick way to navigate to the original file or folder behind a symlink.
 
-see also [ Bug 336194 - "Show Original Directory" in context menu on symlinked folder on desktop does not work](https://bugs.kde.org/show_bug.cgi?id=336194)
+Reported here (2015-10-23): https://bugs.kde.org/show_bug.cgi?id=354260
+Dolphin 15.07.90: add "Show Original File" to symlink item's context menu, https://bugs.kde.org/show_bug.cgi?id=354260
+
+see also [Bug 336194 - "Show Original Directory" in context menu on symlinked folder on desktop does not work](https://bugs.kde.org/show_bug.cgi?id=336194)
 
 
 Dolphin [wish]: Drag and Drop to compress

@@ -93,6 +93,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 * OPEN/WAIT: Glitch: Show Desktop, put item in rename mode, hit ESC unshows desktop
     * https://bugs.kde.org/show_bug.cgi?id=352988
+    * see also Add "Minimize all" to the "Show Desktop" widget's context menu  - https://bugs.kde.org/show_bug.cgi?id=354257 -
 
 
 * OPEN/WAIT: Thunderbird tray icon not visible
@@ -126,7 +127,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 * OPEN: Glitch: Choose Leave -> Switch user -> "New session" -> "ok"
     -> Standby mode (happens only the first time after reboot)
-    not reported yet
+    * reported here: https://bugs.kde.org/show_bug.cgi?id=354250
 
 
 * "If the new user works, then you have to clean your plasma settings with removing the plasma* files from ~/.config
@@ -134,10 +135,11 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     --> renamed ~/.config/plasmashellrc, the other file was not present
 
 
-* OPEN/WAIT: krunner crashes at startup
+* OPEN: krunner crashes at startup
     * does not happen with new user
     * deleted ~/.config/krunnerrc -> did not help
     * see https://bugs.kde.org/show_bug.cgi?id=343982
+        * TODO action required
 
 
 * OPEN/WAIT: drkonqi can't report bugs about krunner the version is 0.1 which bugzilla claims is not active
@@ -149,7 +151,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * https://bugs.kde.org/show_bug.cgi?id=354244
 
 
-
 * OPEN/WAIT: Device Notifier does not react on inserted DVD
     * https://bugs.kde.org/show_bug.cgi?id=354245
 
@@ -159,7 +160,40 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * https://git.reviewboard.kde.org/r/124675/
 
 
-* OPEN/WAIT 5.5: QuickLaunch wiget is missing, which makes the following scripts disappear:
+* OPEN/WAIT: Checkbox readability optimization
+    * https://forum.kde.org/viewtopic.php?f=285&t=128946
+
+
+* OPEN/WAIT: Dolphin search displays "Invalid protocol" error. Ctrl+F
+    * see https://bugs.kde.org/show_bug.cgi?id=339866
+        * WAIT: "The issue's status says "resolved downstream". Could also the upstream message could be improved, for example by saying "Invalid protocol. See console output for details"?"
+
+
+* NOTE: Panel menu -> "More settings..." contains "Lock widgets" menu item reachable with left clicks.
+
+
+* OPEN/WAIT: Add "Minimize all" to the "Show Desktop" widget's context menu
+    * Left-click on the "Show Desktop" widget switches to a certain show desktop mode.
+        This is good because this way it is possible to restore all the windows as they were before the switch.
+        There are situations where one would like to minimize all windows, e.g. to have a fresh start or working with the desktop itself.
+        In this case it would be helpful if there was a "Minimize all" option in the context menu of "Show Desktop" widget.
+    * https://bugs.kde.org/show_bug.cgi?id=354257
+
+
+* OPEN/WAIT: Dolphin 15.07.90: Confirmation setting for "Deleting files or folders" is ignored
+    * https://bugs.kde.org/show_bug.cgi?id=354261
+
+
+### issues not reported yet
+
+* OPEN: QuickShare / Pastebin widget is missing
+    * not reported yet
+
+
+* OPEN: keyboard layout switcher missing because settings are not transfered from Plasma 4 to 5.4.2
+
+
+* OPEN/WAIT 5.5: QuickLaunch widget is missing, which makes the following scripts disappear:
     - Lupe on/off (big icons)
     - zypper update
     - create KF5 documenation
@@ -168,6 +202,8 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 
 * WAIT?/STRANGE: plasma font and some images (like login image) stretched...?
+
+
 
 
 
