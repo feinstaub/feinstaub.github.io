@@ -186,6 +186,10 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 ### issues not reported yet
 
+* OPEN: !!!, see https://forum.kde.org/viewtopic.php?f=285&t=128894#p344183
+    On my openSUSE 13.2, Plasma 5.4.2, an empty user gets indeed the Home and Trash desktop items put into ~/Desktop. But when I right-click the desktop to open the Settings there is "Desktop" chosen as layout and not "Folder View", so the desktop was empty. I switched to "Folder View" manually.
+    TODO: report bug and post to forum
+
 * OPEN: QuickShare / Pastebin widget is missing
     * not reported yet
 
@@ -202,8 +206,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 
 * WAIT?/STRANGE: plasma font and some images (like login image) stretched...?
-
-
 
 
 
