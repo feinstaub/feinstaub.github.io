@@ -8,10 +8,11 @@ Zurück zu **[foodstruct Rezepte](foodstruct.md)**
 -------------------------------------
 Gemüse:
 
-* **Fenchel**
-* **Kohlrabi**
-* **Paprika**
-* **Zwiebeln**
+* **Fenchel** (B ok)
+* Aubergine, Zuchini, Tomaten (B ok)
+* **Zwiebeln** (B ?)
+* (**Kohlrabi** (B Bl))
+* (**Paprika** (B Bl))
 * Knoblauch, wenn gewünscht
 
 Soße (zum Binden des ganzen Gemüses):
