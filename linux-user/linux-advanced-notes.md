@@ -204,8 +204,57 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     - ???
     - TODO..... report
 
+* OPEN/MINOR: Application menu design issues:
+    see http://wstaw.org/m/2015/10/29/shot1.png
+
 
 * WAIT?/STRANGE: plasma font and some images (like login image) stretched...?
+
+
+* OPEN: Make Tweak --> "Press and hold" on by default. This is really awesome!
+    TODO: check on empty user if it is maybe already default
+
+
+* OPEN: Make "Folder View" the default Desktop layout
+    1) ...instead of "Desktop", upstream
+    Main argument: "Desktop" is a feature subset of "Folder View", so why not present the user a more feature-rich desktop by default?
+
+    see also my topic https://forum.kde.org/viewtopic.php?f=285&t=128894 (last replies)
+    see also https://forum.kde.org/viewtopic.php?f=285&t=123394&hilit=press+%26amp%3B+hold
+
+    2) Changing a default setting is often a delicate matter, so in the following I tried to anticipate some objects and respond to them
+
+        - With "Desktop" the desktop is cleaner
+            Yes, but also less functional, e.g. the contents of the ~/Desktop folder is not shown.
+
+        - People should keep their Desktop clean
+            Maybe, but let the user decide for himself.
+
+        - Some people like the empty desktop
+            They could switch back to "Desktop" layout
+
+        - It has more features and therefore is harder to maintain
+            As long as it can be chosen by the user as option it should be as good as possible.
+
+        - Folder View is similar to the Windows 7 Desktop and therefore a bad default choice
+            Only because a concept was or is used by Windows or Mac does not make the concept bad.
+            (Plus: Moving people to free software is hard enough. As a matter of fact most people use Windows nowadays.
+            So they know some concepts. I don't see point in making these people suffer more than necessary.
+            There is enough other stuff to teach people in the free software world.
+            Also, everyone is free to change the setting back to desktop.)
+
+        - Plasma should not be Windows clone
+            Copying or mimicking a feature does not make Plasma be like Windows. Inner values count also, like being free software.
+
+        - Plasma should be unique and therefore should not copy Windows or Mac features
+            1) The desktop is a kind of infrastructure. The more familiar it is to users the better they can concentrate on their own tasks.
+            2) Copying one or the other feature of those OSes can benefit Plasma because those OS companies also employ designers with good ideas.
+
+        - Distros
+            ...can their current ideas if they want. It's only the upstream default that should be changed.
+
+        - People should learn that there are widgets they can use
+            Place a simple widget - like analog clock - on the desktop by default.
 
 
 
