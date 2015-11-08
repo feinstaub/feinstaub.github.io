@@ -16,6 +16,21 @@ Kochbücher:
 
 ---
 
+Salatsauce auf Nussmusbasis
+---------------------------
+07.11.2015, von Mo
+
+Dieses Sauce passt mit Erdnussmus zu Karottensalat. Geht auch mit Mandelmus. Passt auch zu Kidneybohnen
+
+* 1 Löffel Nussmus
+* Sojasauce
+* Balsamicoessig
+* Olivenöl (und Leinöl)
+* Pfeffer
+* (im Originaltipp stand noch: Sherry)
+
+---
+
 Schokomousse auf Cashew-Basis
 -----------------------------
 08.10.2015, Schauspielerin aus einer Fernsehshow

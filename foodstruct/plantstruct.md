@@ -120,6 +120,7 @@ HP, Odenwald, HD
 HD
 ---
 * http://heidelberg-vegan.org/
+* [Volcano Handschuhsheim](https://www.facebook.com/volkano.heidelberg/info/?tab=page_info)
 * (V)-Selbstbedienungsrestaurant **red**, HD, Mo-Fr 11:00-22:00
 * V-friendly [Malaysisches Restaurant Serai](http://www.serai.de/de/about/lage), Schillerstrasse 28-30, Weststadt, Vegan-Büffet am ersten Montag im Monat 18:00-22:00, Di-Fr: 12:00-14:00, 18:00-22:00, Sa: 18:00-23:00, So+Mo zu
 * V-Cafe: holy kitchen, ca. 11-19 Uhr
