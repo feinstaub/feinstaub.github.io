@@ -184,6 +184,18 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * https://bugs.kde.org/show_bug.cgi?id=354261
 
 
+* OPEN: Display configuration allows overlapping of screens. Intented?
+    * https://bugs.kde.org/show_bug.cgi?id=354662
+
+
+* OPEN: Bug 354663 - "Display configuration" does not remember settings
+    * https://bugs.kde.org/show_bug.cgi?id=354663
+
+
+* OPEN: Access to "Display Configuration" to context menu
+    * https://forum.kde.org/viewtopic.php?f=285&t=129088
+
+
 ### issues not reported yet
 
 * OPEN: !!!, see https://forum.kde.org/viewtopic.php?f=285&t=128894#p344183
@@ -213,6 +225,14 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 * OPEN: Make Tweak --> "Press and hold" on by default. This is really awesome!
     TODO: check on empty user if it is maybe already default
+
+    
+* OPEN: Panel, menu, Lock widget is probably most often used but hidden under "More settings..."
+
+
+* SOLVED: Sometimes switching between desktop layouts is grayed out
+    --> Widgets were locked.
+    = Unintuitive => REPORT
 
 
 * OPEN: Make "Folder View" the default Desktop layout
