@@ -52,7 +52,33 @@ Easy installation which also detects correct drivers for installed card: https:/
 System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (change from kdm to sddm)
 
 
-### Detected issues
+### Detected issues in 5.4.2
+
+* COOL: Alt+Tab shows clutterfree and fast a menu on the left side of the screen
+
+
+* FIXED with 5.4.3: sddm (login screen) is shown on closed laptop display instead of primary screen
+    * https://bugs.kde.org/show_bug.cgi?id=354105
+
+
+* FIXED: Wastebin / trash widget: Malformed URL trash:/
+    * https://bugs.kde.org/show_bug.cgi?id=354241
+    * see also https://forum.kde.org/viewtopic.php?f=22&t=100899&p=327782
+
+
+* FIXED with 5.4.3: krunner crashes at startup
+    * does not happen with new user
+    * deleted ~/.config/krunnerrc -> did not help
+    * see https://bugs.kde.org/show_bug.cgi?id=343982
+    * "If the new user works, then you have to clean your plasma settings with removing the plasma* files from ~/.config
+        or to be more precise it are the files plasmashellrc and plasmarc"
+        --> renamed ~/.config/plasmashellrc, the other file was not present
+
+
+* FIXED/WAIT: drkonqi can't report bugs about krunner the version is 0.1 which bugzilla claims is not active
+    * https://bugs.kde.org/show_bug.cgi?id=353994
+        * also: Dialog has two Help buttons
+
 
 * OPEN: How to get Plasma's version other than plasmashell --version?
     * e.g. Plasma menu > About...
@@ -64,15 +90,13 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * sudo zypper install kinfocenter5
 
 
-* COOL: Alt+Tab shows clutterfree and fast a menu on the left side of the screen
-
-
 * OPEN/WAIT: Open some windows
     -> Click Show Desktop
     -> Open Plasma Menu
     -> Choose Leave
     -> the logout bar (the one the with timeout) appears but is barely readable because the windows are now have-transparent overlapping
     * https://bugs.kde.org/show_bug.cgi?id=354102
+    * still with 5.4.3
 
 
 * OPEN: plasma there is no show desktop applet on the default panel
@@ -84,11 +108,13 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 * OPEN/WAIT: Glitch: Delete an item with DEL key has a delay and shows no confirmation
     * Response to delete by keyboard shortcut very slow: https://bugs.kde.org/show_bug.cgi?id=354100
     * TODO: report "In dolphin this behaviour is configurable in the Confirmations tab of the General category of the Preferences dialog. (On a side note, with dolphin 15.07.90, this seems to be broken: I got no confirmation regardless of the setting)" as separate issue
+    * still with 5.4.3
 
 
 * OPEN/WAIT: F2 key on selected item has no effect - expect rename item  / F2 on desktop items does not work
     * my duplicate: https://bugs.kde.org/show_bug.cgi?id=354101
     * https://bugs.kde.org/show_bug.cgi?id=344969 - "Shortcut configuration for Folder View actions not handled by standard keys" -
+    * still with 5.4.3
 
 
 * OPEN/WAIT: Glitch: Show Desktop, put item in rename mode, hit ESC unshows desktop
@@ -98,6 +124,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 * OPEN/WAIT: Thunderbird tray icon not visible
     * https://bugs.kde.org/show_bug.cgi?id=354103
+    * still with 5.4.3
 
 
 * OPEN/WAIT: Plasma desktop new file is created top right instead of where the mouse is
@@ -105,19 +132,10 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * https://bugs.kde.org/show_bug.cgi?id=354104
 
 
-* OPEN/WAIT: sddm (login screen) is shown on closed laptop display instead of primary screen
-    * https://bugs.kde.org/show_bug.cgi?id=354105
-
-
 * OPEN/WAIT: No Trash/Wastebin on desktop or panel by default?
     * https://forum.kde.org/viewtopic.php?f=285&t=128894
     * see also https://forum.kde.org/viewtopic.php?f=285&t=127490
     * wait for more user feedback
-
-
-* FIXED: Wastebin / trash widget: Malformed URL trash:/
-    * https://bugs.kde.org/show_bug.cgi?id=354241
-    * see also https://forum.kde.org/viewtopic.php?f=22&t=100899&p=327782
 
 
 * OPEN: Alt+F1 does not work anymore for "Application Launcher"
@@ -130,23 +148,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * reported here: https://bugs.kde.org/show_bug.cgi?id=354250
 
 
-* "If the new user works, then you have to clean your plasma settings with removing the plasma* files from ~/.config
-    or to be more precise it are the files plasmashellrc and plasmarc"
-    --> renamed ~/.config/plasmashellrc, the other file was not present
-
-
-* OPEN: krunner crashes at startup
-    * does not happen with new user
-    * deleted ~/.config/krunnerrc -> did not help
-    * see https://bugs.kde.org/show_bug.cgi?id=343982
-        * TODO action required
-
-
-* OPEN/WAIT: drkonqi can't report bugs about krunner the version is 0.1 which bugzilla claims is not active
-    * https://bugs.kde.org/show_bug.cgi?id=353994
-        * also: Dialog has two Help buttons
-
-
 * OPEN/WAIT: Leave logout shows buttons (Cancel, Shutdown) in unexpected order
     * https://bugs.kde.org/show_bug.cgi?id=354244
 
@@ -155,7 +156,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * https://bugs.kde.org/show_bug.cgi?id=354245
 
 
-* OPEN/WAIT: disable taskbar dimming for minimized apps by default
+* TODO: disable taskbar dimming for minimized apps by default
     * https://bugs.kde.org/show_bug.cgi?id=311991
     * https://git.reviewboard.kde.org/r/124675/
 
@@ -167,6 +168,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 * OPEN/WAIT: Dolphin search displays "Invalid protocol" error. Ctrl+F
     * see https://bugs.kde.org/show_bug.cgi?id=339866
         * WAIT: "The issue's status says "resolved downstream". Could also the upstream message could be improved, for example by saying "Invalid protocol. See console output for details"?"
+    * still with 5.4.3
 
 
 * NOTE: Panel menu -> "More settings..." contains "Lock widgets" menu item reachable with left clicks.
@@ -184,7 +186,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * https://bugs.kde.org/show_bug.cgi?id=354261
 
 
-* OPEN: Display configuration allows overlapping of screens. Intented?
+* OPEN: Display configuration allows overlapping of screens. Intended?
     * https://bugs.kde.org/show_bug.cgi?id=354662
 
 
@@ -194,6 +196,11 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 * OPEN: Access to "Display Configuration" to context menu
     * https://forum.kde.org/viewtopic.php?f=285&t=129088
+
+* OPEN: Dropping a file to Trash or Home icon results in the following error message: Access denied to .
+    * already reported to https://bugs.kde.org/show_bug.cgi?id=348378 which
+      is fixed but still not works
+    * still with 5.4.3
 
 
 ### issues not reported yet
@@ -226,13 +233,22 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 * OPEN: Make Tweak --> "Press and hold" on by default. This is really awesome!
     TODO: check on empty user if it is maybe already default
 
-    
+
 * OPEN: Panel, menu, Lock widget is probably most often used but hidden under "More settings..."
+    * "Lock widgets with left mouse button"
 
 
-* SOLVED: Sometimes switching between desktop layouts is grayed out
+* SOLVED/TODO: Sometimes switching between desktop layouts is grayed out
     --> Widgets were locked.
     = Unintuitive => REPORT
+
+
+* NOT REP: drag application from menu to folderview makes plasma crash
+    * happend only once
+
+
+* NOT REP: sddm: Reboot or Shutdown does not work and count down goes to negative values
+    * ...
 
 
 * OPEN: Make "Folder View" the default Desktop layout
@@ -275,6 +291,23 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
         - People should learn that there are widgets they can use
             Place a simple widget - like analog clock - on the desktop by default.
+
+
+### Detected issues in 5.4.3
+
+`sudo zypper update --details`
+
+`sudo zypper update`
+
+=> Leaves Plasma5 broken because 5.4.2 is installed from system packages.
+
+`zypper ls -u` Lists all repos and their URL
+
+`sudo zypper dup --from KDE_Frameworks5` Performs a dist upgrade from the given repo (== "switch system packages")
+
+Did not work at once because repo was broken, see https://build.opensuse.org/package/show/KDE:Frameworks5/plasma5-openSUSE_13.2 and wait for the trucks.
+
+
 
 
 
