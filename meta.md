@@ -3,9 +3,6 @@ Meta
 
 The **codestruct** is currently hosted at feinstaub.github.io
 
-* Featured link of 2015-06-19: [The Encyclical](https://www.youtube.com/watch?v=76BtP1GInlc)
-
-
 ### Based on mdwiki
 
 http://dynalon.github.io/mdwiki

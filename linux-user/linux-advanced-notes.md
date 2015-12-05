@@ -99,12 +99,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * still with 5.4.3
 
 
-* OPEN: plasma there is no show desktop applet on the default panel
-    * reported here: https://forum.kde.org/viewtopic.php?f=285&t=128872, 2015-10-19
-    * and here: https://bugs.kde.org/show_bug.cgi?id=354240, 2015-10-23
-    * TODO: "there is no default shortcut for show desktop"
-
-
 * OPEN/WAIT: Glitch: Delete an item with DEL key has a delay and shows no confirmation
     * Response to delete by keyboard shortcut very slow: https://bugs.kde.org/show_bug.cgi?id=354100
     * TODO: report "In dolphin this behaviour is configurable in the Confirmations tab of the General category of the Preferences dialog. (On a side note, with dolphin 15.07.90, this seems to be broken: I got no confirmation regardless of the setting)" as separate issue
@@ -197,13 +191,18 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 * OPEN: Access to "Display Configuration" to context menu
     * https://forum.kde.org/viewtopic.php?f=285&t=129088
 
+
 * OPEN: Dropping a file to Trash or Home icon results in the following error message: Access denied to .
     * already reported to https://bugs.kde.org/show_bug.cgi?id=348378 which
       is fixed but still not works
     * still with 5.4.3
 
 
-### issues not reported yet
+### issues not reported yet (5.4.2)
+
+* OPEN/TODO: Network manager fails after coming back from new session
+    * Solution: goto yast and switch to wicked and back to Network manager
+
 
 * OPEN: !!!, see https://forum.kde.org/viewtopic.php?f=285&t=128894#p344183
     On my openSUSE 13.2, Plasma 5.4.2, an empty user gets indeed the Home and Trash desktop items put into ~/Desktop. But when I right-click the desktop to open the Settings there is "Desktop" chosen as layout and not "Folder View", so the desktop was empty. I switched to "Folder View" manually.
@@ -213,7 +212,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * not reported yet
 
 
-* OPEN: keyboard layout switcher missing because settings are not transfered from Plasma 4 to 5.4.2
+* OPEN: keyboard layout switcher missing because settings are not transferred from Plasma 4 to 5.4.2
 
 
 * OPEN/WAIT 5.5: QuickLaunch widget is missing, which makes the following scripts disappear:
@@ -222,9 +221,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     - create KF5 documenation
     - ???
     - TODO..... report
-
-* OPEN/MINOR: Application menu design issues:
-    see http://wstaw.org/m/2015/10/29/shot1.png
 
 
 * WAIT?/STRANGE: plasma font and some images (like login image) stretched...?
@@ -293,6 +289,9 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
             Place a simple widget - like analog clock - on the desktop by default.
 
 
+* ? / KF5 File Dialog -- accept DND event like drop a file for moving or linking or copying
+
+
 ### Detected issues in 5.4.3
 
 `sudo zypper update --details`
@@ -308,7 +307,15 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 Did not work at once because repo was broken, see https://build.opensuse.org/package/show/KDE:Frameworks5/plasma5-openSUSE_13.2 and wait for the trucks.
 
 
+* WAIT/MINOR: Application menu design issues:
+    see http://wstaw.org/m/2015/10/29/shot1.png
+    see https://bugs.kde.org/show_bug.cgi?id=355680 - Favorite icons could be mixed up as item icons
 
+
+### issues not reported yet (5.4.3)
+
+NOT REP: Markdown icon is a bit confusing when in a tree view (e.g. kate), because of down arrow
+    * suggestion: use "MD" or "md" because this often also is the file extension for such files
 
 
 ReplayGain
