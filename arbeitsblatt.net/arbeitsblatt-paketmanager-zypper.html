@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Software mit der Kommandozeile installieren</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Software mit der Kommandozeile installieren</h1>
+<div id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_ein_paket_installieren">Ein Paket installieren</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Ziel: Das Programm <em>cowsay</em> mit Hilfe von <em>zypper</em> installieren.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Das Programme "Konsole" öffnen (z. B. via K-Menü oder Alt+F2, siehe auch <a href="arbeitsblatt-bash-basics.html">Arbeitsblatt Kommandozeile</a>).
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">cowsay Muh</span> eingeben und ENTER drücken.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Befehl nicht gefunden.
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">cnf cowsay</span> eingeben.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Die Ausgabe sagt, was zu tun ist, um das (noch) nicht vorhandene Programm zu installieren.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<span class="monospaced">sudo zypper install cowsay</span> eingeben.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Nach Rückfragen wird cowsay installiert.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<span class="monospaced">cowsay Muh</span> eingeben.
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> _____
+&lt; Muh &gt;
+ -----
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||</tt></pre></div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="monospaced">cowsay Hallo &lt;Name deines Sitznachbars&gt;</span> eingeben.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_befehlsübersicht_zypper">Befehlsübersicht zypper</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all"
+style="
+width:100%;
+">
+<col style="width:50%;">
+<col style="width:50%;">
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" > Befehl             </th>
+<th class="tableblock halign-left valign-top" > Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">sudo &lt;befehl&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><strong>s</strong>ubstitute <strong>u</strong>ser <strong>do</strong> - wird meistens dazu verwendet, um einen Befehl mit dem <a href="arbeitsblatt-root-konto.html">Superuser <em>root</em></a> auszuführen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper install &lt;paket_name&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Paket installieren. Es können auch mehrere Pakete mit Leerzeichen getrennt angegeben werden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper remove &lt;paket_name&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Paket deinstallieren</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper search &lt;text&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Paket suchen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper se &lt;text&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Kurzform für zypper search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper info &lt;paket_name&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Informationen (Version, Beschreibung) über ein Paket anzeigen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">cnf</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><strong>c</strong>ommand <strong>n</strong>ot <strong>f</strong>ound handler - siehe auch <span class="monospaced">man cnf</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tipp">
+</td>
+<td class="content">Konsolenausgaben genau durchlesen und versuchen zu verstehen.</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vertiefung">Vertiefung</h2>
+<div class="sectionbody">
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Anmerkung">
+</td>
+<td class="content">&#8230;im Aufbau&#8230;</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>TODO: Paketquellen, aus welchem Repo kommt ein bestimmtes Paket etc.</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2015-12-12 21:44:18 CET
+</div>
+</div>
+</body>
+</html>

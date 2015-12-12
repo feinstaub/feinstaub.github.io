@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Fortune auf Deutsch</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Fortune auf Deutsch</h1>
+<div id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Fortune kann nicht nur englische Sprüche anzeigen. Es gibt auch andere Sprachen. Bei openSUSE sind die anderen Sprachen (darunter Deutsch) leider nicht paketiert. Da wir mit freier Software arbeiten, kann man sich zum Glück anderweitig behelfen.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aufgabe">Aufgabe</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Erzeuge ein temporäres Arbeitsverzeichnis für die folgenden Aktionen:
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><span class="monospaced">mkdir ~/tmp/fortune</span></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Debian ist die GNU/Linux-Distribution mit den meisten Paketen. Dort gibt es für Fortune die deutschen Sprachdateien.
+</p>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Die Seite <a href="https://packages.debian.org/de/jessie/fortunes-de">https://packages.debian.org/de/jessie/fortunes-de</a> besuchen.
+</p>
+</li>
+<li>
+<p>
+Ganz rechts in der Liste die Datei <em>fortunes-de_0.31.orig.tar.gz</em> runterladen.
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Die tar.gz-Datei Mit einem Archivprogramm öffnen (z. B. "ark" durch Klick auf die Datei)
+</p>
+</li>
+<li>
+<p>
+Den Ordner "data" aus der .tar.gz-Datei ins Verzeichnis aus dem ersten Schritt entpacken.
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">cd ~/tmp/fortunes</span> - ins Verzeichnis wechseln.
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">ls data</span> - sollte nun einige Dateien auflisten.
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">cd data</span> - ins Verzeichnis wechseln.
+</p>
+</li>
+<li>
+<p>
+Schaue dir die Datei <em>sprichworte</em> mit einem Texteditor an.
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">strfile sprichworte</span> - erzeugt aus der Textdatei eine Binärdatei, die von cowsay gelesen werden kann: sprichworte.dat
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">cd ..</span> - ins übergeordnete Verzeichnis wechseln.
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">fortune data</span> - Fortune mit den deutschen Sprüchen aufrufen.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_quelle">Quelle</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://forums.opensuse.org/showthread.php/486875-Fortune-program-in-other-languages">https://forums.opensuse.org/showthread.php/486875-Fortune-program-in-other-languages</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2015-12-12 22:34:33 CET
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>GNU/Linux-Image in VirtualBox einbinden</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>GNU/Linux-Image in VirtualBox einbinden</h1>
+<div id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p><em>Ziel</em>: Das Betriebssystem "openSUSE 42.1 64 Bit" soll auf einem Computer laufen, auf dem Windows installiert ist.</p></div>
+<div class="paragraph"><p>Dazu wird die <a href="https://de.wikipedia.org/wiki/Hypervisor">Virtualisierungssoftware</a> <a href="https://de.wikipedia.org/wiki/VirtualBox">Oracle VirtualBox</a> verwendet.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_voraussetzungen">Voraussetzungen</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Oracle <strong>VirtualBox ist installiert</strong>; falls nicht:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Auf der <a href="https://www.virtualbox.org/wiki/Downloads">Downloadseite</a> von virtualbox.org das Setup für "VirtualBox 5.0.10 for Windows hosts" herunterladen und installieren.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<strong>GNU/Linux-Image vorhanden</strong>; falls nicht:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.osboxes.org/opensuse/">http://www.osboxes.org/opensuse/</a> besuchen.
+</p>
+</li>
+<li>
+<p>
+"VirtualBox (VDI) 64bit Size: 1.3GB" herunterladen.
+</p>
+</li>
+<li>
+<p>
+Auf einem externen Datenträger (Festplatte, USB-Stick) entpacken &#8594; Es wird ca. 5 GB verbraucht.
+</p>
+</li>
+<li>
+<p>
+Alternative zum Stick: lokal auf <span class="monospaced">C:\linux</span> installieren.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_einbinden_und_starten">Einbinden und starten</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Diese Schritte müssen jedesmal ausgeführt werden, wenn das Benutzerprofil des Gastgeber-Rechners gelöscht wurde.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Oracle <strong>VirtualBox</strong> starten.
+</p>
+</li>
+<li>
+<p>
+<strong>"New"</strong>
+</p>
+</li>
+<li>
+<p>
+<strong>Type</strong> (oder Gruppe) "Linux" auswählen.
+</p>
+</li>
+<li>
+<p>
+<strong>Version</strong> "openSUSE (64 Bit)" auswählen.
+</p>
+</li>
+<li>
+<p>
+Als Name z. B. "linux" eingeben
+</p>
+</li>
+<li>
+<p>
+"Next"
+</p>
+</li>
+<li>
+<p>
+<strong>2048 GB</strong> Arbeitsspeicher auswählen
+</p>
+</li>
+<li>
+<p>
+"Use an existing virtual hard drive file" anklicken.
+</p>
+</li>
+<li>
+<p>
+Ordnersymbol ganz rechts unten anklicken.
+</p>
+</li>
+<li>
+<p>
+<strong>Eigenes GNU/Linux-Image auswählen</strong> (.vdi-Datei; das Entpackte vom USB-Stick)
+</p>
+</li>
+<li>
+<p>
+"Create"
+</p>
+</li>
+<li>
+<p>
+"Start"
+</p>
+</li>
+<li>
+<p>
+openSUSE sollte nun hochfahren. Das virtuelle Computer-Fenster kann nun in den Vollbildmodus geschaltet werden.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hintergrund">Hintergrund</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_gnu_linux_distributionen">GNU/Linux-Distributionen</h3>
+<div class="paragraph"><p>openSUSE Linux ist eine von vielen <strong>GNU/Linux-Distributionen</strong>. Lese mehr darüber unter <a href="https://de.wikipedia.org/wiki/Linux-Distribution">https://de.wikipedia.org/wiki/Linux-Distribution</a></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Aufgabe 1: Wie heißen die GNU/Linux-Distributionen, die gerne im deutschsprachigen Raum verwendet werden?
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_hypervisor">Hypervisor</h3>
+<div class="paragraph"><p>Im allgemeinen Sprachgebrauch wird Oracle VirtualBox [<a href="https://de.wikipedia.org/wiki/Virtuelle_Maschine]"Virtuelle">https://de.wikipedia.org/wiki/Virtuelle_Maschine]"Virtuelle</a> Maschine" genannt. Der korrekt Fachbegriff ist <a href="https://de.wikipedia.org/wiki/Hypervisor">Hypervisor</a>.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_2048_gb">2048 GB</h3>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Anmerkung">
+</td>
+<td class="content">&#8230;im Aufbau&#8230;</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Warum ist 2048 GB eine "runde Zahl"? &#8594; TODO (was ist ein Byte? Wieviel Byte sind 2048 GB?)</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problembehebung">Problembehebung</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kein_platz_auf_dem_usb_stick">Kein Platz auf dem USB-Stick</h3>
+<div class="paragraph"><p><em>Problem</em>:</p></div>
+<div class="paragraph"><p>Beim Kopieren oder Entpacken des GNU/Linux-Images auf den USB-Stick erscheint die Fehlermeldung, es sei nicht genug Speicher frei, obwohl der Stick groß genug ist.</p></div>
+<div class="paragraph"><p><em>Mögliche Ursache</em>:</p></div>
+<div class="paragraph"><p>Der Stick ist mit dem <a href="https://de.wikipedia.org/wiki/Dateisystem">Dateisystem</a>  <a href="https://de.wikipedia.org/wiki/File_Allocation_Table#FAT32FAT32">https://de.wikipedia.org/wiki/File_Allocation_Table#FAT32FAT32</a> formatiert. Das heißt eine Datei kann nicht größer als 4 GB sein.</p></div>
+<div class="paragraph"><p><em>Lösung</em>:</p></div>
+<div class="paragraph"><p>Rechte Maustaste &#8594; Formatieren &#8594; <a href="https://de.wikipedia.org/wiki/NTFS">NTFS</a> auswählen.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/warning.png" alt="Warnung">
+</td>
+<td class="content">Beim Formatieren werde alle Dateien vom Stick gelöscht. Also vorher ggf. sichern.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_32_statt_64_bit">32 statt 64 Bit</h3>
+<div class="paragraph"><p>openSUSE 42.1 wird nur als 64-Bit-Betriebssystem angeboten.</p></div>
+<div class="paragraph"><p>Ältere Rechner sind aber noch 32 Bit. Wenn dort openSUSE installiert werden soll, dann muss auf die Vorgänger-Version <strong>openSUSE 13.2</strong> zurückgegriffen werden, die es ebenfalls hier gibt: <a href="http://www.osboxes.org/opensuse/">http://www.osboxes.org/opensuse/</a></p></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2015-12-12 21:44:39 CET
+</div>
+</div>
+</body>
+</html>

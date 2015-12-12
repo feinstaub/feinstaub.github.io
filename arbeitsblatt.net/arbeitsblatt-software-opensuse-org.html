@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>software.opensuse.org</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>software.opensuse.org</h1>
+<div id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Auf der Seite <a href="https://software.opensuse.org">https://software.opensuse.org</a> sind alle Pakete zu finden, die automatisch aus ihrem Quellcode <a href="https://build.opensuse.org/">gebaut</a> werden und für openSUSE zur Verfügung stehen.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aufgabe_1_ein_paket_finden_und_installieren">Aufgabe 1: Ein Paket finden und installieren</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Ziel: Das Programm MuseScore installieren.</p></div>
+<div class="paragraph"><p>MuseScore ist ein Programm, mit dem man graphisch ein Notenblatt erstellen kann (engl. <em>score</em> = Note). Die erstellte Partitur kann auch gleich abgespielt werden.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Versuche das Paket "musescore" mittels YaST oder zypper zu installieren.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+z. B. <span class="monospaced">zypper se musescore</span> (siehe <a href="arbeitsblatt-paketmanager-zypper.html">Arbeitsblatt zypper</a>)
+</p>
+</li>
+<li>
+<p>
+Feststellung: das Paket wird nicht gefunden
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Gehe auf <a href="https://software.opensuse.org">https://software.opensuse.org</a>.
+</p>
+</li>
+<li>
+<p>
+Gebe "musescore" ins Suchfeld ein und drücke den Suchen-Knopf.
+</p>
+</li>
+<li>
+<p>
+Es erscheint eine Ergebnisseite.
+</p>
+</li>
+<li>
+<p>
+Klicke dort auf den Treffer "musescore"
+</p>
+</li>
+<li>
+<p>
+Wähle deine Distribution aus (z. B. openSUSE Leap 42.1)
+</p>
+</li>
+<li>
+<p>
+Klicke auf "Show unstable packages".
+</p>
+</li>
+<li>
+<p>
+Suche die Zeile, die mit "Education" (Name des Build-Projects) beginnt.
+</p>
+</li>
+<li>
+<p>
+Klicke ganz rechts auf "1 Click Install".
+</p>
+</li>
+<li>
+<p>
+Folge dem Assistenten.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Bei einem der Schritte wird man gefragt, ob man der neuen Paketquelle trauen möchte. Im Internet gibt es verschiedene Stufen des Vertrauens. Auf der sicheren Seite ist man, wenn man Unbekanntem gar nicht vertraut. In diesem Fall vertrauen wir der neuen Quelle.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Starte <em>MuseScore</em> (z. B. mit Alt+F2. Hinweis: auf der Kommandozeile lautet der Befehl nicht <span class="line-through"><span class="monospaced">musescore</span></span>, sondern <span class="monospaced">mscore</span>)
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Mehr zu MuseScore: <a href="arbeitsblatt-musescore.html">Arbeitsblatt MuseScore</a>.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hintergrund">Hintergrund</h2>
+<div class="sectionbody">
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Anmerkung">
+</td>
+<td class="content">&#8230;im Aufbau&#8230;</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>TODO: Was genau steckt hinter den einzelnen Schritten aus Aufgabe 1.</p></div>
+<div class="paragraph"><p><a href="https://build.opensuse.org/project/show/Education">https://build.opensuse.org/project/show/Education</a></p></div>
+<div class="paragraph"><p><a href="https://build.opensuse.org/package/show?project=Education&amp;package=MuseScore">https://build.opensuse.org/package/show?project=Education&amp;package=MuseScore</a></p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/caution.png" alt="Achtung">
+</td>
+<td class="content">Wie bei allen Dingen, die man sich aus dem Internet lädt, ist Vorsicht geboten. Insbesondere bei "unstable" Pakten, wenn der Name des Build-Projects mit "home:" beginnt, sollte man aufpassen.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Anmerkung">
+</td>
+<td class="content">Der Vorteil aller Pakete, die man sich bei software.opensuse.org herunterladen kann (im Gegensatz zu Binärpaketen ohne Quellcode), ist, dass man sich im Zweifel den Quellcode anschauen kann.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>TODO: Repositories</p></div>
+<div class="paragraph"><p>Hinweis: Alle Programme auf software.opensuse.org - außer die als "non-OSS" gekennzeichnet sind - sind <a href="https://de.wikipedia.org/wiki/Freie_Software">Freie Software</a>. Das heißt sie können zu jedem Zweck verwendet werden, ohne dass Lizenzgebühren anfallen.</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2015-12-12 21:45:32 CET
+</div>
+</div>
+</body>
+</html>
