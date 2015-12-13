@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# http://stackoverflow.com/questions/3737740/is-there-a-better-way-to-run-a-command-n-times-in-bash
-for run in {1..15}
-do
-  xte "keydown Super_L" "key F12" "keyup Super_L"
-done

@@ -1,5 +1,0 @@
-
-[./disable_screensaver](web-gen/disable_screensaver.txt)
-[./disable-scr-impl](web-gen/disable-scr-impl.txt)
-[./home-lupe-off](web-gen/home-lupe-off.txt)
-[./home-lupe-on](web-gen/home-lupe-on.txt)
