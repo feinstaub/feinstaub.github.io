@@ -99,7 +99,7 @@ http://www.gnu.org/software/src-highlite -->
 </div>
 </div>
 <div class="sect1">
-<h2 id="_befehlsübersicht_zypper">Befehlsübersicht zypper</h2>
+<h2 id="_befehlsübersicht">Befehlsübersicht</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all"
 style="
@@ -115,12 +115,45 @@ width:100%;
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">cnf</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><strong>c</strong>ommand <strong>n</strong>ot <strong>f</strong>ound handler - siehe auch <span class="monospaced">man cnf</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">sudo &lt;befehl&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><strong>s</strong>ubstitute <strong>u</strong>ser <strong>do</strong> - wird meistens dazu verwendet, um einen Befehl mit dem <a href="arbeitsblatt-root-konto.html">Superuser <em>root</em></a> auszuführen</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_zypper">zypper</h3>
+<table class="tableblock frame-all grid-all"
+style="
+width:100%;
+">
+<col style="width:50%;">
+<col style="width:50%;">
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" > Befehl             </th>
+<th class="tableblock halign-left valign-top" > Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">cnf</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><strong>c</strong>ommand <strong>n</strong>ot <strong>f</strong>ound handler - siehe auch <span class="monospaced">man cnf</span></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">sudo &lt;befehl&gt;</span></p></td>
 <td class="tableblock halign-left valign-top" ><p class="tableblock"><strong>s</strong>ubstitute <strong>u</strong>ser <strong>do</strong> - wird meistens dazu verwendet, um einen Befehl mit dem <a href="arbeitsblatt-root-konto.html">Superuser <em>root</em></a> auszuführen</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper install &lt;paket_name&gt;</span></p></td>
 <td class="tableblock halign-left valign-top" ><p class="tableblock">Paket installieren. Es können auch mehrere Pakete mit Leerzeichen getrennt angegeben werden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper in &lt;paket_name&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Kurzform für zypper install</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper remove &lt;paket_name&gt;</span></p></td>
@@ -139,8 +172,8 @@ width:100%;
 <td class="tableblock halign-left valign-top" ><p class="tableblock">Informationen (Version, Beschreibung) über ein Paket anzeigen</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">cnf</span></p></td>
-<td class="tableblock halign-left valign-top" ><p class="tableblock"><strong>c</strong>ommand <strong>n</strong>ot <strong>f</strong>ound handler - siehe auch <span class="monospaced">man cnf</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">rpm -ql &lt;paket_name&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Listet alle Dateien auf, die durch dieses Paket installiert wurden.</p></td>
 </tr>
 </tbody>
 </table>
@@ -151,6 +184,49 @@ width:100%;
 </td>
 <td class="content">Konsolenausgaben genau durchlesen und versuchen zu verstehen.</td>
 </tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zypper_2">zypper (2)</h3>
+<table class="tableblock frame-all grid-all"
+style="
+width:100%;
+">
+<col style="width:50%;">
+<col style="width:50%;">
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" > Befehl             </th>
+<th class="tableblock halign-left valign-top" > Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper lp</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Zeigt verfuegbare Patches an.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper lu</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Zeigt verfuegbare Updates an.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper lr -u</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Software-Repositories inklusive der URL anzeigen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper removerepo &lt;nummer&gt;</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Repository mit Nummer aus <span class="monospaced">zypper lr -u</span> loeschen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper dup --from KDE_Frameworks5 --details</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Konsistentes Update von einem bestimmten Repository.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" ><p class="tableblock"><span class="monospaced">zypper update --details</span></p></td>
+<td class="tableblock halign-left valign-top" ><p class="tableblock">Alle Pakete aktualisieren. Vorher Details ansehen. Vorsicht.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -172,7 +248,7 @@ width:100%;
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2015-12-12 21:44:18 CET
+Letzte Änderung 2015-12-13 19:38:34 CET
 </div>
 </div>
 </body>
