@@ -30,17 +30,22 @@ asciidoc.install(2);
 <div class="ulist"><ul>
 <li>
 <p>
-Gebe <span class="monospaced">python --version</span> ein. Wenn die Ausgabe nicht mit 3 beginnt, dann fuege folgende Zeile in deine ~/.bashrc ein <span class="monospaced">alias python=python3</span>
+<span class="monospaced">python3</span> installieren, falls nicht schon vorhanden.
 </p>
 </li>
 <li>
 <p>
-Doku installieren: <span class="monospaced">sudo zypper install python3-doc</span> (bei Bedarf auch python3-doc-pdf)
+Gebe <span class="monospaced">python --version</span> ein. Wenn die Ausgabe nicht mit 3 beginnt, dann füge folgende Zeile in deine ~/.bashrc ein <span class="monospaced">alias python=python3</span>
+</p>
+</li>
+<li>
+<p>
+Offline-Doku installieren: <span class="monospaced">sudo zypper install python3-doc</span> (bei Bedarf auch python3-doc-pdf)
 </p>
 <div class="ulist"><ul>
 <li>
 <p>
-Die Doku ist dann hier lokal verfuegbar: <a href="file:///usr/share/doc/packages/python3/html/index.html">file:///usr/share/doc/packages/python3/html/index.html</a>
+Die Doku ist dann hier lokal verfügbar: <a href="file:///usr/share/doc/packages/python3/html/index.html">file:///usr/share/doc/packages/python3/html/index.html</a>
 </p>
 </li>
 <li>
@@ -50,55 +55,211 @@ Ansonsten ist die Doku auch online zu finden: <a href="https://docs.python.org/3
 </li>
 </ul></div>
 </li>
+<li>
+<p>
+<span class="monospaced">kate</span>-Texteditor installieren und verschiedene Plugins aktivieren, unter anderem das Terminal-Plugin.
+</p>
+</li>
 </ul></div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_referenz">Referenz</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_sprachelemente">Sprachelemente</h3>
 <div class="ulist"><ul>
 <li>
 <p>
-String
-</p>
-<div class="ulist"><ul>
-<li>
-<p>
-<a href="file:///usr/share/doc/packages/python3/html/library/stdtypes.html#typesseq-common">Common Sequence Operation</a>
-</p>
-</li>
-<li>
-<p>
-<a href="file:///usr/share/doc/packages/python3/html/library/stdtypes.html#string-methods">String Methods</a>
-</p>
-</li>
-<li>
-<p>
-<a href="file:///usr/share/doc/packages/python3/html/library/stdtypes.html#str.format">str.format</a>
+Grundlegende Befehle und Operatoren
 </p>
 <div class="ulist"><ul>
 <li>
 <p>
-<a href="file:///usr/share/doc/packages/python3/html/library/string.html#formatstrings">Format String Syntax</a>
+<a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">Reservierte Schlüsselwörter</a>
 </p>
 </li>
 <li>
 <p>
-<a href="file:///usr/share/doc/packages/python3/html/library/string.html#format-examples">Beispiele</a>
+<a href="https://docs.python.org/3/library/functions.html#built-in-functions">Eingebaute Funktionen</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#truth-value-testing">if und while: Wahrheitswerttests</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not">Boolsche Operationen: and, or, not</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#comparisons">Vergleichsoperatoren</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#bitwise-operations-on-integer-types">Bitweise Operatoren</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Befehle fuer Sequenz-Typen (Listen etc.)
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range">list, tuple, range</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types">Veraenderliche Sequenzen</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#lists">Listen: list</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#tuples">Tupel: tuple</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#ranges">Ranges: range</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset">Mengen: set</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict">Mapping-Typen: dict</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#binary-sequence-types-bytes-bytearray-memoryview">Binaere Sequenztypen</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Introspektion
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/functions.html#dir">dir, __dict__</a>
 </p>
 </li>
 </ul></div>
 </li>
 </ul></div>
+</div>
+<div class="sect2">
+<h3 id="_string">String</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#typesseq-common">Allgemeine Sequenz-Operationen</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#string-methods">String Methods</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#str.format">str.format</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/string.html#formatstrings">Format String Syntax</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/string.html#format-examples">Beispiele</a>
+</p>
 </li>
 </ul></div>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/stdtypes.html#textseq">Der String-Typ</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/string.html?highlight=string#module-string">String-Konstanten im Modul <span class="monospaced">string</span></a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/re.html">Regulaere Ausdruecke</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_ein_und_ausgabe_auf_der_konsole">Ein- und Ausgabe auf der Konsole</h3>
+<div class="paragraph"><p>TODO</p></div>
+</div>
+<div class="sect2">
+<h3 id="_mathematik">Mathematik</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/random.html#module-random">Zufallszahlen</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_dateien_und_verzeichnisse">Dateien und Verzeichnisse</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/filesys.html">Uebersicht</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_verschiedenes">Verschiedenes</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/turtle.html">turtle</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/cmd.html">cmd, mit turtle-Beispiel</a>
+</p>
+</li>
+</ul></div>
+</div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2015-12-13 19:25:52 CET
+Letzte Änderung 2015-12-15 12:44:53 CET
 </div>
 </div>
 </body>
