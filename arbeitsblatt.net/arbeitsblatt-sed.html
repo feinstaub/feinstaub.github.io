@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Reguläre Ausdrücke mit sed</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Reguläre Ausdrücke mit sed</h1>
+<div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_aufgabe_1_sed">Aufgabe 1: sed</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><span class="monospaced">sed</span> steht für <strong>s</strong>tream <strong>ed</strong>itor und ist ein Unix-Werkzeug, mit dem Text-Datenströme bearbeitet werden können. [1]</p></div>
+<div class="paragraph"><p>Gib die Befehle, die nach dem $-Zeichen stehen auf der Kommandozeile ein und beantworte die Fragen.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Anmerkung">
+</td>
+<td class="content">Achte genau auf Groß- und Kleinschreibung bei Befehlen und Eingaben.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Beispiel:</p></div>
+<div class="paragraph"><p>$ <span class="monospaced">echo Hallo</span></p></div>
+<div class="paragraph"><p>Ausgabe: <span class="monospaced">Hallo</span></p></div>
+<div class="sect2">
+<h3 id="_schritt_1_s">Schritt 1 (s)</h3>
+<div class="paragraph"><p>$ <span class="monospaced">sed 's/ast/blatt'</span></p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Gebe <span class="monospaced">ast</span> ein, drücke ENTER und beobachte die Ausgabe.
+</p>
+</li>
+<li>
+<p>
+Gebe <span class="monospaced">gast</span> ein, drücke ENTER und beobachte die Ausgabe.
+</p>
+</li>
+<li>
+<p>
+Gebe <span class="monospaced">ast1 ast2</span> ein, drücke ENTER und beobachte die Ausgabe.
+</p>
+</li>
+<li>
+<p>
+Gebe <span class="monospaced">Ast</span> ein, drücke ENTER und beobachte die Ausgabe.
+</p>
+</li>
+<li>
+<p>
+Drücke Strg+D, um die Eingabe zu beenden.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p><em>Frage</em>: Was macht der Befehl?</p></div>
+<div class="paragraph"><p>Hinweis: <span class="white">Das s steht für substitute = ersetzen</span></p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_2_g">Schritt 2 (g)</h3>
+<div class="paragraph"><p>$ <span class="monospaced">sed 's/ast/Blatt/g'</span></p></div>
+<div class="paragraph"><p>Gebe jeweils folgendes ein, drücke dann ENTER und beobachte die Ausgabe:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+<span class="monospaced">ast</span>
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">Ast</span>
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">ast1 ast2</span>
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">ast1 ast2 ast3</span>
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p><em>Frage</em>: Was macht der Befehl im Vergleich zu Schritt 1?</p></div>
+<div class="paragraph"><p>Hinweis: <span class="white">Das g steht für global, also alles</span></p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_3_i">Schritt 3 (I)</h3>
+<div class="paragraph"><p>$ <span class="monospaced">sed 's/ast/Blatt/I'</span></p></div>
+<div class="paragraph"><p>Gebe jeweils folgendes ein, drücke dann ENTER und beobachte die Ausgabe:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+<span class="monospaced">ast</span>
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">Ast</span>
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">Ast1 Ast2</span>
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p><em>Frage</em>: Was macht der Befehl im Vergleich zu Schritt 2?</p></div>
+<div class="paragraph"><p>Hinweis: <span class="white">Das I steht für case-insenstive, also Groß-/Kleinschreiung wird ignoriert.</span></p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_4">Schritt 4</h3>
+<div class="paragraph"><p><span class="monospaced">Aufgabe:</span> Kombiniere die g- und I-Option und probiere es mit der Eingabe <span class="monospaced">ast1 AST2 Ast3</span> aus.</p></div>
+<div class="paragraph"><p>Hinweis: <span class="monospaced"><span class="white">sed 's/ast/blatt/gI'</span></span></p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_5_pipe">Schritt 5 (Pipe)</h3>
+<div class="paragraph"><p>Die Eingaben können auch von einem anderen Programm kommen.</p></div>
+<div class="paragraph"><p>$ <span class="monospaced">echo "ast1 ast2 ast3" | sed 's/ast/blatt/g'</span></p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_6_maus">Schritt 6 (;, Maus)</h3>
+<div class="paragraph"><p>Man kann auch mehrere Ersetzungen hineinander in einem Befehl ausführen.</p></div>
+<div class="paragraph"><p>$ <span class="monospaced">echo "ast1 ast2 ast3" | sed 's/ast/blatt/g;s/1/EINS/;s/2/ZWEI/'</span></p></div>
+<div class="paragraph"><p>Hinweis: Text mit der Maus markieren und auf der Konsole mit der mittleren Maustaste einfügen.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_7_amp">Schritt 7 (&amp;)</h3>
+<div class="paragraph"><p>$ <span class="monospaced">echo "Das ist toll." | sed 's/toll/nicht &amp;/'</span></p></div>
+<div class="paragraph"><p><em>Frage:</em> Was bewirkt das &amp;?</p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_8_cow">Schritt 8 (cow)</h3>
+<div class="paragraph"><p><span class="monospaced">Aufgabe:</span> Leite den Befehl <span class="monospaced">cowsay Hallo</span> so durch <span class="monospaced">sed</span>, dass folgendes Bild entsteht (Augen durch XX ersetzt):</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt> _______
+&lt; Hallo &gt;
+ -------
+        \   ^__^
+         \  (XX)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||</tt></pre></div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aufgabe_2_regex">Aufgabe 2: Regex</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_schritt_1">Schritt 1 (.)</h3>
+<div class="paragraph"><p>$ <span class="monospaced">echo "abc" | sed 's/./ -A- /g'</span></p></div>
+<div class="paragraph"><p>$ <span class="monospaced">echo "abc def agg" | sed 's/a./ -A- /g'</span></p></div>
+<div class="paragraph"><p><em>Frage</em>: Für was steht der Punkt im Suchmuster?</p></div>
+</div>
+<div class="sect2">
+<h3 id="_schritt_2">Schritt 2 (*)</h3>
+<div class="paragraph"><p>$ <span class="monospaced">echo "&lt;ab&gt; &lt;ccc&gt; &lt;cc&gt; &lt;c&gt; &lt;&gt; &lt;ghi&gt;"  | sed 's/&lt;c*&gt;/ -A- /g'</span></p></div>
+<div class="paragraph"><p><em>Frage</em>: Für was steht der Stern im Suchmuster?</p></div>
+<div class="paragraph"><p>$ <span class="monospaced">echo "&lt;ab&gt; &lt;ccc&gt; &lt;cc&gt; &lt;c&gt; &lt;&gt; &lt;ghi&gt;"  | sed 's/&lt;.*&gt;/ -A- /g'</span></p></div>
+<div class="paragraph"><p><em>Frage</em>: Was ist passiert?</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aufgabe_3_html_datei">Aufgabe 3: HTML-Datei</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Besuche die Seite <a href="https://docs.python.org/3/library/intro.html">https://docs.python.org/3/library/intro.html</a>
+</p>
+</li>
+<li>
+<p>
+Lade sie herunter, z. B. mit <span class="monospaced">wget https://docs.python.org/3/library/intro.html</span>
+</p>
+</li>
+<li>
+<p>
+Die Datei im Browser öffnen.
+</p>
+</li>
+<li>
+<p>
+Verwende <span class="monospaced">sed</span>, um alle Vorkommen von <em>Python</em> durch <em>&lt;b&gt;Python&lt;/b&gt;</em> zu ersetzen.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><span class="monospaced">sed &lt;OPTIONEN&gt; EINGABEDATEI &gt; AUSGABEDATEI</span></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Aktualisiere die Datei im Browser.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_referenzen">Referenzen</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+[1] <a href="https://de.wikipedia.org/wiki/Sed_%28Unix%29">https://de.wikipedia.org/wiki/Sed_%28Unix%29</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck">https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.tty1.net/sed-tutorium/sed-tutorium.html">https://www.tty1.net/sed-tutorium/sed-tutorium.html</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://unix.stackexchange.com/questions/20718/substitute-text-with-sed-and-keep-part-of-the-original-text">http://unix.stackexchange.com/questions/20718/substitute-text-with-sed-and-keep-part-of-the-original-text</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.thegeekstuff.com/2009/09/unix-sed-tutorial-replace-text-inside-a-file-using-substitute-command/">http://www.thegeekstuff.com/2009/09/unix-sed-tutorial-replace-text-inside-a-file-using-substitute-command/</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://openbook.rheinwerk-verlag.de/linux/linux_kap08_002.html">http://openbook.rheinwerk-verlag.de/linux/linux_kap08_002.html</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.gnu.org/software/sed/">https://www.gnu.org/software/sed/</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.grymoire.com/Unix/Sed.html">http://www.grymoire.com/Unix/Sed.html</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.gnu.org/software/sed/manual/sed.html">https://www.gnu.org/software/sed/manual/sed.html</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/1103149/non-greedy-regex-matching-in-sed">http://stackoverflow.com/questions/1103149/non-greedy-regex-matching-in-sed</a>
+</p>
+</li>
+<li>
+<p>
+TODO: sed replace text in file or in separate file
+</p>
+</li>
+<li>
+<p>
+TODO: regex matching groups
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2015-12-16 18:22:58 CET
+</div>
+</div>
+</body>
+</html>
