@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="AsciiDoc 8.6.8">
-<title>Werbeblocker</title>
+<title>Cookies und Werbeblocker</title>
 <link rel="stylesheet" href="./asciidoc.css" type="text/css">
 
 
@@ -17,23 +17,180 @@ asciidoc.install(2);
 </head>
 <body class="article">
 <div id="header">
-<h1>Werbeblocker</h1>
+<h1>Cookies und Werbeblocker</h1>
 <div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
   <div id="toctitle">Inhalt</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_aufgabe_1_cookies">Aufgabe 1: Cookies</h2>
 <div class="sectionbody">
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<img src="./images/icons/note.png" alt="Anmerkung">
-</td>
-<td class="content">&#8230;im Aufbau&#8230;</td>
-</tr></table>
+<div class="sect2">
+<h3 id="_1_a_cookies_vergleichen">1 a) Cookies vergleichen</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Firefox</strong> starten
+</p>
+</li>
+<li>
+<p>
+Besuche die Seite <a href="http://www.gmx.net">http://www.gmx.net</a>
+</p>
+</li>
+<li>
+<p>
+Firefox Menu &#8594; Developer &#8594; Toggle Tools
+</p>
+</li>
+<li>
+<p>
+Stelle sicher, dass du den Tab "Network" und "Storage" siehst.
+</p>
+</li>
+<li>
+<p>
+Lade die Seite neu.
+</p>
+</li>
+<li>
+<p>
+Schau dir im <strong>Network</strong>-Tab unten rechts folgendes an und notiere die Werte:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Wieviele Requests</strong> gab es (also wie oft hat der Browser Daten von anderen Computer angefragt)? <span class="white">(263, 303)</span>
+</p>
+</li>
+<li>
+<p>
+Circa welche <strong>Datenmenge</strong> wurde uebertragen? <span class="white">(3,8 MB, 4,2 MB)</span>
+</p>
+</li>
+<li>
+<p>
+Wie lange <strong>dauerte</strong> der Seitenaufbau? <span class="white">(24 sec, 25 sec)</span>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Wiederhole die Messung, indem die Seite noch einmal neu laedst.
+</p>
+</li>
+<li>
+<p>
+Schau dir im <strong>Storage</strong>-Tab an, welche Adressen <strong>Cookies</strong> abgelegt und notiere die Anzahl. <span class="white">(8)</span>
+</p>
+</li>
+<li>
+<p>
+Suche eine spezielle Adresse heraus und klicke drauf: <em>madclient.uimserv.net</em>.
+</p>
+</li>
+<li>
+<p>
+Merke dir aus der Liste die Werte fuer <em>NGUserID</em> und <em>UserID1</em>.
+</p>
+</li>
+<li>
+<p>
+Firefox neu starten.
+</p>
+</li>
+<li>
+<p>
+Suche dir erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus und vergleiche sie mit den vorher notierten.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><em>Frage:</em> Was ist das Ergebnis des Vergleichs?</p></div>
 </div>
+<div class="sect2">
+<h3 id="_1_b_cookie_einstellungen">1 b) Cookie-Einstellungen</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Firefox Menu &#8594; Preferences (Einstellunge) &#8594; Privacy &#8594; History &#8594; Firefox will: "Use custom settings for history" &#8594; Accept cookies from sites &#8594; Keep until <strong>I close Firefox</strong>
+</p>
+</li>
+<li>
+<p>
+Firefox neu starten.
+</p>
+</li>
+<li>
+<p>
+Suche dir von <a href="http://www.gmx.net">http://www.gmx.net</a> erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus und vergleiche sie mit den vorher notierten. <span class="white">Gleich, weil die Einstellungen noch nicht greifen</span>
+</p>
+</li>
+<li>
+<p>
+Firefox nochmal neu starten.
+</p>
+</li>
+<li>
+<p>
+Suche dir erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus und vergleiche sie mit den vorher notierten. <span class="white">Anders.</span>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><em>Frage:</em> Was ist passiert?</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aufgabe_2_adblock">Aufgabe 2: Adblock</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Firefox Menu &#8594; Addons &#8594; Nach <em>Adblock Plus</em> suchen und installieren.
+</p>
+</li>
+<li>
+<p>
+Lade die Seite <a href="http://www.gmx.net">http://www.gmx.net</a> neu.
+</p>
+</li>
+<li>
+<p>
+Siehe Aufgabe 1 a): Schau dir im <strong>Network</strong>-Tab unten rechts folgendes an und notiere die Werte:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Wieviele Requests</strong> gab es? <span class="white">(219, 216)</span>
+</p>
+</li>
+<li>
+<p>
+Welche <strong>Datenmenge</strong> wurde uebertragen? <span class="white">(3,4 MB, 3,2 MB)</span>
+</p>
+</li>
+<li>
+<p>
+Wie lange <strong>dauerte</strong> der Seitenaufbau? <span class="white">(16 sec, 16 sec)</span>
+</p>
+</li>
+<li>
+<p>
+Wie gross ist die Anzahl der <strong>Cookie</strong>-Adressen aus dem Storage-Tab? <span class="white">(2, 2)</span>
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<div class="paragraph"><p><em>Frage:</em> Was faellt auf?</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hintergrund">Hintergrund</h2>
+<div class="sectionbody">
 <div class="ulist"><ul>
 <li>
 <p>
@@ -49,41 +206,17 @@ Das heißt, je weniger unbekannte Quellen angesurft werden, desto besser.
 </li>
 <li>
 <p>
-<strong>Werbung</strong> im Internet kommt aus verschiedenen Quellen; vor allem nicht von der URL, die der Benutzer oben in der Adressleiste sieht.
-</p>
-<div class="ulist"><ul>
-<li>
-<p>
-Aufgabe TODO: Lightbeam installieren und zeigen
+<strong>Werbung</strong> im Internet kommt aus verschiedenen Quellen; vor oft nicht von der URL, die der Benutzer oben in der Adressleiste sieht, sondern von Drittanbietern.
 </p>
 </li>
-</ul></div>
-</li>
-<li>
-<p>
-Seite aaa besuchen ohne Werbeblocker.
-</p>
-</li>
-<li>
-<p>
-Aufgabe TODO: <strong>Adblock Plus</strong> in Firefox installieren
-</p>
-</li>
-<li>
-<p>
-Seite aaa erneut besuchen.
-</p>
-</li>
-</ul></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_hintergrund">Hintergrund</h2>
-<div class="sectionbody">
-<div class="ulist"><ul>
 <li>
 <p>
 Beispiel: Liste der bekannten Sicherheitslücken von Mozilla Firefox und die Version, in der die Lücke geschlossen wurde: <a href="https://www.mozilla.org/en-US/security/advisories/">https://www.mozilla.org/en-US/security/advisories/</a> (engl.)
+</p>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/HTTP-Cookie">https://de.wikipedia.org/wiki/HTTP-Cookie</a>
 </p>
 </li>
 </ul></div>
@@ -93,7 +226,7 @@ Beispiel: Liste der bekannten Sicherheitslücken von Mozilla Firefox und die Ver
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2015-12-12 23:03:05 CET
+Letzte Änderung 2015-12-16 19:52:47 CET
 </div>
 </div>
 </body>
