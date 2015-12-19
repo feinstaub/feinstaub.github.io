@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="AsciiDoc 8.6.8">
-<title>Python-Dokumentation</title>
+<title>Python3-Dokumentation</title>
 <link rel="stylesheet" href="./asciidoc.css" type="text/css">
 
 
@@ -17,7 +17,7 @@ asciidoc.install(2);
 </head>
 <body class="article">
 <div id="header">
-<h1>Python-Dokumentation</h1>
+<h1>Python3-Dokumentation</h1>
 <div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
   <div id="toctitle">Inhalt</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
@@ -33,14 +33,19 @@ asciidoc.install(2);
 <span class="monospaced">python3</span> installieren, falls nicht schon vorhanden.
 </p>
 </li>
+</ul></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/caution.png" alt="Achtung">
+</td>
+<td class="content">Gebe <span class="monospaced">python --version</span> ein. Wenn die Ausgabe nicht mit 3 beginnt, dann füge folgende Zeile ans Ende deiner ~/.bashrc ein: <span class="monospaced">alias python=python3</span></td>
+</tr></table>
+</div>
+<div class="ulist"><ul>
 <li>
 <p>
-Gebe <span class="monospaced">python --version</span> ein. Wenn die Ausgabe nicht mit 3 beginnt, dann füge folgende Zeile in deine ~/.bashrc ein <span class="monospaced">alias python=python3</span>
-</p>
-</li>
-<li>
-<p>
-Offline-Doku installieren: <span class="monospaced">sudo zypper install python3-doc</span> (bei Bedarf auch python3-doc-pdf)
+Optional: Offline-Doku installieren: <span class="monospaced">sudo zypper install python3-doc</span> (bei Bedarf auch python3-doc-pdf)
 </p>
 <div class="ulist"><ul>
 <li>
@@ -58,6 +63,542 @@ Ansonsten ist die Doku auch online zu finden: <a href="https://docs.python.org/3
 <li>
 <p>
 <span class="monospaced">kate</span>-Texteditor installieren und verschiedene Plugins aktivieren, unter anderem das Terminal-Plugin.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Speichern: Strg+S
+</p>
+</li>
+<li>
+<p>
+Tools &#8594; Shortcuts &#8594; Focus Terminal: F4
+</p>
+</li>
+<li>
+<p>
+Auskommentieren: Strg+D
+</p>
+</li>
+<li>
+<p>
+Einkommentieren: Strg+Umschalt+D
+</p>
+</li>
+<li>
+<p>
+Zeile nach oben/unten verschieben: Strg+Umschalt+Cursor hoch/runter
+</p>
+</li>
+<li>
+<p>
+Zeile nach oben/unten kopieren: Strg+Alt+Cursor hoch/runter
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="http://www.python-kurs.eu/python3_interaktiv.php">Python-Shell</a> (python-kurs.eu)
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Ausloggen mit <strong>Strg+D</strong>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Interaktive Hilfe
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.python-kurs.eu/python3_skript_ausfuehren.php">Scripts ausführen und eingebaute Hilfe</a> (python-kurs.eu)
+</p>
+</li>
+<li>
+<p>
+<span class="monospaced">help</span>, <span class="monospaced">type</span>
+</p>
+</li>
+<li>
+<p>
+ipython: ?, ??
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basiswissen">Basiswissen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ausgabe">Ausgabe</h3>
+<div class="paragraph"><p>Ausgabe auf der Konsole.</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># Befehl                             Ausgabe</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># ----------------------------------------------</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hallo"</span><span style="color: #990000">)</span>                     <span style="font-style: italic"><span style="color: #9A1900"># Hallo</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hallo {}."</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Welt"</span><span style="color: #990000">))</span>  <span style="font-style: italic"><span style="color: #9A1900"># Hallo Welt.</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hallo "</span><span style="color: #990000">,</span> end<span style="color: #990000">=</span><span style="color: #FF0000">''</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># kein Zeilenumbruch am Ende</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Welt"</span><span style="color: #990000">)</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Hallo Welt</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_print.php">print</a>, <a href="http://www.python-kurs.eu/python3_formatierte_ausgabe.php">format</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_variablen">Variablen</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>string1 <span style="color: #990000">=</span> <span style="color: #FF0000">"Hallo"</span>
+string2 <span style="color: #990000">=</span> <span style="color: #FF0000">"Welt"</span>
+zahl1 <span style="color: #990000">=</span> <span style="color: #993399">24</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"{} {}. Der Tag hat {} Stunden."</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>string1<span style="color: #990000">,</span> string2<span style="color: #990000">,</span> zahl1<span style="color: #990000">))</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Hallo Welt. Der Tag hat 24 Stunden.</span></span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Oder:</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span>string1 <span style="color: #990000">+</span> <span style="color: #FF0000">" "</span> <span style="color: #990000">+</span> string2 <span style="color: #990000">+</span> <span style="color: #FF0000">". Der Tag hat "</span> <span style="color: #990000">+</span> <span style="font-weight: bold"><span style="color: #000000">str</span></span><span style="color: #990000">(</span>zahl1<span style="color: #990000">)</span> <span style="color: #990000">+</span> <span style="color: #FF0000">" Stunden."</span><span style="color: #990000">)</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Hallo Welt. Der Tag hat 24 Stunden.</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_variablen.php">Datentypen und Variablen</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_eingabe">Eingabe</h3>
+<div class="paragraph"><p>Eingabe von der Konsole.</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>eingabe1 <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Bitte geben Sie Ihren Namen ein: "</span><span style="color: #990000">)</span>
+eingabe2 <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hallo {}. Wie geht es Ihnen? "</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>eingabe1<span style="color: #990000">))</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Schön, dass es Ihnen {} geht, {}."</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>eingabe2<span style="color: #990000">,</span> eingabe1<span style="color: #990000">))</span>
+
+e3s <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Ganzzahl eingeben (z. B. 15): "</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #000000">type</span></span><span style="color: #990000">(</span>e3s<span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># &lt;class 'str'&gt;</span></span>
+e3 <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span>e3s<span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #000000">type</span></span><span style="color: #990000">(</span>e3<span style="color: #990000">)</span>  <span style="font-style: italic"><span style="color: #9A1900"># &lt;class 'int'&gt;</span></span>
+
+e4s <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Fließkommazahl eingeben (z. B. 13.45): "</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #000000">type</span></span><span style="color: #990000">(</span>e4s<span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># &lt;class 'str'&gt;</span></span>
+e4 <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">float</span></span><span style="color: #990000">(</span>e4s<span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #000000">type</span></span><span style="color: #990000">(</span>e4<span style="color: #990000">)</span>  <span style="font-style: italic"><span style="color: #9A1900"># &lt;class 'float'&gt;</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"{} + {} = {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>e3<span style="color: #990000">,</span> e4<span style="color: #990000">,</span> e3 <span style="color: #990000">+</span> e4<span style="color: #990000">))</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"{} - {} = {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>e3<span style="color: #990000">,</span> e4<span style="color: #990000">,</span> e3 <span style="color: #990000">-</span> e4<span style="color: #990000">))</span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_eingabe.php">Eingabe</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_rechenoperatoren">Rechenoperatoren</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #993399">30</span> <span style="color: #990000">+</span> <span style="color: #993399">1</span>  <span style="font-style: italic"><span style="color: #9A1900"># = 31</span></span>
+<span style="color: #993399">30</span> <span style="color: #990000">-</span> <span style="color: #993399">2</span>  <span style="font-style: italic"><span style="color: #9A1900"># = 28</span></span>
+<span style="color: #993399">30</span> <span style="color: #990000">/</span> <span style="color: #993399">2</span>  <span style="font-style: italic"><span style="color: #9A1900"># = 15</span></span>
+<span style="color: #993399">30</span> <span style="color: #990000">*</span> <span style="color: #993399">2</span>  <span style="font-style: italic"><span style="color: #9A1900"># = 60</span></span>
+<span style="color: #993399">2</span> <span style="color: #990000">**</span> <span style="color: #993399">4</span>  <span style="font-style: italic"><span style="color: #9A1900"># = 2 hoch 4 = 2 * 2 * 2 * 2 = 16</span></span>
+
+a <span style="color: #990000">=</span> <span style="color: #993399">30</span>
+a <span style="color: #990000">+=</span> <span style="color: #993399">1</span> <span style="font-style: italic"><span style="color: #9A1900"># a == 31</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_operatoren.php">Operatoren</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_vergleichs_und_logikoperationen">Vergleichs- und Logikoperationen</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>False <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> False  <span style="font-style: italic"><span style="color: #9A1900"># = False</span></span>
+False <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> True   <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+True  <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> False  <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+True  <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> True   <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+
+False <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> False  <span style="font-style: italic"><span style="color: #9A1900"># = False</span></span>
+False <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> True   <span style="font-style: italic"><span style="color: #9A1900"># = False</span></span>
+True  <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> False  <span style="font-style: italic"><span style="color: #9A1900"># = False</span></span>
+True  <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> True   <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">not</span></span> False  <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">not</span></span> True   <span style="font-style: italic"><span style="color: #9A1900"># = False</span></span>
+
+<span style="color: #993399">1</span> <span style="color: #990000">&lt;</span> <span style="color: #993399">2</span>   <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+<span style="color: #993399">2</span> <span style="color: #990000">&lt;</span> <span style="color: #993399">2</span>   <span style="font-style: italic"><span style="color: #9A1900"># = False</span></span>
+<span style="color: #993399">1</span> <span style="color: #990000">&lt;=</span> <span style="color: #993399">2</span>  <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+<span style="color: #993399">1</span> <span style="color: #990000">&gt;</span> <span style="color: #993399">2</span>   <span style="font-style: italic"><span style="color: #9A1900"># = False</span></span>
+<span style="color: #993399">1</span> <span style="color: #990000">==</span> <span style="color: #993399">1</span>  <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+<span style="color: #993399">1</span> <span style="color: #990000">!=</span> <span style="color: #993399">2</span>  <span style="font-style: italic"><span style="color: #9A1900"># = True</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Ist 1 == 2? {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span> <span style="color: #990000">==</span> <span style="color: #993399">2</span><span style="color: #990000">))</span> <span style="font-style: italic"><span style="color: #9A1900"># Ist 1 == 2? False</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_operatoren.php">Operatoren</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_if_anweisung">if-Anweisung</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>x <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"x: "</span><span style="color: #990000">))</span>
+y <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"y: "</span><span style="color: #990000">))</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">if</span></span> x <span style="color: #990000">&gt;</span> y<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"x ist größer als y"</span><span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">if</span></span> x <span style="color: #990000">&gt;</span> y<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"x ist größer als y"</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"x ist kleiner als y oder gleich"</span><span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">if</span></span> x <span style="color: #990000">&gt;</span> y<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"x ist größer als y"</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">elif</span></span> x <span style="color: #990000">==</span> y<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"x ist gleich y"</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"x ist kleiner als y"</span><span style="color: #990000">)</span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_bedingte_anweisungen.php">Bedingte Anweisung</a>, <a href="http://www.python-kurs.eu/python3_bloecke.php">Blöcke durch Einrückung</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_while_schleife">while-Schleife</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>i <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+<span style="font-weight: bold"><span style="color: #0000FF">while</span></span> i <span style="color: #990000">&lt;</span> <span style="color: #993399">5</span><span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span>i<span style="color: #990000">)</span>
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Ausgabe: 0, 1, 2, 3, 4</span></span></tt></pre></div></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># Unendlich-Schleife:</span></span>
+
+i <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+<span style="font-weight: bold"><span style="color: #0000FF">while</span></span> True<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span>i<span style="color: #990000">)</span>
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Ausgabe: 0, 1, 2, 3, 4, 5, 6, 7, ...</span></span></tt></pre></div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tipp">
+</td>
+<td class="content">Unterbrechen mit <strong>Strg+C</strong>.</td>
+</tr></table>
+</div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># break</span></span>
+
+i <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+<span style="font-weight: bold"><span style="color: #0000FF">while</span></span> True<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span>i<span style="color: #990000">)</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> i <span style="color: #990000">==</span> <span style="color: #993399">4</span><span style="color: #990000">:</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">break</span></span>      <span style="font-style: italic"><span style="color: #9A1900"># Vorzeitiger Abbruch</span></span>
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Ausgabe: 0, 1, 2, 3, 4</span></span></tt></pre></div></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># continue</span></span>
+
+i <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+<span style="font-weight: bold"><span style="color: #0000FF">while</span></span> i <span style="color: #990000">&lt;</span> <span style="color: #993399">5</span><span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> i <span style="color: #990000">==</span> <span style="color: #993399">1</span> <span style="font-weight: bold"><span style="color: #0000FF">or</span></span> i <span style="color: #990000">==</span> <span style="color: #993399">3</span><span style="color: #990000">:</span>
+        i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">continue</span></span>   <span style="font-style: italic"><span style="color: #9A1900"># Rest des Schleifenblockes überspringen</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span>i<span style="color: #990000">)</span>
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Ausgabe: 0, 2, 4</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_schleifen.php">Schleifen</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_funkionen_subroutinen">Funkionen / Subroutinen</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">meine_funktion</span></span><span style="color: #990000">():</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Hallo"</span><span style="color: #990000">)</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Test"</span><span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #000000">meine_funktion</span></span><span style="color: #990000">()</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Hallo</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># Test</span></span>
+
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">print_plus</span></span><span style="color: #990000">(</span>a<span style="color: #990000">,</span> b<span style="color: #990000">):</span>
+    ergebnis <span style="color: #990000">=</span> a <span style="color: #990000">+</span> b
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"a + b = {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>ergebnis<span style="color: #990000">))</span>
+
+<span style="font-weight: bold"><span style="color: #000000">print_plus</span></span><span style="color: #990000">(</span><span style="color: #993399">10</span><span style="color: #990000">,</span> <span style="color: #993399">5</span><span style="color: #990000">)</span>
+<span style="font-style: italic"><span style="color: #9A1900"># a + b = 15</span></span>
+
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">my_plus</span></span><span style="color: #990000">(</span>a<span style="color: #990000">,</span> b<span style="color: #990000">):</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">return</span></span> a <span style="color: #990000">+</span> b
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">my_plus</span></span><span style="color: #990000">(</span><span style="color: #993399">10</span><span style="color: #990000">,</span> <span style="color: #993399">5</span><span style="color: #990000">))</span>
+<span style="font-style: italic"><span style="color: #9A1900"># 15</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_funktionen.php">Funktionen</a> (python-kurs.eu)</p></div>
+</div>
+<div class="sect2">
+<h3 id="_zufallszahlen">Zufallszahlen</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> random
+z <span style="color: #990000">=</span> random<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">randint</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #993399">100</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Eine Zufallszahl zwischen 0 und 100: {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>z<span style="color: #990000">))</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Die Endpunkte sind inbegriffen.</span></span></tt></pre></div></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erweitert">Erweitert</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sequentielle_datentypen">Sequentielle Datentypen</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.python-kurs.eu/python3_sequentielle_datentypen.php">http://www.python-kurs.eu/python3_sequentielle_datentypen.php</a>
+</p>
+</li>
+<li>
+<p>
+Listen ändern: <a href="http://www.python-kurs.eu/python3_listen.php">http://www.python-kurs.eu/python3_listen.php</a>
+</p>
+</li>
+<li>
+<p>
+Mengen: <a href="http://www.python-kurs.eu/python3_sets_mengen.php">http://www.python-kurs.eu/python3_sets_mengen.php</a>
+</p>
+</li>
+<li>
+<p>
+Flaches und tiefes Kopieren: <a href="http://www.python-kurs.eu/python3_deep_copy.php">http://www.python-kurs.eu/python3_deep_copy.php</a>
+</p>
+</li>
+<li>
+<p>
+Dictionaries: <a href="http://www.python-kurs.eu/python3_dictionaries.php">http://www.python-kurs.eu/python3_dictionaries.php</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_for_schleife">for-Schleife</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.python-kurs.eu/python3_for-schleife.php">http://www.python-kurs.eu/python3_for-schleife.php</a>
+</p>
+</li>
+<li>
+<p>
+"while" vs. "for mit range": <a href="code/rangetest.py">code/rangetest.py</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_while_schleife_2">while-Schleife (2)</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># else-Zweig</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">while</span></span> True<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"S"</span><span style="color: #990000">)</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">break</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"E"</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Z"</span><span style="color: #990000">)</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Ausgabe:</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># S</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># Z</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">while</span></span> False<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"S"</span><span style="color: #990000">)</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">break</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">else</span></span><span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"E"</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Z"</span><span style="color: #990000">)</span>
+<span style="font-style: italic"><span style="color: #9A1900"># Ausgabe:</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># E</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># Z</span></span></tt></pre></div></div>
+</div>
+<div class="sect2">
+<h3 id="_funktionen_2">Funktionen (2)</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.python-kurs.eu/python3_funktionen.php">http://www.python-kurs.eu/python3_funktionen.php</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+optionale Parameter
+</p>
+</li>
+<li>
+<p>
+Docstring
+</p>
+</li>
+<li>
+<p>
+Schlüsselwortparameter
+</p>
+</li>
+<li>
+<p>
+Rückgabewerte
+</p>
+</li>
+<li>
+<p>
+Lokale und globale Variablen in Funktionen
+</p>
+</li>
+<li>
+<p>
+Beliebige Anzahl von Parametern
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Parameter: <a href="http://www.python-kurs.eu/python3_parameter.php">http://www.python-kurs.eu/python3_parameter.php</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>inkl. Übung</strong>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Globale und Lokale Variablen: <a href="http://www.python-kurs.eu/python3_global_lokal.php">http://www.python-kurs.eu/python3_global_lokal.php</a>
+</p>
+</li>
+<li>
+<p>
+Rekursion und rekursive Funktionen: <a href="http://www.python-kurs.eu/python3_rekursive_funktionen.php">http://www.python-kurs.eu/python3_rekursive_funktionen.php</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+mit Vergleich zu iterativem Ansatz
+</p>
+</li>
+<li>
+<p>
+<strong>inkl. Übungen</strong>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Memoisation und Dekorateure: <a href="http://www.python-kurs.eu/python3_memoisation.php">http://www.python-kurs.eu/python3_memoisation.php</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_dateien">Dateien</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+siehe <a href="http://www.python-kurs.eu/python3_dateien.php">http://www.python-kurs.eu/python3_dateien.php</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+ABER: mit with-Anweisung!
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+pickle und shelve: <a href="http://www.python-kurs.eu/python3_dateien.php">http://www.python-kurs.eu/python3_dateien.php</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<span class="monospaced">zypper install python3-dbm</span>
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oop">OOP</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+siehe <a href="http://www.python-kurs.eu/python3_klassen.php">http://www.python-kurs.eu/python3_klassen.php</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gui">GUI</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://zetcode.com/gui/pyqt5/">http://zetcode.com/gui/pyqt5/</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/othergui.html">https://docs.python.org/3/library/othergui.html</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://riverbankcomputing.com/software/pyqt/intro">https://riverbankcomputing.com/software/pyqt/intro</a>
 </p>
 </li>
 </ul></div>
@@ -199,7 +740,7 @@ Introspektion
 </li>
 <li>
 <p>
-<a href="https://docs.python.org/3/library/stdtypes.html#textseq">Der String-Typ</a>
+<a href="https://docs.python.org/3/library/stdtypes.html#textseq">Der String-Typ</a> (', ", """)
 </p>
 </li>
 <li>
@@ -209,14 +750,10 @@ Introspektion
 </li>
 <li>
 <p>
-<a href="https://docs.python.org/3/library/re.html">Regulaere Ausdruecke</a>
+<a href="https://docs.python.org/3/library/re.html">Reguläre Ausdrücke</a>
 </p>
 </li>
 </ul></div>
-</div>
-<div class="sect2">
-<h3 id="_ein_und_ausgabe_auf_der_konsole">Ein- und Ausgabe auf der Konsole</h3>
-<div class="paragraph"><p>TODO</p></div>
 </div>
 <div class="sect2">
 <h3 id="_mathematik">Mathematik</h3>
@@ -233,7 +770,7 @@ Introspektion
 <div class="ulist"><ul>
 <li>
 <p>
-<a href="https://docs.python.org/3/library/filesys.html">Uebersicht</a>
+<a href="https://docs.python.org/3/library/filesys.html">Übersicht</a>
 </p>
 </li>
 </ul></div>
@@ -259,7 +796,7 @@ Introspektion
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2015-12-15 12:44:53 CET
+Letzte Änderung 2015-12-19 20:13:59 CET
 </div>
 </div>
 </body>
