@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Konsolengraphik mit curses</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Konsolengraphik mit curses</h1>
+<div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Die <em>curses</em>-Bibliothek stellt Funktionen bereit, mit denen man auf einem Textterminal graphikartige Ausgaben erzeugen und Tastatureingaben behandeln kann.</p></div>
+<div class="paragraph"><p>Probiere die folgenden Codebeispiele der Reihe nach aus.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_minimales_programm">Minimales Programm</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> curses
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>stdscr<span style="color: #990000">):</span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Bildschirm löschen; am Anfang nicht unbedingt notwendig.</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">clear</span></span><span style="color: #990000">()</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Aufgrund einer Eigenheit der curses-Bibliothek</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># ist folgendes refresh notwendig, sonst funktionieren</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># einige Befehle nicht wie erwartet.</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Text auf Bildschirm ausgeben</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Taste zum Beenden drücken..."</span><span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Warte auf beliebigen Tastendruck, bevor die</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Konsole wieder aufgeräumt und das Programm beendet wird.</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getkey</span></span><span style="color: #990000">()</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># main-Funktions mit dem Wrapper starten.</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># Der Wrapper sorgt für nötige Initialisierungen</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># und Aufräumarbeiten im Fehlerfall.</span></span>
+curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wrapper</span></span><span style="color: #990000">(</span>main<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_text_ausgeben">Text ausgeben</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> curses
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>stdscr<span style="color: #990000">):</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">clear</span></span><span style="color: #990000">()</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Text an bestimmten Koordinaten ausgeben:</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Erster Parameter: Zeile, also y</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Zweiter Parameter: Spalte, also x</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Text an den Koordinaten y=0, x=0"</span><span style="color: #990000">)</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span><span style="color: #993399">2</span><span style="color: #990000">,</span> <span style="color: #993399">20</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Text an den Koordinaten y=2, x=20"</span><span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># curses.LINES gibt die Anzahl der Zeilen der aktuellen Konsole zurück.</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># curses.COLS die Anzahl der Spalten.</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Folgender Befehl schreibt ein "X" ganz unten rechts in die Ecke.</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># (Falls die maximale Anzahl der Zeilen oder Spalten überschritten wird,</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900">#  kommt es zu einem Fehler: _curses.error: addwstr() returned ERR)</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>curses<span style="color: #990000">.</span>LINES <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLS <span style="color: #990000">-</span> <span style="color: #993399">2</span><span style="color: #990000">,</span> <span style="color: #FF0000">"X"</span><span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Gibt einen Text in der letzten Zeile aus</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>curses<span style="color: #990000">.</span>LINES <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Taste zum Beenden drücken..."</span><span style="color: #990000">)</span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getkey</span></span><span style="color: #990000">()</span>
+
+curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wrapper</span></span><span style="color: #990000">(</span>main<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fenster_debugging">Fenster / Debugging</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> curses
+
+<span style="font-style: italic"><span style="color: #9A1900"># globale Variable</span></span>
+debugstr <span style="color: #990000">=</span> <span style="color: #FF0000">""</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>stdscr<span style="color: #990000">):</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Globale Variable innerhalb der Funktion bekannt machen</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># (ansonsten ist sie lokal).</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">global</span></span> debugstr
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">clear</span></span><span style="color: #990000">()</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Cursor ausblenden, wenn nicht benötigt.</span></span>
+    curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">curs_set</span></span><span style="color: #990000">(</span>False<span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Ein Fenster mit einer bestimmten Größe und Position erzeugen.</span></span>
+    begin_x <span style="color: #990000">=</span> <span style="color: #993399">5</span>
+    begin_y <span style="color: #990000">=</span> <span style="color: #993399">3</span>
+    height <span style="color: #990000">=</span> <span style="color: #993399">10</span>
+    width <span style="color: #990000">=</span> <span style="color: #993399">35</span>
+    win <span style="color: #990000">=</span> curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">newwin</span></span><span style="color: #990000">(</span>height<span style="color: #990000">,</span> width<span style="color: #990000">,</span> begin_y<span style="color: #990000">,</span> begin_x<span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Attribute des win-Objekts auflisten und dem debugstr zuweisen.</span></span>
+    debugstr <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">str</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">dir</span></span><span style="color: #990000">(</span>win<span style="color: #990000">))</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Das Fenster soll einen Rahmen haben.</span></span>
+    win<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">border</span></span><span style="color: #990000">()</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Das Fenster mit Buchstaben füllen.</span></span>
+    <span style="font-weight: bold"><span style="color: #0000FF">for</span></span> y <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> <span style="font-weight: bold"><span style="color: #000000">range</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">,</span> height <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">):</span>
+        <span style="font-weight: bold"><span style="color: #0000FF">for</span></span> x <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> <span style="font-weight: bold"><span style="color: #000000">range</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">,</span> width <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">):</span>
+            win<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addch</span></span><span style="color: #990000">(</span>y<span style="color: #990000">,</span> x<span style="color: #990000">,</span> <span style="font-weight: bold"><span style="color: #000000">ord</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'a'</span><span style="color: #990000">)</span> <span style="color: #990000">+</span> <span style="color: #990000">(</span>x <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">)</span> <span style="color: #990000">%</span> <span style="color: #993399">26</span><span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Refresh, ansonsten wird der Fensterhinhalt nicht angezeigt.</span></span>
+    win<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>curses<span style="color: #990000">.</span>LINES <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Taste zum Beenden drücken..."</span><span style="color: #990000">)</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getkey</span></span><span style="color: #990000">()</span>
+
+curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wrapper</span></span><span style="color: #990000">(</span>main<span style="color: #990000">)</span>
+
+<span style="font-style: italic"><span style="color: #9A1900"># Nach Beenden des Programms kann man die Debug-Nachricht auf der Konsole lesen.</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span>debugstr<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_textattribute_und_farben">Textattribute und Farben</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> curses
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>stdscr<span style="color: #990000">):</span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">clear</span></span><span style="color: #990000">()</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+    curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">curs_set</span></span><span style="color: #990000">(</span>False<span style="color: #990000">)</span>
+
+    i <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Attribute setzen</span></span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Attribut: keins"</span><span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Attribut: A_REVERSE"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>A_REVERSE<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Attribut: A_BOLD"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>A_BOLD<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Attribut: A_DIM (oft äquivalent zu keins)"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>A_DIM<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Attribut: A_BLINK"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>A_BLINK<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Attribut: A_STANDOUT (oft äquivalent zu A_BOLD)"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>A_STANDOUT<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Attribut: A_UNDERLINE"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>A_UNDERLINE<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span> <span style="font-style: italic"><span style="color: #9A1900"># Leere Zeile</span></span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Farben setzen.</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900">#</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Farben kann man immer nur in der Kombination</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Text- und Hintergrundfarbe setzen.</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Diese Kombination wird in einer color_pair-Nummer &gt; 0 registriert.</span></span>
+
+    curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">init_pair</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_RED<span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_BLACK<span style="color: #990000">)</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Farbe: COLOR_RED"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">color_pair</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">))</span>
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+
+    curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">init_pair</span></span><span style="color: #990000">(</span><span style="color: #993399">2</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_BLUE<span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_BLACK<span style="color: #990000">)</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Farbe: COLOR_BLUE"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">color_pair</span></span><span style="color: #990000">(</span><span style="color: #993399">2</span><span style="color: #990000">))</span>
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+
+    colors <span style="color: #990000">=</span> <span style="color: #990000">[</span> curses<span style="color: #990000">.</span>COLOR_CYAN<span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_GREEN<span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_MAGENTA<span style="color: #990000">,</span>
+               curses<span style="color: #990000">.</span>COLOR_WHITE<span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_YELLOW <span style="color: #990000">]</span>
+
+    <span style="font-weight: bold"><span style="color: #0000FF">for</span></span> ci<span style="color: #990000">,</span> col <span style="font-weight: bold"><span style="color: #0000FF">in</span></span> <span style="font-weight: bold"><span style="color: #000000">enumerate</span></span><span style="color: #990000">(</span>colors<span style="color: #990000">):</span>
+        col_pair_num <span style="color: #990000">=</span> ci <span style="color: #990000">+</span> <span style="color: #993399">3</span>
+        curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">init_pair</span></span><span style="color: #990000">(</span>col_pair_num<span style="color: #990000">,</span> col<span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_BLACK<span style="color: #990000">)</span>
+        stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Farbe: {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>col<span style="color: #990000">),</span> curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">color_pair</span></span><span style="color: #990000">(</span>col_pair_num<span style="color: #990000">))</span>
+        i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+
+    i <span style="color: #990000">+=</span> <span style="color: #993399">1</span> <span style="font-style: italic"><span style="color: #9A1900"># Leere Zeile</span></span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Kombination aus Attributen und Farben.</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># HINWEIS: Nicht alle Kombinationen aus Attributen und Farben funktionieren.</span></span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># color_pair-Nummer 1 von oben</span></span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Farbe und Blinken 1"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">color_pair</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">)</span> <span style="color: #990000">+</span> curses<span style="color: #990000">.</span>A_BLINK<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+
+    curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">init_pair</span></span><span style="color: #990000">(</span><span style="color: #993399">9</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_BLUE<span style="color: #990000">,</span> curses<span style="color: #990000">.</span>COLOR_YELLOW<span style="color: #990000">)</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>i<span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Farbe und Blinken 2"</span><span style="color: #990000">,</span> curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">color_pair</span></span><span style="color: #990000">(</span><span style="color: #993399">9</span><span style="color: #990000">)</span> <span style="color: #990000">+</span> curses<span style="color: #990000">.</span>A_BLINK<span style="color: #990000">);</span> i <span style="color: #990000">+=</span> <span style="color: #993399">1</span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>curses<span style="color: #990000">.</span>LINES <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Taste zum Beenden drücken..."</span><span style="color: #990000">)</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getkey</span></span><span style="color: #990000">()</span>
+
+curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wrapper</span></span><span style="color: #990000">(</span>main<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_benutzer_eingabe">Benutzer-Eingabe</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> curses
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">main</span></span><span style="color: #990000">(</span>stdscr<span style="color: #990000">):</span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">clear</span></span><span style="color: #990000">()</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+
+    prompt <span style="color: #990000">=</span> <span style="color: #FF0000">"Bitte Text eingeben: "</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> prompt<span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Wenn Tasten gedrückt werden, dann sollen diese auch sichtbar sein.</span></span>
+    curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">echo</span></span><span style="color: #990000">()</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Liest einen String mit der maximalen Länge 15 ein.</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># Der zurückgegebe Wert ist ein byte-String, der mit</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># der decode-Funktion in einen normalen String konvertiert</span></span>
+    <span style="font-style: italic"><span style="color: #9A1900"># wird.</span></span>
+    s <span style="color: #990000">=</span> stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getstr</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="font-weight: bold"><span style="color: #000000">len</span></span><span style="color: #990000">(</span>prompt<span style="color: #990000">),</span> <span style="color: #993399">15</span><span style="color: #990000">).</span><span style="font-weight: bold"><span style="color: #000000">decode</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"utf-8"</span><span style="color: #990000">)</span>
+
+    <span style="font-style: italic"><span style="color: #9A1900"># Ausgabe von gedrückten Tasten wieder abstellen.</span></span>
+    curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">noecho</span></span><span style="color: #990000">()</span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span><span style="color: #993399">1</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Der Text war '{}'."</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>s<span style="color: #990000">))</span>
+
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addstr</span></span><span style="color: #990000">(</span>curses<span style="color: #990000">.</span>LINES <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">,</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">"Taste zum Beenden drücken..."</span><span style="color: #990000">)</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">refresh</span></span><span style="color: #990000">()</span>
+    stdscr<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">getkey</span></span><span style="color: #990000">()</span>
+
+curses<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wrapper</span></span><span style="color: #990000">(</span>main<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_referenzen">Referenzen</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/howto/curses.html">curses-Tutorial auf docs.python.org (engl.)</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/curses.html">Modul-Dokumenation</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://docs.python.org/3/library/curses.html#curses.window.getkey">getkey</a>
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+<div class="paragraph"><p>Verschiedenes:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/16763701/python-ncurses-doesnt-show-screen-until-first-key-press-even-though-refresh-i">refresh-Bug</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/26152942/python-curses-user-input-while-updating-screen">Asynchrone Eingabe</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/606191/convert-bytes-to-a-python-string">Convert bytes to a Python string</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal">b&#8217;abc'</a>
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2015-12-27 21:11:58 CET
+</div>
+</div>
+</body>
+</html>

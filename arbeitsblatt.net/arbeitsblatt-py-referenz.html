@@ -415,6 +415,23 @@ z <span style="color: #990000">=</span> random<span style="color: #990000">.</sp
 <span style="font-style: italic"><span style="color: #9A1900"># Die Endpunkte sind inbegriffen.</span></span></tt></pre></div></div>
 </div>
 <div class="sect2">
+<h3 id="_mathematik_sin_cos_pi_round">Mathematik: sin, cos, PI, round</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> math
+
+phi <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+phi <span style="color: #990000">=</span> <span style="color: #993399">2</span> <span style="color: #990000">*</span> math<span style="color: #990000">.</span>pi
+
+s <span style="color: #990000">=</span> math<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">sin</span></span><span style="color: #990000">(</span>phi<span style="color: #990000">)</span>
+s <span style="color: #990000">=</span> math<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">cos</span></span><span style="color: #990000">(</span>phi<span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #000000">round</span></span><span style="color: #990000">(</span>s<span style="color: #990000">)</span></tt></pre></div></div>
+</div>
+<div class="sect2">
 <h3 id="_listen">Listen</h3>
 <div class="listingblock">
 <div class="content"><!-- Generator: GNU source-highlight 3.1.7
@@ -476,6 +493,21 @@ http://www.gnu.org/software/src-highlite -->
     <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Fehler beim Umwandeln der Eingabe in eine Zahl."</span><span style="color: #990000">)</span></tt></pre></div></div>
 <div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_ausnahmebehandlung.php">Fehlerbehandlung und Ausnahmebehandlung</a> (python-kurs.eu) (try, except, finally, else, assert).</p></div>
 </div>
+<div class="sect2">
+<h3 id="_sleep">sleep</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> time
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Warte 2 Sekunden"</span><span style="color: #990000">)</span>
+time<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">sleep</span></span><span style="color: #990000">(</span><span style="color: #993399">2</span><span style="color: #990000">)</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Warte 10 Millisekunden"</span><span style="color: #990000">)</span>
+time<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">sleep</span></span><span style="color: #990000">(</span><span style="color: #993399">0.01</span><span style="color: #990000">)</span></tt></pre></div></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -527,6 +559,16 @@ Sortieren: <span class="monospaced">sorted([ 5, 3, 7, 4 ])   # -&gt; [ 3, 4, 5, 
 <li>
 <p>
 "while" vs. "for mit range": <a href="code/rangetest.py">code/rangetest.py</a>
+</p>
+</li>
+<li>
+<p>
+Zugriff auf <a href="http://stackoverflow.com/questions/522563/accessing-the-index-in-python-for-loops">Schleifenindex mit enumerate</a>, siehe <a href="https://www.python.org/dev/peps/pep-0279">PEP 279</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://stackoverflow.com/questions/1663807/how-can-i-iterate-through-two-lists-in-parallel-in-python">How can I iterate through two lists in parallel in Python?</a> mit zip
 </p>
 </li>
 </ul></div>
@@ -898,7 +940,7 @@ Introspektion
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2015-12-27 10:26:35 CET
+Letzte Änderung 2015-12-27 22:13:22 CET
 </div>
 </div>
 </body>
