@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Datensicherung</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Datensicherung</h1>
+<div id="toc">
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_einstieg">Einstieg</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><span class="image">
+<img src="res/Burned_laptop_secumem_16.jpg" alt="res/Burned_laptop_secumem_16.jpg" width="600">
+</span></p></div>
+<div class="paragraph"><p>verbrannter Laptop, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Burned_laptop_secumem_16.jpg">CC BY-SA 3.0</a></p></div>
+<div class="paragraph"><p><span class="image">
+<img src="res/1024px-Backup_Backup_Backup_-_And_Test_Restores.jpg" alt="res/1024px-Backup_Backup_Backup_-_And_Test_Restores.jpg" width="500">
+</span></p></div>
+<div class="paragraph"><p>verbrannter PC, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Backup_Backup_Backup_-_And_Test_Restores.jpg">CC BY 2.0</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_schutz_der_daten_vor_8230">Schutz der Daten vor&#8230;</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Rechner-Brand
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p><a href="datensicherung-schutzvor.html">Und was noch?</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_welche_daten">Welche Daten?</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Welche Daten sind schützenswert?</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Fotos, Bilder
+</p>
+</li>
+<li>
+<p>
+Musik, Hörbücher
+</p>
+</li>
+<li>
+<p>
+Filme
+</p>
+</li>
+<li>
+<p>
+Dokumente aller Art (Text, Tabelle)
+</p>
+</li>
+<li>
+<p>
+Einstellungen bestimmter Programme (wie E-Mail, Browser, Musikspieler)
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Jeweils festzustellen: wo liegen die Daten auf der Festplatte (wenn überhaupt)?</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_medium">Medium</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Grundsätzlich: Die Daten sollten sich auf <strong>mindestens 2</strong> und <strong>örtlich voneinander getrennten</strong> Medien befinden.
+</p>
+</li>
+<li>
+<p>
+<a href="datensicherung-medienauswahl.html">Konkret</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_abwägung">Abwägung</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>&#8230;</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ordner_sync_mit_externer_festplatte">Ordner-Sync mit externer Festplatte</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Einfaches Verfahren, wenn automatisiert (hier: mit FreeFileSync)
+</p>
+</li>
+<li>
+<p>
+Daten liegen als einfache Kopie vor
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+(im Gegensatz zu speziellen Backup-Archiven)
+</p>
+</li>
+<li>
+<p>
+Backup-Medium kann an beliebigen Computer angeschlossen werden, um auf Daten zuzugreifen
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Restore-Test sehr einfach (abgesehen von Programmeinstellungen)
+</p>
+</li>
+<li>
+<p>
+Festplatte liegt an getrenntem Ort und wird nur zum Backup angeschlossen
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Schutz vor Online-Angriffen
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Stand zu genau einem Zeitpunkt
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>Initial:
+
+Dateien auf                   Dateien auf
+Computer                      externen Festplatte
+----------                    -------------------
+bilder/strand.jpg             [leer]
+bilder/wasserball.jpg
+bilder/cocktail.jpg
+dokumente/testament1.docx
+dokumente/liebeserkl.ods
+
+
+Alle Dateien werden kopiert:
+
+Dateien auf                   Dateien auf
+Computer                      externen Festplatte
+----------                    -------------------
+bilder/strand.jpg             bilder/strand.jpg
+bilder/wasserball.jpg         bilder/wasserball.jpg
+bilder/cocktail.jpg           bilder/cocktail.jpg
+dokumente/testament1.docx     dokumente/testament1.docx
+dokumente/liebeserkl.ods      dokumente/liebeserkl.ods
+
+
+Die Dokumente ändern sich:
+
+Dateien auf                   Dateien auf
+Computer                      externen Festplatte
+----------                    -------------------
+bilder/strand.jpg             bilder/strand.jpg
+[gelöscht]                    bilder/wasserball.jpg
+bilder/cocktail.jpg           bilder/cocktail.jpg
+dokumente/testament1.docx[M]  dokumente/testament1.docx
+dokumente/liebeserkl.ods      dokumente/liebeserkl.ods
+dokumente/liebeserkl2.ods
+
+
+Die Unterschiede werden ermittelt und angewendet:
+
+- bilder/wasserball.jpg wurde gelöscht
+- dokumente/testament1.docx wurde geändert
+- dokumente/liebeserkl2.ods ist neu
+
+Dateien auf                   Dateien auf
+Computer                      externen Festplatte
+----------                    -------------------
+bilder/strand.jpg             bilder/strand.jpg
+bilder/cocktail.jpg           bilder/cocktail.jpg
+dokumente/testament1.docx     dokumente/testament1.docx
+dokumente/liebeserkl.ods      dokumente/liebeserkl.ods
+dokumente/liebeserkl2.ods     dokumente/liebeserkl2.ods</tt></pre></div></div>
+<div class="paragraph"><p>&#8594; <a href="datensicherung-freefilesync.html">FreeFileSync</a></p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2016-01-08 18:39:47 CET
+</div>
+</div>
+</body>
+</html>
