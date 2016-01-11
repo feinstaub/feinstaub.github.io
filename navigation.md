@@ -3,6 +3,7 @@
 [linux user and dev]()
 
   * # Hints:
+  * [Install openSUSE](linux-user/linux-install-opensuse.md)
   * [Beginners](linux-user/linux-beginners-notes.md)
   * [Advanced](linux-user/linux-advanced-notes.md)
   * [Firefox](linux-user/browser-notes.md)
@@ -13,7 +14,7 @@
   * [KDE: Symlink handling](struct/symlink-handling.md)
   * # Code:
   * [C++ dev hints](dev/dev-hints.md)
-  * [Scripts](bin/scripts-index.md)
+  * [Scripts](https://quickgit.kde.org/?p=scratch%2Fgregormi%2Fcodestruct-util.git&a=tree)
   * [Review Requests](https://git.reviewboard.kde.org/users/gregormi/)
   * [Bugs](https://bugs.kde.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=CONFIRMED&bug_status=ASSIGNED&bug_status=REOPENED&email1=codestruct&emailassigned_to1=1&emailcc1=1&emaillongdesc1=1&emailreporter1=1&emailtype1=substring&query_format=advanced)
   * # Mozilla Firefox:

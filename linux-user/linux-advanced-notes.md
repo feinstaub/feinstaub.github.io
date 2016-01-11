@@ -331,9 +331,9 @@ How to do mass ReplayGain? How to see which files are already gained?
 
 
 
-Scripts
--------
-[bin](../bin/scripts-index.md)
+Useful shell scripts
+--------------------
+[codestruct-util.git](https://quickgit.kde.org/?p=scratch%2Fgregormi%2Fcodestruct-util.git&a=tree)
 
 
 Fix openSUSE Firefox KDE integration
