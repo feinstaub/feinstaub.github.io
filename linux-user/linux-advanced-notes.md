@@ -54,32 +54,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 ### Detected issues in 5.4.2
 
-* COOL: Alt+Tab shows clutterfree and fast a menu on the left side of the screen
-
-
-* FIXED with 5.4.3: sddm (login screen) is shown on closed laptop display instead of primary screen
-    * https://bugs.kde.org/show_bug.cgi?id=354105
-
-
-* FIXED: Wastebin / trash widget: Malformed URL trash:/
-    * https://bugs.kde.org/show_bug.cgi?id=354241
-    * see also https://forum.kde.org/viewtopic.php?f=22&t=100899&p=327782
-
-
-* FIXED with 5.4.3: krunner crashes at startup
-    * does not happen with new user
-    * deleted ~/.config/krunnerrc -> did not help
-    * see https://bugs.kde.org/show_bug.cgi?id=343982
-    * "If the new user works, then you have to clean your plasma settings with removing the plasma* files from ~/.config
-        or to be more precise it are the files plasmashellrc and plasmarc"
-        --> renamed ~/.config/plasmashellrc, the other file was not present
-
-
-* FIXED/WAIT: drkonqi can't report bugs about krunner the version is 0.1 which bugzilla claims is not active
-    * https://bugs.kde.org/show_bug.cgi?id=353994
-        * also: Dialog has two Help buttons
-
-
 * OPEN: How to get Plasma's version other than plasmashell --version?
     * e.g. Plasma menu > About...
     * https://forum.kde.org/viewtopic.php?f=285&t=128873
@@ -88,15 +62,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 * OPEN: kinfocenter is not installed by default
     * part of this discussion: https://forum.kde.org/viewtopic.php?f=285&t=128873
     * sudo zypper install kinfocenter5
-
-
-* OPEN/WAIT: Open some windows
-    -> Click Show Desktop
-    -> Open Plasma Menu
-    -> Choose Leave
-    -> the logout bar (the one the with timeout) appears but is barely readable because the windows are now have-transparent overlapping
-    * https://bugs.kde.org/show_bug.cgi?id=354102
-    * still with 5.4.3
+    * NOTE that kinfocenter5 is part of openSUSE 42.1
 
 
 * OPEN/WAIT: Glitch: Delete an item with DEL key has a delay and shows no confirmation
@@ -116,11 +82,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * see also Add "Minimize all" to the "Show Desktop" widget's context menu  - https://bugs.kde.org/show_bug.cgi?id=354257 -
 
 
-* OPEN/WAIT: Thunderbird tray icon not visible
-    * https://bugs.kde.org/show_bug.cgi?id=354103
-    * still with 5.4.3
-
-
 * OPEN/WAIT: Plasma desktop new file is created top right instead of where the mouse is
     * Right click to create a file creates the item next to the top-right item instead of where the mouse was clicked
     * https://bugs.kde.org/show_bug.cgi?id=354104
@@ -132,12 +93,7 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * wait for more user feedback
 
 
-* OPEN: Alt+F1 does not work anymore for "Application Launcher"
-    * TODO: find bug
-    * does not happen with new user
-
-
-* OPEN: Glitch: Choose Leave -> Switch user -> "New session" -> "ok"
+* OPEN/WAIT: Glitch: Choose Leave -> Switch user -> "New session" -> "ok"
     -> Standby mode (happens only the first time after reboot)
     * reported here: https://bugs.kde.org/show_bug.cgi?id=354250
 
@@ -148,21 +104,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 
 * OPEN/WAIT: Device Notifier does not react on inserted DVD
     * https://bugs.kde.org/show_bug.cgi?id=354245
-
-
-* TODO: disable taskbar dimming for minimized apps by default
-    * https://bugs.kde.org/show_bug.cgi?id=311991
-    * https://git.reviewboard.kde.org/r/124675/
-
-
-* OPEN/WAIT: Checkbox readability optimization
-    * https://forum.kde.org/viewtopic.php?f=285&t=128946
-
-
-* OPEN/WAIT: Dolphin search displays "Invalid protocol" error. Ctrl+F
-    * see https://bugs.kde.org/show_bug.cgi?id=339866
-        * WAIT: "The issue's status says "resolved downstream". Could also the upstream message could be improved, for example by saying "Invalid protocol. See console output for details"?"
-    * still with 5.4.3
 
 
 * NOTE: Panel menu -> "More settings..." contains "Lock widgets" menu item reachable with left clicks.
@@ -192,27 +133,11 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
     * https://forum.kde.org/viewtopic.php?f=285&t=129088
 
 
-* OPEN: Dropping a file to Trash or Home icon results in the following error message: Access denied to .
-    * already reported to https://bugs.kde.org/show_bug.cgi?id=348378 which
-      is fixed but still not works
-    * still with 5.4.3
-
-
 ### issues not reported yet (5.4.2)
-
-* OPEN/TODO: Network manager fails after coming back from new session
-    * Solution: goto yast and switch to wicked and back to Network manager
-
 
 * OPEN: !!!, see https://forum.kde.org/viewtopic.php?f=285&t=128894#p344183
     On my openSUSE 13.2, Plasma 5.4.2, an empty user gets indeed the Home and Trash desktop items put into ~/Desktop. But when I right-click the desktop to open the Settings there is "Desktop" chosen as layout and not "Folder View", so the desktop was empty. I switched to "Folder View" manually.
     TODO: report bug and post to forum
-
-* OPEN: QuickShare / Pastebin widget is missing
-    * not reported yet
-
-
-* OPEN: keyboard layout switcher missing because settings are not transferred from Plasma 4 to 5.4.2
 
 
 * OPEN/WAIT 5.5: QuickLaunch widget is missing, which makes the following scripts disappear:
@@ -237,14 +162,6 @@ System -> /etc/sysconfig Editor -> Desktop -> Display manager -> DISPLAYMANGER (
 * SOLVED/TODO: Sometimes switching between desktop layouts is grayed out
     --> Widgets were locked.
     = Unintuitive => REPORT
-
-
-* NOT REP: drag application from menu to folderview makes plasma crash
-    * happend only once
-
-
-* NOT REP: sddm: Reboot or Shutdown does not work and count down goes to negative values
-    * ...
 
 
 * OPEN: Make "Folder View" the default Desktop layout
@@ -388,7 +305,6 @@ Name=org.freedesktop.FileManager1
 # Note this has to be done everytime the file gets overwritten.
 ```
 see https://forums.opensuse.org/showthread.php/456698-How-use-Dolphin-to-quot-open-containing-folder-quot-from-firefox-downloads?p=2688494#post2688494
-
 
 
 Oracle VirtualBox

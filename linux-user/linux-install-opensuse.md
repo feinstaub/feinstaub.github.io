@@ -260,13 +260,19 @@ Still not good yet.
 - TODO: Configure Printer and scanner
 
 
-### Non-reported bugs:
+### Not-reported bugs:
 
 * LibreOffice: cannot open file because path contains a 'ß' character
 
 ```
 /home/aaa/bbb_ß_ccc/ddd.odt does not exist.
 ```
+
+* QuickShare
+    * sharing two things and the url of the penultimate item does not react on click
+
+* Mozilla Firefox (and Thunderbird) use non-KDE file dialog and have old-looking theming
+    * this does not work: https://en.opensuse.org/SDB:Mozilla_filechooser
 
 
 ### Reported bugs:
