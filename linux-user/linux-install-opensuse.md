@@ -150,7 +150,7 @@ openSUSE Leap 42.1 installer:
 
 After installation notes
 ------------------------
-- comes with Plasma 5.4.3
+- comes with Plasma 5.4.3 (which is NOT the latest: 5.5.3)
 
 - First: many system updates via "Software Updates" applet
 
@@ -169,7 +169,7 @@ After installation notes
 
 
 ```
-xinput thunderbird yakuake gparted kate virtualbox smplayer krusader clementine kdf filelight git-core
+xinput thunderbird yakuake gparted kate virtualbox krusader clementine kdf filelight git-core
 
 ```
 
@@ -179,9 +179,13 @@ Notes:
 - kinfocenter WAS already installed (version 5.4.3)
 - filelight and kdf was NOT installed (-> kmoretools)
 - virtualbox auto-recommends virtualbox-qt
-- TODO: after smplayer installation still cannot play video files
-    - reboot does not help
 - Some package required kate4-parts (REMIND: could cause problems?)
+- smplayer: after installation still cannot play video files
+    - reboot does not help
+    - must also install mplayer
+    - PROBLEM: there are different versions: one of them in packman repo
+        - the packman one shows video but audio is distorted
+    - WAIT because works with VLC
 
 
 ### The following packages need extra repos:
@@ -194,6 +198,10 @@ Notes:
 
 - http://software.opensuse.org/package/git-cola
     - adds the "devel/tools/scm" repo
+
+- Latest KDE:
+    add repo: http://download.opensuse.org/repositories/KDE:/Frameworks5/openSUSE_Leap_42.1/ (extra Qt not needed anymore)
+        Name it Frameworks5
 
 - Multimedia codecs, see http://opensuse-guide.org/codecs.php, no OneClick-Install available
 
@@ -210,7 +218,12 @@ install vlc
 
 playback works with vlc!
 
-TODO: reboot
+reboot
+
+Playback does not work with smplayer.
+Read error message
+=> `sudo zypper install mplayer`
+Still not good yet.
 
 
 ### Manual Settings:
@@ -242,6 +255,8 @@ TODO: reboot
     - (Add Search widget == krunner)
     - (Add Printer widget)
 
+- HidePackages=true by default to prevent Apper to show too many updates, see https://bugs.freedesktop.org/show_bug.cgi?id=92511
+
 - TODO: Configure Printer and scanner
 
 
@@ -252,7 +267,6 @@ TODO: reboot
 ```
 /home/aaa/bbb_ß_ccc/ddd.odt does not exist.
 ```
-TODO: report
 
 
 ### Reported bugs:
@@ -264,3 +278,6 @@ Later:
 
 
 - TODO: thunderbird font is very narrow and does not look at all integrated into desktop theme
+- TODO: check what happend with VLC
+- TODO: report unreported bugs
+- TODO: look and close old bug reports

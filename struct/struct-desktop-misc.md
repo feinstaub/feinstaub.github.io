@@ -3,7 +3,7 @@ Desktop Misc
 
 Apper: Set HidePackages=true by default to prevent Apper to show too many updates
 ---------------------------------------------------------------------------------
-2015-10-17
+2015-10-17, reviewed 2016-01-11
 
 Reported: https://bugs.freedesktop.org/show_bug.cgi?id=92511
 
@@ -28,6 +28,7 @@ Current situation:
 Click "Install..." and you have to enter the password **7 times** (one time for each font).
 
 WISH: only be asked one time.
+
 
 Font Installer [usability]: wrong kind of message box
 -----------------------------------------------------
