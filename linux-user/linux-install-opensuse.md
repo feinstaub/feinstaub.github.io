@@ -169,7 +169,7 @@ After installation notes
 
 
 ```
-xinput thunderbird yakuake gparted kate virtualbox krusader clementine kdf filelight git-core
+xinput thunderbird yakuake gparted kate virtualbox krusader clementine kdf filelight git-core gnome-disk-utility
 
 ```
 
@@ -180,6 +180,7 @@ Notes:
 - filelight and kdf was NOT installed (-> kmoretools)
 - virtualbox auto-recommends virtualbox-qt
 - Some package required kate4-parts (REMIND: could cause problems?)
+- gnome-disk-utility provides gnome-disks
 - smplayer: after installation still cannot play video files
     - reboot does not help
     - must also install mplayer
@@ -235,6 +236,14 @@ Still not good yet.
     - Distorted test sound
     - relogin / reboot
     - OK / Sound good
+    - ...
+    - System sounds go through laptop again
+    - set primary sound card via YaST
+    - Plasma crash and no sound
+    - reboot
+    - OK, but
+        - VLC plays sound on laptop speaker
+        - smplayer plays sound correct but no video output, :(
 
 - Try to use nvidia graphics driver (fails)
     although the nouveau drivers seem to use I choose the nvidia graphics drivers
@@ -257,7 +266,18 @@ Still not good yet.
 
 - HidePackages=true by default to prevent Apper to show too many updates, see https://bugs.freedesktop.org/show_bug.cgi?id=92511
 
-- TODO: Configure Printer and scanner
+- Configure Printer and scanner
+    - Use Yast and follow the instructions of howto use hplip and hp-setup there
+    - does not find the HP network printer
+    - see https://en.opensuse.org/SDB:How_to_set-up_a_HP_printer
+    - use HP Device Discovery
+    - must know IP address, see printer menu: 192.168.178.24
+    - success
+    - Now that device is known, scanner setup is easy:
+        - YaST scanners, Edit the "unconfigured" HP scanner and choose the presected driver from the list
+
+- thunderbird font is very narrow and does not look at all integrated into desktop theme
+    - System Settings -> GNOME Anwendungs-Stil (GTK) -> Defaults -> OK
 
 
 ### Not-reported bugs:
@@ -282,8 +302,6 @@ Still not good yet.
 
 Later:
 
-
-- TODO: thunderbird font is very narrow and does not look at all integrated into desktop theme
-- TODO: check what happend with VLC
+- TODO: check what happend with VLC and smplayer
 - TODO: report unreported bugs
-- TODO: look and close old bug reports
+- TODO: clementine "Ihrer Installation von GStreamer fehlt ein Plugin."
