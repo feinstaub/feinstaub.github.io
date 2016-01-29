@@ -9,6 +9,30 @@
         <atom:link href="http://feinstaub.github.io/blog/feed.kde.xml" rel="self" type="application/rss+xml"/>
         
             <item>
+                <title>Dolphin Tipp - Investigate Disk Usage</title>
+                <description>&lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://quickgit.kde.org/?p=kde-baseapps.git&amp;amp;a=commit&amp;amp;h=f742843eb3e7935cb10803a09a19d72438528620&quot;&gt;since quite some time&lt;/a&gt;, there is a new feature in dolphin which helps to investigate the disk usage of the current directory (or mount point etc.). The feature is a bit hidden, so I decided to write this post:&lt;/p&gt;
+
+&lt;p&gt;Left-click on the disk space bar (located on the right side of dolphin’s status bar). The following menu opens, see screenshot:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2016-01-29-view-disk-usage-via-dolphin.1-menu.png&quot; alt=&quot;view-disk-usage-via-dolphin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first two menu items open Filelight with different entry points (current folder or current mount point), the third one is KDiskFree. In a submenu, there are also other tools available.&lt;/p&gt;
+
+&lt;p&gt;One nice thing is that you can configure (via submenu More -&amp;gt; Configure…) which programs should be shown in the main menu and in which order. The others will be kept in the submenu. Even if a program is not installed you will find it in the submenu for you to discover.&lt;/p&gt;
+
+&lt;p&gt;Note, that in case Filelight is already installed, you can still (and could in the past) also reach it from the folders context menu -&amp;gt; “Open with” -&amp;gt; Filelight.&lt;/p&gt;
+
+&lt;p&gt;That’s it. If you happen to come across another program that could be useful in the disk usage context and you think it could also useful for others, feel free to &lt;a href=&quot;https://bugs.kde.org/enter_bug.cgi?product=frameworks-knewstuff&quot;&gt;file a bug report&lt;/a&gt; (severity “wishlist”). If accepted, this program would then appear in the submenu for other users to be discovered and you could configure it to appear in the main menu.&lt;/p&gt;
+</description>
+                <link>http://feinstaub.github.io/blog/kde/2016/01/29/view-disk-usage-via-dolphin.html</link>
+
+                <pubDate>Fri, 29 Jan 2016 23:30:00 +0100</pubDate>
+                <guid isPermaLink="true">http://feinstaub.github.io/blog/kde/2016/01/29/view-disk-usage-via-dolphin.html</guid>
+            </item>
+        
+            <item>
                 <title>kreenshot-editor is incubating</title>
                 <description>&lt;p&gt;With this post I would like to introduce a new project: kreenshot-editor.&lt;/p&gt;
 
