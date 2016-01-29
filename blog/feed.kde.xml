@@ -24,7 +24,7 @@
 
 &lt;p&gt;Note, that in case Filelight is already installed, you can still (and could in the past) also reach it from the folders context menu -&amp;gt; “Open with” -&amp;gt; Filelight.&lt;/p&gt;
 
-&lt;p&gt;That’s it. If you happen to come across another program that could be useful in the disk usage context and you think it could also useful for others, feel free to &lt;a href=&quot;https://bugs.kde.org/enter_bug.cgi?product=frameworks-knewstuff&quot;&gt;file a bug report&lt;/a&gt; (severity “wishlist”). If accepted, this program would then appear in the submenu for other users to be discovered and you could configure it to appear in the main menu.&lt;/p&gt;
+&lt;p&gt;That’s it. If you happen to come across another program that could be useful in the disk usage context and you think it could also useful for others, feel free to &lt;a href=&quot;https://bugs.kde.org/enter_bug.cgi?product=frameworks-knewstuff&quot;&gt;file a bug report&lt;/a&gt; (severity “wishlist”, topic “KMoreTools: new disk usage tool for dolphin: …”). If accepted, this program would then appear in the submenu for other users to be discovered and you could configure it to appear in the main menu.&lt;/p&gt;
 </description>
                 <link>http://feinstaub.github.io/blog/kde/2016/01/29/view-disk-usage-via-dolphin.html</link>
 
