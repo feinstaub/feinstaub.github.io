@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Audioformate</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Audioformate</h1>
+<div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>In diesem Arbeitsblatt geht es darum, festzustellen, dass es verschiedene Dateiformate zum Speichern von Audiodaten gibt.</p></div>
+<div class="paragraph"><p>Voraussetzung: <a href="arbeitsblatt-paketmanager-zypper.html">paketmanager-zypper</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vorbereitung_song0">Vorbereitung (song0)</h2>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Installiere <em>amarok</em>.
+</p>
+</li>
+<li>
+<p>
+Erstelle einen Arbeitsordner, z. B. <em>tmp/audio/</em> in deinem Homeverzeichnis.
+</p>
+</li>
+<li>
+<p>
+Kopiere die Audio-Datei, die mit Amarok mitgeliefert wird in den Arbeitsordner, z. B. mit <span class="monospaced">cp /usr/share/kde4/apps/amarok/data/first_run_jingle.ogg ~/tmp/audio/song0.ogg</span>
+</p>
+</li>
+<li>
+<p>
+Deinstalliere <em>amarok</em> wieder und installiere <em>clementine</em>.
+</p>
+</li>
+</ol></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tabelle_erstellen">Tabelle erstellen</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Erstelle (z. B. mit LibreOffice Calc) eine Tabelle, die dann im weiteren Verlauf ausgefüllt wird. Die Tabelle sieht mit der Zeile für <em>song0.ogg</em> schon vorausgefüllt so aus:</p></div>
+<div class="paragraph"><p><span class="image">
+<img src="res/audioformate-tabelle.png" alt="res/audioformate-tabelle.png">
+</span></p></div>
+<div class="paragraph"><p>Versuche, die Werte für <em>song0.ogg</em> wie im folgenden beschrieben selbst zu ermitteln.</p></div>
+<div class="sect2">
+<h3 id="_dateigröße">Dateigröße</h3>
+<div class="paragraph"><p>Die Dateigröße in <strong>Bytes</strong> (B) kann man mit dem Befehl <span class="monospaced">ls -l song0.ogg</span> oder mit rechter Maustaste auf die Datei &#8594; Eigenschaften ermittlen.</p></div>
+<div class="paragraph"><p>Die Dateigröße in <strong>Kilobyte</strong> (KB) ist der Byte-Wert geteilt durch 1024.</p></div>
+<div class="paragraph"><p>Die Dateigröße in <strong>Megabyte</strong> (MB) ist KB-Wert geteilt durch 1024.</p></div>
+<div class="paragraph"><p>Für die letzten beiden Werte verwende am besten eine Calc-Formel.</p></div>
+<div class="paragraph"><p>Die Spalte <strong>% zu song0.ogg</strong> besagt wie groß eine Datei im Vergleich zu <em>song0.ogg</em> ist. Für <em>song0.ogg</em> ist dies 100 %. Für die weiteren Zeilen kann ebenfalls - wenn auch etwas schwieriger - eine Formel verwendet werden.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_dateiformat">Dateiformat</h3>
+<div class="paragraph"><p>Die Informationen zum Dateiformat kann man mit dem Befehl <span class="monospaced">file song0.ogg</span> herausfinden, z. B.:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>~/tmp/audio&gt; file song0.ogg
+song0.ogg: Ogg data, Vorbis audio, stereo, 44100 Hz, ~112000 bps, created by: Xiph.Org libVorbis I</tt></pre></div></div>
+<div class="paragraph"><p>Dabei gilt:</p></div>
+<div class="paragraph"><p>"Ogg data, Vorbis audio" &#8594; <strong>Dateiformat</strong></p></div>
+<div class="paragraph"><p>"44100 Hz" &#8594; <strong>Abtastrate</strong> &#8594; geteilt durch 1000 &#8594; 44,1 kHz</p></div>
+<div class="paragraph"><p>"112000 bps" &#8594; <strong>Datenrate</strong> &#8594; geteilt durch 1000 &#8594; 112 kbps</p></div>
+<div class="paragraph"><p>Die <strong>Auflösung</strong> gibt es bei diesem Dateiformat nicht. Deswegen schreiben wird dafür "n/a" (not available) in die Tabelle.</p></div>
+<div class="paragraph"><p>Alternativ kann man die Datei auch mit Clementine öffnen und mit rechter Maustaste &#8594; "Edit track information&#8230; Ctrl+E" &#8594; Summary anzeigen lassen.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ogg_8594_wav_song1"> .ogg &#8594; .wav (song1)</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>song0.ogg</em> liegt im Dateiformat <a href="https://de.wikipedia.org/wiki/Vorbis">Ogg Vorbis</a>. Dieses Format speichert die Audiodaten stark komprimiert, aber dafür ist es <a href="https://de.wikipedia.org/wiki/Audiodatenkompression">verlustbehaftet</a> (wie z. B. auch mp3 oder aac).</p></div>
+<div class="paragraph"><p>Die Datei soll nun in das verlustfreie Format WAVE umgewandelt werden, dazu kann der Befehl <em>oggdec</em> verwendet werden (das "dec" steht für "Decoder"):</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>~/tmp/audio&gt; oggdec song0.ogg
+oggdec from vorbis-tools 1.4.0
+Decoding "song0.ogg" to "song0.wav"
+        [100.0%]</tt></pre></div></div>
+<div class="paragraph"><p>Für unsere Tabelle nun "song0.wav" umbenennen nach "song1.wav".</p></div>
+<div class="paragraph"><p>(Dies hätte man auch in einem Schritt machen können mit <span class="monospaced">oggdec song0.ogg -o song1.wav</span>, dabei steht "-o" für "output")</p></div>
+<div class="paragraph"><p>Bestimme nun wieder die Dateigröße und verwende wieder den <em>file</em>-Befehl, um Informationen über den Dateityp zu erfahren. Beim WAVE-Format gibt es keine Datenrate, aber dafür eine Auflösung in Bit (was das genau ist, wird später erklärt).</p></div>
+<div class="paragraph"><p><strong>Frage:</strong> Um wieviel größer ist die wav-Datei im Vergleich zur ogg-Datei?</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pcm_16_8594_8_bit_song2">PCM 16 &#8594; 8 Bit (song2)</h2>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Installiere <em>audacity</em>.
+</p>
+</li>
+<li>
+<p>
+Öffne damit <em>song1.wav</em>
+</p>
+</li>
+<li>
+<p>
+Datei &#8594; Ton exportieren&#8230;
+</p>
+</li>
+<li>
+<p>
+"Andere unkomprimierte Dateien" auswählen
+</p>
+</li>
+<li>
+<p>
+Optionen&#8230; klicken und folgendes einstellen: Header: "WAV (Microsoft)", Codec: "Unsigned 8-bit PCM" (PCM steht für <a href="https://de.wikipedia.org/wiki/Puls-Code-Modulation">Puls-Code-Modulation</a>)
+</p>
+</li>
+<li>
+<p>
+Speichern unter <em>song2-8bit-44kHz.wav</em>
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>Fülle für die neue Datei eine neue Zeile in der Tabelle aus.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pcm_44khz_8594_16khz_song3">PCM 44kHz &#8594; 16kHz (song3)</h2>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Öffne <em>song1.wav</em> mit Audacity.
+</p>
+</li>
+<li>
+<p>
+Stelle die Projektfrequenz (unten links) auf 16000
+</p>
+</li>
+<li>
+<p>
+Datei &#8594; Ton exportieren&#8230; &#8594; "WAV (Microsoft) signed 16-bit PCM"
+</p>
+</li>
+<li>
+<p>
+Speichern unter <em>song3-16kHz.wav</em>
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>Fülle für die neue Datei eine neue Zeile in der Tabelle aus.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pcm_44khz_8594_8khz_song4">PCM 44kHz &#8594; 8kHz (song4)</h2>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Öffne wieder <em>song1.wav</em> mit Audacity.
+</p>
+</li>
+<li>
+<p>
+Stelle die Projektfrequenz (unten links) auf 8000
+</p>
+</li>
+<li>
+<p>
+Datei &#8594; Ton exportieren&#8230; &#8594; wie im vorigen Abschnitt
+</p>
+</li>
+<li>
+<p>
+Speichern unter <em>song4-8kHz.wav</em>
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>Fülle für die neue Datei eine neue Zeile in der Tabelle aus. Vergleiche den Klang mit song1 und schreibe deine Bewertung in die Spalte "Hörbeurteilung".</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pcm_44khz_8594_4khz_song5">PCM 44kHz &#8594; 4kHz (song5)</h2>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+Öffne wieder <em>song1.wav</em> mit Audacity.
+</p>
+</li>
+<li>
+<p>
+Stelle die Projektfrequenz (unten links) auf 4000 (manuelle Eingabe!)
+</p>
+</li>
+<li>
+<p>
+Datei &#8594; Ton exportieren&#8230; &#8594; wie im vorigen Abschnitt
+</p>
+</li>
+<li>
+<p>
+Speichern unter <em>song5-4kHz.wav</em>
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>Fülle für die neue Datei eine neue Zeile in der Tabelle aus. Vergleiche den Klang mit song1 und schreibe deine Bewertung in die Spalte "Hörbeurteilung".</p></div>
+<div class="paragraph"><p><strong>Frage:</strong> Was fällt auf, wenn man die Dateigröße und die Tonqualität mit song0 vergleicht?</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oggenc_song6">oggenc (song6)</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Verwende den <em>oggenc</em>-Befehl, um <em>song1.wav</em> in eine .ogg-Datei umzuwandeln ("enc" steht für "Encode"):</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>~/tmp/audio&gt; oggenc song1.wav</tt></pre></div></div>
+<div class="paragraph"><p>Benenne die Datei in <em>song6-q3.ogg</em> um, da diese Datei mit der Standard-Qualität 3 komprimiert wurde, und fülle eine Tabellenzeile aus.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oggenc_q_1_song7">oggenc q -1 (song7)</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Hier verwenden wird Qualitätsstufe -1 und leiten die Ausgabe gleich in die richtige Datei um:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>~/tmp/audio&gt; oggenc -q-1 song1.wav -o song7-q-1.ogg</tt></pre></div></div>
+<div class="paragraph"><p>Tabellenzeile ausfüllen.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oggenc_q_10_song8">oggenc q 10 (song8)</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Hier verwenden wird Qualitätsstufe 10 und leiten die Ausgabe gleich in die richtige Datei um:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>~/tmp/audio&gt; oggenc -q-1 song1.wav -o song8-q10.ogg</tt></pre></div></div>
+<div class="paragraph"><p>Tabellenzeile ausfüllen.</p></div>
+<div class="paragraph"><p><strong>Frage:</strong> Kannst du Unterschiede in der Tonqualität heraushören?</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_flac">FLAC</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>FLAC steht für <a href="https://de.wikipedia.org/wiki/Free_Lossless_Audio_Codec">Free Lossless Audio Codec</a> und komprimiert Audiodaten. Diese sind dann im Gegensatz zu ogg nicht verlustbehaftet, aber dafür ist die Datei größer.</p></div>
+<div class="paragraph"><p>Installiere das Paket <em>flac</em>.</p></div>
+<div class="paragraph"><p>Wandele song1.wav in FLAC um und benenne das Ergebnis um:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>~/tmp/audio&gt; flac song1.wav
+~/tmp/audio&gt; mv song1.flac song9.flac</tt></pre></div></div>
+<div class="paragraph"><p>Tabellenzeile ausfüllen.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links">Links</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Vorbis">Ogg Vorbis</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Audiodatenkompression">Audiodatenkompression - ohne Verlust und verlustbehaftet</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Puls-Code-Modulation">Puls-Code-Modulation (PCM)</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Clementine_%28software%29">Clementine</a>, mit Featureliste
+</p>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Free_Lossless_Audio_Codec">FLAC</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Generationsverlust">https://de.wikipedia.org/wiki/Generationsverlust</a> - Beispiel eines JPEG-Bildes, das wiederholt gedreht und gespeichert wird
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2016-01-31 18:06:23 CET
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Grundlagen des Internets / Privatsphäre</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(2);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Grundlagen des Internets / Privatsphäre</h1>
+<div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Mit welchen Methoden&#8230;</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+kann man als Dienstebetreiber die Identität eines Nutzers feststellen
+</p>
+</li>
+<li>
+<p>
+oder zumindest ob Anfragen zum gleichen Rechner gehören?
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Zunächst aber einige Grundlagen der Netzwerktechnik:</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grundlagen_der_netzwerktechnik">Grundlagen der Netzwerktechnik</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ip_adresse">IP-Adresse</h3>
+<div class="paragraph"><p>"Eine IP-Adresse ist eine Adresse in Computernetzen, die – wie das Internet – auf dem Internetprotokoll (IP) basiert. Sie wird Geräten zugewiesen, die an das Netz angebunden sind, und macht die Geräte so adressierbar und damit erreichbar. Die IP-Adresse kann einen einzelnen Empfänger oder eine Gruppe von Empfängern bezeichnen (Multicast, Broadcast). Umgekehrt können einem Computer mehrere IP-Adressen zugeordnet sein." (<a href="https://de.wikipedia.org/wiki/IP-Adresse">https://de.wikipedia.org/wiki/IP-Adresse</a>)</p></div>
+<div class="paragraph"><p><strong>Aufgabe:</strong></p></div>
+<div class="paragraph"><p>Mit welcher IP-Adresse ist mein Rechner im Internet sichtbar? &#8594; <a href="http://www.whatsmyip.org/">http://www.whatsmyip.org/</a> (Ergebnis z. B. "37.24.143.50")</p></div>
+<div class="paragraph"><p>Vergleiche das Ergebnis mit deinem Sitznachbar. Was fällt auf?</p></div>
+</div>
+<div class="sect2">
+<h3 id="_routing">Routing</h3>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>(Computer 1, Computer 2)
+   &lt;--&gt; Heimrouter
+   &lt;--&gt; ISP (Internet-Service-Provider; vergibt Internet-IP)
+   &lt;--&gt; Internet
+   &lt;--&gt; (alle möglichen Computer)</tt></pre></div></div>
+<div class="paragraph"><p><a href="https://de.wikipedia.org/wiki/IP-Adresse#Routing">https://de.wikipedia.org/wiki/IP-Adresse#Routing</a> (Graphik)</p></div>
+<div class="paragraph"><p>Weg eines Pakets im Internet&#8230;</p></div>
+<div class="paragraph"><p>&#8230;vom eigenen Rechner zu einem beliebigen Ziel (z. B. tagesschau.de, whatsmyip.org):</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>sudo /usr/sbin/traceroute -T whatsmyip.org
+traceroute to whatsmyip.org (208.64.38.55), 30 hops max, 44 byte packets
+ 1  fritz.box (192.168.178.1)  0.633 ms  0.613 ms  1.404 ms
+ 2  84.116.198.82 (84.116.198.82)  26.047 ms  26.604 ms  26.581 ms
+ 3  84.116.197.121 (84.116.197.121)  110.749 ms  111.723 ms  116.441 ms
+ 4  84.116.138.198 (84.116.138.198)  120.276 ms  121.115 ms *
+ 5  * * *
+ 6  * 84.116.140.174 (84.116.140.174)  109.123 ms  109.006 ms
+ 7  us-nyc01b-ri2-et-4-1-0-0.aorta.net (84.116.135.114)  108.303 ms  101.032 ms  107.154 ms
+ 8  lag-5.ear3.NewYork1.Level3.net (4.68.72.9)  116.838 ms  112.097 ms  114.870 ms
+ 9  * * *
+10  ae-1-6.bar2.Detroit1.Level3.net (4.69.202.229)  128.357 ms  125.759 ms  132.949 ms
+11  vl-5.car2.Detroit1.Level3.net (4.69.202.238)  253.247 ms ae-0-11.bar1.Detroit1.Level3.net (4.69.202.221)  129.689 ms  127.818 ms
+12  vl-5.car1.Detroit1.Level3.net (4.69.202.234)  127.885 ms  125.636 ms ae-11-11.car1.Detroit1.Level3.net (4.69.133.245)  286.410 ms
+13  EASY-ONLINE.car1.Detroit1.Level3.net (4.31.123.98)  130.232 ms  127.629 ms  127.808 ms
+14  core5.tym.r256.net (173.225.176.93)  127.963 ms  137.850 ms  137.914 ms
+15  agr3.tym.r256.net (173.225.185.38)  130.919 ms  132.047 ms  132.083 ms
+16  whatsmyip.org (208.64.38.55)  128.001 ms  130.101 ms  130.032 ms</tt></pre></div></div>
+<div class="paragraph"><p>&#8230;oder umgekehrt (nur von whatsmyip.org zum eigenen Rechner: siehe <a href="http://www.whatsmyip.org/traceroute/">http://www.whatsmyip.org/traceroute/</a></p></div>
+</div>
+<div class="sect2">
+<h3 id="_ping_und_ports">Ping und Ports</h3>
+<div class="paragraph"><p>Tausche mit deinem Nachbarn (lokale) IP-Adressen aus und pingt euch gegenseitig (<span class="monospaced">ping ip-adresse</span>).</p></div>
+<div class="paragraph"><p>(&#8230;Man kann nur Host-Adressen pingen, aber keine Ports. Um zu schauen, ob hinter einem Port ein Dienst hängt, verwendet man einen Portscanner, z. B. um seinen eigenen Rechner zu prüfen: <a href="http://www.whatsmyip.org/port-scanner/">http://www.whatsmyip.org/port-scanner/</a>)</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_privatsphäre">Privatsphäre</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>"More Info About You": <a href="http://www.whatsmyip.org/more-info-about-you/">http://www.whatsmyip.org/more-info-about-you/</a> Diese Seite zeigt, welche Information jeder Rechner, den man im Internet mit einem Browser kontaktiert, auslesen kann, ohne dass man sich irgendwo mit einem Benutzerkonto eingeloggt hat. Dazu gehören:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Hostname (und IP-Adresse) des Internet-Service-Providers
+</p>
+</li>
+<li>
+<p>
+Browsername und Version
+</p>
+</li>
+<li>
+<p>
+Bildschirm- und Browserauflösung
+</p>
+</li>
+<li>
+<p>
+Cookies erlaubt ja/nein
+</p>
+</li>
+<li>
+<p>
+Installiert Browser-Plugins
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_spannungsfeld_zwischen_privatsphäre_und_rechteverwertung">Spannungsfeld zwischen Privatsphäre und Rechteverwertung</h3>
+<div class="paragraph"><p>Beispiele:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+CD im Laden kaufen
+</p>
+</li>
+<li>
+<p>
+Buch im Laden kaufen
+</p>
+</li>
+<li>
+<p>
+Amazon-Kindel-Buch (&#8594; jeder Buchkauf mit Person verknüpft &#8594; Historie; Lesestellen werden an Amazon gesendet)
+</p>
+</li>
+<li>
+<p>
+Radio hören (&#8594; Rechteverwertung z. B. durch <a href="https://de.wikipedia.org/w/index.php?title=Gesellschaft_f%C3%BCr_musikalische_Auff%C3%BChrungs-_und_mechanische_Vervielf%C3%A4ltigungsrechte&amp;redirect=no">GEMA</a>)
+</p>
+</li>
+<li>
+<p>
+DRM-Musik: <a href="https://fsfe.org/activities/drm/index.de.html">https://fsfe.org/activities/drm/index.de.html</a>, <a href="http://drm.info/index.de.html">http://drm.info/index.de.html</a>
+</p>
+</li>
+<li>
+<p>
+Privatkopie / Urheberrecht: <a href="http://www.gi.de/fileadmin/redaktion/Download/GI-Position_Urheberrecht2006.pdf">http://www.gi.de/fileadmin/redaktion/Download/GI-Position_Urheberrecht2006.pdf</a> (siehe auch <a href="http://www.gi.de/index.php?id=323">http://www.gi.de/index.php?id=323</a>)
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2016-01-31 21:52:51 CET
+</div>
+</div>
+</body>
+</html>
