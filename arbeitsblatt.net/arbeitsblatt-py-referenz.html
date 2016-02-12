@@ -489,9 +489,34 @@ http://www.gnu.org/software/src-highlite -->
 <pre><tt><span style="font-weight: bold"><span style="color: #0000FF">try</span></span><span style="color: #990000">:</span>
     zahl <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Gebe eine Zahl ein: "</span><span style="color: #990000">))</span>
     <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Die Zahl ist: {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>zahl<span style="color: #990000">))</span>
+<span style="font-weight: bold"><span style="color: #0000FF">except</span></span> ValueError<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Fehler beim Umwandeln der Eingabe in eine Zahl."</span><span style="color: #990000">)</span></tt></pre></div></div>
+<div class="paragraph"><p>oder:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">try</span></span><span style="color: #990000">:</span>
+    zahl <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">int</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">input</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Gebe eine Zahl ein: "</span><span style="color: #990000">))</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Die Zahl ist: {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>zahl<span style="color: #990000">))</span>
+<span style="font-weight: bold"><span style="color: #0000FF">except</span></span> KeyboardInterrupt<span style="color: #990000">:</span>
+    <span style="font-weight: bold"><span style="color: #0000FF">raise</span></span>
 <span style="font-weight: bold"><span style="color: #0000FF">except</span></span><span style="color: #990000">:</span>
     <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Fehler beim Umwandeln der Eingabe in eine Zahl."</span><span style="color: #990000">)</span></tt></pre></div></div>
-<div class="paragraph"><p>Siehe auch <a href="http://www.python-kurs.eu/python3_ausnahmebehandlung.php">Fehlerbehandlung und Ausnahmebehandlung</a> (python-kurs.eu) (try, except, finally, else, assert).</p></div>
+<div class="paragraph"><p>Siehe auch:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.python-kurs.eu/python3_ausnahmebehandlung.php">Fehlerbehandlung und Ausnahmebehandlung</a> (python-kurs.eu) (try, except, finally, else, assert).
+</p>
+</li>
+<li>
+<p>
+<a href="http://effbot.org/zone/stupid-exceptions-keyboardinterrupt.htm">KeyboardInterrupt Exception</a>
+</p>
+</li>
+</ul></div>
 </div>
 <div class="sect2">
 <h3 id="_sleep">sleep</h3>
@@ -940,7 +965,7 @@ Introspektion
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-02-07 17:10:03 CET
+Letzte Änderung 2016-02-12 21:35:20 CET
 </div>
 </div>
 </body>

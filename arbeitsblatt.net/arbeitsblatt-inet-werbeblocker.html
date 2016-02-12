@@ -24,6 +24,11 @@ asciidoc.install(2);
 </div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>Arbeite folgende Aufgaben durch, um zu sehen, wie Cookies und Werbeblocker zusammenhängen können.</p></div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_aufgabe_1_cookies">Aufgabe 1: Cookies</h2>
 <div class="sectionbody">
@@ -32,42 +37,58 @@ asciidoc.install(2);
 <div class="ulist"><ul>
 <li>
 <p>
-<strong>Firefox</strong> starten
+<strong>Firefox</strong> (in einem neuen Fenster) starten
 </p>
 </li>
 <li>
 <p>
-Besuche die Seite <a href="http://www.gmx.net">http://www.gmx.net</a>
+Besuche die Web-Seite <a href="http://www.gmx.de">http://www.gmx.de</a> (oder: <a href="http://www.welt.de">http://www.welt.de</a>)
 </p>
 </li>
 <li>
 <p>
-Firefox Menu &#8594; Developer &#8594; Toggle Tools
-</p>
-</li>
-<li>
-<p>
-Stelle sicher, dass du den Tab "Network" und "Storage" siehst.
-</p>
-</li>
-<li>
-<p>
-Lade die Seite neu.
-</p>
-</li>
-<li>
-<p>
-Schau dir im <strong>Network</strong>-Tab unten rechts folgendes an und notiere die Werte:
+Gehe ins Firefox Menu (die 3 Balken oben rechts) und dann auf
+    &#8594; Developer (Entwickler-Werkzeuge)
+    &#8594; Toggle Tools (Werkzeuge ein-/ausblenden)
 </p>
 <div class="ulist"><ul>
 <li>
 <p>
-<strong>Wieviele Requests</strong> gab es (also wie oft hat der Browser Daten von anderen Computer angefragt)? <span class="white">(263, 303)</span>
+Oder drücke die Tastenkombination Strg+Umschalt+I
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Stelle sicher, dass du den Tab "Network" (Netzwerkanalyse) und "Storage" (Speicher) siehst.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Der Speicher-Tab ist normalerweise zuerst nicht sichtbar. Klicke auf das Zahnrad rechts in der Leiste und setze einen Haken bei "Speicher".
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Lade die Seite (<a href="http://www.gmx.de">http://www.gmx.de</a>) neu und warte bis die Ladeanzeige sich nicht mehr dreht.
 </p>
 </li>
 <li>
 <p>
-Circa welche <strong>Datenmenge</strong> wurde uebertragen? <span class="white">(3,8 MB, 4,2 MB)</span>
+Schau dir im <strong>Network</strong>-Tab unten rechts folgendes an und notiere die Werte (siehe unten rechts in der Leiste):
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Wieviele Requests</strong> (= Anfragen) gab es (also wie oft hat der Browser Daten von anderen Computern angefragt)? <span class="white">(263, 303)</span>
+</p>
+</li>
+<li>
+<p>
+Welche <strong>Datenmenge</strong> wurde ungefähr übertragen? <span class="white">(3,8 MB, 4,2 MB)</span>
 </p>
 </li>
 <li>
@@ -79,27 +100,34 @@ Wie lange <strong>dauerte</strong> der Seitenaufbau? <span class="white">(24 sec
 </li>
 <li>
 <p>
-Wiederhole die Messung, indem die Seite noch einmal neu laedst.
+Wiederhole die Messung, indem die Seite noch einmal neu lädst.
 </p>
 </li>
 <li>
 <p>
-Schau dir im <strong>Storage</strong>-Tab an, welche Adressen <strong>Cookies</strong> abgelegt und notiere die Anzahl. <span class="white">(8)</span>
+Schau dir im <strong>Storage</strong>-Tab an, von welchen Domains <strong>Cookies</strong> abgelegt und notiere die Anzahl. <span class="white">(8)</span>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Hinweis: ein Domainname sieht z. B. so aus: de.wikipedia.org, www.tagesschau.de etc.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Bei gmx.de: suche folgende Domain heraus und klicke drauf: <em>madclient.uimserv.net</em>.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Merke dir aus der Liste die Werte für <em>NGUserID</em> und <em>UserID1</em> (im Fenster ganz rechts kann mit Strg+C den Wert kopieren)
 </p>
 </li>
 <li>
 <p>
-Suche eine spezielle Adresse heraus und klicke drauf: <em>madclient.uimserv.net</em>.
-</p>
-</li>
-<li>
-<p>
-Merke dir aus der Liste die Werte fuer <em>NGUserID</em> und <em>UserID1</em>.
-</p>
-</li>
-<li>
-<p>
-Firefox neu starten.
+Firefox neu starten (zumachen und wieder aufmachen).
 </p>
 </li>
 <li>
@@ -108,38 +136,52 @@ Suche dir erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus un
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><p><em>Frage:</em> Was ist das Ergebnis des Vergleichs?</p></div>
+</li>
+</ul></div>
+<div class="paragraph"><p><em>Frage:</em> Was ist das Ergebnis des Vergleichs? <span class="white">keine Änderung</span></p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>
+
+</tt></pre></div></div>
 </div>
 <div class="sect2">
 <h3 id="_1_b_cookie_einstellungen">1 b) Cookie-Einstellungen</h3>
 <div class="ulist"><ul>
 <li>
 <p>
-Firefox Menu &#8594; Preferences (Einstellunge) &#8594; Privacy &#8594; History &#8594; Firefox will: "Use custom settings for history" &#8594; Accept cookies from sites &#8594; Keep until <strong>I close Firefox</strong>
+Firefox Menü
+    &#8594;  Einstellungen (engl. Preferences)
+    &#8594; Datenschutz (Privacy)
+    &#8594; Chronik-Abschnitt (History)
+    &#8594; Firefox verwendet: "benutzerdefinierte Einstellungen" ("Use custom settings for history")
+    &#8594; Accept cookies from sites
+    &#8594; Keep until <strong>I close Firefox</strong>
 </p>
 </li>
 <li>
 <p>
-Firefox neu starten.
+Firefox 2x neu starten. <span class="white">die Einstellungen greifen erst nach Neustart</span>
 </p>
 </li>
 <li>
 <p>
-Suche dir von <a href="http://www.gmx.net">http://www.gmx.net</a> erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus und vergleiche sie mit den vorher notierten. <span class="white">Gleich, weil die Einstellungen noch nicht greifen</span>
-</p>
-</li>
-<li>
-<p>
-Firefox nochmal neu starten.
-</p>
-</li>
-<li>
-<p>
-Suche dir erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus und vergleiche sie mit den vorher notierten. <span class="white">Anders.</span>
+Suche dir von <a href="http://www.gmx.net">http://www.gmx.net</a> erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus und vergleiche sie mit den vorher notierten.
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><p><em>Frage:</em> Was ist passiert?</p></div>
+<div class="paragraph"><p><em>Frage:</em> Was ist passiert? <span class="white">die IDs unterscheiden sich</span></p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>
+
+</tt></pre></div></div>
 </div>
 </div>
 </div>
@@ -149,7 +191,7 @@ Suche dir erneut die Werte fuer <em>NGUserID</em> und <em>UserID1</em> heraus un
 <div class="ulist"><ul>
 <li>
 <p>
-Firefox Menu &#8594; Addons &#8594; Nach <em>Adblock Plus</em> suchen und installieren.
+Firefox Menü &#8594; "Erweiterungen" (engl. Addons) &#8594; Nach <em>Adblock Plus</em> suchen und installieren.
 </p>
 </li>
 <li>
@@ -169,7 +211,7 @@ Siehe Aufgabe 1 a): Schau dir im <strong>Network</strong>-Tab unten rechts folge
 </li>
 <li>
 <p>
-Welche <strong>Datenmenge</strong> wurde uebertragen? <span class="white">(3,4 MB, 3,2 MB)</span>
+Welche <strong>Datenmenge</strong> wurde übertragen? <span class="white">(3,4 MB, 3,2 MB)</span>
 </p>
 </li>
 <li>
@@ -179,13 +221,21 @@ Wie lange <strong>dauerte</strong> der Seitenaufbau? <span class="white">(16 sec
 </li>
 <li>
 <p>
-Wie gross ist die Anzahl der <strong>Cookie</strong>-Adressen aus dem Storage-Tab? <span class="white">(2, 2)</span>
+Wie ist die Anzahl der <strong>Cookie</strong>-Domains aus dem Storage-Tab? <span class="white">(2, 2)</span>
 </p>
 </li>
 </ul></div>
 </li>
 </ul></div>
 <div class="paragraph"><p><em>Frage:</em> Was fällt auf?</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>
+
+</tt></pre></div></div>
 </div>
 </div>
 <div class="sect1">
@@ -225,6 +275,7 @@ Beispiel: Liste der bekannten Sicherheitslücken von Mozilla Firefox und die Ver
 <div class="sect1">
 <h2 id="_beispiele">Beispiele</h2>
 <div class="sectionbody">
+<div class="paragraph"><p>Beispiele von Seiten, die man mit und ohne AdBlock ausprobieren kann:</p></div>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -233,9 +284,19 @@ Trailer auf youtube: <a href="https://www.youtube.com/watch?v=dVDk7PXNXB8">https
 </li>
 <li>
 <p>
-<a href="http://www.welt.de/wirtschaft/webwelt/article4750988/Die-500-schlechtesten-Passwoerter-auf-einen-Blick.html">http://www.welt.de/wirtschaft/webwelt/article4750988/Die-500-schlechtesten-Passwoerter-auf-einen-Blick.html</a>
+<a href="http://doodle.com/">http://doodle.com/</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.welt.de/">http://www.welt.de/</a>
 </p>
 <div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.welt.de/wirtschaft/webwelt/article4750988/Die-500-schlechtesten-Passwoerter-auf-einen-Blick.html">http://www.welt.de/wirtschaft/webwelt/article4750988/Die-500-schlechtesten-Passwoerter-auf-einen-Blick.html</a>
+</p>
+</li>
 <li>
 <p>
 <a href="http://www.whatsmypass.com/the-top-500-worst-passwords-of-all-time">http://www.whatsmypass.com/the-top-500-worst-passwords-of-all-time</a>
@@ -245,7 +306,39 @@ Trailer auf youtube: <a href="https://www.youtube.com/watch?v=dVDk7PXNXB8">https
 </li>
 <li>
 <p>
+<a href="http://www.gmx.de">http://www.gmx.de</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.web.de">http://www.web.de</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.heise.de">http://www.heise.de</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_weiterführende_infos">Weiterführende Infos</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
 Google Adsense vs. <a href="arbeitsblatt-inet-suchmaschinen.html">Suchmaschinen</a>
+</p>
+</li>
+<li>
+<p>
+12.02.2016: <a href="http://www.heise.de/newsticker/meldung/Adblock-Action-Day-der-Verleger-Adblocking-ist-wie-der-Klimawandel-3100309.html">http://www.heise.de/newsticker/meldung/Adblock-Action-Day-der-Verleger-Adblocking-ist-wie-der-Klimawandel-3100309.html</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Uniform_Resource_Locator#Aufbau">https://de.wikipedia.org/wiki/Uniform_Resource_Locator#Aufbau</a>
 </p>
 </li>
 </ul></div>
@@ -255,7 +348,7 @@ Google Adsense vs. <a href="arbeitsblatt-inet-suchmaschinen.html">Suchmaschinen<
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-02-07 17:01:05 CET
+Letzte Änderung 2016-02-12 20:42:48 CET
 </div>
 </div>
 </body>
