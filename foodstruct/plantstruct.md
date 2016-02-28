@@ -37,17 +37,17 @@ Bad Homburg
 
 FFM
 ---
-- V-Restaurant [Chimichurri](http://www.chimichurri-frankfurt.de/), Im Prüfling 63, 60389, 9:00-24:00
+- V-Restaurant [Chimichurri](http://www.chimichurri-frankfurt.de/), Im Prüfling 63, 60389, 18:00-23:00
 - V-Restaurant [Wondergood](http://www.wondergood.de/), Preungesheimer Str. 1, 60389
 - Restaurant [ginkgo](http://www.ginkgo-frankfurt.de/), Bergerstrasse 81, 60316
     "Seit 2012 interessieren wir uns persönlich mehr und mehr für die vegane und vegetarische Ernährung – ein Einfluss, der sich natürlich auch auf der Karte zeigt."
+- Bio-Burgerrestaurant [Wiesenlust](http://www.wiesenlust.de), Bergerstrasse 77, 60316, Montag bis Donnerstag und Sonntag 11:00 - 23:00 Uhr - Küchen bis 22:00 Uhr, Freitag und Samstag 11:00 - 23:30
 - V-Imbiss direkt vom Metzger [bioSpahn vegan](http://biospahn-vegan.de/), [Vegan-Info](Info: http://biospahn-vegan.de/de/vegan-info?coID=11), Berger Strasse 222, Bornheim, Mo-Sa, Uhrzeit?
 - Bio-(V)-Restaurant [VEVAY](http://www.vevay.net/), Neue Mainzer Straße 20, 60311 FFM, Mo-Fr 9:00-21:00, Sa 10:00-21:00, So zu
 - TODO: (V)-Restaurant [savory](http://www.savory-thevegtory.de),  Burgfriedenstraße 2 / Ecke Alt-Rödelheim, Di-Fr: 11:30-20:00 Uhr, Sa: 11:00-16:00 Uhr
     - [Anfahrt](https://www.google.de/maps/dir/Hauptbahnhof,+Frankfurt/Burgfriedenstra%C3%9Fe+2,+60489+Frankfurt/@50.114939,8.6257427,14z/data=!4m14!4m13!1m5!1m1!1s0x47bd0955616e2395:0x651064cdb7f56566!2m2!1d8.664613!2d50.107733!1m5!1m1!1s0x47bd099b88ff3e33:0xa1def54c9951cdc8!2m2!1d8.6121931!2d50.1251901!3e3)
     - Rödelheim - Bockenheim - Westend-Süd/Nord - Innenstadt/Nordend-West - Nordend-Ost/Ostend - Bornheim
 - TODO: V-Cafe [Extravegant](http://www.extravegant-ffm.de), Berger Straße 154,  Montags bis Freitags von 10:00 Uhr bis 18:00 Uhr und Samstags und Sonntags von 10:00 Uhr bis 19:00 Uhr
-- todo: Burgerrestaurant [Wiesenlust](http://www.wiesenlust.de), Bergerstrasse 77, 60316, Montag bis Donnerstag und Sonntag 11:00 - 23:00 Uhr - Küchen bis 22:00 Uhr, Freitag und Samstag 11:00 - 23:30
 - (V)-Restaurant [Naturbar](http://www.naturbarfrankfurt.de/), Oederweg 26, 60318, Mo-Fr: 11:30-15:30, 18:00-23:00, Sa: 18:00-23:00, So/Ft zu
 - V-Cafe [http://www.edelkiosk.de/](http://www.edelkiosk.de/index.html), Rhönstraße 119, 60385, Mo zu
 - Restaurant [Im Herzen Afrikas](http://im-herzen-afrikas.de/index.html), Gutleutstrasse 13, Dienstag bis Samstag 18 bis 1 Uhr, Sonntag 16 bis 22 Uhr, Montag geschlossen
@@ -92,6 +92,12 @@ Mainz
     [Abstand zur Rheingoldhalle: 1,4 km, 19 Fußminuten](https://www.google.de/maps/dir/Rheingoldhalle,+Rheinstra%C3%9Fe+66,+55116+Mainz/Kupferbergterrasse+19,+55116+Mainz/@49.9993923,8.2671204,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x47bd97052a5458f3:0x43db4c07d0911440!2m2!1d8.27561!2d50.0019!1m5!1m1!1s0x47bd96e21c075155:0x9f3fb1886a224c24!2m2!1d8.2632!2d49.9976!3e2)
 * todo, siehe Liste [veganice.eu/restaurants/mainz](https://veganice.eu/restaurants/mainz)
 
+
+Groß-Gerau
+----------
+* TODO: V-Restaurant [Vegano](https://www.facebook.com/Vegano-1566103680291547/), Alte Straße 1, Groß-Gerau, Tel.: 06152 52217
+
+
 DA
 ---
 * V-Cafe [Veelgood](https://www.facebook.com/www.veelgood.de), Mühlstrasse 76, DA, 06151 6011450, Mo-Do 9:00-19:30, Fr-Sa: 11:00-23:00
@@ -115,6 +121,11 @@ HP, Odenwald, HD
 * [Kunst-Kiosk Erlenbach](https://www.facebook.com/KunstKioskErlenbach/info?tab=page_info), kunstverein erlenbach, 64658 Fürth-Erlenbach, So: 11:00-18:30 (06253/22663)
 
 * (todo?) [Clubrestaurant La Pineta](www.tc-schriesheim.de/clubrestaurant/), Schriesheim
+
+
+Viernheim
+---------
+* Restaurant/Italiener [Galicia/Donnici](http://www.donnici-viernheim.de/kontakt-und-impressum.php), Bürgerhaus, Kreuzstr. 2, 68519 Viernheim
 
 
 HD
