@@ -313,3 +313,9 @@ Resize .vdi drive:
 1. `VBoxManage modifyhd MyHardDisk.vdi --resize 42000` resizes to 42.000 KB = about 42 GB
 2. In der Datenträgerverwaltung "Volume erweitern"
 
+
+System Logs
+-----------
+old: /var/log/messages
+new: `journalctl -xn`
+(https://forums.opensuse.org/showthread.php/502318-Wo-sind-die-Logs-in-opensuse-13-2)
