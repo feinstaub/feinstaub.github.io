@@ -34,7 +34,7 @@ asciidoc.install(2);
 <div class="paragraph"><p><span class="image">
 <img src="res/1024px-Backup_Backup_Backup_-_And_Test_Restores.jpg" alt="res/1024px-Backup_Backup_Backup_-_And_Test_Restores.jpg" width="500">
 </span></p></div>
-<div class="paragraph"><p>verbrannter PC, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Backup_Backup_Backup_-_And_Test_Restores.jpg">CC BY 2.0</a></p></div>
+<div class="paragraph"><p>verbrannter PC, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Backup_Backup_Backup_-_And_Test_Restores.jpg">CC BY 2.0</a>, mit Telefon</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -57,17 +57,17 @@ Rechner-Brand
 <div class="ulist"><ul>
 <li>
 <p>
-Fotos, Bilder
+Bilder, Fotos
 </p>
 </li>
 <li>
 <p>
-Musik, Hörbücher
+Audiodaten: Musik, Hörbücher
 </p>
 </li>
 <li>
 <p>
-Filme
+Videos
 </p>
 </li>
 <li>
@@ -77,11 +77,27 @@ Dokumente aller Art (Text, Tabelle)
 </li>
 <li>
 <p>
-Einstellungen bestimmter Programme (wie E-Mail, Browser, Musikspieler)
+Einstellungen bestimmter Programme (wie E-Mail, Browser-Lesezeichen)
 </p>
 </li>
 </ul></div>
 <div class="paragraph"><p>Jeweils festzustellen: wo liegen die Daten auf der Festplatte (wenn überhaupt)?</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tipp">
+</td>
+<td class="content">Schon beim Speichern auf eine ordentliche Struktur achten.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/warning.png" alt="Warnung">
+</td>
+<td class="content">ggf. auf versteckte Dateien achten.</td>
+</tr></table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -90,12 +106,12 @@ Einstellungen bestimmter Programme (wie E-Mail, Browser, Musikspieler)
 <div class="ulist"><ul>
 <li>
 <p>
-Grundsätzlich: Die Daten sollten sich auf <strong>mindestens 2</strong> und <strong>örtlich voneinander getrennten</strong> Medien befinden.
+Grundsätzlich: Die Daten sollten sich auf <strong>mindestens 2</strong> und <strong>örtlich voneinander getrennten</strong> Medien befinden. Eins davon ist die eingebaute Festplatte.
 </p>
 </li>
 <li>
 <p>
-<a href="datensicherung-medienauswahl.html">Konkret</a>
+<a href="datensicherung-medienauswahl.html">Konkrete Medienauswahl</a>
 </p>
 </li>
 </ul></div>
@@ -111,12 +127,17 @@ Grundsätzlich: Die Daten sollten sich auf <strong>mindestens 2</strong> und <st
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ordner_sync_mit_externer_festplatte">Ordner-Sync mit externer Festplatte</h2>
+<h2 id="_ordner_sync_mit_externem_medium">Ordner-Sync mit externem Medium</h2>
 <div class="sectionbody">
 <div class="ulist"><ul>
 <li>
 <p>
-Einfaches Verfahren, wenn automatisiert (hier: mit FreeFileSync)
+Einfach und schnell, wenn man automatisiert es (z. B. mit FreeFileSync)
+</p>
+</li>
+<li>
+<p>
+Voraussetzung: <em>grundlegende Kenntnisse über das Dateisystem</em>
 </p>
 </li>
 <li>
@@ -159,8 +180,12 @@ Stand zu genau einem Zeitpunkt
 </p>
 </li>
 </ul></div>
+<div class="sect2">
+<h3 id="_sicherung">Sicherung</h3>
+<div class="paragraph"><p>Praxis: <a href="datensicherung-freefilesync.html">FreeFileSync</a></p></div>
+<div class="paragraph"><p>Theorie:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.7
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -215,7 +240,79 @@ bilder/cocktail.jpg           bilder/cocktail.jpg
 dokumente/testament1.docx     dokumente/testament1.docx
 dokumente/liebeserkl.ods      dokumente/liebeserkl.ods
 dokumente/liebeserkl2.ods     dokumente/liebeserkl2.ods</tt></pre></div></div>
-<div class="paragraph"><p>&#8594; <a href="datensicherung-freefilesync.html">FreeFileSync</a></p></div>
+</div>
+<div class="sect2">
+<h3 id="_wiederherstellung">Wiederherstellung</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Manuell mit Dateimanager
+</p>
+</li>
+<li>
+<p>
+Mit <a href="datensicherung-freefilesync.html">FreeFileSync</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_werkzeuge">Werkzeuge</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_freefilesync">FreeFileSync</h3>
+<div class="paragraph"><p>In diesem Kurs: <a href="datensicherung-freefilesync.html">FreeFileSync</a>: freie Software, Windows, Linux, Mac</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tipp">
+</td>
+<td class="content">Bei Ordner-Sync-Software muss man sich auf kein Tool festlegen, da das Programm im Notfall nicht verwendet werden muss, um die Daten wiederherzustellen.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alternativen">Alternativen</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Manuelle Kopie mit Dateimanager / Windows Explorer: auf Dauer umständlich
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.dirsyncpro.org/">DirSync Pro</a>: freie Software, Windows, Linux, Mac
+</p>
+</li>
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/LuckyBackup">LuckyBackup</a>: freie Software, Windows, Linux, Mac
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.2brightsparks.com/freeware/index.html">SyncBack</a>: kostenlos, aber nicht frei
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.allwaysync.com/">Allway Sync</a>: kostenlos, aber nicht frei
+</p>
+</li>
+<li>
+<p>
+<a href="https://en.wikipedia.org/wiki/Comparison_of_file_synchronization_software">https://en.wikipedia.org/wiki/Comparison_of_file_synchronization_software</a>
+</p>
+</li>
+<li>
+<p>
+Windows Backup: ?
+</p>
+</li>
+</ul></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -230,11 +327,43 @@ dokumente/liebeserkl2.ods     dokumente/liebeserkl2.ods</tt></pre></div></div>
 </ul></div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_weiteres">Weiteres</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Sync in zwei Richtungen (nicht als Datensicherung, sondern z. B. USB-Stick als mobiles Arbeitsverzeichnis)
+</p>
+</li>
+<li>
+<p>
+Automatischer Online-Sync, z. B. DropBox, aber nicht für vertrauliche Daten
+</p>
+</li>
+<li>
+<p>
+Online-Sync, z. B. DropBox, aber Daten vorher verschlüsseln: geeignet als zusätzliche Datensicherung, aber man muss sich der Verschlüsselung sicher sein
+</p>
+</li>
+<li>
+<p>
+Private Cloud mit ownCloud und SyncThing
+</p>
+</li>
+<li>
+<p>
+Versionsverwaltung mit git
+</p>
+</li>
+</ul></div>
+</div>
+</div>
 </div>
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-01-08 19:59:02 CET
+Letzte Änderung 2016-02-29 20:07:45 CET
 </div>
 </div>
 </body>
