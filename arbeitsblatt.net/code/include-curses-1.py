@@ -16,7 +16,7 @@ def main(stdscr):
     # Konsole wieder aufgeräumt und das Programm beendet wird.
     stdscr.getkey()
 
-# main-Funktions mit dem Wrapper starten.
+# main-Funktion mit dem Wrapper starten.
 # Der Wrapper sorgt für nötige Initialisierungen
 # und Aufräumarbeiten im Fehlerfall.
 curses.wrapper(main)

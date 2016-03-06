@@ -1,7 +1,7 @@
 @media screen {
   body {
     max-width: 50em; /* approximately 80 characters wide */
-    margin-left: 16em;
+    margin-left: 23em;
   }
 
   #toc {
@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 13em;
+    width: 20em;
     padding: 0.5em;
     padding-bottom: 1.5em;
     margin: 0;
