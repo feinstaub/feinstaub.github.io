@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="AsciiDoc 8.6.8">
-<title>Datensicherung</title>
+<title>Lokale Datensicherung</title>
 <link rel="stylesheet" href="./asciidoc.css" type="text/css">
 
 
@@ -11,35 +11,45 @@
 <script type="text/javascript" src="./asciidoc.js"></script>
 <script type="text/javascript">
 /*<![CDATA[*/
-asciidoc.install(2);
+asciidoc.install(3);
 /*]]>*/
 </script>
 </head>
 <body class="article">
 <div id="header">
-<h1>Datensicherung</h1>
+<h1>Lokale Datensicherung</h1>
+<span id="author">fs-workshop.de &lt;&gt;</span><br>
+<span id="revnumber">version 0.9,</span>
+<span id="revdate">2016</span>
 <div id="toc">
   <div id="toctitle">Inhalt</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_einstieg">Einstieg</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="paragraph"><p><span class="image">
-<img src="res/Burned_laptop_secumem_16.jpg" alt="res/Burned_laptop_secumem_16.jpg" width="600">
-</span></p></div>
-<div class="paragraph"><p>verbrannter Laptop, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Burned_laptop_secumem_16.jpg">CC BY-SA 3.0</a></p></div>
-<div class="paragraph"><p><span class="image">
+<div class="paragraph"><p>Dokument-Lizenz: <a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a></p></div>
+<div class="paragraph"><p>Thema: Lokale Datensicherung im Privatumfeld</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_einstieg">1. Einstieg</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="res/Burned_laptop_secumem_16.jpg" alt="res/Burned_laptop_secumem_16.jpg" width="500">
+</div>
+<div class="title">Abbildung 1. verbrannter Laptop, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Burned_laptop_secumem_16.jpg">CC BY-SA 3.0</a></div>
+</div>
+<div class="imageblock">
+<div class="content">
 <img src="res/1024px-Backup_Backup_Backup_-_And_Test_Restores.jpg" alt="res/1024px-Backup_Backup_Backup_-_And_Test_Restores.jpg" width="500">
-</span></p></div>
-<div class="paragraph"><p>verbrannter PC, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Backup_Backup_Backup_-_And_Test_Restores.jpg">CC BY 2.0</a>, mit Telefon</p></div>
 </div>
+<div class="title">Abbildung 2. verbrannter PC, <a href="https://de.wikipedia.org/wiki/Datensicherung#/media/File:Backup_Backup_Backup_-_And_Test_Restores.jpg">CC BY 2.0</a>, mit Telefon</div>
 </div>
-<div class="sect1">
-<h2 id="_schutz_der_daten_vor_8230">Schutz der Daten vor&#8230;</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_schutz_der_daten_vor_8230">1.1. Schutz der Daten vor&#8230;</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -47,12 +57,10 @@ Rechner-Brand
 </p>
 </li>
 </ul></div>
-<div class="paragraph"><p><a href="datensicherung-schutzvor.html">Und was noch?</a></p></div>
+<div class="paragraph"><p><a href="#datensicherung-schutzvor">Und was noch?</a></p></div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_welche_daten">Welche Daten?</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_welche_daten">1.2. Welche Daten?</h3>
 <div class="paragraph"><p>Welche Daten sind schützenswert?</p></div>
 <div class="ulist"><ul>
 <li>
@@ -77,7 +85,7 @@ Dokumente aller Art (Text, Tabelle)
 </li>
 <li>
 <p>
-Einstellungen bestimmter Programme (wie E-Mail, Browser-Lesezeichen)
+Einstellungen bestimmter Programme (wie E-Mail, Browser-Lesezeichen), siehe <a href="#x_data_and_programsettings">Ort der Programmeinstellungen</a>
 </p>
 </li>
 </ul></div>
@@ -99,10 +107,8 @@ Einstellungen bestimmter Programme (wie E-Mail, Browser-Lesezeichen)
 </tr></table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_medium">Medium</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_medium">1.3. Medium</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -111,24 +117,29 @@ Grundsätzlich: Die Daten sollten sich auf <strong>mindestens 2</strong> und <st
 </li>
 <li>
 <p>
-<a href="datensicherung-medienauswahl.html">Konkrete Medienauswahl</a>
+<a href="#datensicherung-medienauswahl">Konkrete Medienauswahl</a>
 </p>
 </li>
 </ul></div>
 </div>
+<div class="sect2">
+<h3 id="_abwägung">1.4. Abwägung</h3>
+<div class="imageblock">
+<div class="content">
+<img src="res/dreieck.png" alt="res/dreieck.png" width="500">
 </div>
-<div class="sect1">
-<h2 id="_abwägung">Abwägung</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Eine Möglichkeit von Zielkonflikten:</p></div>
-<div class="paragraph"><p><span class="image">
-<img src="res/dreieck.png" alt="res/dreieck.png">
-</span></p></div>
+<div class="title">Abbildung 3. Eine Möglichkeit von Zielkonflikten</div>
 </div>
+<div class="ulist"><ul>
+<li>
+<p>
+Datensicherung = <strong>Versicherung</strong> (regelmäßige "Prämie", aber kommt hoffentlich nie zum Tragen)
+</p>
+</li>
+</ul></div>
 </div>
-<div class="sect1">
-<h2 id="_ordner_sync_mit_externem_medium">Ordner-Sync mit externem Medium</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ordner_sync_mit_externem_medium">1.5. Ordner-Sync mit externem Medium</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -180,9 +191,9 @@ Stand zu genau einem Zeitpunkt
 </p>
 </li>
 </ul></div>
-<div class="sect2">
-<h3 id="_sicherung">Sicherung</h3>
-<div class="paragraph"><p>Praxis: <a href="datensicherung-freefilesync.html">FreeFileSync</a></p></div>
+<div class="sect3">
+<h4 id="_sicherung">1.5.1. Sicherung</h4>
+<div class="paragraph"><p>Praxis: <a href="#datensicherung-freefilesync">FreeFileSync</a></p></div>
 <div class="paragraph"><p>Theorie:</p></div>
 <div class="listingblock">
 <div class="content"><!-- Generator: GNU source-highlight 3.1.8
@@ -241,8 +252,8 @@ dokumente/testament1.docx     dokumente/testament1.docx
 dokumente/liebeserkl.ods      dokumente/liebeserkl.ods
 dokumente/liebeserkl2.ods     dokumente/liebeserkl2.ods</tt></pre></div></div>
 </div>
-<div class="sect2">
-<h3 id="_wiederherstellung">Wiederherstellung</h3>
+<div class="sect3">
+<h4 id="_wiederherstellung">1.5.2. Wiederherstellung</h4>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -251,19 +262,17 @@ Manuell mit Dateimanager
 </li>
 <li>
 <p>
-Mit <a href="datensicherung-freefilesync.html">FreeFileSync</a>
+Mit <a href="#datensicherung-freefilesync">FreeFileSync</a>
 </p>
 </li>
 </ul></div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_werkzeuge">Werkzeuge</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_freefilesync">FreeFileSync</h3>
-<div class="paragraph"><p>In diesem Kurs: <a href="datensicherung-freefilesync.html">FreeFileSync</a>: freie Software, Windows, Linux, Mac</p></div>
+<h3 id="_werkzeuge">1.6. Werkzeuge</h3>
+<div class="sect3">
+<h4 id="_freefilesync">1.6.1. FreeFileSync</h4>
+<div class="paragraph"><p>In diesem Kurs: <a href="#datensicherung-freefilesync">FreeFileSync</a>: freie Software, Windows, Linux, Mac</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -273,8 +282,8 @@ Mit <a href="datensicherung-freefilesync.html">FreeFileSync</a>
 </tr></table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_alternativen">Alternativen</h3>
+<div class="sect3">
+<h4 id="_alternativen">1.6.2. Alternativen</h4>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -308,6 +317,11 @@ Manuelle Kopie mit Dateimanager / Windows Explorer: auf Dauer umständlich
 </li>
 <li>
 <p>
+Ganze Festplatten klonen mit <a href="http://clonezilla.org">CloneZilla</a>
+</p>
+</li>
+<li>
+<p>
 Windows Backup: ?
 </p>
 </li>
@@ -315,20 +329,548 @@ Windows Backup: ?
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_referenzen">Referenzen</h2>
+<h2 id="datensicherung-schutzvor">2. Schutz der Daten vor&#8230;</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_allgemein">2.1. Allgemein</h3>
 <div class="ulist"><ul>
 <li>
 <p>
-<a href="https://de.wikipedia.org/wiki/Datensicherung#Sonderfall_Privatnutzer">https://de.wikipedia.org/wiki/Datensicherung#Sonderfall_Privatnutzer</a>
+technischer Defekt einzelner Rechner-Komponenten
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+insbesondere Festplatte
+</p>
+</li>
+<li>
+<p>
+Rechner-Brand
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Anwender-Fehler (Datei aus Versehen gelöscht oder überschrieben)
+</p>
+</li>
+<li>
+<p>
+Malware
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+"Ransomware"
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Diebstahl (physikalisch)
+</p>
+</li>
+<li>
+<p>
+Hacker-Angriff (eher unwahrscheinlich)
+</p>
+</li>
+<li>
+<p>
+bei Geräten im Mobilen Einsatz: Defekt durch Herunterfallen, Defekt durch Nässe, Diebstahl
 </p>
 </li>
 </ul></div>
 </div>
+<div class="sect2">
+<h3 id="_ransomware">2.2. Ransomware</h3>
+<div class="paragraph"><p>Zum Beispiel Verschlüsselungstrojaner: <a href="http://www.heise.de/newsticker/meldung/Krypto-Trojaner-Locky-wuetet-in-Deutschland-Ueber-5000-Infektionen-pro-Stunde-3111774.html?hg=1&amp;hgi=0&amp;hgf=false">http://www.heise.de/newsticker/meldung/Krypto-Trojaner-Locky-wuetet-in-Deutschland-Ueber-5000-Infektionen-pro-Stunde-3111774.html?hg=1&amp;hgi=0&amp;hgf=false</a> (2016-Feb)</p></div>
+<div class="paragraph"><p>&#8594; vor allem Windows-Nutzer bedroht, Virenscanner schlagen nicht sofort an (<a href="http://www.heise.de/security/meldung/Erpressungs-Trojaner-Locky-schlaegt-offenbar-koordiniert-zu-3104069.html">"Nur 3 der 54 AV-Engines stufen die Datei als Malware ein."</a>)</p></div>
+<div class="paragraph"><p>&#8594; umso wirkungsvoller, je wichtiger einem die Daten sind</p></div>
+<div class="paragraph"><p>&#8594; Kosten für die (hoffentliche) Entschlüsselung 100 - 500 EUR</p></div>
+<div class="paragraph"><p>&#8594; Netzwerkfreigaben (z. B. NAS) und Cloud-Speicher betroffen</p></div>
+<div class="paragraph"><p>&#8594; "Geeignet ist etwa eine USB-Festplatte, die man nur bei Bedarf mit dem Rechner verbindet. "</p></div>
+<div class="paragraph"><p>&#8594; Stichprobenartige manuelle Kontrolle vor dem Backup notwendig</p></div>
+<div class="paragraph"><p>&#8594; Schachstelle: Man hat den Trojaner noch nicht bemerkt und schließt die (einzige) Backupplatte an.</p></div>
+<div class="paragraph"><p>&#8594; auch Krankenhäuser und ein Fraunhofer-Institut betroffen; wahrscheinlich auch hohe Dunkelziffer privater Unternehmen</p></div>
+<div class="paragraph"><p>Locky und Tipps: <a href="https://nakedsecurity.sophos.com/2016/02/17/locky-ransomware-what-you-need-to-know/">https://nakedsecurity.sophos.com/2016/02/17/locky-ransomware-what-you-need-to-know/</a></p></div>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_weiteres">Weiteres</h2>
+<h2 id="datensicherung-medienauswahl">3. Medienauswahl</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Grundsätzlich: Die Daten sollten sich auf <strong>mindestens 2</strong> und <strong>örtlich voneinander getrennten</strong> Medien befinden.</p></div>
+<div class="paragraph"><p>Wahl des Mediums und des Ortes.</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Erstes Medium: eingebaute Festplatte
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>&#8594; Feststellen wie groß die Platte ist bzw. welche Datenmenge zu sichern ist. &#8594; x GB</p></div>
+<div class="paragraph"><p>CD: 700 MB</p></div>
+<div class="paragraph"><p>DVD: ca. 5 GB</p></div>
+<div class="paragraph"><p>1 GB = 1000 MB</p></div>
+<div class="paragraph"><p>1 TB = 1000 GB</p></div>
+<div class="sect2">
+<h3 id="_zweites_medium_externer_usb_datenspeicher">3.1. Zweites Medium: externer USB-Datenspeicher</h3>
+<div class="paragraph"><p>oder <strong>USB-Stick</strong>, auf <strong>USB 3.0</strong> achten (oftmals blauer Anschluss am Computer).</p></div>
+<div class="paragraph"><p>Falls Rechner noch kein 3.0 kann, ist der Stick oder die Festplatte zumindest für die Zukunft gerüstet.</p></div>
+<div class="paragraph"><p>Dateisystem <strong>NTFS</strong> ("mit NTFS formatiert", FAT32 ist oft nicht ausreichend, Rechte Maustaste → Formatieren → NTFS auswählen &#8594; OK).</p></div>
+<div class="paragraph"><p>Beispiele:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://www.conrad.de/de/usb-stick-32-gb-sandisk-cruzer-ultra-schwarz-sdcz48-032g-u46-usb-30-678330.html">USB-Stick von SanDisk, 32 GB, USB 3.0, großes Gehäuse</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>17 EUR</strong>, Stand Februar 2016, 32 GB, für den Normalanwender weit mehr als genug
+</p>
+</li>
+<li>
+<p>
+Vorteil: <strong>Gehäuse ist groß genug</strong>, dass man es anfassen kann und der Stick nicht gleich verloren geht
+</p>
+</li>
+<li>
+<p>
+NTFS-formatiert?
+</p>
+</li>
+<li>
+<p>
+mit vorinstallierter Software, kann gelöscht werden
+</p>
+</li>
+<li>
+<p>
+<span class="image">
+<img src="res/usbstick-1.jpg" alt="res/usbstick-1.jpg" width="150">
+</span>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="https://www.conrad.de/de/usb-stick-32-gb-sandisk-ultra-fit-schwarz-sdcz43-032g-g46-usb-30-1229587.html">USB-Stick von SanDisk, 32 GB, USB 3.0, Minigehäuse</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+15 EUR, Stand Februar 2016
+</p>
+</li>
+<li>
+<p>
+Nachteil: Gehäuse viel zu klein &#8658; fummelig und wird warm
+</p>
+</li>
+<li>
+<p>
+NTFS-formatiert?
+</p>
+</li>
+<li>
+<p>
+<span class="image">
+<img src="res/usbstick-2.jpg" alt="res/usbstick-2.jpg" width="150">
+</span>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="https://www.conrad.de/de/usb-stick-32-gb-xlyne-wave-schwarz-orange-7132000-usb-20-417503.html">USB-Stick, 32 GB, USB 2.0</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+8 EUR, Stand Februar 2016
+</p>
+</li>
+<li>
+<p>
+Nachteil: nur USB 2.0, Marke?
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="https://www.conrad.de/de/externe-festplatte-635-cm-25-500-gb-hitachi-touro-mobile-base-mx3-schwarz-usb-30-1417567.html">Externe Festplatte von Hitachi, 500 GB, USB 3.0</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+50 EUR, Stand Februar 2016
+</p>
+</li>
+<li>
+<p>
+Hinweis Y-Kabel
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="https://www.conrad.de/de/externe-festplatte-635-cm-25-1-tb-seagate-backup-plus-rot-usb-30-807631.html">Externe Festplatte von Seagate, 2.5 " (6.35 cm), 1 TB, USB 3.0</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+70 EUR, Stand Februar 2016, 1 TB (30x mehr als der 32-GB-USB-Stick) ist für den Normalanwender weit mehr als genug
+</p>
+</li>
+<li>
+<p>
+NTFS-formatiert
+</p>
+</li>
+<li>
+<p>
+mit <strong>USB-3.0-Kabel</strong>
+</p>
+</li>
+<li>
+<p>
+mit vorinstallierter Software, kann gelöscht werden
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_weitere_medien_archivierung">3.2. Weitere Medien / Archivierung</h3>
+<div class="paragraph"><p>Aktuelles Backup-Medium beschriften und nach 3 - 10 Jahren
+beiseite legen und dann ein neues Medium verwenden.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="datensicherung-freefilesync">4. Spiegelung mit FreeFileSync</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Ziel: Datensicherung auf einen lokalen, externen Datenträger</p></div>
+<div class="paragraph"><p>Voraussetzung: festgestellt, welche Ordner (Pfade) zu sichern sind.</p></div>
+<div class="paragraph"><p>FreeFileSync ist <a href="https://de.wikipedia.org/wiki/Freie_Software">freie Software</a> (offener Quellcode und Freiheitsrechte). Es ist für die Betriebssysteme Windows, Linux und Mac OS verfübar.</p></div>
+<div class="sect2">
+<h3 id="_einmalig_installation">4.1. Einmalig: Installation</h3>
+<div class="paragraph"><p>Auf der Webseite <a href="http://www.freefilesync.org/">http://www.freefilesync.org/</a> befindet sich ein Link zur <strong>Downloadseite</strong>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/important.png" alt="Wichtig">
+</td>
+<td class="content">Der Windows-Installer enthält eine Komponente, die den Nutzer einlädt eine (in der Regel unnütze) Dritt-Software zu installieren. Diese Komponente wird von manchen Anti-Viren-Programmen als Schadsoftware erkannt, siehe <a href="#ffs_virenscanner">Hinweis Virenscanner</a>.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Siehe auch <a href="#x_adblock">AdBlock</a>.</p></div>
+<div class="paragraph"><p><strong>Installation</strong> durchführen:</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tipp">
+</td>
+<td class="content">Der Windows-Installer enthält einen Schritt, der eine Option enthält, eine unnütze Dritt-Software zu installieren. Darauf achten, das Häkchen zu entfernen.</td>
+</tr></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sicherung_einrichten">4.2. Sicherung einrichten</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Externes Medium anschließen
+</p>
+</li>
+<li>
+<p>
+Erstmalige Einrichtung der zu synchronisierenden Ordner
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Quell-Ordner (links), siehe auch <a href="#x_data_and_programsettings">Daten und Programmeinstellungen</a>
+</p>
+</li>
+<li>
+<p>
+Ziel-Ordner (rechts)
+</p>
+</li>
+<li>
+<p>
+ggf. mehrere
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<strong>Spiegelung</strong> einstellen
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Verschiedene Möglichkeiten, mit gelöschten Dateien umzugehen
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Erster Sync
+</p>
+</li>
+<li>
+<p>
+Zufrieden mit Ergebnis? &#8594; Einstellungen speichern
+</p>
+</li>
+<li>
+<p>
+Externes Medium abdocken
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_regelmäßig">4.3. Regelmäßig</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Externes Medium anschließen
+</p>
+</li>
+<li>
+<p>
+FreeFileSync öffnen
+</p>
+</li>
+<li>
+<p>
+Vergleichen &#8594; Plausibilitäts-Prüfung mit Hilfe der Vorschau
+</p>
+</li>
+<li>
+<p>
+Synchronisierung ausführen
+</p>
+</li>
+<li>
+<p>
+Externes Medium abdocken
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_wiederherstellung_im_fehlerfall">4.4. Wiederherstellung im Fehlerfall</h3>
+<div class="paragraph"><p>Der Notfall ist eingetreten und Dateien müssen wiederhergestellt werden.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tipp">
+</td>
+<td class="content">Da die Daten unverschlüsselt und ungepackt auf dem Backup-Medium liegen, kann jede Person Ihres Vertrauens helfen, die sich ein wenig mit Computern auskennt.</td>
+</tr></table>
+</div>
+<div class="sect3">
+<h4 id="_einzelne_dateien">4.4.1. Einzelne Dateien</h4>
+<div class="paragraph"><p>Zum Beispiel Datei aus Versehen gelöscht oder anderweitig abhanden gekommen.</p></div>
+<div class="paragraph"><p>Verschiedene Möglichkeiten:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Vergleichen mit FreeFileSync und dann manuell mit Dateimanager
+</p>
+</li>
+<li>
+<p>
+Mit Dateimanager
+</p>
+</li>
+<li>
+<p>
+Vergleichen mit FreeFileSync und auswählen, Backuprichtung ändern
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_alle_dateien">4.4.2. Alle Dateien</h4>
+<div class="paragraph"><p>Zum Beispiel interne Festplatte des Rechners defekt. &#8594; Austausch und Neuauspielen Betriebssystem oder gleich neuen Rechner beschafft.</p></div>
+<div class="paragraph"><p>Verschiedene Möglichkeiten:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Mit Dateimanager
+</p>
+</li>
+<li>
+<p>
+Mit FreeFileSync
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_fallstricke">4.4.3. Fallstricke</h4>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/warning.png" alt="Warnung">
+</td>
+<td class="content">Quell- und Zielordner nicht verwechseln</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tipp">
+</td>
+<td class="content">immer von links (Quelle) nach rechts (Ziel=Backup) arbeiten</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/warning.png" alt="Warnung">
+</td>
+<td class="content">ggf. auf versteckte Dateien achten</td>
+</tr></table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fortgeschrittene">4.5. Fortgeschrittene</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Datei-Filter
+</p>
+</li>
+<li>
+<p>
+Sync-Modus (Spiegeln, 2-Wege, Aktualisieren)
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Sync in zwei Richtungen (nicht primär als Datensicherung, aber z. B. USB-Stick als mobiles Arbeitsverzeichnis)
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Umbenannte Dateien erkennen
+</p>
+</li>
+<li>
+<p>
+RealTimeSync
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="ffs_virenscanner">4.6. Hinweis Virenscanner</h3>
+<div class="paragraph"><p>Hintergrund: Das Installationsprogramm der <strong>Windows</strong>-Version von FreeFileSync ist leider keine freie Software und enthält (derzeit) ein Modul von <a href="http://opencandy.com/">OpenCandy</a>. Dadurch wird dem Benutzer <em>einmalig</em> während der Installation von FreeFileSync vorgeschlagen eine unnützes Programm zu installieren. Dies passiert aber laut Autor nie ohne Zustimmung des Nutzers (siehe <a href="http://www.freefilesync.org/faq.php#silent-ad">http://www.freefilesync.org/faq.php#silent-ad</a>). Gegen Geld-Spende bekommt man auch eine werbefreie Version des Installationsprogramms: <a href="http://www.freefilesync.org/faq.php#donor-edition">http://www.freefilesync.org/faq.php#donor-edition</a>. Das Programm an sich ist werbefrei. Unter <strong>Linux</strong> gibt es dieses Installer-Verhalten nicht.</p></div>
+<div class="paragraph"><p>Manche Virenscanner (laut Autor insbesondere der <strong>Norton von Symantec</strong>) erkennen das Modul als Schadsoftware und entfernen es; teilweise ohne brauchbaren Hinweis.</p></div>
+<div class="paragraph"><p>Was kann man tun?</p></div>
+<div class="paragraph"><p>&#8594; Die Datei mittels Virenscanner-Optionen wiederherstellen.</p></div>
+<div class="paragraph"><p>&#8594; Die Datei mit einem (Massen-)Online-Virenscanner testen lassen, zum Beispiel mit <a href="https://www.virustotal.com/">virustotal</a>. Mit diesem Dienst lassen sich Dateien unter Angabe der URL von mehreren Virenscannern auf einmal prüfen, bevor sie auf den eigenen Rechner heruntergeladen werden. Für den FreeFileSync-Windows-Installer zeigen die meisten "keine Gefahr" an.</p></div>
+<div class="paragraph"><p>&#8594; anderes Virenprogramm verwenden</p></div>
+<div class="paragraph"><p>&#8594; anderes Betriebssystem verwenden</p></div>
+</div>
+<div class="sect2">
+<h3 id="_hilfe_bei_problemen">4.7. Hilfe bei Problemen</h3>
+<div class="paragraph"><p>Der Autor von FreeFileSync beantwortet zeitnah Fragen aller Art im <a href="http://www.freefilesync.org/forum/">FreeFileSync-Forum</a>.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_warum_freefilesync">4.8. Warum FreeFileSync?</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Umfangreiche Funktionen zur Ordner-Synchronisation: <a href="http://www.freefilesync.org/faq.php#features">http://www.freefilesync.org/faq.php#features</a>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Darunter die <strong>Überblicksansicht</strong>, die anzeigt, welche Datenmenge in der Ordnerstruktur verarbeitet wird, bevor die Aktion durchgeführt wird.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Verfügbar für Linux, Windows und Mac OS
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+d. h. einmal lernen, überall verwenden.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Freie_Software">Freie Software</a> mit der GPLv3-Lizenz, d. h. ohne Einschränkungen privat und kommerziell nutzbar.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Falls der Autor den Dienst einstellt, kann das Programm von anderen Nutzern mit Programmierkenntnissen fortgeführt werden.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_allgemeine_hinweise">5. Allgemeine Hinweise</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="x_adblock">5.1. Sicheres surfen</h3>
+<div class="paragraph"><p>Firefox &#8594; Menü &#8594; Erweiterungen &#8594; <strong>AdBlock Plus</strong> installieren, siehe auch <a href="https://adblockplus.org/de/">https://adblockplus.org/de/</a></p></div>
+</div>
+<div class="sect2">
+<h3 id="x_data_and_programsettings">5.2. Daten und Programmeinstellungen</h3>
+<div class="paragraph"><p>Wo liegen Benutzerdaten und wo legen Programme ihre Daten und Einstellungen ab?</p></div>
+<div class="sect3">
+<h4 id="_windows">5.2.1. Windows</h4>
+<div class="paragraph"><p>Wurzelverzeichnis aller Benutzerdaten: <em>%USERPROFILE%</em></p></div>
+<div class="paragraph"><p>Mozilla Firefox (z. B. Lesezeichen): <em>%USERPROFILE%\AppData\Roaming\Mozilla...</em></p></div>
+<div class="paragraph"><p>Mozilla Thunderbird (alle E-Mails und Einstellungen): <em>%USERPROFILE%\AppData\Roaming\Mozilla...</em></p></div>
+<div class="paragraph"><p>NTUSER.DAT: Registry; Wiederherstellung schwierig</p></div>
+</div>
+<div class="sect3">
+<h4 id="_linux">5.2.2. Linux</h4>
+<div class="paragraph"><p>Wurzelverzeichnis aller Benutzerdaten: <em>~</em> oder <em>$HOME</em></p></div>
+<div class="paragraph"><p>Mozilla Firefox (z. B. Lesezeichen): <em>$HOME/.mozilla/firefox/</em></p></div>
+<div class="paragraph"><p>Mozilla Thunderbird (alle E-Mails und Einstellungen): <em>$HOME/.thunderbird/</em></p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_weitere_themen">6. Weitere Themen</h2>
 <div class="sectionbody">
 <div class="ulist"><ul>
 <li>
@@ -338,12 +880,17 @@ Sync in zwei Richtungen (nicht als Datensicherung, sondern z. B. USB-Stick als m
 </li>
 <li>
 <p>
+Datensicherung von Mobiltelefonen
+</p>
+</li>
+<li>
+<p>
 Automatischer Online-Sync, z. B. DropBox, aber nicht für vertrauliche Daten
 </p>
 </li>
 <li>
 <p>
-Online-Sync, z. B. DropBox, aber Daten vorher verschlüsseln: geeignet als zusätzliche Datensicherung, aber man muss sich der Verschlüsselung sicher sein
+Online-Sync, z. B. DropBox, aber Daten vorher verschlüsseln: geeignet als zusätzliche Datensicherung, wenn man sich mit Verschlüsselung auskennt
 </p>
 </li>
 <li>
@@ -359,11 +906,43 @@ Versionsverwaltung mit git
 </ul></div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_material">7. Material</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="datensicherung-0.9.pdf">PDF-Download</a>
+</p>
+</li>
+</ul></div>
+<div class="sect2">
+<h3 id="_verschiedenes">7.1. Verschiedenes</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://de.wikipedia.org/wiki/Datensicherung#Sonderfall_Privatnutzer">https://de.wikipedia.org/wiki/Datensicherung#Sonderfall_Privatnutzer</a>
+</p>
+</li>
+<li>
+<p>
+Zeitschrift Easy Linux 2016-01
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_lizenz">7.2. Lizenz</h3>
+<div class="paragraph"><p>Der Inhalt dieses Dokuments darf unter den Bedingungen der folgenden Lizenz weiterverwendet werden: <a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>.</p></div>
+</div>
+</div>
+</div>
 </div>
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-02-29 20:07:45 CET
+Version 0.9<br>
+Letzte Änderung 2016-03-06 19:20:40 CET
 </div>
 </div>
 </body>
