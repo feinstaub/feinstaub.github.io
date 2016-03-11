@@ -18,7 +18,8 @@ asciidoc.install(3);
 <body class="article">
 <div id="header">
 <h1>Lokale Datensicherung</h1>
-<span id="author">fs-workshop.de &lt;&gt;</span><br>
+<span id="author">fsworkshop.net</span><br>
+<span id="email" class="monospaced">&lt;<a href="mailto:fsworkshop@posteo.net">fsworkshop@posteo.net</a>&gt;</span><br>
 <span id="revnumber">version 0.9,</span>
 <span id="revdate">2016</span>
 <div id="toc">
@@ -382,7 +383,7 @@ Hacker-Angriff (eher unwahrscheinlich)
 </li>
 <li>
 <p>
-bei Geräten im Mobilen Einsatz: Defekt durch Herunterfallen, Defekt durch Nässe, Diebstahl
+bei Geräten im mobilen Einsatz: Defekt durch Herunterfallen, Defekt durch Nässe, Diebstahl
 </p>
 </li>
 </ul></div>
@@ -415,13 +416,18 @@ Erstes Medium: eingebaute Festplatte
 </li>
 </ul></div>
 <div class="paragraph"><p>&#8594; Feststellen wie groß die Platte ist bzw. welche Datenmenge zu sichern ist. &#8594; x GB</p></div>
-<div class="paragraph"><p>CD: 700 MB</p></div>
-<div class="paragraph"><p>DVD: ca. 5 GB</p></div>
+<div class="paragraph"><p>CD: 700 MB (Haltbarkeit 5 - 10 J)</p></div>
+<div class="paragraph"><p>DVD: ca. 5 GB (Haltbarkeit 30 J, vermutet)</p></div>
 <div class="paragraph"><p>1 GB = 1000 MB</p></div>
 <div class="paragraph"><p>1 TB = 1000 GB</p></div>
 <div class="sect2">
-<h3 id="_zweites_medium_externer_usb_datenspeicher">3.1. Zweites Medium: externer USB-Datenspeicher</h3>
-<div class="paragraph"><p>oder <strong>USB-Stick</strong>, auf <strong>USB 3.0</strong> achten (oftmals blauer Anschluss am Computer).</p></div>
+<h3 id="_haltbarkeit">3.1. Haltbarkeit</h3>
+<div class="paragraph"><p>siehe Wikipedia: <a href="https://de.wikipedia.org/wiki/Langzeitarchivierung#Haltbarkeit_der_Tr.C3.A4germedien">https://de.wikipedia.org/wiki/Langzeitarchivierung#Haltbarkeit_der_Tr.C3.A4germedien</a></p></div>
+</div>
+<div class="sect2">
+<h3 id="_zweites_medium_externer_usb_datenspeicher">3.2. Zweites Medium: externer USB-Datenspeicher</h3>
+<div class="paragraph"><p>Abwägung zwischen Haltbarkeit und Bequemlichkeit.</p></div>
+<div class="paragraph"><p>Externe USB-Festplatte oder <strong>USB-Stick</strong>, auf <strong>USB 3.0</strong> achten (oftmals blauer Anschluss am Computer).</p></div>
 <div class="paragraph"><p>Falls Rechner noch kein 3.0 kann, ist der Stick oder die Festplatte zumindest für die Zukunft gerüstet.</p></div>
 <div class="paragraph"><p>Dateisystem <strong>NTFS</strong> ("mit NTFS formatiert", FAT32 ist oft nicht ausreichend, Rechte Maustaste → Formatieren → NTFS auswählen &#8594; OK).</p></div>
 <div class="paragraph"><p>Beispiele:</p></div>
@@ -553,7 +559,7 @@ mit vorinstallierter Software, kann gelöscht werden
 </ul></div>
 </div>
 <div class="sect2">
-<h3 id="_weitere_medien_archivierung">3.2. Weitere Medien / Archivierung</h3>
+<h3 id="_weitere_medien_archivierung">3.3. Weitere Medien / Archivierung</h3>
 <div class="paragraph"><p>Aktuelles Backup-Medium beschriften und nach 3 - 10 Jahren
 beiseite legen und dann ein neues Medium verwenden.</p></div>
 </div>
@@ -602,8 +608,20 @@ Erstmalige Einrichtung der zu synchronisierenden Ordner
 <div class="ulist"><ul>
 <li>
 <p>
-Quell-Ordner (links), siehe auch <a href="#x_data_and_programsettings">Daten und Programmeinstellungen</a>
+Quell-Ordner (links)
 </p>
+<div class="ulist"><ul>
+<li>
+<p>
+mit einem anfangen, später ausbauen
+</p>
+</li>
+<li>
+<p>
+siehe auch <a href="#x_data_and_programsettings">Daten und Programmeinstellungen</a>
+</p>
+</li>
+</ul></div>
 </li>
 <li>
 <p>
@@ -759,12 +777,29 @@ Mit FreeFileSync
 <div class="ulist"><ul>
 <li>
 <p>
-Datei-Filter
+<strong>Datei-Filter</strong>
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+über Filter-Knopf
 </p>
 </li>
 <li>
 <p>
-Sync-Modus (Spiegeln, 2-Wege, Aktualisieren)
+Einschließen oder Ausschließen
+</p>
+</li>
+<li>
+<p>
+über rechte Maustaste &#8594; per Filter ausschließen
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<strong>Sync-Modus</strong> (Spiegeln, 2-Wege, Aktualisieren)
 </p>
 <div class="ulist"><ul>
 <li>
@@ -776,12 +811,27 @@ Sync in zwei Richtungen (nicht primär als Datensicherung, aber z. B. USB-Stick 
 </li>
 <li>
 <p>
+<strong>Mehrere</strong> Quell- und Ziel-Ordner in einer Sync-Konfiguation
+</p>
+</li>
+<li>
+<p>
 Umbenannte Dateien erkennen
 </p>
 </li>
 <li>
 <p>
 RealTimeSync
+</p>
+</li>
+<li>
+<p>
+Laufprotokoll: ~/.FreeFileSync/<strong>LastSyncs.log</strong>
+</p>
+</li>
+<li>
+<p>
+bei Windows: <strong>gesperrte Dateien</strong>, z. B. Firefox noch offen, NTUSER.DAT (Registry)
 </p>
 </li>
 </ul></div>
@@ -792,7 +842,7 @@ RealTimeSync
 <div class="paragraph"><p>Manche Virenscanner (laut Autor insbesondere der <strong>Norton von Symantec</strong>) erkennen das Modul als Schadsoftware und entfernen es; teilweise ohne brauchbaren Hinweis.</p></div>
 <div class="paragraph"><p>Was kann man tun?</p></div>
 <div class="paragraph"><p>&#8594; Die Datei mittels Virenscanner-Optionen wiederherstellen.</p></div>
-<div class="paragraph"><p>&#8594; Die Datei mit einem (Massen-)Online-Virenscanner testen lassen, zum Beispiel mit <a href="https://www.virustotal.com/">virustotal</a>. Mit diesem Dienst lassen sich Dateien unter Angabe der URL von mehreren Virenscannern auf einmal prüfen, bevor sie auf den eigenen Rechner heruntergeladen werden. Für den FreeFileSync-Windows-Installer zeigen die meisten "keine Gefahr" an.</p></div>
+<div class="paragraph"><p>&#8594; Die Datei mit einem (Massen-)Online-Virenscanner testen lassen, zum Beispiel mit <a href="https://www.virustotal.com/">virustotal</a>. Mit diesem Dienst lassen sich Dateien unter Angabe der URL von mehreren Virenscannern auf einmal prüfen, bevor sie auf den eigenen Rechner heruntergeladen werden. Für den FreeFileSync-Windows-Installer zeigen die meisten "keine Gefahr" an. Einfach mal ausprobieren.</p></div>
 <div class="paragraph"><p>&#8594; anderes Virenprogramm verwenden</p></div>
 <div class="paragraph"><p>&#8594; anderes Betriebssystem verwenden</p></div>
 </div>
@@ -839,6 +889,26 @@ Falls der Autor den Dienst einstellt, kann das Programm von anderen Nutzern mit 
 </li>
 </ul></div>
 </li>
+<li>
+<p>
+Übersetzt in ca. 30 Sprachen von interessierten Freiwilligen
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect2">
+<h3 id="_was_ist_freefilesync_nicht">4.9. Was ist FreeFileSync nicht?</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+eine Software, mit der man sich die Änderungshistorie von Dateien ansehen kann
+</p>
+</li>
+<li>
+<p>
+&#8230;
+</p>
+</li>
 </ul></div>
 </div>
 </div>
@@ -847,31 +917,29 @@ Falls der Autor den Dienst einstellt, kann das Programm von anderen Nutzern mit 
 <h2 id="_allgemeine_hinweise">5. Allgemeine Hinweise</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="x_adblock">5.1. Sicheres surfen</h3>
-<div class="paragraph"><p>Firefox &#8594; Menü &#8594; Erweiterungen &#8594; <strong>AdBlock Plus</strong> installieren, siehe auch <a href="https://adblockplus.org/de/">https://adblockplus.org/de/</a></p></div>
-</div>
-<div class="sect2">
-<h3 id="x_data_and_programsettings">5.2. Daten und Programmeinstellungen</h3>
+<h3 id="x_data_and_programsettings">5.1. Daten und Programmeinstellungen</h3>
 <div class="paragraph"><p>Wo liegen Benutzerdaten und wo legen Programme ihre Daten und Einstellungen ab?</p></div>
 <div class="sect3">
-<h4 id="_windows">5.2.1. Windows</h4>
+<h4 id="_linux">5.1.1. Linux</h4>
+<div class="paragraph"><p>Wurzelverzeichnis aller Benutzerdaten: <em>~</em> oder <em>$HOME</em></p></div>
+<div class="paragraph"><p>Mozilla Firefox (z. B. Lesezeichen): <em>$HOME/.mozilla/firefox/</em></p></div>
+<div class="paragraph"><p>Mozilla Thunderbird (alle E-Mails und Einstellungen): <em>$HOME/.thunderbird/</em></p></div>
+</div>
+<div class="sect3">
+<h4 id="_windows">5.1.2. Windows</h4>
 <div class="paragraph"><p>Wurzelverzeichnis aller Benutzerdaten: <em>%USERPROFILE%</em></p></div>
 <div class="paragraph"><p>Mozilla Firefox (z. B. Lesezeichen): <em>%USERPROFILE%\AppData\Roaming\Mozilla...</em></p></div>
 <div class="paragraph"><p>Mozilla Thunderbird (alle E-Mails und Einstellungen): <em>%USERPROFILE%\AppData\Roaming\Mozilla...</em></p></div>
 <div class="paragraph"><p>NTUSER.DAT: Registry; Wiederherstellung schwierig</p></div>
 </div>
-<div class="sect3">
-<h4 id="_linux">5.2.2. Linux</h4>
-<div class="paragraph"><p>Wurzelverzeichnis aller Benutzerdaten: <em>~</em> oder <em>$HOME</em></p></div>
-<div class="paragraph"><p>Mozilla Firefox (z. B. Lesezeichen): <em>$HOME/.mozilla/firefox/</em></p></div>
-<div class="paragraph"><p>Mozilla Thunderbird (alle E-Mails und Einstellungen): <em>$HOME/.thunderbird/</em></p></div>
-</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_weitere_themen">6. Weitere Themen</h2>
+<h2 id="_anhang">6. Anhang</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_weitere_themen">6.1. Weitere Themen</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -905,10 +973,85 @@ Versionsverwaltung mit git
 </li>
 </ul></div>
 </div>
+<div class="sect2">
+<h3 id="x_adblock">6.2. Sicheres surfen</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Firefox &#8594; Menü &#8594; Erweiterungen &#8594; <strong>AdBlock Plus</strong> installieren, siehe auch <a href="https://adblockplus.org/de/">https://adblockplus.org/de/</a>
+</p>
+</li>
+<li>
+<p>
+Cookies beim Beenden löschen lassen
+</p>
+</li>
+<li>
+<p>
+(LibreJS, NoJS)
+</p>
+</li>
+</ul></div>
 </div>
-<div class="sect1">
-<h2 id="_material">7. Material</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_schadsoftware_entdecken_und_entfernen">6.3. Schadsoftware entdecken und entfernen</h3>
+<div class="paragraph"><p>auch Malware genannt, <a href="https://de.wikipedia.org/wiki/Schadprogramm">https://de.wikipedia.org/wiki/Schadprogramm</a></p></div>
+<div class="sect3">
+<h4 id="_virenscanner">6.3.1. Virenscanner</h4>
+<div class="sect4">
+<h5 id="_online">Online</h5>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://www.virustotal.com/">virustotal</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect4">
+<h5 id="_linux_2">Linux</h5>
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="https://www.clamav.net/">https://www.clamav.net/</a>
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect4">
+<h5 id="_windows_2">Windows</h5>
+<div class="ulist"><ul>
+<li>
+<p>
+z. B. Avira Antivir (keine freie Software)
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_entfernen_unter_windows">6.3.2. Entfernen unter Windows</h4>
+<div class="ulist"><ul>
+<li>
+<p>
+ask.com entfernen: z. B. siehe <a href="https://malwaretips.com/blogs/remove-ask-toolbar-and-search/">https://malwaretips.com/blogs/remove-ask-toolbar-and-search/</a> (inkl. kaputte Browsersettings wiederherstellen)
+</p>
+</li>
+<li>
+<p>
+Spybot: <a href="https://www.safer-networking.org/de/">https://www.safer-networking.org/de/</a> (keine freie Software)
+</p>
+</li>
+<li>
+<p>
+Anti-Malware: <a href="https://de.malwarebytes.org/">https://de.malwarebytes.org/</a> (keine freie Software)
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_material">6.4. Material</h3>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -916,8 +1059,8 @@ Versionsverwaltung mit git
 </p>
 </li>
 </ul></div>
-<div class="sect2">
-<h3 id="_verschiedenes">7.1. Verschiedenes</h3>
+<div class="sect3">
+<h4 id="_verschiedenes">6.4.1. Verschiedenes</h4>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -931,8 +1074,9 @@ Zeitschrift Easy Linux 2016-01
 </li>
 </ul></div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_lizenz">7.2. Lizenz</h3>
+<h3 id="_lizenz">6.5. Lizenz</h3>
 <div class="paragraph"><p>Der Inhalt dieses Dokuments darf unter den Bedingungen der folgenden Lizenz weiterverwendet werden: <a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>.</p></div>
 </div>
 </div>
@@ -942,7 +1086,7 @@ Zeitschrift Easy Linux 2016-01
 <div id="footer">
 <div id="footer-text">
 Version 0.9<br>
-Letzte Änderung 2016-03-06 19:20:40 CET
+Letzte Änderung 2016-03-11 05:39:04 CET
 </div>
 </div>
 </body>
