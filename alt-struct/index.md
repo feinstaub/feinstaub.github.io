@@ -11,7 +11,8 @@ Literatur:
 
 * Buch: [J. Weizenbaum - Kurs auf den Eisberg](http://www.zvab.com/advancedSearch.do?title=%22Kurs+auf+den+Eisberg%22) (1988) über die Verantwortung des einzelnen
     * Elevator-Pitch-Artikel: https://ohneamazon.wordpress.com/2014/01/31/die-sogenannte-ohnmacht-des-einzelnen-ist-vielleicht-die-gefahrlichste-illusion-die-ein-mensch-haben-kann/
-* [A. Schweitzer - Aus meinem Leben und Denken](http://www.fischerverlage.de/buch/aus_meinem_leben_und_denken/9783596128761) (vor 1965)
+* Buch: [A. Schweitzer - Aus meinem Leben und Denken](http://www.fischerverlage.de/buch/aus_meinem_leben_und_denken/9783596128761) (vor 1965)
+* Buch: Komm, ich erzähl dir eine Geschichte [Dec 01, 2006] Bucay, Jorge and Harrach, Stephanie von
 
 Aktuelles:
 
@@ -67,13 +68,14 @@ Kleidung
 --------
 * weniger ist mehr
 * [Web-Suche "Nachhaltige Kleidung"](https://www.google.de/search?q=nachhaltige+kleidung)
-* [Fairtrade und Fairer Handel](https://news.utopia.de/ratgeber/fair-trade-fairer-handel-fragen-antworten/) (2015)
+* [Fairtrade und Fairer Handel](https://news.utopia.de/ratgeber/fair-trade-fairer-handel-fragen-antworten/) (2015) (Websuche "warum fair trade")
 * http://www.fairwear.de
 * https://www.fairmondo.de
+* http://veganemode.info/ (Warum? -> http://www.peta.de/themen/Pelz), [Label](http://www.peta.de/petaapprovedvegan#.VuIuVUnYQkg)
 
-Negativ-Beispiele:
+Negativ-Beispiele: [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0)
 
-* [ARD-Reportage zu kik](https://www.youtube.com/watch?v=NPoHGr6uiq0)
+Positiv-Beispiele: HessNatur, maas Natur, ..., http://www.miwai.de/
 
 
 Politik
@@ -223,15 +225,46 @@ Gesellschaft
 * Film: [Hotel Ruanda](https://de.wikipedia.org/wiki/Hotel_Ruanda)
 * Film: https://de.wikipedia.org/wiki/American_History_X
 * Film: We feed the world
-* Film: Let's make money
+* Film: [Let's make money (2008)](https://de.wikipedia.org/wiki/Let%E2%80%99s_Make_Money)
 * Film: Food, Inc
 * Film: Zeit der Kannibalen
 * Buch: Selbstverbrennung von Hans Joachim Schellnhuber
     * http://water.org
+* Buch: [Öl - Das blutige Geschäft (2010)](https://www.buch7.de/store/product_details/2087042953)
+* Film: [Plastic Planet (2009)](https://de.wikipedia.org/wiki/Plastic_Planet)
 * https://de.wikipedia.org/wiki/Die_Grenzen_des_Wachstums
     * https://de.wikipedia.org/wiki/Kenneth_Ewart_Boulding
-* Dezentralität
+* Dezentralität:
     * Artikel: [Steuertrickser: "Modell Ikea" Vorbild für internationale Konzerne](http://www.attac.de/index.php?id=394&no_cache=1&tx_ttnews[tt_news]=8580) (16.02.2016)
     * Artikel: [Risiko einer Bankenkrise wie 2008 ist hoch](http://www.attac.de/index.php?id=394&no_cache=1&tx_ttnews[tt_news]=8593) (23.02.2016)
     * siehe Ernähung / Was ist der Nachteil von Monopolen und Oligopolen?
-
+* Rohstoffe:
+    * Beispiel Websuche "Coltan"
+        * http://www.regenwald-schuetzen.org/regenwald-wissen/holz-papier-soja-co/coltan-handy.html
+        * https://www.aktiv-gegen-kinderarbeit.de/produkte/bodenschatze/coltan/
+        * Doku: [Blood Coltan (2007)](https://www.youtube.com/watch?v=in0A8SFL3XM)
+    * Kupfer: [Stealing Africa - Why Poverty? (2013)](https://www.youtube.com/watch?v=WNYemuiAOfU)
+        * [Why poverty YT channel](https://www.youtube.com/channel/UC5McHEvkqTK4wovjv5ChLgg)
+    * Positiv-Beispiele:
+        * [Fairphone](]http://www.fairphone.com/)
+        * [Pangea-Sun-ein-modulares-Open-Source-Notebook](http://www.heise.de/newsticker/meldung/Pangea-Sun-ein-modulares-Open-Source-Notebook-3127864.html)
+        * konsequentes Recycling (https://www.recyclingnews.info/recycling/studien-fordern-wandel-zu-kreislaufwirtschaft/)
+            * https://de.wikipedia.org/wiki/Kreislaufwirtschaft
+            * [Crade-to-Cradle, C2C](http://c2c-ev.de/vorstellung-beirat-des-cradle-to-cradle-e-v/)
+            * [Michael Braungart](https://de.wikipedia.org/wiki/Michael_Braungart), Verfahrenstechniker und Chemiker, mit Interview
+        * memo.de
+        * Frosch
+* Schmuck:
+    * Gold-Abschnitt aus [Let's make money (2008)](https://de.wikipedia.org/wiki/Let%E2%80%99s_Make_Money)
+    * Film: [Blood Diamond (2006)](https://de.wikipedia.org/wiki/Blood_Diamond), siehe Zitat von DiCaprio
+* Film: [Alphabet (2013)](https://de.wikipedia.org/wiki/Alphabet_%28Film%29), u. a. "Verkürzung des Lebens auf die Ökonomie“
+* Film: [Colonia Dignidad (2015)](https://de.wikipedia.org/wiki/Colonia_Dignidad_%E2%80%93_Es_gibt_kein_Zur%C3%BCck)
+    * Pispers: [Bis neulich (2007), Teil 1 u 2](https://www.youtube.com/watch?v=AuUUQ0_SO00), [Teil 2 - Syrien, Afghanistan, Wandschrank](https://www.youtube.com/watch?v=vHygky3_JcI)
+    * https://de.wikipedia.org/wiki/Colonia_Dignidad
+    * https://de.wikipedia.org/wiki/Putsch_in_Chile_1973
+    * https://de.wikipedia.org/wiki/Amnesty_International
+* Buch: Daemon [Paperback] [Jan 07, 2010] Suarez, Daniel
+* Buch: Freedom (TM) [Mass Market Paperback] [Jan 04, 2011] Suarez, Daniel
+* Buch: Das Imperium der Schande: Der Kampf gegen Armut und Unterdrückung	Ziegler, Jean
+* Film: Die Bucht - The Cove	DVD 2009
+* Buch: Die Letzten ihrer Art [Paperback] [Nov 01, 1992] Adams, Douglas and Carwardine, Mark
