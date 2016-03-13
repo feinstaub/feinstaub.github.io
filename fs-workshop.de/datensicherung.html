@@ -20,7 +20,7 @@ asciidoc.install(3);
 <h1>Lokale Datensicherung</h1>
 <span id="author">fsworkshop.net</span><br>
 <span id="email" class="monospaced">&lt;<a href="mailto:fsworkshop@posteo.net">fsworkshop@posteo.net</a>&gt;</span><br>
-<span id="revnumber">version 0.9,</span>
+<span id="revnumber">version 0.9.2,</span>
 <span id="revdate">2016</span>
 <div id="toc">
   <div id="toctitle">Inhalt</div>
@@ -674,6 +674,13 @@ Verschiedene Möglichkeiten, mit gelöschten Dateien umzugehen
 <p>
 Erster Sync
 </p>
+<div class="ulist"><ul>
+<li>
+<p>
+Hinweis "Mehr als 50% geänderte Dateien"
+</p>
+</li>
+</ul></div>
 </li>
 <li>
 <p>
@@ -797,11 +804,8 @@ Mit FreeFileSync
 </div>
 <div class="sect2">
 <h3 id="_fortgeschrittene">4.5. Fortgeschrittene</h3>
-<div class="ulist"><ul>
-<li>
-<p>
-<strong>Datei-Filter</strong>
-</p>
+<div class="sect3">
+<h4 id="_datei_filter">4.5.1. Datei-Filter</h4>
 <div class="ulist"><ul>
 <li>
 <p>
@@ -819,7 +823,58 @@ Einschließen oder Ausschließen
 </p>
 </li>
 </ul></div>
+</div>
+<div class="sect3">
+<h4 id="_laufprotokoll">4.5.2. Laufprotokoll</h4>
+<div class="paragraph"><p>Laufprotokoll: ~/.FreeFileSync/<strong>LastSyncs.log</strong></p></div>
+</div>
+<div class="sect3">
+<h4 id="_extras_8594_optionen">4.5.3. Extras &#8594; Optionen</h4>
+<div class="ulist"><ul>
+<li>
+<p>
+Umgang mit gesperrten Dateien
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+bei Windows: <strong>gesperrte Dateien</strong>, z. B. Firefox noch offen, NTUSER.DAT (Registry)
+</p>
 </li>
+</ul></div>
+</li>
+<li>
+<p>
+Eigene Werkzeuge ins Menü einbinden
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+z. B. Textdateien vergleichen mit <a href="https://sourceforge.net/projects/kdiff3/">kdiff3</a> oder <a href="http://meldmerge.org/">Meld</a>
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_2_wege_sync">4.5.4. 2-Wege-Sync</h4>
+<div class="ulist"><ul>
+<li>
+<p>
+Hinweis: ggf. muss initial 2x gesynct werden, damit bei gelöschten Dateien die Richtung richtig erkannt wird
+</p>
+</li>
+<li>
+<p>
+Umgang mit dem "Konflikt"-Symbol
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_verschiedenes">4.5.5. Verschiedenes</h4>
+<div class="ulist"><ul>
 <li>
 <p>
 <strong>Sync-Modus</strong> (Spiegeln, 2-Wege, Aktualisieren)
@@ -839,7 +894,7 @@ Sync in zwei Richtungen (nicht primär als Datensicherung, aber z. B. USB-Stick 
 </li>
 <li>
 <p>
-Umbenannte Dateien erkennen
+Umbenannte Dateien erkennen &#8594; in der Vergleichsansicht nicht sichtbar (&#8594; Feature-Request?)
 </p>
 </li>
 <li>
@@ -847,17 +902,8 @@ Umbenannte Dateien erkennen
 RealTimeSync
 </p>
 </li>
-<li>
-<p>
-Laufprotokoll: ~/.FreeFileSync/<strong>LastSyncs.log</strong>
-</p>
-</li>
-<li>
-<p>
-bei Windows: <strong>gesperrte Dateien</strong>, z. B. Firefox noch offen, NTUSER.DAT (Registry)
-</p>
-</li>
 </ul></div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="ffs_virenscanner">4.6. Hinweis Virenscanner</h3>
@@ -994,6 +1040,11 @@ Private Cloud mit ownCloud und SyncThing
 Versionsverwaltung mit git
 </p>
 </li>
+<li>
+<p>
+Dateien schnell finden mit <a href="https://www.voidtools.com/">Everything</a> (nur NTFS, keine freie Software)
+</p>
+</li>
 </ul></div>
 <div class="sect3">
 <h4 id="_programme_unter_datensicherungsaspekten_auswählen">6.1.1. Programme unter Datensicherungsaspekten auswählen</h4>
@@ -1006,7 +1057,17 @@ Versionsverwaltung mit git
 <div class="ulist"><ul>
 <li>
 <p>
-Metadaten werden direkt in den Bilddateien gespeichert
+Metadaten können optional direkt in den Bilddateien gespeichert (empfohlen)
+</p>
+</li>
+<li>
+<p>
+Programm-Datenbank im gleichen Ordner wie der Bilder-Wurzelordner
+</p>
+</li>
+<li>
+<p>
+Hilfe: <a href="https://www.digikam.org/support">https://www.digikam.org/support</a>
 </p>
 </li>
 </ul></div>
@@ -1096,13 +1157,9 @@ Anti-Malware: <a href="https://de.malwarebytes.org/">https://de.malwarebytes.org
 <div class="ulist"><ul>
 <li>
 <p>
-<a href="datensicherung-0.9.pdf">PDF-Download</a>
+Dieses Dokument als <a href="datensicherung-0.9.2.pdf">PDF-Download</a>.
 </p>
 </li>
-</ul></div>
-<div class="sect3">
-<h4 id="_verschiedenes">6.4.1. Verschiedenes</h4>
-<div class="ulist"><ul>
 <li>
 <p>
 <a href="https://de.wikipedia.org/wiki/Datensicherung#Sonderfall_Privatnutzer">https://de.wikipedia.org/wiki/Datensicherung#Sonderfall_Privatnutzer</a>
@@ -1113,12 +1170,21 @@ Anti-Malware: <a href="https://de.malwarebytes.org/">https://de.malwarebytes.org
 Zeitschrift Easy Linux 2016-01
 </p>
 </li>
+<li>
+<p>
+<a href="https://www.sicher-im-netz.de/daten-sichern">https://www.sicher-im-netz.de/daten-sichern</a> (Deutschland sicher im Netz e.V.)
+</p>
+</li>
+<li>
+<p>
+<a href="https://www.bsi-fuer-buerger.de/BSIFB/DE/Empfehlungen/Datensicherung/datensicherung_node.html">https://www.bsi-fuer-buerger.de/BSIFB/DE/Empfehlungen/Datensicherung/datensicherung_node.html</a> (Bundesamt für Sicherheit in der Informationstechnik)
+</p>
+</li>
 </ul></div>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_lizenz">6.5. Lizenz</h3>
-<div class="paragraph"><p>Der Inhalt dieses Dokuments darf unter den Bedingungen der folgenden Lizenz weiterverwendet werden: <a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>.</p></div>
+<div class="paragraph"><p>Der Inhalt dieses Dokuments von fsworkshop.net darf unter den Bedingungen der folgenden Lizenz weiterverwendet werden: <a href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>.</p></div>
 </div>
 </div>
 </div>
@@ -1126,8 +1192,8 @@ Zeitschrift Easy Linux 2016-01
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Version 0.9<br>
-Letzte Änderung 2016-03-11 16:28:38 CET
+Version 0.9.2<br>
+Letzte Änderung 2016-03-13 17:28:32 CET
 </div>
 </div>
 </body>
