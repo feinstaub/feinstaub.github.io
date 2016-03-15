@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.8">
+<title>Lego-Roboter mit Python</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css">
+
+
+<link rel="stylesheet" href="./toc2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install(3);
+/*]]>*/
+</script>
+</head>
+<body class="article">
+<div id="header">
+<h1>Lego-Roboter mit Python</h1>
+<div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
+  <div id="toctitle">Inhalt</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><p>(&#8230; im Aufbau &#8230;)</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_python_mit_dem_nxt_verbinden">Python mit dem NXT verbinden</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>$ cd ~/tmp/pynxt/</p></div>
+<div class="paragraph"><p>$ git clone <a href="https://github.com/eelviny/nxt-python">https://github.com/eelviny/nxt-python</a></p></div>
+<div class="paragraph"><p>$ python setup.py install --user</p></div>
+<div class="paragraph"><p>import nxt -&#8594; ok</p></div>
+<div class="paragraph"><p><a href="https://github.com/Eelviny/nxt-python/wiki/Installation">https://github.com/Eelviny/nxt-python/wiki/Installation</a></p></div>
+<div class="paragraph"><p>sudo zypper install python3-usb</p></div>
+<div class="paragraph"><p>sudo groupadd lego</p></div>
+<div class="paragraph"><p>sudo usermod -a -G lego &lt;username&gt;</p></div>
+<div class="paragraph"><p>sudo touch /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>ls -la /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>sudo chmod u+w /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>kdesu kwrite /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p></p></div>
+<div class="paragraph"><p>Save.</p></div>
+<div class="paragraph"><p>$ cd ~/tmp/pynxt/</p></div>
+<div class="paragraph"><p>git clone <a href="https://github.com/Eelviny/nxt-python-examples">https://github.com/Eelviny/nxt-python-examples</a></p></div>
+<div class="paragraph"><p>checkout bytes branch from above repo! (siehe <a href="https://github.com/Eelviny/nxt-python/issues/72">https://github.com/Eelviny/nxt-python/issues/72</a>)</p></div>
+<div class="paragraph"><p>test_sensors2.py, spin2.py works!</p></div>
+<div class="sect2">
+<h3 id="_troubleshooting">Troubleshooting</h3>
+<div class="ulist"><ul>
+<li>
+<p>
+Brick: Orangene Taste drücken.
+</p>
+</li>
+<li>
+<p>
+nxt.locator.find_one_brick() findet nichts
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Restart udev: sudo udevadm control --reload-rules
+    <a href="http://unix.stackexchange.com/questions/39370/how-to-reload-udev-rules-without-reboot">http://unix.stackexchange.com/questions/39370/how-to-reload-udev-rules-without-reboot</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+siehe auch <a href="https://github.com/Eelviny/nxt-python/issues/72">https://github.com/Eelviny/nxt-python/issues/72</a>
+    &#8594; TODO: try again and report back
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr></div>
+<div id="footer">
+<div id="footer-text">
+Letzte Änderung 2016-03-15 20:55:05 CET
+</div>
+</div>
+</body>
+</html>
