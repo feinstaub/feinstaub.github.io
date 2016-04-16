@@ -16,6 +16,13 @@ Kochbücher:
 
 ---
 
+Chiasamenpudding
+----------------
+16.04.2016, selbst
+
+Chiasamenpudding mit Bananen, Kakao, Cranberries, Weizenkleie und Äpfel
+
+
 Salatsauce auf Nussmusbasis
 ---------------------------
 07.11.2015, von Mo
@@ -33,15 +40,17 @@ Dieses Sauce passt mit Erdnussmus zu Karottensalat. Geht auch mit Mandelmus. Pas
 
 Schokomousse auf Cashew-Basis
 -----------------------------
-08.10.2015, Schauspielerin aus einer Fernsehshow
+08.10.2015, Schauspielerin aus einer Fernsehshow, Update 16.04.2016
 
 * 3/4 Tasse Cashewnüsse
 * 3/4 Tasse Wasser
 * 1 Banane
-* 3 - 4 EL Kakaopulver
+* 4 EL Kakaopulver
 * 1 TL Zimt
 * 1 Prise Salz
 * 1 Spritzer Zitrone
+* 2 TL Ahornsirup
+* ggf. Reissirup zum weiteren Süßen
 
 Alles in den Mixer geben und mixen. Etwas warten, weil (angeblich) noch nachdickt.
 
@@ -148,15 +157,15 @@ Tzatziki (Veganitzki)
 
 Weißer Bohnensalat mit Kapern
 -----------------------------
-23.03.2015, selbst, partytauglich, zuletzt aktualisiert 23.10.2015
+23.03.2015, selbst, partytauglich, Update 16.04.2016
 
 Reihenfolge wie es in die Schüssel kommt:
 
 * Oliven**öl** (mit Zitrone oder Zitrone separat oder ohne Zitrone), Balsamico-**Essig**, Soja-Sauce, Hanföl
-* 2 EL Tomatenmark (oder passierte Tomaten)
+* 1 EL Tomatenmark (oder entsprechend mehr passierte Tomaten)
 * [Soyana Sauerrahm](http://www.alles-vegetarisch.de/LEBENSMITTEL-Sahne---Ei-Ersatz-Soyana-SOYANANDA-Sauerrahm--200g-Fermentierte-Soja-Alternative-zu-Sauerrahm,art-4685) (oder [Soyanada](http://www.alles-vegetarisch.de/frischkaese-vegan-bio-soja-streichkaese-wie-rahm-pflanzlich,art-4688) oder Jogurth-Produkt)
 * Ahornsirup
-* Pfeffer, Muskat
+* Pfeffer, Muskat, (Koriander)
 * 1 kleines Gläschen **Kapern** (optional: Saure Gurkenstücke)
 * gehackte **Zwiebeln**
 * Kau-Elemente:

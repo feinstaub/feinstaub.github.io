@@ -266,5 +266,5 @@ Gesellschaft
 * Buch: Daemon [Paperback] [Jan 07, 2010] Suarez, Daniel
 * Buch: Freedom (TM) [Mass Market Paperback] [Jan 04, 2011] Suarez, Daniel
 * Buch: Das Imperium der Schande: Der Kampf gegen Armut und Unterdrückung	Ziegler, Jean
-* Film: Die Bucht - The Cove	DVD 2009
+* Film: Die Bucht - The Cove (DVD 2009)
 * Buch: Die Letzten ihrer Art [Paperback] [Nov 01, 1992] Adams, Douglas and Carwardine, Mark
