@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="AsciiDoc 8.6.8">
-<title></title>
+<title>Datenaustausch</title>
 <link rel="stylesheet" href="./asciidoc.css" type="text/css">
 
 
@@ -17,47 +17,98 @@ asciidoc.install(3);
 </head>
 <body class="article">
 <div id="header">
+<h1>Datenaustausch</h1>
 <div      id="toc"><div id="back-nav" style="margin-bottom: 50px"><a href="index.html">Übersicht</a></div>
   <div id="toctitle">Inhalt</div>
   <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_datenaustausch">Datenaustausch</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_adhoc_datenaustausch">AdHoc-Datenaustausch</h3>
+<div class="paragraph"><p>Wie kann Daten untereinander austauschen kann, indem man Dateien transferiert.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linux_lan_linux">Linux - LAN - Linux</h2>
+<div class="sectionbody">
 <div class="ulist"><ul>
 <li>
 <p>
-Im lokalen Netzwerk oder Internet: z. B. mit <a href="https://www.sharedrop.io/">https://www.sharedrop.io/</a>
+scp
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+transfer-User anlegen
 </p>
 </li>
 <li>
 <p>
-Zwischen Windows und Linux: <a href="https://winscp.net/">WinSCP</a>, <a href="https://winscp.net/eng/docs/license">https://winscp.net/eng/docs/license</a>
+&#8230;
+</p>
+</li>
+<li>
+<p>
+siehe <a href="http://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh">http://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh</a>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+NFS
 </p>
 </li>
 </ul></div>
 </div>
-<div class="sect2">
-<h3 id="_samba_server">Samba-Server</h3>
+</div>
+<div class="sect1">
+<h2 id="_linux_lan_windows">Linux - LAN - Windows</h2>
+<div class="sectionbody">
 <div class="ulist"><ul>
 <li>
 <p>
-todo
+<a href="https://winscp.net/">WinSCP</a> (<a href="https://winscp.net/eng/docs/license">https://winscp.net/eng/docs/license</a>)
+</p>
+</li>
+<li>
+<p>
+Samba-Server: <a href="https://www.samba.org/">https://www.samba.org/</a>
 </p>
 </li>
 </ul></div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_linux_windows_lan_linux_windows">Linux/Windows - LAN - Linux/Windows</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+z. B. mit <a href="https://www.sharedrop.io/">https://www.sharedrop.io/</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linux_windows_internet_linux_windows">Linux/Windows - Internet - Linux/Windows</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+z. B. mit <a href="https://www.sharedrop.io/">https://www.sharedrop.io/</a>
+</p>
+</li>
+</ul></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-03-15 18:13:24 CET
+Letzte Änderung 2016-04-17 18:57:50 CEST
 </div>
 </div>
 </body>
