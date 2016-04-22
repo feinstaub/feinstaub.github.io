@@ -32,24 +32,65 @@ asciidoc.install(3);
 <div class="sect1">
 <h2 id="_python_mit_dem_nxt_verbinden">Python mit dem NXT verbinden</h2>
 <div class="sectionbody">
+<div class="paragraph"><p>Hinweise:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Das "$" gehört nicht zum Befehl, sondern sagt, dass das nachfolgende Kommando in der bash-Shell eingegeben werden soll.
+</p>
+</li>
+<li>
+<p>
+Das "&gt;&gt;&gt;" gehört nicht zum Befehl, sondern sagt, dass man sich hier in der Python-Shell befindet.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Python = Python3</p></div>
+<div class="paragraph"><p>Arbeitsverzeichnis erzeugen:</p></div>
 <div class="paragraph"><p>$ cd ~/tmp/pynxt/</p></div>
+<div class="paragraph"><p>Python-nxt-Bibliothek herunterladen:</p></div>
 <div class="paragraph"><p>$ git clone <a href="https://github.com/eelviny/nxt-python">https://github.com/eelviny/nxt-python</a></p></div>
+<div class="paragraph"><p>(Falls git nicht installiert ist, dann vorher <span class="monospaced">$ sudo zypper install git</span> oder alternativ über den Download-Knopf)</p></div>
+<div class="paragraph"><p>In das heruntergeladene Verzeichnis wechseln.</p></div>
+<div class="paragraph"><p>$ cd nxt-python</p></div>
+<div class="paragraph"><p>Python-nxt-Bibliothek für eigenen Nutzer (im Gegensatz zu systemweit) installieren:</p></div>
 <div class="paragraph"><p>$ python setup.py install --user</p></div>
-<div class="paragraph"><p>import nxt -&#8594; ok</p></div>
-<div class="paragraph"><p><a href="https://github.com/Eelviny/nxt-python/wiki/Installation">https://github.com/Eelviny/nxt-python/wiki/Installation</a></p></div>
-<div class="paragraph"><p>sudo zypper install python3-usb</p></div>
-<div class="paragraph"><p>sudo groupadd lego</p></div>
-<div class="paragraph"><p>sudo usermod -a -G lego &lt;username&gt;</p></div>
-<div class="paragraph"><p>sudo touch /etc/udev/rules.d/70-lego.rules</p></div>
-<div class="paragraph"><p>ls -la /etc/udev/rules.d/70-lego.rules</p></div>
-<div class="paragraph"><p>sudo chmod u+w /etc/udev/rules.d/70-lego.rules</p></div>
-<div class="paragraph"><p>kdesu kwrite /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>Ausprobieren, ob das geklappt hat:</p></div>
+<div class="paragraph"><p>$ python
+&gt;&gt;&gt; import nxt</p></div>
+<div class="paragraph"><p>Wenn keine Fehlermeldung erscheint, war die Installation erfolgreich.</p></div>
+<div class="sect2">
+<h3 id="_usb_konfigurieren">USB konfigurieren</h3>
+<div class="paragraph"><p>Die nächsten Schritte basieren auf dieser Anleitung: <a href="https://github.com/Eelviny/nxt-python/wiki/Installation">https://github.com/Eelviny/nxt-python/wiki/Installation</a></p></div>
+<div class="paragraph"><p>$ sudo zypper install python3-usb</p></div>
+<div class="paragraph"><p>$ sudo groupadd lego</p></div>
+<div class="paragraph"><p>$ sudo usermod -a -G lego &lt;username&gt;</p></div>
+<div class="paragraph"><p>(&lt;username&gt; kann mit <span class="monospaced">$ whoami</span> herausgefunden werden)</p></div>
+<div class="paragraph"><p>Leere Datei anlegen:</p></div>
+<div class="paragraph"><p>$ sudo touch /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>Schauen, ob die Datei da ist:</p></div>
+<div class="paragraph"><p>$ ls -la /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>Rechte setzen:</p></div>
+<div class="paragraph"><p>$ sudo chmod u+w /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>Datei mit kwrite bearbeiten:</p></div>
+<div class="paragraph"><p>$ kdesu kwrite /etc/udev/rules.d/70-lego.rules</p></div>
+<div class="paragraph"><p>Folgendes eintragen (eine Zeile):</p></div>
 <div class="paragraph"><p></p></div>
-<div class="paragraph"><p>Save.</p></div>
+<div class="paragraph"><p>Speichern und kwrite wieder schließen.</p></div>
+<div class="paragraph"><p>Wieder zurück ins Arbeitsverzeichnis:</p></div>
 <div class="paragraph"><p>$ cd ~/tmp/pynxt/</p></div>
-<div class="paragraph"><p>git clone <a href="https://github.com/Eelviny/nxt-python-examples">https://github.com/Eelviny/nxt-python-examples</a></p></div>
+<div class="paragraph"><p>Beispiele kopieren:</p></div>
+<div class="paragraph"><p>$ git clone <a href="https://github.com/Eelviny/nxt-python-examples">https://github.com/Eelviny/nxt-python-examples</a></p></div>
+<div class="olist lowerroman"><ol class="lowerroman">
+<li>
+<p>
+unfertig &#8230;:
+</p>
+</li>
+</ol></div>
 <div class="paragraph"><p>checkout bytes branch from above repo! (siehe <a href="https://github.com/Eelviny/nxt-python/issues/72">https://github.com/Eelviny/nxt-python/issues/72</a>)</p></div>
 <div class="paragraph"><p>test_sensors2.py, spin2.py works!</p></div>
+</div>
 <div class="sect2">
 <h3 id="_troubleshooting">Troubleshooting</h3>
 <div class="ulist"><ul>
@@ -77,6 +118,33 @@ siehe auch <a href="https://github.com/Eelviny/nxt-python/issues/72">https://git
     &#8594; TODO: try again and report back
 </p>
 </li>
+<li>
+<p>
+$ udevadm monitor
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Zeigt an, wenn USB-Geräte angeschlossen oder entfernt werden.
+</p>
+</li>
+<li>
+<p>
+Den angezeigen Pfad kann man im folgenden Befehl verwenden:
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+$ sudo udevadm info --path PFAD
+</p>
+</li>
+<li>
+<p>
+PFAD ist z. B. /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.2
+</p>
+</li>
 </ul></div>
 </div>
 </div>
@@ -85,7 +153,7 @@ siehe auch <a href="https://github.com/Eelviny/nxt-python/issues/72">https://git
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-03-15 20:55:05 CET
+Letzte Änderung 2016-04-22 15:05:47 CEST
 </div>
 </div>
 </body>
