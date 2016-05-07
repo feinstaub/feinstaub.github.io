@@ -17,7 +17,14 @@
 
 &lt;p&gt;Dimensions: Height 116.9mm, Width 60.4mm, Depth 11.7mm, Weight: 120g (including battery)&lt;/p&gt;
 
-&lt;p&gt;Software overview: pre-installed Android 2.3, I did not connect to a Google account, Apps via F-droid, Kontalk messenger&lt;/p&gt;
+&lt;p&gt;Software overview:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pre-installed Android 2.3&lt;/li&gt;
+  &lt;li&gt;I did not connect to a Google account but there are quite a few non-free and non-uninstallable apps present&lt;/li&gt;
+  &lt;li&gt;Apps via &lt;a href=&quot;https://f-droid.org/&quot;&gt;F-droid store&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kontalk.org/&quot;&gt;Kontalk messenger&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Backup strategy: USB storage connection to PC for some data but not all. No regular backup of contacts.&lt;/p&gt;
 
@@ -54,7 +61,7 @@
 
 &lt;p&gt;Dimensions: 125.3 x 66.1 x 8.5 mm, Weight: 116 g (probably including battery)&lt;/p&gt;
 
-&lt;p&gt;Software overview: pre-installed Replicant 4.2 0004 (based on CyanogenMod, based on Android 4.2), default App store F-droid&lt;/p&gt;
+&lt;p&gt;Software overview: pre-installed Replicant 4.2 0004 (based on CyanogenMod, based on Android 4.2), default app store F-droid.&lt;/p&gt;
 
 &lt;h2 id=&quot;ordering-and-shipping&quot;&gt;Ordering and Shipping&lt;/h2&gt;
 &lt;p&gt;Before I placed the order, I had some questions which the shop owner answered timely, friendly and comprehensively.&lt;/p&gt;
@@ -92,10 +99,10 @@
   &lt;li&gt;Connect with USB cable to computer&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;connect-with-usb-cable-part-1&quot;&gt;Connect with USB cable (part 1)&lt;/h2&gt;
-&lt;p&gt;There are several options: the default one is to act as MTP device. Another one is the USB storage device which did not work and the KDE device notifier repeatedly showed up and disappeared as if some logic tries to connect but fails. I then used MTP to transfer two songs in ogg vorbis format and was able to play them with the pre-installed Apollo app out-of-the-box.&lt;/p&gt;
+&lt;h2 id=&quot;screen-protector-and-branding&quot;&gt;Screen protector and branding&lt;/h2&gt;
+&lt;p&gt;The screen protector did not look nice so I removed it using &lt;a href=&quot;https://www.youtube.com/watch?v=wf990UzEZ5A&quot;&gt;these simple instructions&lt;/a&gt;. Note, that the installed protector was non-mirroring in contrast to the one from the video.&lt;/p&gt;
 
-&lt;p&gt;I also briefly opened a remote shell using the Android debug bridge (adb) from my openSUSE host.&lt;/p&gt;
+&lt;p&gt;On the shop screenshots the phone is branded the the “TEHNOETIC” logo. My phone however has the standard “SAMSUNG” branding.&lt;/p&gt;
 
 &lt;h2 id=&quot;reboot-options&quot;&gt;Reboot options&lt;/h2&gt;
 &lt;p&gt;When you choose “Reboot” from the menu (and in the Developer settings - which were on by default - the “Advanced boot options” option is checked) then you get three options&lt;/p&gt;
@@ -108,14 +115,16 @@
 
 &lt;p&gt;Note, when you accidentally disabled the Developer settings menu it can be restored by &lt;a href=&quot;http://android.stackexchange.com/questions/67249/how-to-enter-usb-debugging-mode-in-cyanogenmod&quot;&gt;tapping 5 times somewhere as described here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;screen-protector-and-branding&quot;&gt;Screen protector and branding&lt;/h2&gt;
-&lt;p&gt;The screen protector did not look nice so I removed it using &lt;a href=&quot;https://www.youtube.com/watch?v=wf990UzEZ5A&quot;&gt;these simple instructions&lt;/a&gt;. Note, that the installed protector was non-mirroring in contrast to the one from the video.&lt;/p&gt;
+&lt;h2 id=&quot;connect-with-usb-cable-part-1&quot;&gt;Connect with USB cable (part 1)&lt;/h2&gt;
+&lt;p&gt;There are several options: the default one is to act as MTP device. Another one is the USB storage device which did not work and the KDE device notifier repeatedly showed up and disappeared as if some logic tries to connect but fails. I then used MTP to transfer two songs in ogg vorbis format and was able to play them with the pre-installed Apollo app out-of-the-box.&lt;/p&gt;
 
-&lt;p&gt;On the shop screenshots the phone is branded the the “TEHNOETIC” logo. My phone however has the standard “SAMSUNG” branding.&lt;/p&gt;
+&lt;p&gt;I also briefly opened a remote shell using the Android debug bridge (adb) from my openSUSE host.&lt;/p&gt;
 
 &lt;h2 id=&quot;next-connect-to-the-internet-without-sim-card-and-wifi&quot;&gt;NEXT: Connect to the Internet without SIM card and Wifi&lt;/h2&gt;
 
-&lt;p&gt;Wifi and Bluetooth are both not working with Replicant because there is no existing free firmware yet. I will report back about this topic.&lt;/p&gt;
+&lt;p&gt;Wifi and Bluetooth are both not working with Replicant because there is no existing free firmware yet that works with the given hardware.&lt;/p&gt;
+
+&lt;p&gt;I will report back about how to connect to the Internet without SIM card but using an USB cable.&lt;/p&gt;
 
 &lt;p&gt;TODO: include discussion capability to this blog post.&lt;/p&gt;
 
