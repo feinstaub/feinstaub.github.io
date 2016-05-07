@@ -9,6 +9,124 @@
         <atom:link href="http://feinstaub.github.io/blog/feed.kde.xml" rel="self" type="application/rss+xml"/>
         
             <item>
+                <title>Unboxing the Tehnoetic S2 phone with Replicant</title>
+                <description>&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;For some years I am using a second-hand &lt;a href=&quot;http://consumer.huawei.com/en/mobile-phones/tech-specs/u8655-en.htm&quot;&gt;Huawei Ascend Y200&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hardware specifications: 800 MHz CPU, 256 MB RAM, 512 MB Flash memory, 2 GB SD card, 320 x 480 screen resolution&lt;/p&gt;
+
+&lt;p&gt;Dimensions: Height 116.9mm, Width 60.4mm, Depth 11.7mm, Weight: 120g (including battery)&lt;/p&gt;
+
+&lt;p&gt;Software overview: pre-installed Android 2.3, I did not connect to a Google account, Apps via F-droid, Kontalk messenger&lt;/p&gt;
+
+&lt;p&gt;Backup strategy: USB storage connection to PC for some data but not all. No regular backup of contacts.&lt;/p&gt;
+
+&lt;p&gt;Recently, the hardware got some glitches witch resulted in a situation where I could not install new apps or update existing ones. Also the USB to PC connection stopped working.&lt;/p&gt;
+
+&lt;h2 id=&quot;looking-for-a-new-phone&quot;&gt;Looking for a new phone&lt;/h2&gt;
+&lt;p&gt;My requirements for a new phone are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fair hardware (which includes the production chain, open hardware specifiations and being as robust as possible to reduce electronic waste)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Free software&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;decisions&quot;&gt;Decisions&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fair hardware: the &lt;a href=&quot;https://www.fairphone.com/phone/&quot;&gt;Fairphone 2&lt;/a&gt; is the primary choice in this area. But the price is too high for my usage profile. So I braced myself to find another second-hand phone.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Free software: on &lt;a href=&quot;https://prism-break.org/en/categories/android/&quot;&gt;prism-break.org&lt;/a&gt; I rediscovered &lt;a href=&quot;http://www.replicant.us/&quot;&gt;Replicant&lt;/a&gt;. It is &lt;a href=&quot;https://fsfe.org/campaigns/android/liberate.en.html&quot;&gt;endorsed by the FSF&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I wanted a phone that works pretty much out of the box without having to worry about hardware compatibility and installation hassles since I never used Replicant before. The only shop and product I found to meet these criteria was &lt;a href=&quot;https://tehnoetic.com/tehnoetic-s2-phone-replicant&quot;&gt;the second-hand Samsung S2 by Tehnoetic&lt;/a&gt;. The Romanian shop was &lt;a href=&quot;https://www.fsf.org/resources/hw/endorsement/tehnoetic&quot;&gt;positively mentioned by the FSF&lt;/a&gt; so I decided to test my trust.&lt;/p&gt;
+
+&lt;h3 id=&quot;tehnoetic-s2-phone-with-replicant&quot;&gt;Tehnoetic S2 phone with Replicant&lt;/h3&gt;
+
+&lt;p&gt;Hardware specifications: Dual-core 1.2 GHz Cortex-A9 CPU, 1 GB RAM, 16 GB internal storage, no SD card installed, 480 x 800 screen resolution. This is really better than the old phone.&lt;/p&gt;
+
+&lt;p&gt;Dimensions: 125.3 x 66.1 x 8.5 mm, Weight: 116 g (probably including battery)&lt;/p&gt;
+
+&lt;p&gt;Software overview: pre-installed Replicant 4.2 0004 (based on CyanogenMod, based on Android 4.2), default App store F-droid&lt;/p&gt;
+
+&lt;h2 id=&quot;ordering-and-shipping&quot;&gt;Ordering and Shipping&lt;/h2&gt;
+&lt;p&gt;Before I placed the order, I had some questions which the shop owner answered timely, friendly and comprehensively.&lt;/p&gt;
+
+&lt;p&gt;The payment was done via bank transfer to the given Romanian bank account.&lt;/p&gt;
+
+&lt;p&gt;The estimated delivery time of 4 - 7 business days could not be met but I was notified about this issue via email.&lt;/p&gt;
+
+&lt;h2 id=&quot;unboxing&quot;&gt;Unboxing&lt;/h2&gt;
+&lt;p&gt;The phone was located in an original-looking Samsung soft box which smelled of cold smoke. Something that has to be accepted when buying second-hand, I thought. Gladly, the phone itself had no smell at all.&lt;/p&gt;
+
+&lt;h2 id=&quot;switching-it-on-part-1&quot;&gt;Switching it on (part 1)&lt;/h2&gt;
+&lt;p&gt;The power button did not work at once but I remembered some note that the battery is taped off due to shipping regulations.&lt;/p&gt;
+
+&lt;h2 id=&quot;switching-it-on-part-2--still-no-sim-card&quot;&gt;Switching it on (part 2) / Still no SIM card&lt;/h2&gt;
+&lt;p&gt;After having removed the battery tape the phone started up. A few things I noticed.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fast boot time (&amp;lt; 30 seconds)&lt;/li&gt;
+  &lt;li&gt;Tidy app menu. Only about one screen full of pre-installed apps. No junk apps. No Google apps.&lt;/li&gt;
+  &lt;li&gt;The time is not set and auto-configuring does not work because there is no network connection yet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First actions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Disabled some built-in apps like “Mail” just to try it out&lt;/li&gt;
+  &lt;li&gt;Opened the F-droid store =&amp;gt; no apps installed.&lt;/li&gt;
+  &lt;li&gt;Browse through the pre-installed wallpapers, ringtones and other menus&lt;/li&gt;
+  &lt;li&gt;Configured the lockscreen&lt;/li&gt;
+  &lt;li&gt;Disabled keyboard sound&lt;/li&gt;
+  &lt;li&gt;Tried the Terminal Emulator app (cool to have access to a shell)&lt;/li&gt;
+  &lt;li&gt;Made a picture with the camera&lt;/li&gt;
+  &lt;li&gt;Noticed that the “Torch” app does not work (the LED did not light up)&lt;/li&gt;
+  &lt;li&gt;Connect with USB cable to computer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;connect-with-usb-cable-part-1&quot;&gt;Connect with USB cable (part 1)&lt;/h2&gt;
+&lt;p&gt;There are several options: the default one is to act as MTP device. Another one is the USB storage device which did not work and the KDE device notifier repeatedly showed up and disappeared as if some logic tries to connect but fails. I then used MTP to transfer two songs in ogg vorbis format and was able to play them with the pre-installed Apollo app out-of-the-box.&lt;/p&gt;
+
+&lt;p&gt;I also briefly opened a remote shell using the Android debug bridge (adb) from my openSUSE host.&lt;/p&gt;
+
+&lt;h2 id=&quot;reboot-options&quot;&gt;Reboot options&lt;/h2&gt;
+&lt;p&gt;When you choose “Reboot” from the menu (and in the Developer settings - which were on by default - the “Advanced boot options” option is checked) then you get three options&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reboot – default&lt;/li&gt;
+  &lt;li&gt;Recovery – reboots and goes into the clockworkmod shell which can be used for backup and recovery; I don’t know yet for which use cases this should be used&lt;/li&gt;
+  &lt;li&gt;Download – reboots and goes into some Download mode which did nothing until I pressed the power button long to turn the phone off.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note, when you accidentally disabled the Developer settings menu it can be restored by &lt;a href=&quot;http://android.stackexchange.com/questions/67249/how-to-enter-usb-debugging-mode-in-cyanogenmod&quot;&gt;tapping 5 times somewhere as described here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;screen-protector-and-branding&quot;&gt;Screen protector and branding&lt;/h2&gt;
+&lt;p&gt;The screen protector did not look nice so I removed it using &lt;a href=&quot;https://www.youtube.com/watch?v=wf990UzEZ5A&quot;&gt;these simple instructions&lt;/a&gt;. Note, that the installed protector was non-mirroring in contrast to the one from the video.&lt;/p&gt;
+
+&lt;p&gt;On the shop screenshots the phone is branded the the “TEHNOETIC” logo. My phone however has the standard “SAMSUNG” branding.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-connect-to-the-internet-without-sim-card-and-wifi&quot;&gt;NEXT: Connect to the Internet without SIM card and Wifi&lt;/h2&gt;
+
+&lt;p&gt;Wifi and Bluetooth are both not working with Replicant because there is no existing free firmware yet. I will report back about this topic.&lt;/p&gt;
+
+&lt;p&gt;TODO: include discussion capability to this blog post.&lt;/p&gt;
+
+</description>
+                <link>http://feinstaub.github.io/blog/kde/2016/05/07/tehnotic-s2-with-replicatn.html</link>
+
+                <pubDate>Sat, 07 May 2016 19:30:00 +0200</pubDate>
+                <guid isPermaLink="true">http://feinstaub.github.io/blog/kde/2016/05/07/tehnotic-s2-with-replicatn.html</guid>
+            </item>
+        
+            <item>
                 <title>Dolphin Tip - Investigate Disk Usage</title>
                 <description>&lt;p&gt;Hi,&lt;/p&gt;
 
