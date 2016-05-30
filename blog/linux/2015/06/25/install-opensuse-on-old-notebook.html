@@ -112,35 +112,37 @@
 <p>IST-Zustand war:</p>
 
 <ul>
-  <li>Medion Laptop mit Windows XP, das seit 2014 aus der Wartung gelaufen ist.</li>
+<li>Medion Laptop mit Windows XP, das seit 2014 aus der Wartung gelaufen ist.</li>
 </ul>
 
 <p>SOLL-Zustand:</p>
 
 <ul>
-  <li><strong>Dual-Boot</strong> mit vorhandenem Windows XP und openSUSE 13.2. Dual-Boot für den Fall, dass der Anwender doch etwas verwenden möchte, was nur unter Windows funktioniert.</li>
+<li><strong>Dual-Boot</strong> mit vorhandenem Windows XP und openSUSE 13.2. Dual-Boot für den Fall, dass der Anwender doch etwas verwenden möchte, was nur unter Windows funktioniert.</li>
 </ul>
 
-<h2 id="vorgehen">Vorgehen</h2>
+<h2>Vorgehen</h2>
+
 <ul>
-  <li>Mit <strong>garted</strong>-Live-CD Festplatte “aufräumen”
-    <ul>
-      <li>C-Partition verkleinern, D-Partition löschen, Restore-Partition löschen</li>
-      <li>Übrig bleibt C-Partition und eine leere erweiterte Partition (und eine Restore-Partition?)</li>
-    </ul>
-  </li>
-  <li><strong>openSUSE 13.2 32 Bit</strong> DVD einlegen und Setup</li>
-  <li>Anstelle der Voreinstellung btrs als Root-Dateisystem verwende ich <strong>ext4</strong>. Siehe dazu nächster Abschnitt.</li>
-  <li>Für die Home-Partition ein <strong>xfs</strong>-Dateisystem mit <strong>Verschlüsselung</strong>. Das vergebene Passwort muss dann immer während des Boot-Vorgangs eingegeben werden.</li>
-  <li>Nötige Anwender-Software nachinstallieren.</li>
+<li>Mit <strong>garted</strong>-Live-CD Festplatte &quot;aufräumen&quot;
+
+<ul>
+<li>C-Partition verkleinern, D-Partition löschen, Restore-Partition löschen</li>
+<li>Übrig bleibt C-Partition und eine leere erweiterte Partition (und eine Restore-Partition?)</li>
+</ul></li>
+<li><strong>openSUSE 13.2 32 Bit</strong> DVD einlegen und Setup</li>
+<li>Anstelle der Voreinstellung btrs als Root-Dateisystem verwende ich <strong>ext4</strong>. Siehe dazu nächster Abschnitt.</li>
+<li>Für die Home-Partition ein <strong>xfs</strong>-Dateisystem mit <strong>Verschlüsselung</strong>. Das vergebene Passwort muss dann immer während des Boot-Vorgangs eingegeben werden.</li>
+<li>Nötige Anwender-Software nachinstallieren.</li>
 </ul>
 
-<h2 id="fallstricke-und-lsungen">Fallstricke und Lösungen</h2>
+<h2>Fallstricke und Lösungen</h2>
+
 <p>Beim Installieren schlägt das openSUSE-Setup btrfs-Dateisystem vor. Dies habe ich auch so durchgeführt, um dann gegen Ende der Installation festzustellen, dass der grub-Bootloader nicht installiert werden kann.</p>
 
 <p>Das openSUSE-Setup zeigt in diesem Fall nur eine generische Fehlermeldung.</p>
 
-<p>Mit Hilfe dieser Anleitung <a href="https://en.opensuse.org/SDB:Repair_MBR_after_Windows_install">Repair_MBR_after_Windows_install</a> kann man versuchen, den grub per grub-install per Hand zu installieren und erhält “error: filesystem btrfs doesn’t support blocklists.” als Fehlermeldung. Weiter kam ich damit aber nicht.</p>
+<p>Mit Hilfe dieser Anleitung <a href="https://en.opensuse.org/SDB:Repair_MBR_after_Windows_install">Repair<em>MBR</em>after<em>Windows</em>install</a> kann man versuchen, den grub per grub-install per Hand zu installieren und erhält &quot;error: filesystem btrfs doesn&#39;t support blocklists.&quot; als Fehlermeldung. Weiter kam ich damit aber nicht.</p>
 
 <p>Nach Internet-Recherche (z. B. <a href="https://forums.opensuse.org/showthread.php/502363-Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2-Legacy-BIOS-amp-Grub2">Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2</a>) auf gut Glück das Setup nochmal ausgeführt, <strong>aber diesmal ext4 statt btrfs ausgewählt</strong>. Damit hat die Installation des Bootloaders dann problemlos funktioniert.</p>
 

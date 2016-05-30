@@ -6,15 +6,16 @@
 </description>
     <link>http://feinstaub.github.io/blog/</link>
     <atom:link href="http://feinstaub.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 May 2016 22:22:35 +0200</pubDate>
-    <lastBuildDate>Mon, 30 May 2016 22:22:35 +0200</lastBuildDate>
+    <pubDate>Mon, 30 May 2016 22:32:45 +0200</pubDate>
+    <lastBuildDate>Mon, 30 May 2016 22:32:45 +0200</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
         <title>Replicant Mobile OS - Part 2</title>
         <description>&lt;p&gt;This is part 2 of &lt;a href=&quot;/blog/kde/2016/05/07/tehnotic-s2-with-replicant.html&quot;&gt;Unboxing the Tehnoetic S2 phone with Replicant&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;usb-networking-failed&quot;&gt;USB Networking (failed)&lt;/h2&gt;
+&lt;h2&gt;USB Networking (failed)&lt;/h2&gt;
+
 &lt;p&gt;The following is based on this &lt;a href=&quot;http://redmine.replicant.us/projects/replicant/wiki/ReplicantUSBNetworking&quot;&gt;Replicant USB Networking article&lt;/a&gt;. It does not work for me yet, but here are my intermediate steps.&lt;/p&gt;
 
 &lt;p&gt;Download the &lt;em&gt;reverse_tether.sh&lt;/em&gt; script and make it executable.&lt;/p&gt;
@@ -22,12 +23,12 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo zypper install android-tools &lt;span class=&quot;c&quot;&gt;# for the adb command&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo zypper install bridge-utils  &lt;span class=&quot;c&quot;&gt;# to make the script work correctly&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;“Make sure to have installed ADB and to have the host daemon running as root.”&lt;/p&gt;
+&lt;p&gt;&amp;quot;Make sure to have installed ADB and to have the host daemon running as root.&amp;quot;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;adb root
 root access is disabled by system setting - &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;settings -&amp;gt; development option&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Go to Settings -&amp;gt; Developer Options (under the System section) -&amp;gt; Root access -&amp;gt; (default was “Apps only”, I switched it to “ADB only”)&lt;/p&gt;
+&lt;p&gt;Go to Settings -&amp;gt; Developer Options (under the System section) -&amp;gt; Root access -&amp;gt; (default was &amp;quot;Apps only&amp;quot;, I switched it to &amp;quot;ADB only&amp;quot;)&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;adb root
 restarting adbd as root&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -43,209 +44,208 @@ PING 192.168.77.2 (192.168.77.2) 56(84) bytes of data.
 rtt min/avg/max/mdev = 1.758/1.758/1.758/0.000 ms
 Success!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The next command did not succeed and I had to restart the openSUSE host in order to get the networking work again. So, make sure the &lt;code class=&quot;highlighter-rouge&quot;&gt;brctl&lt;/code&gt; is installed (in package bridge-utils). And it must be sudoed because otherwise ifconfig is not found.&lt;/p&gt;
+&lt;p&gt;The next command did not succeed and I had to restart the openSUSE host in order to get the networking work again. So, make sure the &lt;code&gt;brctl&lt;/code&gt; is installed (in package bridge-utils). And it must be sudoed because otherwise ifconfig is not found.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shell
-$ sudo ./reverse_tether.sh nat
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo ./reverse_tether.sh nat
 Configuring NAT...
-net.ipv4.ip_forward = 1
-Setting up phone routes and DNS...
-&lt;/code&gt;&lt;/p&gt;
+net.ipv4.ip_forward &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1
+Setting up phone routes and DNS...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Android asks you to accept the host. Answer ‘yes’ on the phone.&lt;/p&gt;
+&lt;p&gt;Android asks you to accept the host. Answer &amp;#39;yes&amp;#39; on the phone.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-* daemon not running. starting it now on port 5037 *
-cannot bind &#39;tcp:5037&#39;
-ADB server didn&#39;t ACK
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; daemon not running. starting it now on port 5037 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+cannot &lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;tcp:5037&#39;&lt;/span&gt;
+ADB server didn&lt;span class=&quot;s1&quot;&gt;&#39;t ACK
 * failed to start daemon *
-error: cannot connect to daemon
-&lt;/code&gt;&lt;/p&gt;
+error: cannot connect to daemon&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;In this case &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo ./reverse_tether.sh stop-all&lt;/code&gt; does not work and the host must be restarted.&lt;/p&gt;
+&lt;p&gt;In this case &lt;code&gt;sudo ./reverse_tether.sh stop-all&lt;/code&gt; does not work and the host must be restarted.&lt;/p&gt;
 
 &lt;p&gt;So, no success so far:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Reported bug at: http://redmine.replicant.us/boards/9/topics/8217&lt;/li&gt;
+&lt;li&gt;Reported bug at: &lt;a href=&quot;http://redmine.replicant.us/boards/9/topics/8217&quot;&gt;http://redmine.replicant.us/boards/9/topics/8217&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Next steps:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Try other tutorials like this one https://community.linuxmint.com/tutorial/view/1524&lt;/li&gt;
+&lt;li&gt;Try other tutorials like this one &lt;a href=&quot;https://community.linuxmint.com/tutorial/view/1524&quot;&gt;https://community.linuxmint.com/tutorial/view/1524&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;initial-phone-setup&quot;&gt;Initial phone setup&lt;/h2&gt;
+&lt;h2&gt;Initial phone setup&lt;/h2&gt;
+
 &lt;p&gt;These are the next things I did to initialize the phone.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Insert SIM card.&lt;/li&gt;
-  &lt;li&gt;Phone works.&lt;/li&gt;
-  &lt;li&gt;Internet works (over mobile connection).&lt;/li&gt;
-  &lt;li&gt;F-droid works&lt;/li&gt;
-  &lt;li&gt;Noticed graphics error :(
-    &lt;ul&gt;
-      &lt;li&gt;Installed a game app (Gravity Defied - Trail racing game) which caused the phone to get considerably warmer and show graphics errors (colored horizontal lines and then false colors over the whole screen) even after reboot. After some time the graphics errors went away (maybe because the phone got cooler).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;Insert SIM card.&lt;/li&gt;
+&lt;li&gt;Phone works.&lt;/li&gt;
+&lt;li&gt;Internet works (over mobile connection).&lt;/li&gt;
+&lt;li&gt;F-droid works&lt;/li&gt;
+&lt;li&gt;Noticed graphics error :(
+
+&lt;ul&gt;
+&lt;li&gt;Installed a game app (Gravity Defied - Trail racing game) which caused the phone to get considerably warmer and show graphics errors (colored horizontal lines and then false colors over the whole screen) even after reboot. After some time the graphics errors went away (maybe because the phone got cooler).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;import-contacts-from-old-phone&quot;&gt;Import contacts from old phone&lt;/h2&gt;
+&lt;h2&gt;Import contacts from old phone&lt;/h2&gt;
+
 &lt;p&gt;Old phone:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Select all contacts&lt;/li&gt;
-  &lt;li&gt;Send via bluetooth to a phone where bluetooth is working&lt;/li&gt;
-  &lt;li&gt;There were concerns that this action would automatically import the contacts to the other phones address book, but only a vcf file was received.&lt;/li&gt;
-  &lt;li&gt;This vcf file was then moved over a PC using an USB cable connection.&lt;/li&gt;
+&lt;li&gt;Select all contacts&lt;/li&gt;
+&lt;li&gt;Send via bluetooth to a phone where bluetooth is working&lt;/li&gt;
+&lt;li&gt;There were concerns that this action would automatically import the contacts to the other phones address book, but only a vcf file was received.&lt;/li&gt;
+&lt;li&gt;This vcf file was then moved over a PC using an USB cable connection.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;New phone:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Open People, select menu, Import/Export, choose “import from Storage” which automatically found the vcf file on the SD card. Select it and the contacts were imported.&lt;/li&gt;
+&lt;li&gt;Open People, select menu, Import/Export, choose &amp;quot;import from Storage&amp;quot; which automatically found the vcf file on the SD card. Select it and the contacts are imported.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;messenger--migrate-kontalk&quot;&gt;Messenger / Migrate Kontalk&lt;/h2&gt;
+&lt;h2&gt;Messenger / Migrate Kontalk&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Install Kontalk (10 MB)&lt;/li&gt;
-  &lt;li&gt;Export key on old phone -&amp;gt; password protected zip file stored on sd card&lt;/li&gt;
-  &lt;li&gt;Put SD card into new phone&lt;/li&gt;
-  &lt;li&gt;Import key file on new phone. Contacts are automatically loaded and ready to chat.&lt;/li&gt;
+&lt;li&gt;Install Kontalk (10 MB)&lt;/li&gt;
+&lt;li&gt;Export key on old phone -&amp;gt; password protected zip file stored on sd card&lt;/li&gt;
+&lt;li&gt;Put SD card into new phone&lt;/li&gt;
+&lt;li&gt;Import key file on new phone. Contacts are automatically loaded and ready to chat.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;no-status-led&quot;&gt;No status LED&lt;/h2&gt;
-&lt;p&gt;The front status LED does not work at all. Which means I have no visual notification on new messages. This is reported here http://redmine.replicant.us/issues/1695.&lt;/p&gt;
+&lt;h2&gt;No status LED&lt;/h2&gt;
 
-&lt;h2 id=&quot;no-free-bluetooth-firmware&quot;&gt;No free Bluetooth firmware&lt;/h2&gt;
+&lt;p&gt;The front status LED does not work at all. Which means I have no visual notification on new messages. This is reported here &lt;a href=&quot;http://redmine.replicant.us/issues/1695&quot;&gt;http://redmine.replicant.us/issues/1695&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;No free Bluetooth firmware&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Try to make Bluetooth work
-    &lt;ul&gt;
-      &lt;li&gt;using proprietary firmware
-        &lt;ul&gt;
-          &lt;li&gt;http://psyct.com/replicant-android-how-to-get-wifi-and-bluetooth-working/&lt;/li&gt;
-          &lt;li&gt;http://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100LoadedFirmwares&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;to be continued&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;Try to make Bluetooth work
+
+&lt;ul&gt;
+&lt;li&gt;using proprietary firmware
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://psyct.com/replicant-android-how-to-get-wifi-and-bluetooth-working/&quot;&gt;http://psyct.com/replicant-android-how-to-get-wifi-and-bluetooth-working/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100LoadedFirmwares&quot;&gt;http://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100LoadedFirmwares&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;to be continued&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;remove-the-questionmark-from-the-lockscreen&quot;&gt;Remove the questionmark from the lockscreen&lt;/h2&gt;
+&lt;h2&gt;Remove the questionmark from the lockscreen&lt;/h2&gt;
+
 &lt;p&gt;There is an orange questionmark on the lock screen which looks rather odd.&lt;/p&gt;
 
 &lt;p&gt;Goto to Settings &amp;gt; Lock screen &amp;gt; Clock widget &amp;gt; Weather panel and disable it.&lt;/p&gt;
 
-&lt;h2 id=&quot;slower-2d-graphics&quot;&gt;Slower 2D graphics&lt;/h2&gt;
+&lt;h2&gt;Slower 2D graphics&lt;/h2&gt;
+
 &lt;p&gt;One thing noticeable thing is that animations (scrolling, open/closing an app) are often a little studdering compared to my old phone.&lt;/p&gt;
 
-&lt;h2 id=&quot;backup--send-back-the-phone&quot;&gt;Backup / Send back the phone&lt;/h2&gt;
+&lt;h2&gt;Backup / Send back the phone&lt;/h2&gt;
+
 &lt;p&gt;After a few days the above-mentioned graphics error re-appeared and became permanent. Before I send the phone back for replacement I will try to backup most of the data that was accumulated by now&lt;/p&gt;
 
-&lt;h3 id=&quot;list-of-installed-apps&quot;&gt;List of installed apps&lt;/h3&gt;
+&lt;h3&gt;List of installed apps&lt;/h3&gt;
 
 &lt;p&gt;In alphabetical order:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Adblock Plus - needs root access if not only ads over Wifi should be blocked (remember that there is no Wifi support out of the box)&lt;/li&gt;
-  &lt;li&gt;Apollo - pre-installed music player&lt;/li&gt;
-  &lt;li&gt;Arity - graphical calculator&lt;/li&gt;
-  &lt;li&gt;Barcode Scanner - did not recognize any of the barcodes and QR codes I tried
-    &lt;ul&gt;
-      &lt;li&gt;QR Scanner - did also not work&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Calendar Import-Export
-    &lt;ul&gt;
-      &lt;li&gt;together with Offline Calender&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conversations - XMPP client&lt;/li&gt;
-  &lt;li&gt;Cowsay&lt;/li&gt;
-  &lt;li&gt;FreeOTP - for two-factor authentication&lt;/li&gt;
-  &lt;li&gt;Interactive Story - an interactive Mars story which is over after 1 minute&lt;/li&gt;
-  &lt;li&gt;Lightning - alternative browser&lt;/li&gt;
-  &lt;li&gt;Meeting-Cost-Clock&lt;/li&gt;
-  &lt;li&gt;RadioDroid&lt;/li&gt;
-  &lt;li&gt;robotfindskitten&lt;/li&gt;
-  &lt;li&gt;Silence - Send encrypted SMS&lt;/li&gt;
-  &lt;li&gt;Turbo Editor - Decent text editor for taking notes&lt;/li&gt;
-  &lt;li&gt;WaveUp - turn on / off screen by using the proximity sensor&lt;/li&gt;
+&lt;li&gt;Adblock Plus - needs root access if not only ads over Wifi should be blocked (remember that there is no Wifi support out of the box)&lt;/li&gt;
+&lt;li&gt;Apollo - pre-installed music player&lt;/li&gt;
+&lt;li&gt;Arity - graphical calculator&lt;/li&gt;
+&lt;li&gt;Barcode Scanner - did not recognize any of the barcodes and QR codes I tried
+
+&lt;ul&gt;
+&lt;li&gt;QR Scanner - did also not work&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Calendar Import-Export
+
+&lt;ul&gt;
+&lt;li&gt;together with Offline Calender&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Conversations - XMPP client&lt;/li&gt;
+&lt;li&gt;Cowsay&lt;/li&gt;
+&lt;li&gt;FreeOTP - for two-factor authentication&lt;/li&gt;
+&lt;li&gt;Interactive Story - an interactive Mars story which is over after 1 minute&lt;/li&gt;
+&lt;li&gt;Lightning - alternative browser&lt;/li&gt;
+&lt;li&gt;Meeting-Cost-Clock&lt;/li&gt;
+&lt;li&gt;RadioDroid&lt;/li&gt;
+&lt;li&gt;robotfindskitten&lt;/li&gt;
+&lt;li&gt;Silence - Send encrypted SMS&lt;/li&gt;
+&lt;li&gt;Turbo Editor - Decent text editor for taking notes&lt;/li&gt;
+&lt;li&gt;WaveUp - turn on / off screen by using the proximity sensor&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;backup-data-with-mtp-failed&quot;&gt;Backup data with MTP (failed)&lt;/h3&gt;
+&lt;h3&gt;Backup data with MTP (failed)&lt;/h3&gt;
 
-&lt;p&gt;The MTP connection was not reliable from the beginning. The device contents were listed but after copy and paste there was the message “The process for the mtp protocoll died unexpectantly” and now the Device Notifier does not stop from popping up and disappear (and sometimes steals focus).&lt;/p&gt;
+&lt;p&gt;The MTP connection was not reliable from the beginning. The device contents were listed but after copy and paste there was the message &amp;quot;The process for the mtp protocoll died unexpectantly&amp;quot; and now the Device Notifier does not stop from popping up and disappear (and sometimes steals focus).&lt;/p&gt;
 
 &lt;p&gt;Next steps: find out how to debug this.&lt;/p&gt;
 
-&lt;h3 id=&quot;backup-with-other-methods&quot;&gt;Backup with other methods&lt;/h3&gt;
+&lt;h3&gt;Backup with other methods&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Bluetooth&lt;/em&gt;: not working because of missing firmware&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Wifi&lt;/em&gt;: not working because of missing firmware&lt;/li&gt;
-  &lt;li&gt;Computer USB connection and then choose &lt;em&gt;Mass storage&lt;/em&gt; instead of “Media Device (MTP)”: it did not work at first (the computer does not detect any device, even when waiting a few minutes)
-  but there is another “Turn on USB storage” that has to be activated.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;OTG cable&lt;/em&gt; (“USB on the go”): connected USB stick was recognized and data could be transferred
-    &lt;ul&gt;
-      &lt;li&gt;TODO: howto unmount?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Bluetooth&lt;/em&gt;: not working because of missing firmware&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Wifi&lt;/em&gt;: not working because of missing firmware&lt;/li&gt;
+&lt;li&gt;Computer USB connection and then choose &lt;em&gt;Mass storage&lt;/em&gt; instead of &amp;quot;Media Device (MTP)&amp;quot;: it did not work at first (the computer does not detect any device, even when waiting a few minutes)
+but there is another &amp;quot;Turn on USB storage&amp;quot; that has to be activated.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;OTG cable&lt;/em&gt; (&amp;quot;USB on the go&amp;quot;): connected USB stick was recognized and data could be transferred
+
+&lt;ul&gt;
+&lt;li&gt;TODO: howto unmount?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;backup-with-android-debug-bridge&quot;&gt;Backup with Android Debug Bridge&lt;/h3&gt;
+&lt;h3&gt;Backup with Android Debug Bridge&lt;/h3&gt;
 
-&lt;h4 id=&quot;backup-sd-card&quot;&gt;Backup SD card&lt;/h4&gt;
+&lt;h4&gt;Backup SD card&lt;/h4&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;adb pull /storage/sdcard0&lt;/code&gt; also copies hidden files as desired.
-(‘-p’ to display the transfer progress)
-(‘-a’ means copy timestamp and mode)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;adb pull /storage/sdcard0&lt;/code&gt; also copies hidden files as desired.
+(&amp;#39;-p&amp;#39; to display the transfer progress)
+(&amp;#39;-a&amp;#39; means copy timestamp and mode)&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shell
-adb root
-cd /local/backupdir/sdcard0
-adb pull -p -a /storage/sdcard0
-&lt;/code&gt;
-Note that with the -a option the files may not readable for ‘user’. So the permissions must be adapted afterwards.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;adb root
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /local/backupdir/sdcard0
+adb pull -p -a /storage/sdcard0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;backup-contacts&quot;&gt;Backup contacts&lt;/h4&gt;
+&lt;p&gt;Note that with the -a option the files may not readable for &amp;#39;user&amp;#39;. So the permissions must be adapted afterwards.&lt;/p&gt;
+
+&lt;h4&gt;Backup contacts&lt;/h4&gt;
 
 &lt;p&gt;People -&amp;gt; Menu -&amp;gt; Import/Export -&amp;gt; Export To Storage&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-cd /local/backupdir/contacts
-adb pull -p -a /storage/sdcard0/00002.vcf
-&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /local/backupdir/contacts
+adb pull -p -a /storage/sdcard0/00002.vcf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;backup-bookmarks&quot;&gt;Backup bookmarks&lt;/h4&gt;
+&lt;h4&gt;Backup bookmarks&lt;/h4&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-cd /local/backupdir/bookmarks
-adb backup com.android.browser
-&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /local/backupdir/bookmarks
+adb backup com.android.browser&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Restore:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-adb restore backup.ab
-&lt;/code&gt;
-I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
+&lt;p&gt;Test restore:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;adb restore backup.ab&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
 
 &lt;p&gt;I &lt;em&gt;made no backup&lt;/em&gt; for: SMS messages, Kontalk messages, homescreen settings, lockscreen settings, regional settings&lt;/p&gt;
 
-&lt;h3 id=&quot;delete-data-and-do-factory-restore&quot;&gt;Delete data and do factory restore&lt;/h3&gt;
+&lt;h3&gt;Delete data and do factory restore&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Power off&lt;/li&gt;
-  &lt;li&gt;Remove SIM card&lt;/li&gt;
-  &lt;li&gt;Boot&lt;/li&gt;
-  &lt;li&gt;Filebrowser &amp;gt; /storage/sdcard0 &amp;gt; Select all &amp;gt; Delete&lt;/li&gt;
-  &lt;li&gt;Settings &amp;gt; Backup &amp;amp; Reset &amp;gt; Factory data reset, check the “Erase SD card” to be sure, “Reset phone” (draw your unlock pattern to confirm), “Erase everything”
-    &lt;ul&gt;
-      &lt;li&gt;Phone reboots automatically (takes longer than normal)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;Power off&lt;/li&gt;
+&lt;li&gt;Remove SIM card&lt;/li&gt;
+&lt;li&gt;Boot&lt;/li&gt;
+&lt;li&gt;Filebrowser &amp;gt; /storage/sdcard0 &amp;gt; Select all &amp;gt; Delete&lt;/li&gt;
+&lt;li&gt;Settings &amp;gt; Backup &amp;amp; Reset &amp;gt; Factory data reset, check the &amp;quot;Erase SD card&amp;quot; to be sure, &amp;quot;Reset phone&amp;quot; (draw your unlock pattern to confirm), &amp;quot;Erase everything&amp;quot;
+
+&lt;ul&gt;
+&lt;li&gt;Phone reboots automatically (takes longer than normal)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Then, I sent back the phone and now I wait for replacement.&lt;/p&gt;
@@ -263,7 +263,8 @@ I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
     
       <item>
         <title>Unboxing the Tehnoetic S2 phone with Replicant</title>
-        <description>&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
+        <description>&lt;h2&gt;Motivation&lt;/h2&gt;
+
 &lt;p&gt;For some years I am using a second-hand &lt;a href=&quot;http://consumer.huawei.com/en/mobile-phones/tech-specs/u8655-en.htm&quot;&gt;Huawei Ascend Y200&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Hardware specifications: 800 MHz CPU, 256 MB RAM, 512 MB Flash memory, 2 GB SD card, 320 x 480 screen resolution&lt;/p&gt;
@@ -273,10 +274,10 @@ I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
 &lt;p&gt;Software overview:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Pre-installed Android 2.3&lt;/li&gt;
-  &lt;li&gt;I did not connect to a Google account but there are quite a few non-free and non-uninstallable apps present&lt;/li&gt;
-  &lt;li&gt;Apps via &lt;a href=&quot;https://f-droid.org/&quot;&gt;F-droid store&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://kontalk.org/&quot;&gt;Kontalk messenger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pre-installed Android 2.3&lt;/li&gt;
+&lt;li&gt;I did not connect to a Google account but there are quite a few non-free and non-uninstallable apps present&lt;/li&gt;
+&lt;li&gt;Apps via &lt;a href=&quot;https://f-droid.org/&quot;&gt;F-droid store&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kontalk.org/&quot;&gt;Kontalk messenger&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Backup strategy: USB storage connection to PC for some data but not all. No regular backup of contacts.&lt;/p&gt;
@@ -285,32 +286,25 @@ I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
 
 &lt;p&gt;Even before, I could not some apps because of the limited flash memory and the fact that certain useless apps are forbidden to uninstall.&lt;/p&gt;
 
-&lt;h2 id=&quot;looking-for-a-new-phone&quot;&gt;Looking for a new phone&lt;/h2&gt;
+&lt;h2&gt;Looking for a new phone&lt;/h2&gt;
+
 &lt;p&gt;My requirements for a new phone are:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Fair hardware (which includes the production chain, open hardware specifiations and being as robust as possible to reduce electronic waste)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Free software&lt;/p&gt;
-  &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fair hardware (which includes the production chain, open hardware specifiations and being as robust as possible to reduce electronic waste)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Free software&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;decisions&quot;&gt;Decisions&lt;/h3&gt;
+&lt;h3&gt;Decisions&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Fair hardware: the &lt;a href=&quot;https://www.fairphone.com/phone/&quot;&gt;Fairphone 2&lt;/a&gt; seems to be the primary choice in this area. But the price is too high for my usage profile. So I braced myself to find another second-hand phone.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Free software: on &lt;a href=&quot;https://prism-break.org/en/categories/android/&quot;&gt;prism-break.org&lt;/a&gt; I rediscovered &lt;a href=&quot;http://www.replicant.us/&quot;&gt;Replicant&lt;/a&gt;. It is &lt;a href=&quot;https://fsfe.org/campaigns/android/liberate.en.html&quot;&gt;endorsed by the FSF&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fair hardware: the &lt;a href=&quot;https://www.fairphone.com/phone/&quot;&gt;Fairphone 2&lt;/a&gt; seems to be the primary choice in this area. But the price is too high for my usage profile. So I braced myself to find another second-hand phone.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Free software: on &lt;a href=&quot;https://prism-break.org/en/categories/android/&quot;&gt;prism-break.org&lt;/a&gt; I rediscovered &lt;a href=&quot;http://www.replicant.us/&quot;&gt;Replicant&lt;/a&gt;. It is &lt;a href=&quot;https://fsfe.org/campaigns/android/liberate.en.html&quot;&gt;endorsed by the FSF&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I wanted a phone that works pretty much out of the box without having to worry about hardware compatibility and installation hassles since I never used Replicant before. The only shop and product I found to meet these criteria was &lt;a href=&quot;https://tehnoetic.com/tehnoetic-s2-phone-replicant&quot;&gt;the second-hand Samsung S2 by Tehnoetic&lt;/a&gt;. The Romanian shop was &lt;a href=&quot;https://www.fsf.org/resources/hw/endorsement/tehnoetic&quot;&gt;positively mentioned by the FSF&lt;/a&gt; so I decided to test my trust.&lt;/p&gt;
 
-&lt;h3 id=&quot;tehnoetic-s2-phone-with-replicant&quot;&gt;Tehnoetic S2 phone with Replicant&lt;/h3&gt;
+&lt;h3&gt;Tehnoetic S2 phone with Replicant&lt;/h3&gt;
 
 &lt;p&gt;Hardware specifications: Dual-core 1.2 GHz Cortex-A9 CPU, 1 GB RAM, 16 GB internal storage, no SD card installed, 480 x 800 screen resolution. This is really better than the old phone.&lt;/p&gt;
 
@@ -318,72 +312,78 @@ I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
 
 &lt;p&gt;Software overview: pre-installed Replicant 4.2 0004 (based on CyanogenMod, based on Android 4.2), default app store F-droid.&lt;/p&gt;
 
-&lt;h2 id=&quot;ordering-and-shipping&quot;&gt;Ordering and Shipping&lt;/h2&gt;
+&lt;h2&gt;Ordering and Shipping&lt;/h2&gt;
+
 &lt;p&gt;Before I placed the order, I had some questions which the shop owner answered timely, friendly and comprehensively.&lt;/p&gt;
 
 &lt;p&gt;The payment was done via bank transfer to the given Romanian bank account.&lt;/p&gt;
 
 &lt;p&gt;The estimated delivery time of 4 - 7 business days could not be met but I was notified about this issue via email.&lt;/p&gt;
 
-&lt;h2 id=&quot;unboxing&quot;&gt;Unboxing&lt;/h2&gt;
+&lt;h2&gt;Unboxing&lt;/h2&gt;
+
 &lt;p&gt;The phone was located in an original-looking Samsung soft box which smelled of cold smoke. Something that has to be accepted when buying second-hand, I thought. Gladly, the phone itself had no smell at all.&lt;/p&gt;
 
-&lt;h2 id=&quot;switching-it-on-part-1&quot;&gt;Switching it on (part 1)&lt;/h2&gt;
+&lt;h2&gt;Switching it on (part 1)&lt;/h2&gt;
+
 &lt;p&gt;The power button did not work at once but I remembered some note that the battery is taped off due to shipping regulations.&lt;/p&gt;
 
-&lt;h2 id=&quot;switching-it-on-part-2&quot;&gt;Switching it on (part 2)&lt;/h2&gt;
+&lt;h2&gt;Switching it on (part 2)&lt;/h2&gt;
+
 &lt;p&gt;(Still no SIM card inserted)&lt;/p&gt;
 
 &lt;p&gt;After having removed the battery tape the phone started up. A few things I noticed:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Fast boot time (&amp;lt; 30 seconds)&lt;/li&gt;
-  &lt;li&gt;Tidy app menu. Only about one screen full of pre-installed apps. No junk apps. No Google apps.&lt;/li&gt;
-  &lt;li&gt;The time is not set and auto-configuring does not work because there is no network connection yet.&lt;/li&gt;
+&lt;li&gt;Fast boot time (&amp;lt; 30 seconds)&lt;/li&gt;
+&lt;li&gt;Tidy app menu. Only about one screen full of pre-installed apps. No junk apps. No Google apps.&lt;/li&gt;
+&lt;li&gt;The time is not set and auto-configuring does not work because there is no network connection yet.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;First actions:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Disabled some built-in apps like “Mail” just to try it out&lt;/li&gt;
-  &lt;li&gt;Opened the F-droid store =&amp;gt; no apps installed.&lt;/li&gt;
-  &lt;li&gt;Browse through the pre-installed wallpapers, ringtones and other menus&lt;/li&gt;
-  &lt;li&gt;Configured the lockscreen&lt;/li&gt;
-  &lt;li&gt;Disabled keyboard sound&lt;/li&gt;
-  &lt;li&gt;Tried the Terminal Emulator app (cool to have access to a shell)&lt;/li&gt;
-  &lt;li&gt;Made a picture with the camera&lt;/li&gt;
-  &lt;li&gt;Connect with USB cable to computer&lt;/li&gt;
+&lt;li&gt;Disabled some built-in apps like &amp;quot;Mail&amp;quot; just to try it out&lt;/li&gt;
+&lt;li&gt;Opened the F-droid store =&amp;gt; no apps installed.&lt;/li&gt;
+&lt;li&gt;Browse through the pre-installed wallpapers, ringtones and other menus&lt;/li&gt;
+&lt;li&gt;Configured the lockscreen&lt;/li&gt;
+&lt;li&gt;Disabled keyboard sound&lt;/li&gt;
+&lt;li&gt;Tried the Terminal Emulator app (cool to have access to a shell)&lt;/li&gt;
+&lt;li&gt;Made a picture with the camera&lt;/li&gt;
+&lt;li&gt;Connect with USB cable to computer&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;screen-protector-and-branding&quot;&gt;Screen protector and branding&lt;/h2&gt;
+&lt;h2&gt;Screen protector and branding&lt;/h2&gt;
+
 &lt;p&gt;The screen protector did not look nice so I removed it using &lt;a href=&quot;https://www.youtube.com/watch?v=wf990UzEZ5A&quot;&gt;these simple instructions&lt;/a&gt;. Note, that the installed protector was good non-mirroring in contrast to the one from the video.&lt;/p&gt;
 
-&lt;p&gt;On the shop screenshots the phone is branded with the “TEHNOETIC” logo. My phone however has the standard “SAMSUNG” branding.&lt;/p&gt;
+&lt;p&gt;On the shop screenshots the phone is branded with the &amp;quot;TEHNOETIC&amp;quot; logo. My phone however has the standard &amp;quot;SAMSUNG&amp;quot; branding.&lt;/p&gt;
 
-&lt;h2 id=&quot;reboot-options&quot;&gt;Reboot options&lt;/h2&gt;
-&lt;p&gt;When you choose “Reboot” from the menu (and in the Developer settings - which were on by default - the “Advanced boot options” option is checked) then you get three options&lt;/p&gt;
+&lt;h2&gt;Reboot options&lt;/h2&gt;
+
+&lt;p&gt;When you choose &amp;quot;Reboot&amp;quot; from the menu (and in the Developer settings - which were on by default - the &amp;quot;Advanced boot options&amp;quot; option is checked) then you get three options&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Reboot – default&lt;/li&gt;
-  &lt;li&gt;Recovery – reboots and goes into the clockworkmod shell which can be used for backup and recovery; I don’t know yet for which use cases this should be used&lt;/li&gt;
-  &lt;li&gt;Download – reboots and goes into some Download mode which did nothing until I pressed the power button long to turn the phone off.&lt;/li&gt;
+&lt;li&gt;Reboot -- default&lt;/li&gt;
+&lt;li&gt;Recovery -- reboots and goes into the clockworkmod shell which can be used for backup and recovery; I don&amp;#39;t know yet for which use cases this should be used&lt;/li&gt;
+&lt;li&gt;Download -- reboots and goes into some Download mode which did nothing until I pressed the power button long to turn the phone off.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Note, when you accidentally disable the Developer settings menu it can be restored by &lt;a href=&quot;http://android.stackexchange.com/questions/67249/how-to-enter-usb-debugging-mode-in-cyanogenmod&quot;&gt;tapping 5 times somewhere as described here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;connect-with-usb-cable-part-1&quot;&gt;Connect with USB cable (part 1)&lt;/h2&gt;
+&lt;h2&gt;Connect with USB cable (part 1)&lt;/h2&gt;
+
 &lt;p&gt;There are several options: the default one is to act as MTP device. Another one is the USB storage device which did not work and the KDE device notifier repeatedly showed up and disappeared as if some logic tries to connect but fails. I then used MTP to transfer two songs in ogg vorbis format and was able to play them with the pre-installed &lt;a href=&quot;https://f-droid.org/repository/browse/?fdfilter=apollo&amp;amp;fdid=com.andrew.apollo&quot;&gt;Apollo&lt;/a&gt; app out-of-the-box.&lt;/p&gt;
 
 &lt;p&gt;I also briefly opened a remote shell using the &lt;a href=&quot;http://developer.android.com/tools/help/adb.html&quot;&gt;Android Debug Bridge (adb)&lt;/a&gt; from my openSUSE host.&lt;/p&gt;
 
-&lt;h2 id=&quot;next-connect-to-the-internet-without-sim-card-and-wifi&quot;&gt;NEXT: Connect to the Internet without SIM card and Wifi&lt;/h2&gt;
+&lt;h2&gt;NEXT: Connect to the Internet without SIM card and Wifi&lt;/h2&gt;
 
 &lt;p&gt;Wifi and Bluetooth are both not working with Replicant because there is no existing free firmware yet that works with the given hardware.&lt;/p&gt;
 
 &lt;p&gt;I will report back about how to connect to the Internet without SIM card but using an USB cable.&lt;/p&gt;
 
 &lt;p&gt;TODO: include discussion capability to this blog post.&lt;/p&gt;
-
 </description>
         <pubDate>Sat, 07 May 2016 19:00:00 +0200</pubDate>
         <link>http://feinstaub.github.io/blog/kde/2016/05/07/tehnotic-s2-with-replicant.html</link>
@@ -400,17 +400,17 @@ I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://quickgit.kde.org/?p=kde-baseapps.git&amp;amp;a=commit&amp;amp;h=f742843eb3e7935cb10803a09a19d72438528620&quot;&gt;since quite some time&lt;/a&gt;, there is a new feature in dolphin which helps to investigate the disk usage of the current directory (or mount point etc.). The feature is a bit hidden, so I decided to write this post:&lt;/p&gt;
 
-&lt;p&gt;Left-click on the disk space bar (located on the right side of dolphin’s status bar). The following menu opens, see screenshot:&lt;/p&gt;
+&lt;p&gt;Left-click on the disk space bar (located on the right side of dolphin&amp;#39;s status bar). The following menu opens, see screenshot:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/2016-01-29-view-disk-usage-via-dolphin.1-menu.png&quot; alt=&quot;view-disk-usage-via-dolphin&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/2016-01-29-view-disk-usage-via-dolphin.1-menu.png&quot; alt=&quot;view-disk-usage-via-dolphin&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The first two menu items open Filelight with different entry points (current folder or current mount point), the third one is KDiskFree. In a submenu, there are also other tools available.&lt;/p&gt;
 
-&lt;p&gt;One nice thing is that you can configure (via submenu More -&amp;gt; Configure…) which programs should be shown in the main menu and in which order. The others will be kept in the submenu. Even if a program is not installed you will find it in the submenu for you to discover.&lt;/p&gt;
+&lt;p&gt;One nice thing is that you can configure (via submenu More -&amp;gt; Configure...) which programs should be shown in the main menu and in which order. The others will be kept in the submenu. Even if a program is not installed you will find it in the submenu for you to discover.&lt;/p&gt;
 
-&lt;p&gt;Note, that in case Filelight is already installed, you can still (and could in the past) also reach it from the folders context menu -&amp;gt; “Open with” -&amp;gt; Filelight.&lt;/p&gt;
+&lt;p&gt;Note, that in case Filelight is already installed, you can still (and could in the past) also reach it from the folders context menu -&amp;gt; &amp;quot;Open with&amp;quot; -&amp;gt; Filelight.&lt;/p&gt;
 
-&lt;p&gt;That’s it. If you happen to come across another program that could be useful in the disk usage context and you think it could also be useful for others, feel free to &lt;a href=&quot;https://bugs.kde.org/enter_bug.cgi?product=frameworks-knewstuff&quot;&gt;file a bug report&lt;/a&gt; (severity “wishlist”, topic “KMoreTools: new disk usage tool for dolphin: …”). If accepted, this program would then appear in the submenu for other users to be discovered and you could configure it to appear in the main menu.&lt;/p&gt;
+&lt;p&gt;That&amp;#39;s it. If you happen to come across another program that could be useful in the disk usage context and you think it could also be useful for others, feel free to &lt;a href=&quot;https://bugs.kde.org/enter_bug.cgi?product=frameworks-knewstuff&quot;&gt;file a bug report&lt;/a&gt; (severity &amp;quot;wishlist&amp;quot;, topic &amp;quot;KMoreTools: new disk usage tool for dolphin: ...&amp;quot;). If accepted, this program would then appear in the submenu for other users to be discovered and you could configure it to appear in the main menu.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jan 2016 23:30:00 +0100</pubDate>
         <link>http://feinstaub.github.io/blog/kde/2016/01/29/view-disk-usage-via-dolphin.html</link>
@@ -430,35 +430,37 @@ I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
 &lt;p&gt;IST-Zustand war:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Medion Laptop mit Windows XP, das seit 2014 aus der Wartung gelaufen ist.&lt;/li&gt;
+&lt;li&gt;Medion Laptop mit Windows XP, das seit 2014 aus der Wartung gelaufen ist.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;SOLL-Zustand:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Dual-Boot&lt;/strong&gt; mit vorhandenem Windows XP und openSUSE 13.2. Dual-Boot für den Fall, dass der Anwender doch etwas verwenden möchte, was nur unter Windows funktioniert.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dual-Boot&lt;/strong&gt; mit vorhandenem Windows XP und openSUSE 13.2. Dual-Boot für den Fall, dass der Anwender doch etwas verwenden möchte, was nur unter Windows funktioniert.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;vorgehen&quot;&gt;Vorgehen&lt;/h2&gt;
+&lt;h2&gt;Vorgehen&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Mit &lt;strong&gt;garted&lt;/strong&gt;-Live-CD Festplatte “aufräumen”
-    &lt;ul&gt;
-      &lt;li&gt;C-Partition verkleinern, D-Partition löschen, Restore-Partition löschen&lt;/li&gt;
-      &lt;li&gt;Übrig bleibt C-Partition und eine leere erweiterte Partition (und eine Restore-Partition?)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;openSUSE 13.2 32 Bit&lt;/strong&gt; DVD einlegen und Setup&lt;/li&gt;
-  &lt;li&gt;Anstelle der Voreinstellung btrs als Root-Dateisystem verwende ich &lt;strong&gt;ext4&lt;/strong&gt;. Siehe dazu nächster Abschnitt.&lt;/li&gt;
-  &lt;li&gt;Für die Home-Partition ein &lt;strong&gt;xfs&lt;/strong&gt;-Dateisystem mit &lt;strong&gt;Verschlüsselung&lt;/strong&gt;. Das vergebene Passwort muss dann immer während des Boot-Vorgangs eingegeben werden.&lt;/li&gt;
-  &lt;li&gt;Nötige Anwender-Software nachinstallieren.&lt;/li&gt;
+&lt;li&gt;Mit &lt;strong&gt;garted&lt;/strong&gt;-Live-CD Festplatte &amp;quot;aufräumen&amp;quot;
+
+&lt;ul&gt;
+&lt;li&gt;C-Partition verkleinern, D-Partition löschen, Restore-Partition löschen&lt;/li&gt;
+&lt;li&gt;Übrig bleibt C-Partition und eine leere erweiterte Partition (und eine Restore-Partition?)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;openSUSE 13.2 32 Bit&lt;/strong&gt; DVD einlegen und Setup&lt;/li&gt;
+&lt;li&gt;Anstelle der Voreinstellung btrs als Root-Dateisystem verwende ich &lt;strong&gt;ext4&lt;/strong&gt;. Siehe dazu nächster Abschnitt.&lt;/li&gt;
+&lt;li&gt;Für die Home-Partition ein &lt;strong&gt;xfs&lt;/strong&gt;-Dateisystem mit &lt;strong&gt;Verschlüsselung&lt;/strong&gt;. Das vergebene Passwort muss dann immer während des Boot-Vorgangs eingegeben werden.&lt;/li&gt;
+&lt;li&gt;Nötige Anwender-Software nachinstallieren.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;fallstricke-und-lsungen&quot;&gt;Fallstricke und Lösungen&lt;/h2&gt;
+&lt;h2&gt;Fallstricke und Lösungen&lt;/h2&gt;
+
 &lt;p&gt;Beim Installieren schlägt das openSUSE-Setup btrfs-Dateisystem vor. Dies habe ich auch so durchgeführt, um dann gegen Ende der Installation festzustellen, dass der grub-Bootloader nicht installiert werden kann.&lt;/p&gt;
 
 &lt;p&gt;Das openSUSE-Setup zeigt in diesem Fall nur eine generische Fehlermeldung.&lt;/p&gt;
 
-&lt;p&gt;Mit Hilfe dieser Anleitung &lt;a href=&quot;https://en.opensuse.org/SDB:Repair_MBR_after_Windows_install&quot;&gt;Repair_MBR_after_Windows_install&lt;/a&gt; kann man versuchen, den grub per grub-install per Hand zu installieren und erhält “error: filesystem btrfs doesn’t support blocklists.” als Fehlermeldung. Weiter kam ich damit aber nicht.&lt;/p&gt;
+&lt;p&gt;Mit Hilfe dieser Anleitung &lt;a href=&quot;https://en.opensuse.org/SDB:Repair_MBR_after_Windows_install&quot;&gt;Repair&lt;em&gt;MBR&lt;/em&gt;after&lt;em&gt;Windows&lt;/em&gt;install&lt;/a&gt; kann man versuchen, den grub per grub-install per Hand zu installieren und erhält &amp;quot;error: filesystem btrfs doesn&amp;#39;t support blocklists.&amp;quot; als Fehlermeldung. Weiter kam ich damit aber nicht.&lt;/p&gt;
 
 &lt;p&gt;Nach Internet-Recherche (z. B. &lt;a href=&quot;https://forums.opensuse.org/showthread.php/502363-Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2-Legacy-BIOS-amp-Grub2&quot;&gt;Partition-Setup-for-Dual-Boot-with-OpenSUSE-13-2&lt;/a&gt;) auf gut Glück das Setup nochmal ausgeführt, &lt;strong&gt;aber diesmal ext4 statt btrfs ausgewählt&lt;/strong&gt;. Damit hat die Installation des Bootloaders dann problemlos funktioniert.&lt;/p&gt;
 
@@ -481,7 +483,7 @@ I deleted some bookmarks to test the restore which worked fine.&lt;/p&gt;
 
 &lt;p&gt;Those of you who often do screenshots under MS Windows will probably know
 &lt;a href=&quot;http://getgreenshot.org/&quot;&gt;Greenshot&lt;/a&gt; which is - as they say on their website -
-“a free screenshot tool optimized for productivity”. It is GPL licensed and
+&amp;quot;a free screenshot tool optimized for productivity&amp;quot;. It is GPL licensed and
 written in C#.&lt;/p&gt;
 
 &lt;p&gt;The &lt;strong&gt;built-in image editor of Greenshot&lt;/strong&gt; is specifically designed to edit
@@ -492,7 +494,7 @@ Each of these objects is movable, resizable and deletable and there is undo/redo
 &lt;p&gt;Noteably, the mouse cursor is (optionally) captured as
 separate object which then can be moved or deleted after taking the screenshot.&lt;/p&gt;
 
-&lt;p&gt;Now, &lt;strong&gt;kreenshot-editor&lt;/strong&gt; is a new Qt-based project that was inspired by Greenshot’s image editor.
+&lt;p&gt;Now, &lt;strong&gt;kreenshot-editor&lt;/strong&gt; is a new Qt-based project that was inspired by Greenshot&amp;#39;s image editor.
 It is hosted on &lt;a href=&quot;https://projects.kde.org/projects/playground/graphics/kreenshot-editor&quot;&gt;KDE playground&lt;/a&gt;.
 It focuses on the image editing
 task, can be invoked from command line and should also provide a resuable
@@ -502,14 +504,14 @@ main application.&lt;/p&gt;
 
 &lt;p&gt;Kreenshot-editor is still experimental, only basic features are implemented
 and there are currently some non-functional UI elements. Yet, it is already usable - if
-you don’t care that the color of objects is fixed to red ;-). Currently, you can
+you don&amp;#39;t care that the color of objects is fixed to red ;-). Currently, you can
 create new objects, move them around, delete them, do undo/redo, load/save image,
 configure output filename pattern etc.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://feinstaub.github.io/kreenshot-editor/&quot;&gt;Website&lt;/a&gt;
-  (includes some screenshots and hints how to contribute)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forum.kde.org/viewtopic.php?f=19&amp;amp;t=125841&quot;&gt;Discussions go here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://feinstaub.github.io/kreenshot-editor/&quot;&gt;Website&lt;/a&gt;
+(includes some screenshots and hints how to contribute)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://forum.kde.org/viewtopic.php?f=19&amp;amp;t=125841&quot;&gt;Discussions go here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 26 Apr 2015 23:45:00 +0200</pubDate>
@@ -527,17 +529,18 @@ configure output filename pattern etc.&lt;/p&gt;
     
       <item>
         <title>Test blog entry</title>
-        <description>&lt;h2 id=&quot;heading-1&quot;&gt;Heading 1&lt;/h2&gt;
+        <description>&lt;h2&gt;Heading 1&lt;/h2&gt;
 
 &lt;p&gt;Test 1&lt;/p&gt;
 
-&lt;h3 id=&quot;heading-2&quot;&gt;Heading 2&lt;/h3&gt;
+&lt;h3&gt;Heading 2&lt;/h3&gt;
 
 &lt;p&gt;Test 2 lorem ipsum&lt;/p&gt;
 
-&lt;h2 id=&quot;notes&quot;&gt;NOTES&lt;/h2&gt;
+&lt;h2&gt;NOTES&lt;/h2&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;categories are reflected in the URL!&lt;/li&gt;
+&lt;li&gt;categories are reflected in the URL!&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sat, 18 Apr 2015 22:35:00 +0200</pubDate>
@@ -551,9 +554,9 @@ configure output filename pattern etc.&lt;/p&gt;
     
       <item>
         <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
 
@@ -564,7 +567,6 @@ configure output filename pattern etc.&lt;/p&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
 </description>
         <pubDate>Sat, 18 Apr 2015 22:26:41 +0200</pubDate>
         <link>http://feinstaub.github.io/blog/jekyll/2015/04/18/welcome-to-jekyll.html</link>
