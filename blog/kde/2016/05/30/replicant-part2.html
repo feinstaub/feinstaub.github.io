@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Replicant Mobile OS - Part 2 &middot; codestruct
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/blog/public/css/poole.css">
+  <link rel="stylesheet" href="/blog/public/css/syntax.css">
+  <link rel="stylesheet" href="/blog/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/blog/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/blog/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>This... is the codestruct.
+</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/blog/">Home</a>
+
+    
+
+    
+    
+      
+    
+      
+        
+      
+    
+      
+        
+          
+          <a class="sidebar-nav-item" href="/blog/about/">About</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+
+  </nav>
+
+  <div class="sidebar-item">
+    
+    <p>RSS feeds:</p>
+
+<ul>
+  <li><a href="/blog/feed.xml">All</a></li>
+  <li><a href="/blog/feed.kde.xml">KDE</a></li>
+</ul>
+
+  </div>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2016. Some rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/blog/" title="Home">codestruct</a>
+            <small>blog</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Replicant Mobile OS - Part 2</h1>
+  <span class="post-date">30 May 2016</span>
+  <p>This is part 2 of <a href="/blog/kde/2016/05/07/tehnotic-s2-with-replicant.html">Unboxing the Tehnoetic S2 phone with Replicant</a>.</p>
+
+<h2 id="usb-networking-failed">USB Networking (failed)</h2>
+<p>The following is based on this <a href="http://redmine.replicant.us/projects/replicant/wiki/ReplicantUSBNetworking">Replicant USB Networking article</a>. It does not work for me yet, but here are my intermediate steps.</p>
+
+<p>Download the <em>reverse_tether.sh</em> script and make it executable.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo zypper install android-tools <span class="c"># for the adb command</span>
+<span class="gp">$ </span>sudo zypper install bridge-utils  <span class="c"># to make the script work correctly</span></code></pre></figure>
+
+<p>“Make sure to have installed ADB and to have the host daemon running as root.”</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>adb root
+root access is disabled by system setting - <span class="nb">enable </span><span class="k">in </span>settings -&gt; development option</code></pre></figure>
+
+<p>Go to Settings -&gt; Developer Options (under the System section) -&gt; Root access -&gt; (default was “Apps only”, I switched it to “ADB only”)</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>adb root
+restarting adbd as root</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>./reverse_tether.sh rndis
+Starting RNDIS...
+root<span class="s1">'s password:
+Pinging the phone...
+PING 192.168.77.2 (192.168.77.2) 56(84) bytes of data.
+
+--- 192.168.77.2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.758/1.758/1.758/0.000 ms
+Success!</span></code></pre></figure>
+
+<p>The next command did not succeed and I had to restart the openSUSE host in order to get the networking work again. So, make sure the <code class="highlighter-rouge">brctl</code> is installed (in package bridge-utils). And it must be sudoed because otherwise ifconfig is not found.</p>
+
+<p><code class="highlighter-rouge">shell
+$ sudo ./reverse_tether.sh nat
+Configuring NAT...
+net.ipv4.ip_forward = 1
+Setting up phone routes and DNS...
+</code></p>
+
+<p>Android asks you to accept the host. Answer ‘yes’ on the phone.</p>
+
+<p><code class="highlighter-rouge">
+* daemon not running. starting it now on port 5037 *
+cannot bind 'tcp:5037'
+ADB server didn't ACK
+* failed to start daemon *
+error: cannot connect to daemon
+</code></p>
+
+<p>In this case <code class="highlighter-rouge">sudo ./reverse_tether.sh stop-all</code> does not work and the host must be restarted.</p>
+
+<p>So, no success so far:</p>
+
+<ul>
+  <li>Reported bug at: http://redmine.replicant.us/boards/9/topics/8217</li>
+</ul>
+
+<p>Next steps:</p>
+
+<ul>
+  <li>Try other tutorials like this one https://community.linuxmint.com/tutorial/view/1524</li>
+</ul>
+
+<h2 id="initial-phone-setup">Initial phone setup</h2>
+<p>These are the next things I did to initialize the phone.</p>
+
+<ul>
+  <li>Insert SIM card.</li>
+  <li>Phone works.</li>
+  <li>Internet works (over mobile connection).</li>
+  <li>F-droid works</li>
+  <li>Noticed graphics error :(
+    <ul>
+      <li>Installed a game app (Gravity Defied - Trail racing game) which caused the phone to get considerably warmer and show graphics errors (colored horizontal lines and then false colors over the whole screen) even after reboot. After some time the graphics errors went away (maybe because the phone got cooler).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="import-contacts-from-old-phone">Import contacts from old phone</h2>
+<p>Old phone:</p>
+
+<ul>
+  <li>Select all contacts</li>
+  <li>Send via bluetooth to a phone where bluetooth is working</li>
+  <li>There were concerns that this action would automatically import the contacts to the other phones address book, but only a vcf file was received.</li>
+  <li>This vcf file was then moved over a PC using an USB cable connection.</li>
+</ul>
+
+<p>New phone:</p>
+
+<ul>
+  <li>Open People, select menu, Import/Export, choose “import from Storage” which automatically found the vcf file on the SD card. Select it and the contacts were imported.</li>
+</ul>
+
+<h2 id="messenger--migrate-kontalk">Messenger / Migrate Kontalk</h2>
+<ul>
+  <li>Install Kontalk (10 MB)</li>
+  <li>Export key on old phone -&gt; password protected zip file stored on sd card</li>
+  <li>Put SD card into new phone</li>
+  <li>Import key file on new phone. Contacts are automatically loaded and ready to chat.</li>
+</ul>
+
+<h2 id="no-status-led">No status LED</h2>
+<p>The front status LED does not work at all. Which means I have no visual notification on new messages. This is reported here http://redmine.replicant.us/issues/1695.</p>
+
+<h2 id="no-free-bluetooth-firmware">No free Bluetooth firmware</h2>
+<ul>
+  <li>Try to make Bluetooth work
+    <ul>
+      <li>using proprietary firmware
+        <ul>
+          <li>http://psyct.com/replicant-android-how-to-get-wifi-and-bluetooth-working/</li>
+          <li>http://redmine.replicant.us/projects/replicant/wiki/GalaxyS2I9100LoadedFirmwares</li>
+        </ul>
+      </li>
+      <li>to be continued</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="remove-the-questionmark-from-the-lockscreen">Remove the questionmark from the lockscreen</h2>
+<p>There is an orange questionmark on the lock screen which looks rather odd.</p>
+
+<p>Goto to Settings &gt; Lock screen &gt; Clock widget &gt; Weather panel and disable it.</p>
+
+<h2 id="slower-2d-graphics">Slower 2D graphics</h2>
+<p>One thing noticeable thing is that animations (scrolling, open/closing an app) are often a little studdering compared to my old phone.</p>
+
+<h2 id="backup--send-back-the-phone">Backup / Send back the phone</h2>
+<p>After a few days the above-mentioned graphics error re-appeared and became permanent. Before I send the phone back for replacement I will try to backup most of the data that was accumulated by now</p>
+
+<h3 id="list-of-installed-apps">List of installed apps</h3>
+
+<p>In alphabetical order:</p>
+
+<ul>
+  <li>Adblock Plus - needs root access if not only ads over Wifi should be blocked (remember that there is no Wifi support out of the box)</li>
+  <li>Apollo - pre-installed music player</li>
+  <li>Arity - graphical calculator</li>
+  <li>Barcode Scanner - did not recognize any of the barcodes and QR codes I tried
+    <ul>
+      <li>QR Scanner - did also not work</li>
+    </ul>
+  </li>
+  <li>Calendar Import-Export
+    <ul>
+      <li>together with Offline Calender</li>
+    </ul>
+  </li>
+  <li>Conversations - XMPP client</li>
+  <li>Cowsay</li>
+  <li>FreeOTP - for two-factor authentication</li>
+  <li>Interactive Story - an interactive Mars story which is over after 1 minute</li>
+  <li>Lightning - alternative browser</li>
+  <li>Meeting-Cost-Clock</li>
+  <li>RadioDroid</li>
+  <li>robotfindskitten</li>
+  <li>Silence - Send encrypted SMS</li>
+  <li>Turbo Editor - Decent text editor for taking notes</li>
+  <li>WaveUp - turn on / off screen by using the proximity sensor</li>
+</ul>
+
+<h3 id="backup-data-with-mtp-failed">Backup data with MTP (failed)</h3>
+
+<p>The MTP connection was not reliable from the beginning. The device contents were listed but after copy and paste there was the message “The process for the mtp protocoll died unexpectantly” and now the Device Notifier does not stop from popping up and disappear (and sometimes steals focus).</p>
+
+<p>Next steps: find out how to debug this.</p>
+
+<h3 id="backup-with-other-methods">Backup with other methods</h3>
+
+<ul>
+  <li><em>Bluetooth</em>: not working because of missing firmware</li>
+  <li><em>Wifi</em>: not working because of missing firmware</li>
+  <li>Computer USB connection and then choose <em>Mass storage</em> instead of “Media Device (MTP)”: it did not work at first (the computer does not detect any device, even when waiting a few minutes)
+  but there is another “Turn on USB storage” that has to be activated.</li>
+  <li><em>OTG cable</em> (“USB on the go”): connected USB stick was recognized and data could be transferred
+    <ul>
+      <li>TODO: howto unmount?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="backup-with-android-debug-bridge">Backup with Android Debug Bridge</h3>
+
+<h4 id="backup-sd-card">Backup SD card</h4>
+
+<p><code class="highlighter-rouge">adb pull /storage/sdcard0</code> also copies hidden files as desired.
+(‘-p’ to display the transfer progress)
+(‘-a’ means copy timestamp and mode)</p>
+
+<p><code class="highlighter-rouge">shell
+adb root
+cd /local/backupdir/sdcard0
+adb pull -p -a /storage/sdcard0
+</code>
+Note that with the -a option the files may not readable for ‘user’. So the permissions must be adapted afterwards.</p>
+
+<h4 id="backup-contacts">Backup contacts</h4>
+
+<p>People -&gt; Menu -&gt; Import/Export -&gt; Export To Storage</p>
+
+<p><code class="highlighter-rouge">
+cd /local/backupdir/contacts
+adb pull -p -a /storage/sdcard0/00002.vcf
+</code></p>
+
+<h4 id="backup-bookmarks">Backup bookmarks</h4>
+
+<p><code class="highlighter-rouge">
+cd /local/backupdir/bookmarks
+adb backup com.android.browser
+</code></p>
+
+<p>Restore:
+<code class="highlighter-rouge">
+adb restore backup.ab
+</code>
+I deleted some bookmarks to test the restore which worked fine.</p>
+
+<p>I <em>made no backup</em> for: SMS messages, Kontalk messages, homescreen settings, lockscreen settings, regional settings</p>
+
+<h3 id="delete-data-and-do-factory-restore">Delete data and do factory restore</h3>
+
+<ul>
+  <li>Power off</li>
+  <li>Remove SIM card</li>
+  <li>Boot</li>
+  <li>Filebrowser &gt; /storage/sdcard0 &gt; Select all &gt; Delete</li>
+  <li>Settings &gt; Backup &amp; Reset &gt; Factory data reset, check the “Erase SD card” to be sure, “Reset phone” (draw your unlock pattern to confirm), “Erase everything”
+    <ul>
+      <li>Phone reboots automatically (takes longer than normal)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Then, I sent back the phone and now I wait for replacement.</p>
+
+<p>TODO: include discussion capability to this blog post.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/blog/kde/2016/05/07/tehnotic-s2-with-replicant.html">
+            Unboxing the Tehnoetic S2 phone with Replicant
+            <small>07 May 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/kde/2016/01/29/view-disk-usage-via-dolphin.html">
+            Dolphin Tip - Investigate Disk Usage
+            <small>29 Jan 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/linux/2015/06/25/install-opensuse-on-old-notebook.html">
+            openSUSE 13.2 auf altem Notebook installieren
+            <small>25 Jun 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
