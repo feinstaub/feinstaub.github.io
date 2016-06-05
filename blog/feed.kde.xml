@@ -115,7 +115,7 @@ error: cannot connect to daemon&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure
 
 &lt;h2&gt;No status LED&lt;/h2&gt;
 
-&lt;p&gt;The front status LED does not work at all. Which means I have no visual notification on new messages. This is reported here &lt;a href=&quot;http://redmine.replicant.us/issues/1695&quot;&gt;http://redmine.replicant.us/issues/1695&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;EDIT: The front status LED does not work... because the Samsung S2 does not have one! (&lt;a href=&quot;http://redmine.replicant.us/issues/1695&quot;&gt;http://redmine.replicant.us/issues/1695&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h2&gt;No free Bluetooth firmware&lt;/h2&gt;
 
@@ -377,6 +377,8 @@ adb backup com.android.browser&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;Wifi and Bluetooth are both not working with Replicant because there is no existing free firmware yet that works with the given hardware.&lt;/p&gt;
 
 &lt;p&gt;I will report back about how to connect to the Internet without SIM card but using an USB cable.&lt;/p&gt;
+
+&lt;p&gt;Read &lt;a href=&quot;/blog/kde/2016/05/30/replicant-part2.html&quot;&gt;Part 2 of the Replicant user review&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;TODO: include discussion capability to this blog post.&lt;/p&gt;
 </description>
