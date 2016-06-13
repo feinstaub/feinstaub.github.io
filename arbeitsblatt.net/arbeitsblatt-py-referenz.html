@@ -269,6 +269,30 @@ http://www.gnu.org/software/src-highlite -->
 <span style="font-style: italic"><span style="color: #9A1900"># Letzter Befehl =&gt; Reguläres Beenden mit Exit-Code 0</span></span></tt></pre></div></div>
 </div>
 <div class="sect2">
+<h3 id="_kommandozeilen_argumente">Kommandozeilen-Argumente</h3>
+<div class="paragraph"><p>args.py:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900">#!/usr/bin/python3</span></span>
+
+<span style="font-weight: bold"><span style="color: #000080">import</span></span> sys
+
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Anzahl der Argumente: {0}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">len</span></span><span style="color: #990000">(</span>sys<span style="color: #990000">.</span>argv<span style="color: #990000">)))</span>
+<span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Argument-Liste: {0}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>sys<span style="color: #990000">.</span>argv<span style="color: #990000">))</span></tt></pre></div></div>
+<div class="paragraph"><p>args.py auf der Konsole ausführen:</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>$ <span style="color: #990000">.</span>/args<span style="color: #990000">.</span>py Hallo Test
+Anzahl der Argumente<span style="color: #990000">:</span> <span style="color: #993399">3</span>
+Argument-Liste<span style="color: #990000">:</span> <span style="color: #990000">[</span><span style="color: #FF0000">'./args.py'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Hallo'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'Test'</span><span style="color: #990000">]</span></tt></pre></div></div>
+</div>
+<div class="sect2">
 <h3 id="_rechenoperatoren">Rechenoperatoren</h3>
 <div class="listingblock">
 <div class="content"><!-- Generator: GNU source-highlight 3.1.8
@@ -1161,7 +1185,7 @@ Introspektion
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-04-17 18:33:48 CEST
+Letzte Änderung 2016-06-12 11:25:38 CEST
 </div>
 </div>
 </body>
