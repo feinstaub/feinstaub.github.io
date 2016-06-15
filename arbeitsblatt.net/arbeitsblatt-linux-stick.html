@@ -30,27 +30,90 @@ asciidoc.install(3);
 <div class="ulist"><ul>
 <li>
 <p>
-openSUSE 42.1 DVD herunterladen und brennen
+<strong>openSUSE Leap 42.1</strong> <a href="https://software.opensuse.org">DVD-Image herunterladen</a> (mit Direkt-Link oder BitTorrent)
 </p>
 </li>
 <li>
 <p>
-32 GB USB-Stick
+Die .iso-Datei <strong>auf DVD brennen</strong> (alternativ: auf einen weiteren USB-Stick "bootable" speichern).
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Das Medium wird nur zur Installation benötigt. Die Updates und neue Pakete kann man via Paketmanager direkt aus dem Internet laden.
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+<strong>USB-Stick</strong>, auf dem das System installiert werden soll:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+empfohlene Größe: <strong>32 GB</strong>
 </p>
 </li>
 <li>
 <p>
-von DVD booten, setup
+auf <strong>USB 3.0</strong> achten (auch drauf achten, dass manchmal USB 3.0 draufsteht, obwohl der Speicher dennoch langsam ist)
 </p>
 </li>
 <li>
 <p>
-Partitionieren: 10 GB root, 2 GB swap, 14 GB home, 2 GB FAT32
+Alternativ: externe Festplatte; diese hat eine verlässlichere Übertragungsrate
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Von DVD (oder dem Boot-Stick) booten und das <strong>openSUSE-Setup</strong> durchführen
 </p>
 </li>
 <li>
 <p>
-Hinweis: Dieses System funktioniert auf anderer Hardware vermutlich nicht richtig.
+Bei der <strong>Partitionierung</strong> folgende Einteilung vornehmen
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Eingebaute Platte: /dev/sda (nicht verwenden!), aber dafür /dev/sdb (wenn das der Stick ist)
+</p>
+</li>
+<li>
+<p>
+10 GB root (/) EXT4 - Systemdateien
+</p>
+</li>
+<li>
+<p>
+2 GB swap - Auslagerungsplatz
+</p>
+</li>
+<li>
+<p>
+14 GB /home EXT4 - Benutzerdaten
+</p>
+</li>
+<li>
+<p>
+2 GB FAT32 - Auf diesen Bereich kann man dann auch unter Windows zugreifen.
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Achtung: möglicherweise muss diese Partition ganz an den Anfang, damit es wirklich funktioniert.
+</p>
+</li>
+</ul></div>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+Hinweis: Dieses so installierte System funktioniert möglicherweise auf anderes konfigurierter Hardware (z. B. unterschiedliche Anzahl von eingebauten Festplatten) nicht.
 </p>
 </li>
 </ul></div>
@@ -60,7 +123,7 @@ Hinweis: Dieses System funktioniert auf anderer Hardware vermutlich nicht richti
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-04-17 18:45:39 CEST
+Letzte Änderung 2016-06-15 21:29:10 CEST
 </div>
 </div>
 </body>
