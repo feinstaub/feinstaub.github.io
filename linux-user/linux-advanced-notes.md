@@ -227,6 +227,13 @@ Did not work at once because repo was broken, see https://build.opensuse.org/pac
 * WAIT/MINOR: Application menu design issues:
     see http://wstaw.org/m/2015/10/29/shot1.png
     see https://bugs.kde.org/show_bug.cgi?id=355680 - Favorite icons could be mixed up as item icons
+    Kmenu/k-menu
+
+    wait: I thought about why I find the current Kicker(=Application Menu) appearance strange: it is because the favorite icons have no text at all. On other UIs there often is some text next to or below the icon.
+
+    "Yes, the ones with the five tabs at the bottom." is Plasma default
+
+    TODO: ask in openSUSE forum
 
 
 ### issues not reported yet (5.4.3)

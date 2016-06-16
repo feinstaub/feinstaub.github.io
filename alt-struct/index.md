@@ -224,7 +224,7 @@ Gesellschaft
     * https://de.wikipedia.org/wiki/Finanzkrise_ab_2007#Dokumentationen_und_Spielfilme
 * Film: [Hotel Ruanda](https://de.wikipedia.org/wiki/Hotel_Ruanda)
 * Film: https://de.wikipedia.org/wiki/American_History_X
-* Film: We feed the world
+* Film: We feed the world (2009)
 * Film: [Let's make money (2008)](https://de.wikipedia.org/wiki/Let%E2%80%99s_Make_Money)
 * Film: Food, Inc
 * Film: Zeit der Kannibalen
