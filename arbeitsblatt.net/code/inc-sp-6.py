@@ -8,9 +8,9 @@ import sys
 from getch import *
 
 ###############################################################################
-### Globale Daten                                                           ###
+### Globale Variablen
 
-objekte = { 0: "Stein", 1: "Papier", 2: "Schere" }
+objekte = [ "Stein", "Papier", "Schere" ]
 
 # erste Zeile für Spieler 1 und zweite Zeile für Spieler 2
 tasten = [ [ 'A', 'S', 'D' ],

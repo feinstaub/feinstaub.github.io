@@ -71,6 +71,8 @@ print("Tastentest \n   - Jeder Spieler drückt seine Tasten (gerne auch ungülti
 print("   - Q zum Beenden")
 print("")
 
+# while True ist eine Unendlichschleife.
+
 while True:
     k = getch()
     print("Taste: " + k)
