@@ -473,7 +473,14 @@ http://www.gnu.org/software/src-highlite -->
 s<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">lower</span></span><span style="color: #990000">()</span>  <span style="font-style: italic"><span style="color: #9A1900"># "hallo welt"</span></span>
 s<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">upper</span></span><span style="color: #990000">()</span>  <span style="font-style: italic"><span style="color: #9A1900"># "HALLO WELT"</span></span>
 
-<span style="color: #FF0000">"    string with space  "</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">strip</span></span><span style="color: #990000">()</span>   <span style="font-style: italic"><span style="color: #9A1900"># "string with space"</span></span></tt></pre></div></div>
+<span style="color: #FF0000">"    string with space  "</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">strip</span></span><span style="color: #990000">()</span>   <span style="font-style: italic"><span style="color: #9A1900"># "string with space"</span></span>
+
+<span style="font-weight: bold"><span style="color: #000000">ord</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'A'</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># 65</span></span>
+<span style="font-weight: bold"><span style="color: #000000">ord</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'B'</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># 66</span></span>
+
+<span style="font-weight: bold"><span style="color: #000000">chr</span></span><span style="color: #990000">(</span><span style="color: #993399">65</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># 'A'</span></span>
+<span style="font-weight: bold"><span style="color: #000000">chr</span></span><span style="color: #990000">(</span><span style="color: #993399">97</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># 'a'</span></span></tt></pre></div></div>
+<div class="paragraph"><p>Warum diese Zahlen bei <em>ord</em> und <em>chr</em>? Siehe <a href="https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#ASCII-Tabelle">https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#ASCII-Tabelle</a></p></div>
 </div>
 <div class="sect2">
 <h3 id="_zufallszahlen">Zufallszahlen</h3>
@@ -485,7 +492,8 @@ http://www.gnu.org/software/src-highlite -->
 <pre><tt><span style="font-weight: bold"><span style="color: #000080">import</span></span> random
 z <span style="color: #990000">=</span> random<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">randint</span></span><span style="color: #990000">(</span><span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #993399">100</span><span style="color: #990000">)</span>
 <span style="font-weight: bold"><span style="color: #0000FF">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"Eine Zufallszahl zwischen 0 und 100: {}"</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">format</span></span><span style="color: #990000">(</span>z<span style="color: #990000">))</span>
-<span style="font-style: italic"><span style="color: #9A1900"># Die Endpunkte sind inbegriffen.</span></span></tt></pre></div></div>
+<span style="font-style: italic"><span style="color: #9A1900"># Die Endpunkte sind inbegriffen.</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># Siehe &gt;&gt;&gt; help(random.randint)</span></span></tt></pre></div></div>
 </div>
 <div class="sect2">
 <h3 id="_mathematik">Mathematik</h3>
@@ -1185,7 +1193,7 @@ Introspektion
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Letzte Änderung 2016-06-12 11:25:38 CEST
+Letzte Änderung 2016-09-08 21:13:44 CEST
 </div>
 </div>
 </body>

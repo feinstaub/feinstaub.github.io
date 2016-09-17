@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'design.ui'
+#
+# Created by: PyQt5 UI code generator 5.6
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(687, 619)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.frame = MyWidget(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
+        self.frame.setSizePolicy(sizePolicy)
+        self.frame.setObjectName("frame")
+        self.verticalLayout.addWidget(self.frame)
+        spacerItem = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.verticalLayout.addItem(spacerItem)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.pushButton_1 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_1.setObjectName("pushButton_1")
+        self.horizontalLayout.addWidget(self.pushButton_1)
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.horizontalLayout.addWidget(self.pushButton_4)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.comboBox_1 = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox_1.setObjectName("comboBox_1")
+        self.horizontalLayout_2.addWidget(self.comboBox_1)
+        self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.horizontalLayout_2.addWidget(self.pushButton_5)
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_2.addWidget(self.label_2)
+        self.horizontalSlider_1 = QtWidgets.QSlider(self.centralwidget)
+        self.horizontalSlider_1.setProperty("value", 50)
+        self.horizontalSlider_1.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_1.setObjectName("horizontalSlider_1")
+        self.horizontalLayout_2.addWidget(self.horizontalSlider_1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem2)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setObjectName("label")
+        self.horizontalLayout_3.addWidget(self.label)
+        self.horizontalSlider_fps = QtWidgets.QSlider(self.centralwidget)
+        self.horizontalSlider_fps.setMaximum(100)
+        self.horizontalSlider_fps.setProperty("value", 30)
+        self.horizontalSlider_fps.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_fps.setObjectName("horizontalSlider_fps")
+        self.horizontalLayout_3.addWidget(self.horizontalSlider_fps)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem3)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.pushButton_1.setText(_translate("MainWindow", "Button 1"))
+        self.pushButton_2.setText(_translate("MainWindow", "Button 2"))
+        self.pushButton_3.setText(_translate("MainWindow", "Button 3"))
+        self.pushButton_4.setText(_translate("MainWindow", "Button 4"))
+        self.pushButton_5.setText(_translate("MainWindow", "Button 5"))
+        self.label_2.setText(_translate("MainWindow", "nextFrame manuell:"))
+        self.label.setText(_translate("MainWindow", "Geschwindigkeit"))
+
+from mywidget import MyWidget

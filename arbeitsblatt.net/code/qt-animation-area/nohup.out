@@ -1,0 +1,4 @@
+Trying to convert empty KLocalizedString to QString.
+Cannot creat accessible child interface for object:  PlacesView(0x2a16160)  index:  24
+Attempted to re-run an already running session.
+kf5.kio.core: KLocalSocket(0x2b3f720) Jumbo packet of 99132 bytes
