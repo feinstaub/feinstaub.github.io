@@ -44,8 +44,6 @@
   * [Rezepte](foodstruct/index.md)
   * [Drinks](foodstruct/foodfluid.md)
   * [Auswärts](foodstruct/plantstruct.md)
-  * # ---
-  * [Alternativen](alt-struct/index.md)
 
 [contact]()
 
