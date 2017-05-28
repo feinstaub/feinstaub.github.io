@@ -6,7 +6,6 @@
   * [Install openSUSE](linux-user/linux-install-opensuse.md)
   * [Beginners](linux-user/linux-beginners-notes.md)
   * [Advanced](linux-user/linux-advanced-notes.md)
-  * [Firefox](linux-user/browser-notes.md)
   * # KDE UI suggestions / next steps:
   * [KDE: General](struct/struct-main.md)
   * [KDE: Dolphin](struct/struct-dolphin.md)
