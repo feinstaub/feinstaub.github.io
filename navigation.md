@@ -39,12 +39,6 @@
 
   * [Start](asr/index.md)
 
-[foodstruct]()
-
-  * [Rezepte](foodstruct/index.md)
-  * [Drinks](foodstruct/foodfluid.md)
-  * [Auswärts](foodstruct/plantstruct.md)
-
 [contact]()
 
   * [meta](meta.md)
