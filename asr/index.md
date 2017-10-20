@@ -299,9 +299,6 @@ Good when you regularly exchange files with the same person.
     * Teilen von Notizen, Kalender (ics-Kalender-Datei) etc. (Daten werden bei Austausch jedes Mal erneut verschlüsselt)
     * Lokales Lösen von Konflikten (am besten vermeiden, z. B. jeder hat seinen eigenen Kalender)
 
-* old: [fyshare concept draft](fyshare/index.md)
-
-
 ---
 
 asr: First concept: 2014, First prototype: 2015-03-27 / Web content last updated: 2015-08-20
